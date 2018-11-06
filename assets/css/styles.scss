@@ -1,10 +1,9 @@
 ---
 ---
-@import "main";
 
-.my-definition {
-  color: red;
-}
+@import "variables";
+@import "bootstrap";
   
-
-
+@import "main";
+@import "home";
+@import "navigation";

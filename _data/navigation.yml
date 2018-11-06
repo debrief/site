@@ -1,4 +1,12 @@
 - name: Home
   link: /
+- name: Get Debrief
+  link: /get-debrief
+- name: Videos
+  link: /videos
 - name: About
   link: /about
+- name: Support
+  link: /
+- name: Blog
+  link: /blog

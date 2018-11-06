@@ -3,30 +3,159 @@ layout: default
 title: Home
 ---
 
-<header class="site-header" role="banner">
-
-    <div class="wrapper">
-      <a class="site-title" rel="author" href="/">Your awesome title</a>
-      <nav class="site-nav">
-        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
-        <label for="nav-trigger">
-          <span class="menu-icon">
-            <svg viewBox="0 0 18 15" width="18px" height="15px">
-              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
-            </svg>
-          </span>
-        </label>
-
-        <div class="trigger">
-          <a class="page-link" href="/about/">About</a>
-        </div>
-        </nav>
+<header class="home-header" role="banner">
+    {% include navigation.html %}
+    <section class="home-hero-section"></section>
+    <section class="home-intro">
+      <div class="container-fluid text-center">
+          <h2 class="font-weight-normal">Powerful, Free, Fast and Intuitive!</h2>
+          <h5 class="font-weight-light mt-2">The Debrief Maritime Analysis Tool accelerates maritime data analysis and reporting. Over twenty years of visionary development make us the first choice of effective analysts the world over.</h5>    
       </div>
+    </section>
   </header>
   <main class="page-content" aria-label="Content">
-    <div class="wrapper">
-        {% include navigation.html %}
-        <h1 class="current">{{ "Hello World!" | downcase }}</h1>        
-    </div>
+    <section class="section-default benefits-section">
+      <div class="container-fluid">
+          <h1>BENEFITS</h1>
+          <div class="divider-default clearfix "></div>
+          <div class="row">
+            <div class="col-sm-4">
+              <div class="benefits-item">
+                <div class="benefits-item__icon">
+                  <img src="../assets/images/benefits-open-source.png" alt="" class="img-fluid">
+                </div>
+                <div class="benefits-item__body">
+                  <h3>Open Source</h3>
+                  <p>Debrief’s Open Source license means that it is (and always will be) completely free to use, plus you’ll never suffer “Vendor lock-in”.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="benefits-item">
+                <div class="benefits-item__icon">
+                  <img src="../assets/images/benefits-multi-platform.png" alt="" class="img-fluid">
+                </div>
+                <div class="benefits-item__body">
+                  <h3>Multi Platform</h3>
+                  <p>Debrief’s Java foundations mean that it will run on 32 and 64 bit versions of MS Windows, Apple OSX and Linux.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="benefits-item">
+                <div class="benefits-item__icon">
+                  <img src="../assets/images/benefits-mature.png" alt="" class="img-fluid">
+                </div>
+                <div class="benefits-item__body">
+                  <h3>Mature</h3>
+                  <p>Under continuous maintenance since 1995, the algorithms underpinning Debrief have had around two decades of testing and development.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="benefits-item">
+                <div class="benefits-item__icon">
+                  <img src="../assets/images/benefits-capable.png" alt="" class="img-fluid">
+                </div>
+                <div class="benefits-item__body">
+                  <h3>Capable</h3>
+                  <p>A suite of custom data views mean that challenging analysis tasks become easy and straightforward, allowing the analyst to focus on considered observations rather than collating data.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="benefits-item">
+                <div class="benefits-item__icon">
+                  <img src="../assets/images/benefits-reliable.png" alt="" class="img-fluid">
+                </div>
+                <div class="benefits-item__body">
+                  <h3>Reliable</h3>
+                  <p>Currently in use by Navies, Governmental and non-Governmental organisations around the world, the Debrief software has unprecedented levels of reliability.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="benefits-item">
+                <div class="benefits-item__icon">
+                  <img src="../assets/images/benefits-supported.png" alt="" class="img-fluid">
+                </div>
+                <div class="benefits-item__body">
+                  <h3>Supported</h3>
+                  <p>This well documented, standards adherent application is easy to maintain, either within your own organisation or with commercial contracted support.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+      
+
+    </section>
+    <section class="section-default capabilities-section">
+      <div class="container-fluid">
+        <h1>CAPABILITIES</h1>
+        <div class="divider-default clearfix "></div>
+        <div class="row">
+          <div class="col-sm-6 text-center">
+            <a href="https://www.youtube.com/watch?v=1kNJgjtZ_f8" target="_blank">
+              <img class="img-fluid" src="../assets/images/QuickIntroductionTrimmed.gif" alt="Quick Introduction Trimmed" width="317" height="278">
+            </a>
+          </div>
+          <div class="col-sm-6">
+            <h4 class="font-weight-light mt-3">Analysis & Reporting</h4>
+            <p class="font-weight-light mb-4">Debrief supports the full maritime analysis process, from loading data, through analysing that data, to producing attractive and persuasive images in your analysis report.</p>
+            <a target="_blank" href="https://www.youtube.com/watch?v=1kNJgjtZ_f8" class="btn btn-default btn-secondary">
+              <i class="far fa-chart-bar"></i>
+              See the full screencast
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section-default capabilities-section">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-6">
+            <h4 class="font-weight-light mt-3">Trials Planning</h4>
+            <p class="font-weight-light mb-4">Debrief has specialised capabilities that make it ideal for the whole equipment trials process: covering planning, analysis and presenting results.</p>
+            <a target="_blank" href="https://www.youtube.com/watch?v=VKSsGjLXabI" class="btn btn-default btn-secondary">
+              <i class="fas fa-chart-area"></i>
+              See the full screencast
+            </a>
+          </div>
+          <div class="col-sm-6 text-center">
+            <a href="https://www.youtube.com/watch?v=VKSsGjLXabI" target="_blank">
+              <img class="img-fluid" src="../assets/images/PlanTrial.gif" alt="PlanTrial" width="506" height="488">
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section-default capabilities-section">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-6 text-center">
+            <a href="http://debrief.info/s2r-videos/" target="_blank">
+              <img class="img-fluid" src="../assets/images/06_SATC_suppress_cuts_400x400.gif" alt="Single Sided Reconstruction by Debrief" width="400" height="400">
+            </a>
+          </div>
+          <div class="col-sm-6">
+            <h4 class="font-weight-light mt-3">Single Sided Reconstruction</h4>
+            <p class="font-weight-light mb-4">Debrief can be used to produce a solution for target tracks based on bearing data, even for multi-leg engagements that are typically challenging using manual TMA capabilities.</p>
+            <a target="_blank" href="http://debrief.info/s2r-videos/" class="btn btn-default btn-secondary">
+              <i class="fab fa-youtube"></i>
+              See the full screencast
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="container-fluid">
+        <h1>OUR USERS</h1>
+        <p>Debrief has years of experience providing top notch analysis capabilities to tier one organisations throughout the World</p>
+      </div>
+    </section>
+
+    
   </main>
 

@@ -3,15 +3,21 @@ $navbar-light-hover-color:  #fff !default;
 $navbar-light-active-color: #fff;
 $primary:                   #000033;
 $secondary:                 #cc0033;
-
+$background-light-gray:     #f3f3f3;
+$text-gray:                 #bbbbbb;
 $nav-link-padding-y:          1rem;
 $navbar-nav-link-padding-x:   1rem;
 $navbar-brand-padding-y:      0.5rem;
 $font-family-sans-serif:      Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
 $font-size-base:              1rem !default;
-$h1-font-size:                $font-size-base * 2.25 !default;
-$h2-font-size:                $font-size-base * 1.875 !default;
-$h3-font-size:                $font-size-base * 1.75 !default;
-$h4-font-size:                $font-size-base * 1.5 !default;
-$h5-font-size:                $font-size-base * 1.3125 !default;
-$h6-font-size:                $font-size-base !default;
+$h1-font-size:                $font-size-base * 2.4 !default;
+$h2-font-size:                $font-size-base * 2 !default;
+$h3-font-size:                $font-size-base * 1.6 !default;
+$h4-font-size:                $font-size-base * 1.4 !default;
+$h5-font-size:                $font-size-base * 1.2 !default;
+$h6-font-size:                $font-size-base * 1.066666667 !default;
+
+$input-height-lg:             3.6rem;
+$input-bg:                    #eeeeee !default;
+$btn-padding-y-lg:            0.45rem; 
+$btn-padding-x-lg:            0.7rem;

@@ -1,70 +1,119 @@
 <ul class="nav nav-pills justify-content-center mb-3 ml-0" id="pills-tab" role="tablist">
     <li class="nav-item">
-      <a class="nav-link pill-link-secondary active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">All</a>
+      <a class="nav-link pill-link-secondary active" id="pills-all-tab" data-toggle="pill" href="#pills-all" role="tab" aria-controls="pills-all" aria-selected="true">All</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link pill-link-secondary" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Analysis</a>
+      <a class="nav-link pill-link-secondary" id="pill-analysis-tab" data-toggle="pill" href="#pill-analysis" role="tab" aria-controls="pill-analysis" aria-selected="false">Analysis</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link pill-link-secondary" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">Presentation</a>
+      <a class="nav-link pill-link-secondary" id="pill-presentation-tab" data-toggle="pill" href="#pill-presentation" role="tab" aria-controls="pill-presentation" aria-selected="false">Presentation</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link pill-link-secondary" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">Reconstruction</a>
+        <a class="nav-link pill-link-secondary" id="pill-reconstruction-tab" data-toggle="pill" href="#pill-reconstruction" role="tab" aria-controls="pill-reconstruction" aria-selected="false">Reconstruction</a>
       </li>
   </ul>
 
   <div class="tab-content" id="pills-tabContent">
 
-    <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
-
+    <div class="tab-pane fade show active" id="pills-all" role="tabpanel" aria-labelledby="pills-all-tab">
       <div class="row">
-        <div class="col-sm-4">
-          <figure class="figure features-item">
-            <div class="features-item__img-wrapper">
-              <img src="../assets/images/GridEditor-300x300.png" class="figure-img img-fluid features-item__img" alt="A generic square placeholder image with rounded corners in a figure.">
-              <div class="features-item__overlay">
-                  <a class="features-item__overlay-link" href="http://debrief.info/wp-content/uploads/2015/04/GridEditor.png" data-gal="prettyPhoto">
-                    <i class="far fa-eye"></i>
-                  </a>
-              </div>                 
+        {% for item in site.data.features.all %}
+            <div class="col-sm-4">
+              <figure class="figure features-item">
+                  <div class="features-item__img-wrapper">
+                    <img src="{{ item.image }}" class="figure-img img-fluid features-item__img" alt="A generic square placeholder image with rounded corners in a figure.">
+                    <div class="features-item__overlay">
+                        <a class="features-item__overlay-link" href="#" data-gal="prettyPhoto">
+                          <i class="far fa-eye"></i>
+                        </a>
+                    </div>
+                  </div>
+                  <figcaption class="figure-caption features-item__caption">
+                    <a href="{{ item.link }}" class="features-item__title btn btn-primary">{{ item.title }}</a>
+                    <p class="features-item__text">{{ item.text }}</p>
+                    <a href="{{ item.link }}" class="features-item__link">Learn more</a>
+                  </figcaption>
+                </figure>
             </div>
-            <figcaption class="figure-caption features-item__caption">
-              <a href="http://www.debrief.info/tutorial/GridEditor.html" class="features-item__title btn btn-primary">GRID EDITOR</a>
-              <p class="features-item__text">Yes, the onboard sensors may be less than perfect. Don’t worry, Debrief’s Grid Editor allows you to use your understanding of the data to perform a range of grooming operations: from removing outliers, inserting missing data, right through to smoothing values to remove quantisation artifacts</p>
-              <a href="http://www.debrief.info/tutorial/GridEditor.html" class="features-item__link">Learn more</a>
-            </figcaption>
-          </figure>
-        </div>
-        <div class="col-sm-4">
-          <figure class="figure features-item">
-            <div class="features-item__img-wrapper">
-              <img src="../assets/images/GraphExport-300x286.png" class="figure-img img-fluid features-item__img" alt="A generic square placeholder image with rounded corners in a figure.">
-              <div class="features-item__overlay"></div>
-            </div>
-            <figcaption class="figure-caption features-item__caption">
-              <a href="http://www.debrief.info/tutorial/show_time_vars.html" class="features-item__title btn btn-primary">GRAPH EXPORT</a>
-              <p class="features-item__text">It’s not just track plots that can be exported from Debrief.  All those Time-Variable plots can also be exported, to be inserted directly into your Analysis Report or Quick-Look Briefing document.</p>
-              <a href="http://www.debrief.info/tutorial/show_time_vars.html" class="features-item__link">Learn more</a>
-            </figcaption>
-          </figure>
-        </div>
-        <div class="col-sm-4">
-          <figure class="figure features-item">
-            <div class="features-item__img-wrapper">
-                <img src="../assets/images/NaturalEarth-300x300.png" class="figure-img img-fluid features-item__img" alt="A generic square placeholder image with rounded corners in a figure.">
-                <div class="features-item__overlay"></div>              
-            </div>
-            <figcaption class="figure-caption features-item__caption">
-              <a href="http://www.debrief.info/tutorial/external_datasets.html#natural_earth" class="features-item__title btn btn-primary">GNATURAL EARTH</a>
-              <p class="features-item__text">Everybody likes detailed charts. The Debrief Natural Earth background dataset delivers natural looking maps, with bathymetric shading. Developed by a professional cartographer, our custom set of Natural Earth themes & styles is dedicated to the maritime domain. Our maps will certainly put a shine on your next briefing</p>
-              <a href="http://www.debrief.info/tutorial/external_datasets.html#natural_earth" class="features-item__link">Learn more</a>
-            </figcaption>
-          </figure>
-        </div>
+        {% endfor %}
       </div>
-
     </div>
 
-    <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">...</div>
-    <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">...</div>
+    <div class="tab-pane fade" id="pill-analysis" role="tabpanel" aria-labelledby="pill-analysis-tab">
+      <div class="row">
+          {% for item in site.data.features.all %}
+            {% if item.analysis == true %}
+              <div class="col-sm-4">
+                <figure class="figure features-item">
+                    <div class="features-item__img-wrapper">
+                      <img src="{{ item.image }}" class="figure-img img-fluid features-item__img" alt="A generic square placeholder image with rounded corners in a figure.">
+                      <div class="features-item__overlay">
+                          <a class="features-item__overlay-link" href="#" data-gal="prettyPhoto">
+                            <i class="far fa-eye"></i>
+                          </a>
+                      </div>
+                    </div>
+                    <figcaption class="figure-caption features-item__caption">
+                      <a href="{{ item.link }}" class="features-item__title btn btn-primary">{{ item.title }}</a>
+                      <p class="features-item__text">{{ item.text }}</p>
+                      <a href="{{ item.link }}" class="features-item__link">Learn more</a>
+                    </figcaption>
+                  </figure>
+              </div>
+            {% endif %}
+          {% endfor %}
+        </div>      
+    </div>
+
+    <div class="tab-pane fade" id="pill-presentation" role="tabpanel" aria-labelledby="pill-presentation-tab">
+      <div class="row">
+          {% for item in site.data.features.all %}
+            {% if item.presentation == true %}
+              <div class="col-sm-4">
+                <figure class="figure features-item">
+                    <div class="features-item__img-wrapper">
+                      <img src="{{ item.image }}" class="figure-img img-fluid features-item__img" alt="A generic square placeholder image with rounded corners in a figure.">
+                      <div class="features-item__overlay">
+                          <a class="features-item__overlay-link" href="#" data-gal="prettyPhoto">
+                            <i class="far fa-eye"></i>
+                          </a>
+                      </div>
+                    </div>
+                    <figcaption class="figure-caption features-item__caption">
+                      <a href="{{ item.link }}" class="features-item__title btn btn-primary">{{ item.title }}</a>
+                      <p class="features-item__text">{{ item.text }}</p>
+                      <a href="{{ item.link }}" class="features-item__link">Learn more</a>
+                    </figcaption>
+                  </figure>
+              </div>
+            {% endif %}
+          {% endfor %}
+        </div>      
+    </div>
+    
+    <div class="tab-pane fade" id="pill-reconstruction" role="tabpanel" aria-labelledby="pill-reconstruction-tab">
+      <div class="row">
+        {% for item in site.data.features.all %}
+          {% if item.reconstruction == true %}
+            <div class="col-sm-4">
+              <figure class="figure features-item">
+                  <div class="features-item__img-wrapper">
+                    <img src="{{ item.image }}" class="figure-img img-fluid features-item__img" alt="A generic square placeholder image with rounded corners in a figure.">
+                    <div class="features-item__overlay">
+                        <a class="features-item__overlay-link" href="#" data-gal="prettyPhoto">
+                          <i class="far fa-eye"></i>
+                        </a>
+                    </div>
+                  </div>
+                  <figcaption class="figure-caption features-item__caption">
+                    <a href="{{ item.link }}" class="features-item__title btn btn-primary">{{ item.title }}</a>
+                    <p class="features-item__text">{{ item.text }}</p>
+                    <a href="{{ item.link }}" class="features-item__link">Learn more</a>
+                  </figcaption>
+                </figure>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>      
+    </div>
   </div>

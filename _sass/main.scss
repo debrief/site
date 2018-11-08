@@ -16,6 +16,9 @@ html {
     font-weight: $font-weight-light;
     @include border-radius ($border-radius-sm);
   }
+  &--gray {
+    background-color:  $input-bg-gray;
+  }
 }
 
 //Section & Blocks

@@ -1,3 +1,4 @@
+//GitHub Link
 #forkongithub {
   position: fixed;
   display: block;
@@ -47,6 +48,8 @@
   }
 }
 
+
+//Navbar
 .navbar-wrapper {
   height: 77px;
 }
@@ -67,7 +70,11 @@
   }
   .nav-link {
     @include hover-focus {
-      background-color: #000033;
+      background-color: $primary;
+    }
+    &.active {
+      background-color: $primary;
+      color: $white
     }
   }
   .dropdown-toggle::after {
@@ -78,7 +85,7 @@
     .dropdown-toggle:visited {
     }
     .dropdown-toggle::after {
-      border: none;
+      display: none;
     }
   }
 }

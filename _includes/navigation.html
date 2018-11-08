@@ -2,10 +2,13 @@
   <a href="https://github.com/debrief/debrief">Fork me on GitHub</a>
 </span>
 
+
+
+
 <div class="navbar-wrapper">
   <nav class="header-navbar navbar fixed-top navbar-light navbar-expand-lg">
     <div class="container">
-      <a class="navbar-brand" href="#">
+      <a class="navbar-brand" href="/">
           <img src="../assets/images/debrief.png" alt="Debrief" class="img-fluid">
         </a>
         <button class="navbar-toggler header-navbar-toggler" type="button" data-toggle="collapse" data-target="#headerNavbar" aria-controls="headerNavbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -14,45 +17,25 @@
     
         <div class="collapse navbar-collapse" id="headerNavbar">
           <div class="navbar-nav header-navbar-nav ml-auto">
-            <div class="nav-item">
-              <a href="#" class="nav-link">Home</a>
-            </div>
-            <div class="nav-item">
-              <a href="#" class="nav-link">Get Debrief</a>
-            </div>
-    
-            <div class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="headerNavlinkVideos" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Videos
+
+            {% for item in site.data.navigation.nav %}
+              <div {% if item.dropdown == 1 %}class="nav-item dropdown"{% endif %} {% if item.dropdown != 1 %}class="nav-item"{% endif %}>
+                <a href="{{ item.link }}" id="{{ item.id }}"{% if page.url == item.link %}style="color: #fff; background-color: #003;"{% endif %} 
+                                                                             {% if item.dropdown == 1 %}class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"{% endif %} 
+                                                                             {% if item.dropdown != 1 %}class="nav-link"{% endif %} >
+                  {{ item.name }}
                 </a>
-                <div class="dropdown-menu" aria-labelledby="headerNavlinkVideos">
-                  <a class="dropdown-item" href="#">Getting started</a>
-                  <a class="dropdown-item" href="#">Single Sided Reconstruction</a>
-                </div>
+                {% if item.subnav[0] %}
+                  <div class="dropdown-menu" aria-labelledby="{{ item.id }}">
+                    {% for entry in item.subnav %}
+                      <a class="dropdown-item" href="{{ entry.link }}">{{ entry.name }}</a>
+                    {% endfor %}
+                  </div>
+                {% endif %}
+
               </div>
-    
-            <div class="nav-item dropdown">
-              <a href="#" class="nav-link dropdown-toggle" id="headerNavlinkAbout" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">About</a>
-                <div class="dropdown-menu" aria-labelledby="headerNavlinkAbout">
-                  <a class="dropdown-item" href="#">About Us</a>
-                  <a class="dropdown-item" href="#">FAQ</a>
-                  <a class="dropdown-item" href="#">Customisation example</a>
-                  <a class="dropdown-item" href="#">Use Case Study</a>
-                  <a class="dropdown-item" href="#">Releases</a>
-                </div>
-            </div>
-            <div class="nav-item dropdown">
-              <a href="#" class="nav-link dropdown-toggle" id="headerNavlinkSupport" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Support</a>
-                <div class="dropdown-menu" aria-labelledby="headerNavlinkSupport">
-                    <a class="dropdown-item" href="#">Getting Support</a>
-                    <a class="dropdown-item" href="#">User Guide</a>
-                    <a class="dropdown-item" href="#">Self-teach tutorial (PDF)</a>
-                    <a class="dropdown-item" href="#">Replay File Format</a>
-                </div>
-            </div>
-            <div class="nav-item">
-              <a href="#" class="nav-link">Blog</a>
-            </div>
+            {% endfor %}
+
             <div class="nav-item nav-item--search dropdown">
                 <a href="#" class="nav-link dropdown-toggle" id="headerNavlinkSearch" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <i class="fas fa-search"></i>                 

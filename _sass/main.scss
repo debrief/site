@@ -21,20 +21,14 @@ html {
   }
 }
 
-//Section & Blocks
-.section-default {
-  padding: 50px 20px;
-  overflow: hidden;
-  position: relative;
-  box-shadow: 1px 0 1px rgba(50,50,50,0.15) inset;
-  &--gray {
-    background-color: $background-light-gray;
-  }
-  h1 {
-    text-align: center;
-    font-weight: 300;
-  }
+
+//Utilits
+.lh-14 {
+  line-height: 1.4;
 }
+
+
+
 
 
 //Items
@@ -142,4 +136,38 @@ html {
   color: #fff;
   background-color: #4b4b4b;
   border-color: #adadad;
+}
+
+
+//Section & Blocks
+.section-default {
+  padding: 70px 20px 50px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 1px 0 1px rgba(50,50,50,0.15) inset;
+  &--gray {
+    background-color: $background-light-gray;
+  }
+  h1 {
+    text-align: center;
+    font-weight: 300;
+  }
+}
+.header-page {
+  background: url(../images/GetDebriefBanner.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  padding: 50px 20px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 1px 0 1px rgba(50,50,50,0.15) inset;
+  h2 {
+    background-color: rgba(0, 0, 33, 0.4);
+    padding: 10px 15px;
+    color: $white;
+    font-weight: 300;
+    margin: 20px auto 10px;
+  }
 }

@@ -11,24 +11,27 @@
       <a class="navbar-brand" href="/">
           <img src="../assets/images/debrief.png" alt="Debrief" class="img-fluid">
         </a>
-        <button class="navbar-toggler header-navbar-toggler" type="button" data-toggle="collapse" data-target="#headerNavbar" aria-controls="headerNavbar" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler header-navbar__toggler" type="button" data-toggle="collapse" data-target="#headerNavbar" aria-controls="headerNavbar" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
     
         <div class="collapse navbar-collapse" id="headerNavbar">
-          <div class="navbar-nav header-navbar-nav ml-auto">
+          <div class="navbar-nav header-navbar__nav ml-auto">
 
             {% for item in site.data.navigation.nav %}
-              <div {% if item.dropdown == 1 %}class="nav-item dropdown"{% endif %} {% if item.dropdown != 1 %}class="nav-item"{% endif %}>
-                <a href="{{ item.link }}" id="{{ item.id }}"{% if page.url == item.link %}style="color: #fff; background-color: #003;"{% endif %} 
-                                                                             {% if item.dropdown == 1 %}class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"{% endif %} 
-                                                                             {% if item.dropdown != 1 %}class="nav-link"{% endif %} >
+              <div {% if item.dropdown == 1 %}class="nav-item dropdown"{% else %}class="nav-item"{% endif %}>
+                <a href="{{ item.link }}" id="{{ item.id }}"
+                  {% if page.url == item.link %}style="color: #fff; background-color: #003;"{% endif %} 
+                  {% if item.dropdown == 1 %}
+                    class="nav-link header-navbar__nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                    {% else %}class="nav-link header-navbar__nav-link"
+                  {% endif %} >
                   {{ item.name }}
                 </a>
                 {% if item.subnav[0] %}
-                  <div class="dropdown-menu" aria-labelledby="{{ item.id }}">
+                  <div class="dropdown-menu dropdown-menu-right" aria-labelledby="{{ item.id }}">
                     {% for entry in item.subnav %}
-                      <a class="dropdown-item" href="{{ entry.link }}">{{ entry.name }}</a>
+                      <a class="dropdown-item header-navbar__dropdown-item" href="{{ entry.link }}">{{ entry.name }}</a>
                     {% endfor %}
                   </div>
                 {% endif %}
@@ -37,15 +40,15 @@
             {% endfor %}
 
             <div class="nav-item nav-item--search dropdown">
-                <a href="#" class="nav-link dropdown-toggle" id="headerNavlinkSearch" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a href="#" class="nav-link header-navbar__nav-link dropdown-toggle" id="headerNavlinkSearch" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <i class="fas fa-search"></i>                 
                 </a>                 
-                <div class="dropdown-menu" aria-labelledby="headerNavlinkSearch">
+                <div class="dropdown-menu dropdown-menu-right dropdown-search p-3" aria-labelledby="headerNavlinkSearch">
                   <form class="form-inline" role="search" action="http://debrief.info">
                       <div class="input-group">
-                        <input type="text" class="form-control" name="search" id="nav-search"  placeholder="Search" aria-label="Username" aria-describedby="basic-addon1">
+                        <input type="text" class="form-control dropdown-search__input" name="search" id="nav-search"  placeholder="Search" aria-label="Username" aria-describedby="basic-addon1">
                         <div class="input-group-prepend">
-                            <button type="submit" class="btn btn-danger my-2 my-sm-0" type="submit">
+                            <button type="submit" class="btn btn-danger my-2 my-sm-0 dropdown-search__btn" type="submit">
                               <i class="fas fa-search"></i>
                             </button>
                         </div>

@@ -6,9 +6,7 @@ html {
 .page-content {
     padding: 0;
 }
-a:visited {
-  color: inherit;
-}
+
 .form-control {
   @include hover-focus-active {
     background-color: $white;
@@ -93,6 +91,10 @@ a:visited {
   }
 }
 .btn-with-symbol {
+  .text {
+    color: #fff;
+    font-size: 18px;
+  }
   .symbol {
     display: none;
   }

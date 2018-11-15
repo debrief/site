@@ -7,7 +7,10 @@ $secondary:                 #cc0033;
 $background-light-gray:     #f3f3f3;
 $text-gray:                 #bbbbbb;
 $input-bg-gray:             #eee;
-
+$danger:                    #d9534f;
+$link-color:                  $secondary; 
+$link-hover-color:          #999999;
+$link-hover-decoration:       none;
 //Sizing
 $nav-link-padding-y:          1rem;
 $navbar-nav-link-padding-x:   1rem;
@@ -26,8 +29,14 @@ $h5-font-size:                $font-size-base * 1.2 !default;
 $h6-font-size:                $font-size-base * 1.066666667 !default;
 $headings-line-height:        1.1 !default;
 
-//Input
+
+// Style elements
+$paragraph-margin-bottom:   0.666666667rem !default;
+
+//Form
 $input-height-lg:             3.6rem;
+$label-margin-bottom:         0.2rem;
+$form-group-margin-bottom:    0.6rem;
 
 //Buttons
 $btn-padding-y-lg:            0.45rem; 

@@ -1,0 +1,32 @@
+//header-page
+
+.header-page {
+  background: url(../images/GetDebriefBanner.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  padding: 50px 20px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 1px 0 1px rgba(50,50,50,0.15) inset;
+  &__title {
+    background-color: rgba(0, 0, 33, 0.4);
+    padding: 10px 15px;
+    color: $white;
+    font-weight: 300;
+    margin: 20px auto 10px;
+    animation: fadeInDown 0.7s linear 1;
+  }
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-80px);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}

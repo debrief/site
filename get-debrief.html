@@ -3,42 +3,148 @@ layout: default
 title: Get Debrief – Debrief Maritime Analysis Tool
 ---
 
-{% include header_page.html title="GET DEBRIEF" image="../assets/images/GetDebriefBanner.png" %}
+{% include header-page.html title="GET DEBRIEF" image="../assets/images/GetDebriefBanner.png" %}
 
 <main>
     <section class="section-default benefits-section">
         <div class="container-fluid">
             <h1>DEBRIEF ON CD</h1>
             <p class="text-center font-weight-light">Get your own copy of Debrief on CD</p>
-            <div class="divider-default clearfix "></div>
+            <div class="divider-default"></div>
             <div class="row">
-                <div class="col-md-4"></div>
+                <div class="col-md-4">
+                    <p class="font-weight-light">If you don’t mind providing some background to your use of Debrief, we’ll be happy to send you a copy of Debrief on CD.</p>
+                    <p class="font-weight-light">Debrief will run from this CD without requiring installation on your PC.</p>
+                    <img src="../assets/images/sml_mock_01-295x2201.png" alt="" class="img-thumbnail thumbnail-user-logo">
+                </div>
                 <div class="col-md-8">
                     <form class="mb-5">
                         <div class="form-row">
-                            <div class="form-group col-md-6">
-                            <label for="SMinputName" class="font-weight-light">Your Name (required)</label>
+                            <div class="form-group col-md-6 pr-2">
+                            <label for="CDinputName" class="font-weight-light">Your Name (required)</label>
                             <input type="text" class="form-control form-control--gray form-control-lg" id="SMinputName">
                             </div>
-                            <div class="form-group col-md-6">
-                            <label for="SMinputEmail" class="font-weight-light">Your Email (required)</label>
-                            <input type="email" class="form-control form-control--gray form-control-lg" id="SMinputEmail">
+                            <div class="form-group col-md-6 pl-2">
+                            <label for="CDinputEmail" class="font-weight-light">Your Email (required)</label>
+                            <input type="email" class="form-control form-control--gray form-control-lg" id="CDinputEmail">
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="SMinputSubject" class="font-weight-light">Subject</label>
-                            <input type="text" class="form-control form-control--gray form-control-lg" id="SMinputSubject">
+                            <label for="CDinputAddress" class="font-weight-light">Your mailing address  (required)</label>
+                            <input type="text" class="form-control form-control--gray form-control-lg" id="CDinputAddress">
                         </div>
                         <div class="form-group">
-                            <label for="SMinputMessage" class="font-weight-light">Your Message</label>
-                            <textarea class="form-control form-control--gray form-control-lg" id="SMinputMessage" rows="6"></textarea>
+                            <label for="CDinputMessage" class="font-weight-light">Your intended use of Debrief</label>
+                            <textarea class="form-control form-control--gray form-control-lg" id="CDinputMessage" rows="6"></textarea>
                             </div>
                         
-                        <button type="submit" class="btn btn-secondary btn-submit">SEND THE MESSAGE</button>
+                        <button type="submit" class="btn btn-secondary btn-submit">SEND</button>
                     </form>
                 </div>
             </div>
         </div>
     </section>
+
+    <section class="section-default benefits-section">
+        <div class="container-fluid">
+            <h1>EASY INSTALL</h1>
+            <div class="divider-default"></div>
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="font-weight-light">As an active Open Source project, Debrief moves forward at a pace unlike that which you’ll experience from commercial software.  So, many users track the Debrief Releases page, and download/install new versions according to new features. (or they task their IT departments with doing this, or they receive a new enterprise-friendly MSI installer on CD in the mail if they have a support contract).</p>
+                    <p class="font-weight-light">But, if you’re keen to get started, then the Easy Installer is just for you.</p>
+                    <p class="font-weight-light">If you don’t need the latest features, you can download a stable release from this link:</p>
+                    <a target="_blank" href="https://github.com/debrief/debrief/releases" class="btn btn-default btn-danger mb-2">
+                        <i class="fas fa-download"></i>
+                        Download
+                    </a>
+                    <p class="font-weight-light mt-4">Once you’ve downloaded the file, just unzip it and run <b>DebriefNG.exe</b> from the unzipped folder.</p>
+                </div>
+                <div class="col-md-6">
+                        <img src="../assets/images/Unpacked-Debrief.png" alt="" class="img-thumbnail img-fluid">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-default benefits-section">
+        <div class="container-fluid">
+            <h1>ADVANCED INSTALL</h1>
+            <div class="divider-default"></div>
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="../assets/images/Get-Java.png" alt="" class="img-thumbnail img-fluid">
+                </div>
+                <div class="col-md-6">
+                    <p class="font-weight-light">If you’re more technically adept, you can download the most recent version of Debrief from its project management site, <a title="GitHub" href="https://github.com/debrief/debrief" target="_blank" rel="noopener">GitHub</a> – and enjoy the most glamorous new features.</p>                    
+                    <p class="font-weight-light">Debrief is a multi-platform application, working on <b>MS Windows</b>, <b>Apple OSX</b> and <b>Linux</b>. It achieves this by building on top of the Java language. So, if you haven’t already got Java installed, head over to the Oracle page for Java using the button below, then download and install a new copy of Java (<b>we recommend 32 bit versions for MS Windows</b>).</p>
+                    <a target="_blank" href="https://java.com/inc/BrowserRedirect1.jsp?locale=en" class="btn btn-default btn-danger mt-5">
+                        <i class="fas fa-link"></i>
+                        Get Java
+                    </a>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    
+    <section class="section-default benefits-section">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="font-weight-light">All significant Debrief releases are collated together on the Debrief Releases Page.  Navigate to the page using the button below, and download the relevant version of Debrief for your platform.</p>
+                    <a target="_blank" href="https://github.com/debrief/debrief/releases" class="btn btn-default btn-danger mt-5">
+                        <i class="fas fa-code-branch"></i>
+                        Releases Page
+                    </a>
+                </div>
+                <div class="col-md-6">
+                        <img src="../assets/images/DebriefRelease-921x500.png" alt="" class="img-thumbnail img-fluid">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-default benefits-section">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="../assets/images/Unpacked-Debrief.png" alt="" class="img-thumbnail img-fluid">
+                </div>
+                <div class="col-md-6">
+                    <p class="font-weight-light"><b>Ok, you’ve downloaded it. Now work through these steps:</b></p>                    
+                    <ol>
+                        <li class="font-weight-light">Unpack the zip-file – this will give you a folder called <b>DebriefNG</b></li>
+                        <li class="font-weight-light">Move the folder to a location of your choice.</li>
+                        <li class="font-weight-light">In the folder you’ll find an executable called <b>DebriefNG.exe</b></li>
+                        <li class="font-weight-light">just double-click it to run the application.</li>
+                    </ol>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <section class="section-default benefits-section">
+        <div class="container-fluid">
+            <h1>ENTERPRISE INSTALL</h1>
+            <div class="divider-default"></div>
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="font-weight-light">Open Source Debrief doesn’t include an installer application, it doesn’t require one.</p>
+                    <p class="font-weight-light">But, if you’re an enterprise user and you require a MSI or EXE installer for deployment on your network, this service can be obtained from independent Debrief support companies.</p>
+                    <p class="font-weight-light">Regularly updated MSI or EXE installers are included in the Debrief support contracts from <a title="Debrief Support from Deep Blue C" href="http://DeepBlueC.com" target="_blank" rel="noopener">Deep Blue C</a></p>
+                    <a target="_blank" href="http://deepbluec.com/debrief-support/" class="btn btn-default btn-danger mt-5">
+                        <i class="far fa-life-ring"></i>
+                        Support from Deep Blue C
+                    </a>
+                </div>
+                <div class="col-md-6">
+                        <img src="../assets/images/sofware-installer-513x400.png" alt="" class="img-thumbnail img-fluid">
+                </div>
+            </div>
+        </div>
+    </section>
+
 
 </main>

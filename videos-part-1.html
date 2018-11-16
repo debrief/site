@@ -1,0 +1,59 @@
+---
+layout: default
+title: Get Debrief – Debrief Maritime Analysis Tool
+---
+
+{% include header-page.html title="Debrief Instructional Videos" image="../assets/images/GetDebriefBanner.png" %}
+
+<main>
+    <section class="section-default">
+        <div class="container-fluid">
+            <h1>Debrief Instructional Videos: Part 1</h1>
+            <p class="text-center font-weight-light">
+              This page contains video play-throughs of the 
+              <a href="http://debrief.info/support/">Debrief tutorials</a>. 
+              The following videos correspond to the 
+              <a href="http://debrief.info/library/DebriefNGTutorial.pdf">
+              Getting Started with Debrief </a>document. If you’ve already progressed to the track construction tutorial please visit the 
+              <a href="http://debrief.info/s2r-videos/">
+              Track Construction Videos </a>for the relevant videos. There are currently 5 tutorials, broken down into 22 videos, with more videos to come soon. These videos use test data to demonstrate how to use various Debrief functions and features. The data is included with all copies of Debrief so you can easily follow along.
+            </p>
+            <div class="divider-default"></div>
+        </div>
+    </section>
+
+    {% for item in site.data.videos.part1 %} 
+        <section class="section-default section-default--videos">
+            <div class="container-fluid">
+                <h1>{{ item.title }}</h1>
+                <p class="text-center font-weight-light">{{ item.title_text }}</p>
+                <div {% if item.divider == true %}class="divider-default"{% endif %}></div>
+                <div class="row">
+                    <div {% if item.img_first == false %}class="col-md-6 order-1"{% else %}class="col-md-6 order-2"{% endif %}>
+                        <h3 class="font-weight-light">{{ item.subtitle }}</h3>
+                        {% for entry in item.text %} 
+                            <p class="font-weight-light {{ entry.margin }}">{{ entry.paragraph }}</p>
+                        {% endfor %}
+                        {% if item.btn == true %}
+                            <a target="_blank" href="{{ item.link }}" class="btn btn-lg btn-default btn-secondary btn-dark-hover {{ item.btn_margin }}">
+                                <i class="{{ item.icon }}"></i>
+                                {{ item.btn_name}}
+                            </a>
+                        {% endif %}
+                        {% for entry in item.text %} 
+                            <p class="font-weight-light">{{ entry.paragraph-under }}</p>
+                        {% endfor %}
+                    </div>
+                    <div {% if item.img_first == true %}class="col-md-6 order-1"{% else %}class="col-md-6 order-2"{% endif %}>
+                        <div class="embed-responsive embed-responsive-16by9 mx-auto">
+                          <iframe class="embed-responsive-item img-get-dedrief" src="{{ item.video }}" width="560" height="315" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div {% if item.divider-bottom == true %}class="divider-default"{% endif %}></div>
+            </div>
+        </section>
+    {% endfor %}
+
+
+</main>

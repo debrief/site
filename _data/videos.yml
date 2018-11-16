@@ -1,0 +1,323 @@
+part1:
+  - title: Tutorial 1 – Getting Started
+    title_text: 'The first tutorial covers the absolute basics of Debrief. It’s an intuitive, but complicated software and we recommend you start from here. We’ll be showing you how to <a href="/get-debrief">download </a>and install Debrief, how to customize the interface to your liking, the various tools and functions are available and how to use them, and shortcuts for frequently used functions.'
+    divider: true
+    divider-bottom: false
+    img_first: true
+    btn: true
+    btn_margin: 'mt-2 mb-3'
+    link: https://youtu.be/uKNkxhV0ECY?list=PLP4kZJRsqOSWYubZvLg17_sq4QtRW7T16
+    icon: 'fab fa-youtube'
+    btn_name:  Watch in Youtube
+    video: https://www.youtube.com/embed/uKNkxhV0ECY
+    subtitle: 1.01 -Download, Install and Open
+    text:
+      - paragraph: 'As an active Open Source project, Debrief moves forward at a pace unlike that which you’ll experience from commercial software.  So, many users track the Debrief Releases page, and download/install new versions according to new features. (or they task their IT departments with doing this, or they receive a new enterprise-friendly MSI installer on CD in the mail if they have a support contract).'
+      - paragraph: 'If you don’t have a copy yet, or have an older version, you can get the latest Debrief from <a href="/get-debrief">http://debrief.info/get-debrief/</a>'
+
+  - divider: false
+    divider-bottom: false
+    img_first: false
+    btn: true
+    btn_margin: 'mt-2 mb-3'
+    link: https://youtu.be/rgS8A1VGpKU?list=PLP4kZJRsqOSWYubZvLg17_sq4QtRW7T16
+    icon: 'fab fa-youtube'
+    btn_name:  Watch in Youtube
+    video: https://www.youtube.com/embed/rgS8A1VGpKU
+    subtitle: 1.02 – Preferences
+    text:
+      - paragraph: 'This is the second video in our getting started tutorials.  This video will demonstrate Debrief defaults, and how to change Debrief preferences, so that you can set it up to your liking.'
+
+  - divider: false
+    divider-bottom: false
+    img_first: true
+    btn: true
+    btn_margin: 'mt-2 mb-3'
+    link: https://youtu.be/fhLIncEQXFw?list=PLP4kZJRsqOSWYubZvLg17_sq4QtRW7T16
+    icon: 'fab fa-youtube'
+    btn_name:  Watch in Youtube
+    video: https://www.youtube.com/embed/fhLIncEQXFw
+    subtitle: 1.03 -Working with Views
+    text:
+      - paragraph: 'This third video in our getting started tutorials will demonstrate the various views available in Debrief workbench.'
+      - paragraph: 'This video will cover using views to manipulate the workbench, navigator view, quick access dialog, view properties and controls, object states, and re-positioning views, some keyboard shortcuts.'
+
+  - divider: false
+    divider-bottom: false
+    img_first: false
+    btn: true
+    btn_margin: 'mt-2 mb-3'
+    link: https://youtu.be/rYSUvyJv0Wg?list=PLP4kZJRsqOSWYubZvLg17_sq4QtRW7T16
+    icon: 'fab fa-youtube'
+    btn_name:  Watch in Youtube
+    video: https://www.youtube.com/embed/rYSUvyJv0Wg
+    subtitle: 1.04 – Menus
+    text:
+      - paragraph: 'This is the fourth video in our getting started tutorials. This video will show you how to work with the various menus inside Debrief.'
+      - paragrsph: 'This video will cover the main menu function, view drop downs, and context sensitive menus.'
+
+  - divider: false
+    divider-bottom: false
+    img_first: true
+    btn: true
+    btn_margin: 'mt-2 mb-3'
+    link: https://youtu.be/KOFB9lM4nYA?list=PLP4kZJRsqOSWYubZvLg17_sq4QtRW7T16
+    icon: 'fab fa-youtube'
+    btn_name:  Watch in Youtube
+    video: https://www.youtube.com/embed/KOFB9lM4nYA
+    subtitle: 1.05 – Plot Editor
+    text:
+      - paragraph: 'The fifth video in our getting started tutorials will show you how to work with the plot editor.'
+      - paragraph: 'The plot editor is the central part of the Debreif interface, and we recommend beginners and experts alike take a look.'
+  
+  - divider: false
+    divider-bottom: false
+    img_first: false
+    btn: true
+    btn_margin: 'mt-2 mb-3'
+    link: https://youtu.be/sXH84PBJeB8
+    icon: 'fab fa-youtube'
+    btn_name:  Watch in Youtube
+    video: https://www.youtube.com/embed/sXH84PBJeB8
+    subtitle: 1.06 – Toolbars
+    text:
+      - paragraph: 'This is the sixth video in our getting started tutorials.'
+        margin: mb-0
+      - paragraph: 'This video will show you how to work with the various toolbars in Debrief.'
+      - paragraph: 'This video will cover the 4 basic toolbars in Debrief – the main toolbar, the view toolbars, the fast view toolbar, and the perspective toolbar.'
+
+  - divider: false
+    divider-bottom: true
+    img_first: true
+    btn: true
+    btn_margin: 'mt-2 mb-3'
+    link: https://youtu.be/ZAM_BaQu6jc?list=PLP4kZJRsqOSWYubZvLg17_sq4QtRW7T16
+    icon: 'fab fa-youtube'
+    btn_name:  Watch in Youtube
+    video: https://www.youtube.com/embed/ZAM_BaQu6jc
+    subtitle: 1.07 -Shortcut Key Combinations
+    text:
+      - paragraph: 'This is the seventh and final video in our getting started tutorials.'
+        margin: mb-0
+      - paragraph: 'This video will demonstrate some of the many keyboard shortcut in Debrief.'
+
+
+  - title: Tutorial 2 – Working with Debrief
+    title_text: 'The second tutorial delves deeper into Debrief’s functions. Here you’ll learn more about working with the functions you saw in the first tutorial. Debrief comes packaged with a set of dummy data to help you practice and get the hang of the software, and that’s the data we’ll be using for demonstration here.'
+    divider: true
+    divider-bottom: false
+    img_first: true
+    btn: true
+    btn_margin: 'mt-2 mb-3'
+    link: https://youtu.be/qE3KxhxcOo8?list=PLP4kZJRsqOSWYubZvLg17_sq4QtRW7T16
+    icon: 'fab fa-youtube'
+    btn_name:  Watch in Youtube
+    video: https://www.youtube.com/embed/qE3KxhxcOo8
+    subtitle: 2.01 -Defining Workspace
+    text:
+      - paragraph: 'This video will show you how to define your workspace, generating project data, and viewing your data.'
+        margin: mb-0
+      - paragraph: 'You’ll notice a number of functions being used, so if you’re unsure of how something was done please refer to the appropriate earlier video.'
+
+  - divider: false
+    divider-bottom: false
+    img_first: false
+    btn: true
+    btn_margin: 'mt-2 mb-3'
+    link: https://youtu.be/rgS8A1VGpKU?list=PLP4kZJRsqOSWYubZvLg17_sq4QtRW7T16
+    icon: 'fab fa-youtube'
+    btn_name:  Watch in Youtube
+    video: https://www.youtube.com/embed/5IxcCudgV2A
+    subtitle: 2.02 – Viewing Data
+    text:
+      - paragraph: 'The second video in our working with Debrief series.'
+      - paragraph: 'This video will demonstrate how to bring up and view data, the various options for viewing data. This video also covers some basics on the types of files you can use in Debrief.'
+
+  - divider: false
+    divider-bottom: false
+    img_first: true
+    btn: true
+    btn_margin: 'mt-2 mb-3'
+    link: https://youtu.be/eTDvDnjTXos?list=PLP4kZJRsqOSWYubZvLg17_sq4QtRW7T16
+    icon: 'fab fa-youtube'
+    btn_name:  Watch in Youtube
+    video: https://www.youtube.com/embed/eTDvDnjTXos
+    subtitle: 2.03 -Editing Data
+    text:
+      - paragraph: 'The third video in our Working with Debrief series.'
+        margin: mb-0
+      - paragraph: 'This video will demonstrate the basics of editing and saving data inside a project using Debrief.'
+
+  - divider: false
+    divider-bottom: true
+    img_first: false
+    btn: true
+    btn_margin: 'mt-2 mb-3'
+    link: https://youtu.be/y9plFf9-Sog?list=PLP4kZJRsqOSWYubZvLg17_sq4QtRW7T16
+    icon: 'fab fa-youtube'
+    btn_name:  Watch in Youtube
+    video: https://www.youtube.com/embed/y9plFf9-Sog
+    subtitle: 2.04 – Analsying Sensor Data
+    text:
+      - paragraph: 'The final video in our Working with Debrief series will show you how to add sensor data, and the various ways in which you can analyze them.'
+      - paragraph: 'You’ll also learn how to do a plot lock, how to declutter your workspace when you’re doing realy complicated analysis.'
+
+
+  - title: Tutorial 3 – Controlling What You View
+    title_text: 'The third tutorial deals with controlling the views and various options related to them. You’ll also learn about primary and secondary tracks, and how they affect analyses.'
+    divider: true
+    divider-bottom: false
+    img_first: true
+    btn: true
+    btn_margin: 'mt-2 mb-3'
+    link: https://youtu.be/E_p27DD5b6Q?list=PLP4kZJRsqOSWYubZvLg17_sq4QtRW7T16
+    icon: 'fab fa-youtube'
+    btn_name:  Watch in Youtube
+    video: https://www.youtube.com/embed/E_p27DD5b6Q
+    subtitle: 3.01 – Controlling What You View
+    text:
+      - paragraph: 'The first video of the Controlling What You View Tutorial Series will demonstrate the basics of controlling your workspace.'
+      - paragraph: 'You’ll learn how to filter your view, assessing primary and secondary tracks, viewing time related tracks, analyzing time related data, and working with narrative data.'
+
+  - divider: false
+    divider-bottom: false
+    img_first: false
+    btn: true
+    btn_margin: 'mt-2 mb-3'
+    link: https://youtu.be/UsrmtzCvf9A?list=PLP4kZJRsqOSWYubZvLg17_sq4QtRW7T16
+    icon: 'fab fa-youtube'
+    btn_name:  Watch in Youtube
+    video: https://www.youtube.com/embed/UsrmtzCvf9A
+    subtitle: 3.02 – Assess Primary and Secondary Tracks
+    text:
+      - paragraph: 'The second video will show you what are primary and secondary tracks, how you can work with them, and why they matter.'
+      - paragraph: 'You’ll also learn how to do a plot lock, how to declutter your workspace when you’re doing realy complicated analysis.'
+
+  - divider: false
+    divider-bottom: false
+    img_first: true
+    btn: true
+    btn_margin: 'mt-2 mb-3'
+    link: https://youtu.be/q58INbUWxk8?list=PLP4kZJRsqOSWYubZvLg17_sq4QtRW7T16
+    icon: 'fab fa-youtube'
+    btn_name:  Watch in Youtube
+    video: https://www.youtube.com/embed/q58INbUWxk8
+    subtitle: 3.03 -Viewing Time-related Vessel Tracks
+    text:
+      - paragraph: 'The third video will show you how to work with time related tracks.'
+      - paragraph: 'You’ll learn the relevant drop down menus, the time controls and various related shortcuts and features..'
+
+  - divider: false
+    divider-bottom: false
+    img_first: false
+    btn: true
+    btn_margin: 'mt-2 mb-3'
+    link: https://youtu.be/QTIhkE7PAQc?list=PLP4kZJRsqOSWYubZvLg17_sq4QtRW7T16
+    icon: 'fab fa-youtube'
+    btn_name:  Watch in Youtube
+    video: https://www.youtube.com/embed/QTIhkE7PAQc
+    subtitle: 3.04 – Time Related Calculated Data
+    text:
+      - paragraph: 'In this video we’ll look at calculating and analyzing time related data.'
+      - paragraph: 'We’ll delve into working with XY plots, rangefinders, and sensor data.'
+
+  - divider: false
+    divider-bottom: true
+    img_first: true
+    btn: true
+    btn_margin: 'mt-2 mb-3'
+    link: https://youtu.be/mmGj3G84w64?list=PLP4kZJRsqOSWYubZvLg17_sq4QtRW7T16
+    icon: 'fab fa-youtube'
+    btn_name:  Watch in Youtube
+    video: https://www.youtube.com/embed/mmGj3G84w64
+    subtitle: 3.05 – Narrative Viewer
+    text:
+      - paragraph: 'The final video in our third tutorial series, Controlling what you view.'
+      - paragraph: 'We’ve talked about the narrative view before, now we’ll show you all the juicy details. We’ll go over all the basic functions, including how to open the Narrative View, filtering the items in the Narrative View to make it easier to work with more complex analyses, and linking narratives to specific times.'
+
+part2:
+  - title: Tutorial 4 – Single Sided Reconstruction
+    title_text: 'We’ll now start going into more advanced Debrief features.This fourth tutorial series will look at Single Sided Reconstruction or SSR. We recommend you go over the previous tutorials, especially tutorial 3,  before starting this, if you haven’t already.'
+    divider: true
+    divider-bottom: false
+    img_first: true
+    btn: true
+    btn_margin: 'mt-2 mb-3'
+    link: https://youtu.be/7RkRNfVkWQg?list=PLP4kZJRsqOSWYubZvLg17_sq4QtRW7T16
+    icon: 'fab fa-youtube'
+    btn_name:  Watch in Youtube
+    video: https://www.youtube.com/embed/7RkRNfVkWQg
+    subtitle: 4.01 -Grooming Data
+    text:
+      - paragraph: 'The first video will show you how to groom the data so analysis is possible.'
+      - paragraph: 'We’ll start by showing you how to configure Debrief for SSR, and then we’ll move to generating, editing and filtering track data.'
+
+  - divider: false
+    divider-bottom: false
+    img_first: false
+    btn: true
+    btn_margin: 'mt-2 mb-3'
+    link: https://youtu.be/GfXf4bi0k7A?list=PLP4kZJRsqOSWYubZvLg17_sq4QtRW7T16
+    icon: 'fab fa-youtube'
+    btn_name:  Watch in Youtube
+    video: https://www.youtube.com/embed/GfXf4bi0k7A
+    subtitle: 4.02 – Preferences
+    text:
+      - paragraph: 'This video will demonstrate how to groom sensor data – ready for production and target motion analysis (TMA) tracks.'
+      - paragraph: 'We’ll show you how to filter out ambiguous data, how to edit raw sensor data, and how to smoothen resulting tracks.'
+
+  - divider: false
+    divider-bottom: false
+    img_first: true
+    btn: true
+    btn_margin: 'mt-2 mb-3'
+    link: https://youtu.be/vqnb2VPNYrA?list=PLP4kZJRsqOSWYubZvLg17_sq4QtRW7T16
+    icon: 'fab fa-youtube'
+    btn_name:  Watch in Youtube
+    video: https://www.youtube.com/embed/vqnb2VPNYrA
+    subtitle: 4.03 – Generate Target Tracks
+    text:
+      - paragraph: 'This video will show you how to generate a target track from sensor data.'
+
+  - divider: false
+    divider-bottom: true
+    img_first: false
+    btn: true
+    btn_margin: 'mt-2 mb-3'
+    link: https://youtu.be/qKJJQMJwFtE?list=PLP4kZJRsqOSWYubZvLg17_sq4QtRW7T16
+    icon: 'fab fa-youtube'
+    btn_name:  Watch in Youtube
+    video: https://www.youtube.com/embed/qKJJQMJwFtE
+    subtitle: 4.04 – Merging Tracks
+    text:
+      - paragraph: 'The final video of this tutorial will show how to merge target tracks created from sensor data.'
+      - paragraph: 'This includes generating infill segments and merging tracks.'
+
+  - title: Tutorial 5 – Semi Automatic Track Construction
+    title_text: 'Our fifth tutorial deals with Semi Automatic Track Construction, or SATC for short. This is an advanced tutorial and makes use of many of the more complex functions built into Debrief. If you are unable to follow the tutorial please consider running through the previous tutorials.'
+    divider: true
+    divider-bottom: false
+    img_first: true
+    btn: true
+    btn_margin: 'mt-2 mb-3'
+    link: https://youtu.be/igmjSD6R-6E?list=PLP4kZJRsqOSWYubZvLg17_sq4QtRW7T16
+    icon: 'fab fa-youtube'
+    btn_name:  Watch in Youtube
+    video: https://www.youtube.com/embed/igmjSD6R-6E
+    subtitle: 5.01 -Singleleg SATC
+    text:
+      - paragraph: 'This video will introduce you to SATC, and demonstrate how to generate a TMA solution for a singleleg track.'
+
+  - divider: false
+    divider-bottom: true
+    img_first: false
+    btn: true
+    btn_margin: 'mt-2 mb-3'
+    link: https://youtu.be/V1gnsvUAAY4?list=PLP4kZJRsqOSWYubZvLg17_sq4QtRW7T16
+    icon: 'fab fa-youtube'
+    btn_name:  Watch in Youtube
+    video: https://www.youtube.com/embed/V1gnsvUAAY4
+    subtitle: 5.02 – Multileg SATC
+    text:
+      - paragraph: 'The second SATC video will demonstrate generating a TMA solution for a multileg track.'
+

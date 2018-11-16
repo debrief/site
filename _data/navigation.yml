@@ -12,9 +12,9 @@ nav:
     dropdown: 1
     subnav:
       - name: Getting started
-        link: /getting-started
+        link: /videos-part-1
       - name: Single Sided Reconstruction
-        link: /single-sided-reconstruction
+        link: /videos-part-2
   - name: About
     link: /#
     id: NavlinkAbout

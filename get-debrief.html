@@ -51,21 +51,21 @@ title: Get Debrief – Debrief Maritime Analysis Tool
                 <h1>{{ item.title }}</h1>
                 <div {% if item.divider == true %}class="divider-default"{% endif %}></div>
                 <div class="row">
-                    <div {% if item.img-first == false %}class="col-md-6 order-1"{% else %}class="col-md-6 order-2"{% endif %}>
+                    <div {% if item.img_first == false %}class="col-md-6 order-1"{% else %}class="col-md-6 order-2"{% endif %}>
                         {% for entry in item.text %} 
                             <p class="font-weight-light">{{ entry.paragraph }}</p>
                         {% endfor %}
                         {% if item.btn == true %}
-                            <a target="_blank" href="{{ item.link }}" class="btn btn-default btn-danger {{ item.btn-margin }}">
+                            <a target="_blank" href="{{ item.link }}" class="btn btn-default btn-danger {{ item.btn_margin }}">
                                 <i class="{{ item.icon }}"></i>
-                                {{ item.btn-name}}
+                                {{ item.btn_name}}
                             </a>
                         {% endif %}
                         {% for entry in item.text %} 
                             <p class="font-weight-light">{{ entry.paragraph-under }}</p>
                         {% endfor %}
                     </div>
-                    <div {% if item.img-first == true %}class="col-md-6 order-1"{% else %}class="col-md-6 order-2"{% endif %}>
+                    <div {% if item.img_first == true %}class="col-md-6 order-1"{% else %}class="col-md-6 order-2"{% endif %}>
                         <img src="{{ item.image }}" alt="" class="img-thumbnail img-fluid img-get-dedrief">
                     </div>
                 </div>

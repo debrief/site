@@ -1,12 +1,12 @@
 section:
   - title: EASY INSTALL
     divider: true
-    img-first: false
+    img_first: false
     btn: true
-    btn-margin: 'mt-2 mb-3'
+    btn_margin: 'mt-2 mb-3'
     link: https://github.com/debrief/debrief/releases
     icon: 'fas fa-download'
-    btn-name: 'Download'
+    btn_name: 'Download'
     image: ../assets/images/Unpacked-Debrief.png
     text:
       - paragraph: 'As an active Open Source project, Debrief moves forward at a pace unlike that which you’ll experience from commercial software.  So, many users track the Debrief Releases page, and download/install new versions according to new features. (or they task their IT departments with doing this, or they receive a new enterprise-friendly MSI installer on CD in the mail if they have a support contract).'
@@ -16,32 +16,32 @@ section:
 
   - title: ADVANCED INSTALL
     divider: true
-    img-first: true
+    img_first: true
     btn: true
-    btn-margin: mt-5
+    btn_margin: mt-5
     link: https://java.com/inc/BrowserRedirect1.jsp?locale=en
     icon: 'fas fa-link'
-    btn-name: 'Get Java'
+    btn_name: 'Get Java'
     image: ../assets/images/Get-Java.png
     text:
       - paragraph: 'If you’re more technically adept, you can download the most recent version of Debrief from its project management site, <a title="GitHub" href="https://github.com/debrief/debrief" target="_blank" rel="noopener">GitHub</a> – and enjoy the most glamorous new features.'
       - paragraph: 'Debrief is a multi-platform application, working on <b>MS Windows</b>, <b>Apple OSX</b> and <b>Linux</b>. It achieves this by building on top of the Java language. So, if you haven’t already got Java installed, head over to the Oracle page for Java using the button below, then download and install a new copy of Java (<b>we recommend 32 bit versions for MS Windows</b>).'
 
   - divider: false
-    img-first: false
+    img_first: false
     btn: true
-    btn-margin: mt-5
+    btn_margin: mt-5
     link: https://github.com/debrief/debrief/releases
     icon: 'fas fa-code-branch'
-    btn-name: 'Releases Page'
+    btn_name: 'Releases Page'
     image: ../assets/images/DebriefRelease-921x500.png
     text:
       - paragraph: 'All significant Debrief releases are collated together on the Debrief Releases Page.  Navigate to the page using the button below, and download the relevant version of Debrief for your platform.'
 
   - divider: false
-    img-first: true
+    img_first: true
     btn: false
-    btn-margin: mt-5
+    btn_margin: mt-5
     image: ../assets/images/Unpacked-Debrief.png
     text:
       - paragraph: '<b>Ok, you’ve downloaded it. Now work through these steps:</b>'
@@ -49,12 +49,12 @@ section:
 
   - title: ENTERPRISE INSTALL
     divider: true
-    img-first: false
+    img_first: false
     btn: true
     btn-margin: mt-5
     link: http://deepbluec.com/debrief-support/
     icon: 'far fa-life-ring'
-    btn-name: 'Support from Deep Blue C'
+    btn_name: 'Support from Deep Blue C'
     image: ../assets/images/sofware-installer-513x400.png
     text:
       - paragraph: 'Open Source Debrief doesn’t include an installer application, it doesn’t require one.'

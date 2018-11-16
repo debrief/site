@@ -1,7 +1,6 @@
 //header-page
 
 .header-page {
-  background: url(../images/GetDebriefBanner.png);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -19,6 +18,7 @@
     animation: fadeInDown 0.7s linear 1;
   }
 }
+
 
 @keyframes fadeInDown {
   0% {

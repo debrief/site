@@ -43,7 +43,7 @@ all:
     analysis: true
     presentation: false
   - title: TIME CONTROLLER
-    text: The Time Controller is the home of all time-related activity.  You’ll use the main slider to control the point in time at which data is displayed. But this composite control goes a lot further to help you select and refine your snapshot. Use it to show or hide data, to show whole tracks or just recent points, to orient the plot, and to highlight the current location by marker, platform symbol or sensor coverage rings.'
+    text: 'The Time Controller is the home of all time-related activity.  You’ll use the main slider to control the point in time at which data is displayed. But this composite control goes a lot further to help you select and refine your snapshot. Use it to show or hide data, to show whole tracks or just recent points, to orient the plot, and to highlight the current location by marker, platform symbol or sensor coverage rings.'
     image: ../assets/images/TimeController-300x220.png
     link: http://www.debrief.info/tutorial/controlling_time.html#time_controller
     reconstruction: false

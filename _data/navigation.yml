@@ -36,7 +36,7 @@ nav:
     dropdown: 1
     subnav:
       - name: Getting Support
-        link: /getting-support
+        link: /support
       - name: User Guide
         link: /user-guide
       - name: Self-teach tutorial (PDF)

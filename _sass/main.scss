@@ -162,6 +162,9 @@ html {
   overflow: hidden;
   position: relative;
   box-shadow: 1px 0 1px rgba(50,50,50,0.15) inset;
+  &--wet-asphalt {
+    background-color: #34495e;
+  }
   &--gray {
     background-color: $background-light-gray;
   }

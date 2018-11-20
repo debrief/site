@@ -21,7 +21,7 @@ title: Home
           <div class="col-sm-4">
             <div class="benefits-item">
               <div class="benefits-item__icon">
-                <img src="../assets/images/benefits-open-source.png" alt="" class="img-fluid">
+                <img src="../assets/images/benefits-open-source.png" srcset="../assets/images/benefits-open-source@2x.png 2x" alt="open source" class="img-fluid">
               </div>
               <div class="benefits-item__body">
                 <h3>Open Source</h3>
@@ -32,7 +32,7 @@ title: Home
           <div class="col-sm-4">
             <div class="benefits-item">
               <div class="benefits-item__icon">
-                <img src="../assets/images/benefits-multi-platform.png" alt="" class="img-fluid">
+                <img src="../assets/images/benefits-multi-platform.png" srcset="../assets/images/benefits-multi-platform@2x.png 2x" alt="multi-platform" class="img-fluid">
               </div>
               <div class="benefits-item__body">
                 <h3>Multi Platform</h3>
@@ -43,7 +43,7 @@ title: Home
           <div class="col-sm-4">
             <div class="benefits-item">
               <div class="benefits-item__icon">
-                <img src="../assets/images/benefits-mature.png" alt="" class="img-fluid">
+                <img src="../assets/images/benefits-mature.png" srcset="../assets/images/benefits-mature@2x.png 2x" alt="mature" class="img-fluid">
               </div>
               <div class="benefits-item__body">
                 <h3>Mature</h3>
@@ -54,7 +54,7 @@ title: Home
           <div class="col-sm-4">
             <div class="benefits-item">
               <div class="benefits-item__icon">
-                <img src="../assets/images/benefits-capable.png" alt="" class="img-fluid">
+                <img src="../assets/images/benefits-capable.png" srcset="../assets/images/benefits-capable@2x.png 2x" alt="capable" class="img-fluid">
               </div>
               <div class="benefits-item__body">
                 <h3>Capable</h3>
@@ -65,7 +65,7 @@ title: Home
           <div class="col-sm-4">
             <div class="benefits-item">
               <div class="benefits-item__icon">
-                <img src="../assets/images/benefits-reliable.png" alt="" class="img-fluid">
+                <img src="../assets/images/benefits-reliable.png" srcset="../assets/images/benefits-reliable@2x.png 2x" alt="reliable" class="img-fluid">
               </div>
               <div class="benefits-item__body">
                 <h3>Reliable</h3>
@@ -76,7 +76,7 @@ title: Home
           <div class="col-sm-4">
             <div class="benefits-item">
               <div class="benefits-item__icon">
-                <img src="../assets/images/benefits-supported.png" alt="" class="img-fluid">
+                <img src="../assets/images/benefits-supported.png" srcset="../assets/images/benefits-supported@2x.png 2x" alt="Supported" class="img-fluid">
               </div>
               <div class="benefits-item__body">
                 <h3>Supported</h3>
@@ -222,36 +222,9 @@ title: Home
       </div>
     </div>
   </section>
-  <section class="section-default">
-      <div class="container-fluid">
-        <h1>GET IN TOUCH WITH US</h1>
-        <p class="text-center font-weight-light">If you’d like to learn more about Debrief, or would like to discuss support options please leave us a message, and we’ll get back to you as soon as we can.</p>
-        <div class="divider-default"></div>
-        <form class="mb-5">
-            <div class="form-row">
-              <div class="form-group col-md-6 form-col-l--3">
-                <label for="SMinputName" class="font-weight-light">Your Name (required)</label>
-                <input type="text" class="form-control form-control--gray form-control-lg" id="SMinputName">
-              </div>
-              <div class="form-group col-md-6 form-col-r--3">
-                <label for="SMinputEmail" class="font-weight-light">Your Email (required)</label>
-                <input type="email" class="form-control form-control--gray form-control-lg" id="SMinputEmail">
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="SMinputSubject" class="font-weight-light">Subject</label>
-              <input type="text" class="form-control form-control--gray form-control-lg" id="SMinputSubject">
-            </div>
-            <div class="form-group">
-                <label for="SMinputMessage" class="font-weight-light">Your Message</label>
-                <textarea class="form-control form-control--gray form-control-lg" id="SMinputMessage" rows="6"></textarea>
-              </div>
-            
-            <button type="submit" class="btn btn-secondary btn-submit">SEND THE MESSAGE</button>
-          </form>
-        
-      </div>
-    </section>
+
+  {% include contact-section.html %}
+
 </main>
 
 

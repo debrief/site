@@ -23,6 +23,7 @@
   color: $text-gray;
   font-weight: 300;
   a {
+    color: $text-gray;
     @include hover-focus-active {
       text-decoration: none;
       color: #f7f7f7;

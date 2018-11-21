@@ -1,0 +1,37 @@
+---
+layout: default
+title: FAQ – Debrief Maritime Analysis Tool
+---
+
+{% include header-page.html title="FREQUENTLY ASKED QUESTIONS" image="../assets/images/header_bg_faq.jpg" %}
+
+<main>
+    {% for theme in site.data.faq.theme_list %}
+        <section class="section-default">
+            <div class="container-fluid"> 
+                <h1>{{ theme.name }}</h1>
+
+                <div class="accordion accordion--faq" id="{{ theme.id }}">
+                    {% for item in theme.question_list %}
+                        <div class="card accordion-card">
+                            <div class="card-header accordion-card__header" id="{{ item.id }}">
+                                <h5 class="mb-0">
+                                    <a class="btn btn-link collapsed btn-faq" href="#{{ item.id_link }}" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="{{ item.id_link }}">
+                                        {{ item.question }}         
+                                    </a>
+                                </h5>
+                            </div>
+                        
+                            <div id="{{ item.id_link }}" class="collapse" aria-labelledby="{{ item.id }}" data-parent="#{{ theme.id }}">
+                                <div class="card-body font-weight-light">
+                                    {{ item.answer }}
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+    {% endfor %}
+
+</main>

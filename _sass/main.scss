@@ -129,6 +129,18 @@ html {
   line-height: 16px;
   padding: 1.3rem 2.6rem;
 }
+.btn-faq {
+  color: $body-color;
+  font-weight: 300;
+  font-size: 16px;
+  padding: 0;
+  width: 100%;
+  text-align: left;
+  @include hover-focus-active {
+    color: $body-color;
+  }
+}
+
 
 //Pill
 .pill-link-secondary {
@@ -284,3 +296,22 @@ html {
   }
 
 }
+
+
+//FAQ 
+.accordion {
+  .accordion-card {
+    border: 1px solid #ddd !important;
+    border-radius: 3px !important;
+    &__header {
+      background-color: #f5f5f5;
+      border-color: #ddd;
+      padding: 6px 15px;
+    }
+  }
+  &--faq {
+    margin-top: 35px;
+    margin-bottom: 40px;
+  }
+}
+

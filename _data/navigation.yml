@@ -9,7 +9,7 @@ nav:
   - name: Videos
     link: /#
     id: NavlinkVideos
-    dropdown: 1
+    dropdown: true
     subnav:
       - name: Getting started
         link: /videos-part-1
@@ -18,7 +18,7 @@ nav:
   - name: About
     link: /#
     id: NavlinkAbout
-    dropdown: 1
+    dropdown: true
     subnav:
       - name: About Us
         link: /about-us
@@ -33,7 +33,7 @@ nav:
   - name: Support
     link: /#
     id: NavlinkSupport
-    dropdown: 1
+    dropdown: true
     subnav:
       - name: Getting Support
         link: /support

@@ -2,9 +2,16 @@
 html {
   font-size: 15px;
 }
+body {
+  font-weight: 300;
+}
 
 .page-content {
     padding: 0;
+    &--blog {
+      background-color: #f3f3f3;
+      padding: 5% 0;
+    }
 }
 
 .form-control {

@@ -1,0 +1,60 @@
+---
+layout: default
+title: Get Debrief – Debrief Maritime Analysis Tool
+---
+
+{% include header-blog.html title="The Debrief Blog"  subtitle="Keep up to speed on what's happening in Debrief." classes="text-center" %}
+
+<main class="page-content page-content--blog" aria-label="Content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-9">
+        <div class="blog-content-block">
+            {% for post in site.posts %}
+              <img src="{{ post.image }}" alt="" class="img-fluid">
+              <h3>
+                <a class="post-link" href="{{ post.url }}">
+                  {{ post.title }}
+                </a>
+              </h3>
+              <span class="post-meta">{{ post.date | date: "%B %e,%Y" }},</span>
+              <span class="post-autor">{{ post.author.display_name }}</span>
+              <div class="post-text"></div>
+              <a target="_self" href="{{ post.url }}" class="btn btn-default btn-dark-hover btn-secondary font-weight-light btn-sm m-1">
+                Read More
+              </a>
+              <a href="#">{{ post.categories }}</a>
+              <div>{{ post.meta.post_views_count }}</div>
+            {% endfor %}
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="blog-content-block blog-sidebar">
+          {% include form-search.html %}
+          <div class="blog-widget">
+            <h3 class="blog-widget__title">Recent Posts</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+  <div class="wrapper">
+    <div class="home">
+    <h2 class="post-list-heading">Posts</h2>
+    <ul class="post-list"><li><span class="post-meta">Nov 5, 2018</span>
+        <h3>
+          <a class="post-link" href="/jekyll/update/2018/11/05/welcome-to-jekyll.html">
+            Welcome to Jekyll!
+          </a>
+        </h3></li></ul>
+    <p class="rss-subscribe">subscribe <a href="/feed.xml">via RSS</a></p></div>
+  </div>
+
+  
+</main>

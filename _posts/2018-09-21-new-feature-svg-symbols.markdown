@@ -8,8 +8,8 @@ published: true
 password: ''
 status: publish
 categories:
-- Releases
-- Technical Demonstration
+  - name: Releases
+  - name: Technical Demonstration
 tags: []
 meta:
   _edit_last: '3'
@@ -27,6 +27,7 @@ author:
 <p>The first set of symbols is shown below.</p>
 <p>Please feel free to request any other commonly required symbols, together with a pointer to an example of what it should look like, and we'll get our designer onto it.</p>
 <p>&nbsp;</p>
-<p><img class="spotlight" src="{{ site.baseurl }}/assets/42204410_306624460120475_5431134055875739648_n.png?_nc_cat=111&amp;oh=23555173655d72e5b19eb93be515825f&amp;oe=5C5629A1" alt="No automatic alt text available." aria-busy="true" /></p>
+
+<p><img class="spotlight" src="{{ site.baseurl }}../assets/image/42204410_306624460120475_5431134055875739648_n.png?_nc_cat=111&amp;oh=23555173655d72e5b19eb93be515825f&amp;oe=5C5629A1" alt="No automatic alt text available." aria-busy="true" /></p>
 <p>&nbsp;</p>
-<p><img class="spotlight" src="{{ site.baseurl }}/assets/42330616_306624480120473_6324126970112114688_n.png?_nc_cat=109&amp;oh=545c405efd8382674f4e790d5e1969d3&amp;oe=5C1EAC3B" alt="No automatic alt text available." aria-busy="false" /></p>
+<p><img class="spotlight" src="{{ site.baseurl }}../assets/image/42330616_306624480120473_6324126970112114688_n.png?_nc_cat=109&amp;oh=545c405efd8382674f4e790d5e1969d3&amp;oe=5C1EAC3B" alt="No automatic alt text available." aria-busy="false" /></p>

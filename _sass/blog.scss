@@ -29,4 +29,10 @@
       width: 40px
     }
   }
+  &__link {
+    color: $primary;
+    @include hover-focus-active {
+      color: $secondary;
+    }
+  }
 }

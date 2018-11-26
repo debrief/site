@@ -1,0 +1,31 @@
+blog:
+  - title: Recent Posts
+    list:
+      - item: 'New Feature Release: Paste Rep from Clipboard'
+      - item: 'New Feature: SVG Symbols'
+  - title: Recent Comments
+    list: 
+      - item: 'New Comment 1'
+      - item: 'New FComment 2'
+  - title: Archives
+    list: 
+      - item: 'New Comment 1'
+      - item: 'New FComment 2'
+  - title: Categories
+    list: 
+      - item: 'Customisation example'
+        link: '#'
+      - item: 'Debrief Help'
+        link: '#'
+      - item: 'GitHub'
+        link: '#'
+      - item: 'New Feature in Development'
+        link: '#'
+      - item: 'Releases'
+        link: '#'
+      - item: 'Technical Demonstration'
+        link: '#'
+      - item: 'Uncategorized'
+        link: '#'
+      - item: 'Use Case Study'
+        link: '#'

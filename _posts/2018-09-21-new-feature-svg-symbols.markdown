@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: 'New Feature: SVG Symbols'
 date: 2018-09-21 13:10:08.000000000 +01:00
 type: post

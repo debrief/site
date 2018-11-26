@@ -1,5 +1,4 @@
-//header-page
-
+// Header pages
 .header-page {
   background-position: center center;
   background-repeat: no-repeat;
@@ -31,8 +30,7 @@
 }
 
 
-//header-blog
-
+// Header blog
 .header-blog {
   background-size: cover;
   background-repeat: no-repeat;
@@ -77,8 +75,9 @@
   }
 }
 
-// Form search 
 
+
+// Form search 
 .form-search {
   &__input {
     height: 34px;
@@ -96,60 +95,38 @@
 }
 
 
-//Post Preview 
-.post-preview {
-  padding: 20px 25px 5px;
+// Sidebar 
+.blog-sidebar {
+  padding: 20px;
   background-color: $white;
-  margin-bottom: 45px;
-  border-radius: 3px;
-  box-shadow: 0 1px 0 #ccc;
-  position: relative;
+  .form-search {
+    .input-group {
+      width: 100%;
+    }
+  }
+}
+.blog-widget {
+  margin-bottom: 20px;
   &__title {
     color: $text-dark;
-    font-weight: 300;
+    position: relative;
+    border-bottom: 1px solid rgba(119,119,119,.1);
+    padding: 10px 0;
     margin-top: 20px;
     margin-bottom: 10px;
-    display: block;
+    font-weight: 300;
+    &::before {
+      border-bottom: 1px solid #000033;
+      bottom: -1px;
+      content: "";
+      position: absolute;
+      width: 40px
+    }
+  }
+  &__link {
+    color: $primary;
     @include hover-focus-active {
       color: $secondary;
     }
-  }
-  &__meta,
-  &__footer {
-    color: $supporting-text;
-    padding: 10px 0;
-    border-top: 1px solid $input-bg-gray;
-    font-size: 11px;
-    font-weight: 400;
-    position: relative;
-    text-transform: uppercase;
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    &::after {
-      border-bottom: 1px solid #ccc;
-      content: "";
-      height: 0;
-      left: 0;
-      position: absolute;
-      top: -1px;
-      width: 25px;
-    }
-  }
-  &__meta {
-    border-bottom: 1px solid $input-bg-gray;
-    &::before {
-      border-bottom: 1px solid #ccc;
-      bottom: -1px;
-      content: "";
-      height: 0;
-      left: 0;
-      position: absolute;
-      width: 25px;
-    }
-  }
-  &__body {
-    padding-top: 25px;
-    padding-bottom: 25px;
   }
 }

@@ -1,0 +1,253 @@
+---
+layout: default
+title: Get Debrief – Debrief Maritime Analysis Tool
+---
+<header class="header-blog" style="background-image: url({{ absolute_url }} /assets/images/header_bg_blog.jpg);">
+  <div class="container">
+    <div class="header-blog__container">
+      <h1 class="header-blog__title font-weight-light mb-2">{{ page.title }}</h1>
+    </div>
+    <div class="header-blog__breadcrumbs">
+      <a href="/">Home</a>
+      <span>\</span>
+      <a href="/blog">Blog</a>
+    </div>
+  </div>
+</header>
+
+<div class="page-content page-content--blog" aria-label="Content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-9">
+
+        <div class="post-block">
+            <div class="post-block__header">
+                <a href="{{ page.url }}">
+                  <img src="{{ absolute_url }}  {{ page.image }}" class="img-fluid post-block__img">
+                </a>
+                <h1>
+                  <a class="post-block__title" href="{{ page.url }}">
+                    {{ page.title }}
+                  </a>
+                </h1>
+                <div class="post-block__meta">
+                    <div class="post-block__date mr-2">
+                        <i class="far fa-calendar-alt"></i>
+                        <span>Posted</span>
+                        <span><a href="#"  class="post-block__date-link">{{ page.date | date: "%B %e, %Y" }}</a>,</span>
+                    </div>
+                    <div class="post-block__autor">
+                        <span>by</span>
+                        <i class="fas fa-user"></i>
+                        <a href="#" class="post-block__autor-link">{{ page.author.display_name }}</a>  
+                    </div>
+                </div>
+            </div>
+
+            <div class="post-content">
+              {{ content }}
+            </div>
+
+            <div class="post-block__related-list">
+              <h5 class="font-weight-light mb-3">Related Posts</h5>
+              <ul class="list-unstyled">
+                <li class="d-flex align-items-center mb-1">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="5" height="14" viewBox="0 0 189 317" fill="#333" class="mr-1">
+                    <g transform="translate(-5 -5)">
+                      <rect width="48" height="222" x="72.4594" y="120.4594" rx="12" transform="rotate(45 96.4594 231.4594)"/>
+                      <rect width="48" height="231" x="75.3988" y="-16.4652" rx="12" transform="rotate(-45 99.3988 99.0348)"/>
+                    </g>
+                  </svg>
+                  <a href="#" class="post-block__related-link ml-1">Using Debrief on GitHub</a>
+                </li>
+                <li class="d-flex align-items-center mb-1">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="5" height="14" viewBox="0 0 189 317" fill="#333" class="mr-1">
+                    <g transform="translate(-5 -5)">
+                      <rect width="48" height="222" x="72.4594" y="120.4594" rx="12" transform="rotate(45 96.4594 231.4594)"/>
+                      <rect width="48" height="231" x="75.3988" y="-16.4652" rx="12" transform="rotate(-45 99.3988 99.0348)"/>
+                    </g>
+                  </svg>
+                  <a href="#" class="post-block__related-link ml-1">Using Debrief on GitHub</a>
+                </li>
+                <li class="d-flex align-items-center mb-1">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="5" height="14" viewBox="0 0 189 317" fill="#333" class="mr-1">
+                    <g transform="translate(-5 -5)">
+                      <rect width="48" height="222" x="72.4594" y="120.4594" rx="12" transform="rotate(45 96.4594 231.4594)"/>
+                      <rect width="48" height="231" x="75.3988" y="-16.4652" rx="12" transform="rotate(-45 99.3988 99.0348)"/>
+                    </g>
+                  </svg>
+                  <a href="#" class="post-block__related-link ml-1">Using Debrief on GitHub</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="social-share">
+              <span class="social-share__question">You feel socially?</span>
+              <div class="googlePlus sharrre" id="googleplus-3320" data-url="http://debrief.info/exploring-the-tactical-overview/" data-text="Exploring the Tactical Overview" data-title="+1">
+                <div class="box"><a class="count" href="#">0</a>
+                  <a class="share" href="#">+1</a>
+                </div>
+              </div>
+            </div>
+            <div class="post-block__footer text-uppercase">
+                <div class="post-block__categories mr-2">
+                  <i class="fas fa-folder-open"></i>
+                  <span>Categories</span>
+                  {% for entry in page.categories %}
+                    {% if entry.name %}
+                    <a href="#">{{ entry.name }}</a>
+                    {% endif %}
+                  {% endfor %}
+                </div>
+                {% if page.tags %}
+                  <div class="post-block__tags mr-2">
+                    <i class="fas fa-tags"></i>
+                    <span>tagged in</span>
+                    {% for entry in page.tags %}
+                      <a href="#">{{ entry.name }}</a>
+                    {% endfor %}
+                  </div>
+                {% endif %}
+
+                <div class="post-block__views-count">
+                  <i class="far fa-eye"></i>
+                  <span>{{ page.meta.post_views_count }}</span>
+                  <span>Views</span>
+                </div>
+              </div>
+
+        </div>
+
+        <div class="article-vote">
+          <span class="article-vote__question">Was this helpful? Your opinion is very important to us</span>
+          <div class="article-vote__controls">
+            <a href="#" role="button" class="tip article-vote__control-link positive" data-id="3483" data-type="positive" title="" data-original-title="No votes yet">
+              <i class="fa fa-thumbs-up"></i> 0
+            </a>
+            <a href="#" role="button" class="tip article-vote__control-link negative" data-id="3483" data-type="negative" title="" data-original-title="No votes yet">
+              <i class="fa fa-thumbs-down"></i> 0
+            </a>
+          </div>
+        </div>
+
+        <div class="author-block">
+          <div class="row pt-3">
+            <div class="col-sm-2 text-center">
+                <img alt="Ian Mayo" src="http://2.gravatar.com/avatar/e25687fb3ee2a85ea95dff42c1ea833a?s=90&amp;d=mm&amp;r=g" srcset="http://2.gravatar.com/avatar/e25687fb3ee2a85ea95dff42c1ea833a?s=180&amp;d=mm&amp;r=g 2x" class="avatar img-fluid" height="90" width="90">
+            </div>
+            <div class="col-sm-10 mt-2">
+              <h3 class="author-block__name">
+                <a href="http://debrief.info/author/ianmayo/" title="Posts by IanMayo" rel="author">{{ page.author.login }}</a>
+              </h3>
+              <!--{% if page.author.login == site.data.blog-list.author.name %}{{ site.data.blog-list.author.name }}{% endif %}-->
+              
+              <p class="author-block__description">Ian Mayo (from Deep Blue C Technologies) has been developing and maintaining Debrief since 1995, and helping users perform effective analysis and deliver persuasive results.</p>
+              <div class="author-block__socials">
+                <span class="text-uppercase mr-2">Follow me</span>
+                <a class="author-block__social-link google_plus" target="_blank" title="google+" href="https://plus.google.com/u/0/+IanMayo">
+                  <i class="fab fa-google-plus-g"></i>
+                </a>
+                <a class="author-block__social-link linkedin" target="_blank" title="linkedin" href="https://www.linkedin.com/in/ianmayo">
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+
+        <div class="other-posts">
+          <div class="row">
+            <div class="col-sm-6">
+              <h3 class="blog-widget__title">Recent Posts</h3>
+              <div class="other-posts-list">
+                <div class="other-posts-item media">
+                  <a href="#">
+                      <img class="mr-3 other-posts-item__img" src="{{ absolute_url }}  {{ page.image }}">
+                  </a>
+                  <div class="media-body">
+                    <a href="#">
+                      <h6 class="mt-0 other-posts-item__title">New Feature Release: Paste Rep from Clipboard</h6>
+                    </a> 
+                    <div class="other-posts-item__date">September 21, 2018</div>
+                  </div>
+                </div>
+                <div class="other-posts-item media">
+                  <a href="#">
+                      <img class="mr-3 other-posts-item__img" src=".../64x64">
+                  </a>
+                  <div class="media-body">
+                    <a href="#">
+                      <h6 class="mt-0 other-posts-item__title">New Feature Release: Paste Rep from Clipboard</h6>
+                    </a> 
+                    <div class="other-posts-item__date">September 21, 2018</div>
+                  </div>
+                </div>
+                <div class="other-posts-item media">
+                  <a href="#">
+                      <img class="mr-3 other-posts-item__img" src=".../64x64">
+                  </a>
+                  <div class="media-body">
+                    <a href="#">
+                      <h6 class="mt-0 other-posts-item__title">New Feature Release: Paste Rep from Clipboard</h6>
+                    </a> 
+                    <div class="other-posts-item__date">September 21, 2018</div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="col-sm-6">
+              <h3 class="blog-widget__title">Popular Posts</h3>
+              <div class="other-posts-list">
+                <div class="other-posts-item media">
+                  <a href="#">
+                      <img class="mr-3 other-posts-item__img" src="{{ absolute_url }}  {{ page.image }}">
+                  </a>
+                  <div class="media-body">
+                    <a href="#">
+                      <h6 class="mt-0 other-posts-item__title">New Feature Release: Paste Rep from Clipboard</h6>
+                    </a> 
+                    <div class="other-posts-item__date">September 21, 2018</div>
+                  </div>
+                </div>
+                <div class="other-posts-item media">
+                  <a href="#">
+                      <img class="mr-3 other-posts-item__img" src=".../64x64">
+                  </a>
+                  <div class="media-body">
+                    <a href="#">
+                      <h6 class="mt-0 other-posts-item__title">New Feature Release: Paste Rep from Clipboard</h6>
+                    </a> 
+                    <div class="other-posts-item__date">September 21, 2018</div>
+                  </div>
+                </div>
+                <div class="other-posts-item media">
+                  <a href="#">
+                      <img class="mr-3 other-posts-item__img" src=".../64x64">
+                  </a>
+                  <div class="media-body">
+                    <a href="#">
+                      <h6 class="mt-0 other-posts-item__title">New Feature Release: Paste Rep from Clipboard</h6>
+                    </a> 
+                    <div class="other-posts-item__date">September 21, 2018</div>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="col-md-3">
+        {% include blog-sidebar.html %}
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+

@@ -1,8 +1,8 @@
 ---
-layout: default
+layout: post
 title: 'New Feature Release: Paste Rep from Clipboard'
 date: 2018-09-27 13:12:08.000000000 +01:00
-image: '../assets/images/Rep-data-from-clipboard.jpg'
+image: '/assets/images/Rep-data-from-clipboard.jpg'
 type: post
 parent_id: '0'
 published: true

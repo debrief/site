@@ -103,18 +103,9 @@
     .dropdown-toggle::after {
       display: none;
     }
-    .dropdown-search {
+    .form-search {
       .input-group {
         min-width: 17.066666667rem;
-      }
-      &__input {
-        height: 34px;
-        font-size: 14px;
-        line-height: 1.42857143;
-      }
-      &__btn {
-        font-size: 14px;
-        line-height: 1.42857143;
       }
     }
   }

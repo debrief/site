@@ -17,11 +17,23 @@
     height: 80px;
     background-image: url(../images/ship.png);
   }
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include media-breakpoint-down (sm) {
+      flex-direction: column;
+    }
+  }
 }
 
 .copyright-text {
   color: $text-gray;
   font-weight: 300;
+  @include media-breakpoint-down (sm)  {
+    padding-bottom: 15px;
+    text-align: center;
+  }
   a {
     color: $text-gray;
     @include hover-focus-active {
@@ -32,6 +44,10 @@
 }
 
 .nav-socials {
+  @include media-breakpoint-down (sm) {
+    padding-top: 10px;
+    padding-bottom: 10px; 
+  }
   &__text {
     margin-right: 5px;
     text-transform: uppercase;

@@ -1,58 +1,57 @@
-{% for post in site.posts %}
-  <div class="post-block post-block--preview">
+<div class="post-block post-block--preview">
 
-    <div class="post-block__header">
-        <a href="{{ post.url }}">
-          <img src="{{ absolute_url }} {{ post.image }}" class="img-fluid post-block__img">
+  <div class="post-block__header">
+      <a href="{{ post.url }}">
+        <img src="{{ absolute_url }} {{ post.image }}" class="img-fluid post-block__img">
+      </a>
+      <h2>
+        <a class="post-block__title" href="{{ post.url }}">
+          {{ post.title }}
         </a>
-        <h2>
-          <a class="post-block__title" href="{{ post.url }}">
-            {{ post.title }}
-          </a>
-        </h2>
-        <div class="post-block__meta">
-            <div class="post-block__date mr-2">
-                <i class="far fa-calendar-alt"></i>
-                <span>Posted</span>
-                <span><a href="#"  class="post-block__date-link">{{ post.date | date: "%B %e, %Y" }}</a>,</span>
-            </div>
-            <div class="post-block__autor">
-                <span>by</span>
-                <i class="fas fa-user"></i>
-                <a href="#" class="post-block__autor-link">{{ post.author.display_name }}</a>  
-            </div>
-        </div>
-    </div>
-
-    <div class="post-block__body">
-        <p class="post-block__post-text">{{ post.excerpt | strip_html | truncatewords: 55 }}</p>
-        <a href="{{ post.url }}" target="_self" class="btn btn-default btn-dark-hover btn-secondary font-weight-light btn-sm mx-1 my-2">
-          Read More
-          <svg xmlns="http://www.w3.org/2000/svg" width="5" height="14" viewBox="0 0 189 317" fill="#fff">
-            <g transform="translate(-5 -5)">
-              <rect width="48" height="222" x="72.4594" y="120.4594" rx="12" transform="rotate(45 96.4594 231.4594)"/>
-              <rect width="48" height="231" x="75.3988" y="-16.4652" rx="12" transform="rotate(-45 99.3988 99.0348)"/>
-            </g>
-          </svg>
-        </a>
-    </div>
-
-    <div class="post-block__footer text-uppercase">
-      <div class="post-block__categories mr-2">
-        <i class="fas fa-folder-open"></i>
-        <span>Categories</span>
-        {% for entry in post.categories %}
-          {% if entry.name %}
-          <a href="#">{{ entry.name }}</a>
-          {% endif %}
-        {% endfor %}
+      </h2>
+      <div class="post-block__meta">
+          <div class="post-block__date mr-2">
+              <i class="far fa-calendar-alt"></i>
+              <span>Posted</span>
+              <span><a href="#"  class="post-block__date-link">{{ post.date | date: "%B %e, %Y" }}</a>,</span>
+          </div>
+          <div class="post-block__autor">
+              <span>by</span>
+              <i class="fas fa-user"></i>
+              {% assign author = site.authors | where: 'short_name', post.author | first %}
+                {% if author %}
+                <a href="{{ author.url }}" class="post-block__autor-link">{{ author.name }}</a>
+                {% endif %}  
+          </div>
       </div>
-      <div class="post-block__views-count">
-        <i class="far fa-eye"></i>
-        <span>{{ post.meta.post_views_count }}</span>
-        <span>Views</span>
-      </div>
-    </div>
-
   </div>
-{% endfor %}
+
+  <div class="post-block__body">
+      <p class="post-block__post-text">{{ post.excerpt | strip_html | truncatewords: 55 }}</p>
+      <a href="{{ post.url }}" target="_self" class="btn btn-default btn-dark-hover btn-secondary font-weight-light btn-sm mx-1 my-2">
+        Read More
+        <svg xmlns="http://www.w3.org/2000/svg" width="5" height="14" viewBox="0 0 189 317" fill="#fff">
+          <g transform="translate(-5 -5)">
+            <rect width="48" height="222" x="72.4594" y="120.4594" rx="12" transform="rotate(45 96.4594 231.4594)"/>
+            <rect width="48" height="231" x="75.3988" y="-16.4652" rx="12" transform="rotate(-45 99.3988 99.0348)"/>
+          </g>
+        </svg>
+      </a>
+  </div>
+
+  <div class="post-block__footer text-uppercase">
+    <div class="post-block__categories mr-2">
+      <i class="fas fa-folder-open"></i>
+      <span>Categories</span>
+      {% for category in post.categories %}
+        <a href="#">{{ category }}</a>
+      {% endfor %}
+    </div>
+    <div class="post-block__views-count">
+      <i class="far fa-eye"></i>
+      <span>{{ post.meta.post_views_count }}</span>
+      <span>Views</span>
+    </div>
+  </div>
+
+</div>

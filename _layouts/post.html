@@ -2,6 +2,7 @@
 layout: default
 title: Get Debrief – Debrief Maritime Analysis Tool
 ---
+
 <header class="header-blog" style="background-image: url({{ absolute_url }} /assets/images/header_bg_blog.jpg);">
   <div class="container">
     <div class="header-blog__container">
@@ -39,7 +40,10 @@ title: Get Debrief – Debrief Maritime Analysis Tool
                     <div class="post-block__autor">
                         <span>by</span>
                         <i class="fas fa-user"></i>
-                        <a href="#" class="post-block__autor-link">{{ page.author.display_name }}</a>  
+                        {% assign author = site.authors | where: 'short_name', page.author | first %}
+                          {% if author %}
+                            <a href="{{ author.url }}" class="post-block__autor-link">{{ author.name }}</a>
+                          {% endif %} 
                     </div>
                 </div>
             </div>
@@ -133,21 +137,19 @@ title: Get Debrief – Debrief Maritime Analysis Tool
         <div class="author-block">
           <div class="row pt-3">
             <div class="col-sm-2 text-center">
-                <img alt="Ian Mayo" src="http://2.gravatar.com/avatar/e25687fb3ee2a85ea95dff42c1ea833a?s=90&amp;d=mm&amp;r=g" srcset="http://2.gravatar.com/avatar/e25687fb3ee2a85ea95dff42c1ea833a?s=180&amp;d=mm&amp;r=g 2x" class="avatar img-fluid" height="90" width="90">
+                <img alt="{{ author.name }}" src="http://2.gravatar.com/avatar/e25687fb3ee2a85ea95dff42c1ea833a?s=90&amp;d=mm&amp;r=g" class="avatar img-fluid" height="90" width="90">
             </div>
             <div class="col-sm-10 mt-2">
               <h3 class="author-block__name">
-                <a href="http://debrief.info/author/ianmayo/" title="Posts by IanMayo" rel="author">{{ page.author.login }}</a>
-              </h3>
-              <!--{% if page.author.login == site.data.blog-list.author.name %}{{ site.data.blog-list.author.name }}{% endif %}-->
-              
-              <p class="author-block__description">Ian Mayo (from Deep Blue C Technologies) has been developing and maintaining Debrief since 1995, and helping users perform effective analysis and deliver persuasive results.</p>
+                <a href="{{ author.url }}" title="Posts by {{ author.name }}" rel="author">{{ author.name }}</a>
+              </h3>              
+              <p class="author-block__description">{{ author.content | markdownify }}</p>
               <div class="author-block__socials">
                 <span class="text-uppercase mr-2">Follow me</span>
-                <a class="author-block__social-link google_plus" target="_blank" title="google+" href="https://plus.google.com/u/0/+IanMayo">
+                <a class="author-block__social-link google_plus" target="_blank" title="google+" href="{{ author.googleplus }}">
                   <i class="fab fa-google-plus-g"></i>
                 </a>
-                <a class="author-block__social-link linkedin" target="_blank" title="linkedin" href="https://www.linkedin.com/in/ianmayo">
+                <a class="author-block__social-link linkedin" target="_blank" title="linkedin" href="{{ author.linkedin }}">
                   <i class="fab fa-linkedin-in"></i>
                 </a>
               </div>
@@ -174,7 +176,7 @@ title: Get Debrief – Debrief Maritime Analysis Tool
                 </div>
                 <div class="other-posts-item media">
                   <a href="#">
-                      <img class="mr-3 other-posts-item__img" src=".../64x64">
+                      <img class="mr-3 other-posts-item__img" src="{{ absolute_url }}  {{ page.image }}">
                   </a>
                   <div class="media-body">
                     <a href="#">
@@ -185,7 +187,7 @@ title: Get Debrief – Debrief Maritime Analysis Tool
                 </div>
                 <div class="other-posts-item media">
                   <a href="#">
-                      <img class="mr-3 other-posts-item__img" src=".../64x64">
+                      <img class="mr-3 other-posts-item__img" src="{{ absolute_url }}  {{ page.image }}">
                   </a>
                   <div class="media-body">
                     <a href="#">

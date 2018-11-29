@@ -1,0 +1,78 @@
+---
+layout: post
+title: Have Your Say on a Shiny New Debrief Capability
+date: 2015-09-22 11:50:45.000000000 +01:00
+type: post
+parent_id: '0'
+published: true
+password: ''
+status: publish
+categories:
+- Customisation example
+- Use Case Study
+tags:
+- Debrief
+- Debrief Update
+- New Feature
+meta:
+  _edit_last: '1'
+  post_views_count: '1651'
+  _thumbnail_id: '3081'
+author:
+  login: IanMayo
+  email: ian@planetmayo.com
+  display_name: IanMayo
+  first_name: ''
+  last_name: ''
+---
+<p>We’re launching a new capability for a broader set of analysis. In addition to running standalone  this tool will be seamlessly integrated into with Debrief.</p>
+<h2>Why Do We Need a New Tool?</h2>
+<p>Debrief traditionally enjoys a fixed data model, understanding precisely how to exploit, visualise and process each type of data.  Over the years analysts do request new data types to be handled with Debrief, and, where the new data type fits the general model of Debrief a new REP message format is introduced, and the data is “knitted into” the rest of the Debrief interface and data flows.</p>
+<p>But, recently a body of analysts need to explore a physical phenomena.  The data to be handled and the algorithms to process that data aren’t mature enough to be bedded directly into Debrief.  So, a more free-form mode of analysis is required.</p>
+<h2>What Is This New Tool?</h2>
+<p>In response to this, we’re adding some <b>new capabilities to Debrief </b>to allow ad-hoc, unpredictable data types to be loaded into the application.  Debrief won’t know about this data in advance, but tools will be provided to either conduct a generic analysis of that data, or for the user to add sufficient context to the data to allow relevant operations and visualisations to be provided.</p>
+<p>&nbsp;</p>
+<p><a href="http://debrief.info/wp-content/uploads/2015/12/ian_infographic_02.jpg"><img class="aligncenter wp-image-3068" src="{{ site.baseurl }}/assets/ian_infographic_02.jpg" alt="ian_infographic_02" width="1003" height="679" /></a></p>
+<p>The generic nature of this approach (it’s certainly not tied to the maritime domain) means that it is justified to create the capabilities as a separate project, seamlessly pulling capabilities back into the Debrief interface.  Notice the new <b><i>measurements</i></b> elements in the Debrief Outline view at the bottom left of the following screenshot</p>
+<p><a href="http://debrief.info/wp-content/uploads/2015/09/DebriefMockup.png"><img class="  aligncenter wp-image-3072" src="{{ site.baseurl }}/assets/DebriefMockup.png" alt="DebriefMockup" width="1001" height="594" /></a></p>
+<p>The new capability is being called <b>Limpet (Lightweight InforMation ProcEssing Toolkit)</b>, and we'd like to tell you more about it.</p>
+<h2>What’s Special About Limpet</h2>
+<ul>
+<li>Limpet will focus on allowing users to conduct Data Driven Analysis:
+<ul>
+<li>Analysis is based on sound scientific principles</li>
+<li>Allows analysts to work at high level, with quick results</li>
+</ul>
+</li>
+<li>Limpet will allow a quick-start in new analysis domains
+<ul>
+<li>Users can drag in data-files directly, without worrying about import conversion</li>
+<li>A Descriptive statistics view gives quick overview of datafiles</li>
+<li>Exploratory analysis tools let analysts learn about equipment / sensor / system performance</li>
+<li>The software will be extensible to accommodate emergent/proprietary file formats</li>
+<li>The capabilities are extensible to new scientific domains through the addition of new operations</li>
+</ul>
+</li>
+<li>Limpet will offer organisation-wide benefits
+<ul>
+<li>This open source software will suffer no vendor lock in</li>
+<li>The common skill-set can be applied across multiple domains</li>
+</ul>
+</li>
+<li>Limpet includes a wide range of functions and analysis options, from the generic level (addition of datasets) to domain-specific (calculate the acoustic propagation loss between two vessel tracks).</li>
+</ul>
+<h2>How Is It Different From Debrief?</h2>
+<p>Debrief focuses on the <b><i>spatial</i></b> (map based) analysis of a <b><i>specific set of data</i></b> from <b><i>maritime vehicles</i></b>. Limpet supports <b><i>graphical and tabular</i></b> analysis of an <b><i>unlimited range of datasets</i></b> coming from <b><i>any source</i></b>..</p>
+<h2>What Are The Alternatives?</h2>
+<p>There are two traditional bodies of application that are used in this ad-hoc analysis</p>
+<p>&nbsp;</p>
+<ul>
+<li><b><b>Excel/MatLab:</b> </b> Limpet takes away tasks of loading, parsing and organising data, letting analyst concentrate on actually performing analysis via a library of high level operations. <i>Basic administrative tasks are automated, thus cutting down on turnaround time.  Many more features are provided in Limpet, these features free up more of the analyst’s time to focus on analysis rather than clerical data tasks.</i><b><i> </i></b></li>
+</ul>
+<ul>
+<li><b>ETL (</b><a href="https://www.talend.com/products/data-integration"><b>Talend</b></a><b>, </b><a href="http://www.pentaho.com/product/data-integration"><b>Pentaho</b></a><b>, </b><a href="https://www.knime.org/knime"><b>Knime</b></a><b>, </b><a href="http://ptolemy.eecs.berkeley.edu/ptolemyII/summary.htm"><b>PTolemy II</b></a><b>) : </b>Limpet supports the direct, interactive manipulation of datasets with instant responses.  It is possible to collate multiple operations into a composite operation for later usage (like traditional ETL), but the Limpet UI flow allows the analyst to develop these operations in the more exploratory, experimental manner necessary when investigating a new domain. <i>Real-time data manipulation tools allow for faster turnaround of analysis. </i></li>
+</ul>
+<p>&nbsp;</p>
+<h2>Where Can I Get Limpet?</h2>
+<p>Limpet is still under development. Things are pretty embryonic right now - we're still<a href="https://docs.google.com/presentation/d/18WHwEn6BD4HcnAIplFkb-HxsV95hrm_6A79mYOHLN7Q/pub?start=false&amp;loop=false&amp;delayms=3000"> going through</a> high level requirements collection,. But, we hope to motor on through the high level questions, discussions, plans, designs, and get into some nice iterative/agile progress in September.</p>
+<p>You can track Limpet updates on it’s own website: <a href="http://debrief.github.io/limpet/">http://debrief.github.io/limpet/</a> or on it’s Github page: <a href="https://github.com/debrief/limpet">https://github.com/debrief/limpet</a>. We encourage you to subscribe to our mailing list for updates: <b><a href="https://groups.google.com/d/forum/limpet-tool">https://groups.google.com/d/forum/limpet-tool</a></b>.</p>

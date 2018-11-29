@@ -1,0 +1,80 @@
+---
+layout: post
+title: How We Notify Changes to Debrief
+date: 2016-03-11 16:44:10.000000000 +00:00
+type: post
+parent_id: '0'
+published: true
+password: ''
+status: publish
+categories:
+- Debrief Help
+- GitHub
+tags:
+- Debrief help
+- Debrief Issue
+- GitHub
+- Pull Requests
+- Reporting a problem
+- Reporting an issue
+meta:
+  _edit_last: '4'
+  post_views_count: '1197'
+  _thumbnail_id: '3238'
+author:
+  login: russ
+  email: russ1click@gmail.com
+  display_name: Russ Crowley
+  first_name: Russ
+  last_name: Crowley
+---
+<h2>Notifying Changes to Debrief</h2>
+<p>Now we will look at notifying changes to Debrief. As we've mentioned already, Debrief has been under continuous maintenance for 20-years now and, as you can imagine, has evolved considerably over that time. As it is open source and hosted on GitHub, anyone can take a copy of the main repository - or what is termed the ‘<i>main branch</i>’ - at any time, and then work on it on their computer. When this happens, this copy [of the <i>main</i> branch]<i> </i>is called a <i>‘fork’</i>.</p>
+<p>Later, after modifications have been made to the fork, the developer can request that other users discuss, review, or comment on these changes. If the changes are acceptable and will benefit the <em>program,</em> they can then be pushed to into the <i>main branch</i>.</p>
+<h3>How this works</h3>
+<p>For example, if there is a bug in the software and you've just raised a new issue. The developer assigned to this issue will then take a <em>fork</em> from the version of Debrief that you've reported in your issue (using the structure that was advised in the post <a href="http://debrief.info/how-to-create-a-debrief-issue/">How to Create a Debrief Issue</a>), install the same java version as you have on your system, and then try and recreate the issue.</p>
+<p>When the issue is resolved, the developer then needs to notify interested parties that the code needs to be reviewed. This actual notification is called a <b>Pull Request </b>-<b> </b>it’s a broadcast to notify other interested parties that a change has been made to the code and, in the first instance, to invite them to review it.</p>
+<p>From a user’s point of view, it is interesting to observe these requests as it’s an indication of new features in Debrief.</p>
+<p><b>Viewing a Pull Request</b></p>
+<p>Any logged-in user can view a pull request. Click on the subject of the request and you will see its details:</p>
+<p><img class="aligncenter wp-image-3230" src="{{ site.baseurl }}/assets/04_closed_pull_request.png" alt="Viewing a Pull Request" width="601" height="463" /></p>
+<p>This particular request is now closed, but you can clearly see the numbered items on the image:</p>
+<ol>
+<li>The reason for the pull request</li>
+<li>The 9 additional commits this request has: each of these can be clicked on to drill-down and view the code</li>
+<li>The total number of lines of code modified in this change.</li>
+</ol>
+<p><b>Who Can Initiate a Pull Request?</b></p>
+<p>Though any registered and logged-in GitHub user can initiate a Pull Request, this section is geared primarily towards Debrief developers or advanced Debrief users who have implemented changes to their ‘fork’ and wish to have them included in the main application, it isn’t for normal users. The only requirement is that changes have been made to the <i>fork </i>(as we’ll show below)<i>.</i></p>
+<h2><b>How to Initiate a Pull Request</b></h2>
+<p>To initiate a new Pull Request, in the Debrief Repository:</p>
+<ol>
+<li>Click on the <b>Pull Requests</b> tab and then click on the <b>New pull request</b> button:</li>
+</ol>
+<p><img class="aligncenter wp-image-3233" src="{{ site.baseurl }}/assets/01_new_pull_request.png" alt="Create New Pull Request" width="601" height="233" /></p>
+<p style="padding-left: 30px;"><b>Note: </b>in the top right of the image, you can see that there are <strong>9 forks</strong> from the main repository.</p>
+<ol start="2">
+<li>The screen will refresh and you will see the following:</li>
+</ol>
+<p><img class="aligncenter wp-image-3234" src="{{ site.baseurl }}/assets/01a_no_pull_req_allowed.png" alt="No Pull Request Allowed" width="602" height="210" /></p>
+<p style="padding-left: 30px;">As you can see, the <b>Create pull reques</b>t button is disabled. This is because there haven’t been any changes between the base repository and the fork it’s being compared with.</p>
+<ol start="3">
+<li>However, clicking on the <b>Compare</b> drop-down and selecting a fork that has changed will enable you to <b>Open a pull request</b>:</li>
+</ol>
+<p><img class="aligncenter wp-image-3235" src="{{ site.baseurl }}/assets/02_open_pull_request.png" alt="Open a Pull Request" width="601" height="350" /></p>
+<ol start="4">
+<li>Once you’ve entered your comment, click on the <b>Create Pull Request</b> button. The screen will refresh and your request will become an <b>open pull request</b>:</li>
+</ol>
+<p><img class="aligncenter wp-image-3232" src="{{ site.baseurl }}/assets/03_pull_req_opened.png" alt="Pull Request Opened" width="601" height="287" /></p>
+<p>That’s the basics to pull requests and their function. As mentioned, they’re a very useful GitHub tool which enables you to keep track of what’s going on as well as to keep abreast of all changes to Debrief regardless of whether you’re an interested party, a user, or an active contributor.</p>
+<h3><b>Comments or Feedback</b></h3>
+<p>This concludes the tutorial on how we notify you of changes to Debrief. As with all our posts, we hope it’s been useful to you? If you have any comments, feedback, or would like to add something, please feel free to do so in the reply box below - all comments are reviewed, acted upon, and are very much appreciated.</p>
+<table class="table table-striped">
+<tbody>
+<tr>
+<td><a href="http://debrief.info/how-to-create-a-debrief-issue/">Previous Post</a></td>
+<td><a href="http://debrief.info/debrief-on-github/">Post Home</a></td>
+<td><a href="http://debrief.info/how-to-view-debrief-issues-in-github/">Next Post</a></td>
+</tr>
+</tbody>
+</table>

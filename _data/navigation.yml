@@ -40,7 +40,7 @@ nav:
       - name: User Guide
         link: /user-guide
       - name: Self-teach tutorial (PDF)
-        link: /self-teach-tutorial
+        link: /library/DebriefNG_Tutorial.pdf
       - name: Replay File Format
         link: /replay-file-format
   - name: Blog

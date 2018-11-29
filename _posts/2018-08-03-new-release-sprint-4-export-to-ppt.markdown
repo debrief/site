@@ -8,9 +8,7 @@ parent_id: '0'
 published: true
 password: ''
 status: publish
-categories:
-  - name: Releases
-  - name: Technical Demonstration
+categories: [blog, travel]
 tags: []
 meta:
   _edit_last: '3'

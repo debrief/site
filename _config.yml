@@ -37,9 +37,19 @@ sass:
 collections:
   authors:
     output: true
+    permalink: /:collection/:name
+  category:
+    output: true
+    permalink: /:collection/:name
 
+permalink: /:categories/:year/:month/:day/:title
 
 defaults:
+  - scope:
+      path: ""
+      type: category
+    values:
+      layout: "category"
   - scope:
       path: ""
       type: "authors"

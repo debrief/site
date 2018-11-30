@@ -10,7 +10,7 @@ blog:
   - title: Categories
     list: 
       - item: 'Customisation example'
-        link: '/category/customisation_example'
+        link: '/category/customisation-example'
       - item: 'Debrief Help'
         link: '/category/debrief-help'
       - item: 'GitHub'

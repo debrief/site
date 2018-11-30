@@ -2,12 +2,34 @@
 
     {% include form-search.html %}
 
+    <div class="blog-widget">
+        <h3 class="blog-widget__title">Resent Post</h3>
+          <ul class="list-unstyled">
+            {% assign recentCount = 0 %}
+            {% for post in site.posts %}
+              {% assign recentCount = recentCount | plus: 1 %}
+              <li class="mt-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="5" height="14" viewBox="0 0 189 317" fill="#888" class="mr-1">
+                  <g transform="translate(-5 -5)">
+                    <rect width="48" height="222" x="72.4594" y="120.4594" rx="12" transform="rotate(45 96.4594 231.4594)"/>
+                    <rect width="48" height="231" x="75.3988" y="-16.4652" rx="12" transform="rotate(-45 99.3988 99.0348)"/>
+                  </g>
+                </svg>
+                <a href="{{ post.url }}" class="blog-widget__link">{{ post.title }}</a>
+              </li>
+              {% if recentCount == 4 %}
+                  {% break %}
+              {% endif %}
+            {% endfor %}
+          </ul>
+      </div>
+
     {% for widget in site.data.widgets.blog %}
       <div class="blog-widget">
         <h3 class="blog-widget__title">{{ widget.title }}</h3>
-        {% for entry in widget.list %}
           <ul class="list-unstyled">
-            <li>
+            {% for entry in widget.list %}
+            <li class="mt-2">
               <svg xmlns="http://www.w3.org/2000/svg" width="5" height="14" viewBox="0 0 189 317" fill="#888" class="mr-1">
                 <g transform="translate(-5 -5)">
                   <rect width="48" height="222" x="72.4594" y="120.4594" rx="12" transform="rotate(45 96.4594 231.4594)"/>
@@ -16,8 +38,8 @@
               </svg>
               <a href="{{ entry.link }}" class="blog-widget__link">{{ entry.item }}</a>
             </li>
+            {% endfor %}
           </ul>
-        {% endfor %}
       </div>
     {% endfor %}
 

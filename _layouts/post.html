@@ -55,34 +55,28 @@ title: Get Debrief – Debrief Maritime Analysis Tool
             <div class="post-block__related-list">
               <h5 class="font-weight-light mb-3">Related Posts</h5>
               <ul class="list-unstyled">
-                <li class="d-flex align-items-center mb-1">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="5" height="14" viewBox="0 0 189 317" fill="#333" class="mr-1">
-                    <g transform="translate(-5 -5)">
-                      <rect width="48" height="222" x="72.4594" y="120.4594" rx="12" transform="rotate(45 96.4594 231.4594)"/>
-                      <rect width="48" height="231" x="75.3988" y="-16.4652" rx="12" transform="rotate(-45 99.3988 99.0348)"/>
-                    </g>
-                  </svg>
-                  <a href="#" class="post-block__related-link ml-1">Using Debrief on GitHub</a>
-                </li>
-                <li class="d-flex align-items-center mb-1">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="5" height="14" viewBox="0 0 189 317" fill="#333" class="mr-1">
-                    <g transform="translate(-5 -5)">
-                      <rect width="48" height="222" x="72.4594" y="120.4594" rx="12" transform="rotate(45 96.4594 231.4594)"/>
-                      <rect width="48" height="231" x="75.3988" y="-16.4652" rx="12" transform="rotate(-45 99.3988 99.0348)"/>
-                    </g>
-                  </svg>
-                  <a href="#" class="post-block__related-link ml-1">Using Debrief on GitHub</a>
-                </li>
-                <li class="d-flex align-items-center mb-1">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="5" height="14" viewBox="0 0 189 317" fill="#333" class="mr-1">
-                    <g transform="translate(-5 -5)">
-                      <rect width="48" height="222" x="72.4594" y="120.4594" rx="12" transform="rotate(45 96.4594 231.4594)"/>
-                      <rect width="48" height="231" x="75.3988" y="-16.4652" rx="12" transform="rotate(-45 99.3988 99.0348)"/>
-                    </g>
-                  </svg>
-                  <a href="#" class="post-block__related-link ml-1">Using Debrief on GitHub</a>
-                </li>
-              </ul>
+                  {% assign firstCategory = page.categories | first %}
+                  {% assign relatedCount = 0 %}
+                  {% for related in site.categories[firstCategory] %}
+                      {% unless page.url == related.url %}
+                          {% assign relatedCount = relatedCount | plus: 1 %}
+                          <li class="d-flex align-items-center mb-1">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="5" height="14" viewBox="0 0 189 317" fill="#333" class="mr-1">
+                                <g transform="translate(-5 -5)">
+                                  <rect width="48" height="222" x="72.4594" y="120.4594" rx="12" transform="rotate(45 96.4594 231.4594)"/>
+                                  <rect width="48" height="231" x="75.3988" y="-16.4652" rx="12" transform="rotate(-45 99.3988 99.0348)"/>
+                                </g>
+                              </svg>
+                              <a href="{{ related.url }}" class="post-block__related-link ml-1">{{ related.title }}</a>
+                            </li>
+                      {% endunless %}
+              
+                      {% if relatedCount == 3 %}
+                          {% break %}
+                      {% endif %}
+                  {% endfor %}
+                </ul>
+              
             </div>
 
             <div class="social-share">
@@ -167,40 +161,25 @@ title: Get Debrief – Debrief Maritime Analysis Tool
             <div class="col-sm-6">
               <h3 class="blog-widget__title">Recent Posts</h3>
               <div class="other-posts-list">
-                <div class="other-posts-item media">
-                  <a href="#">
-                      <img class="mr-3 other-posts-item__img" src="{{ absolute_url }}  {{ page.image }}">
-                  </a>
-                  <div class="media-body">
-                    <a href="#">
-                      <h6 class="mt-0 other-posts-item__title">New Feature Release: Paste Rep from Clipboard</h6>
-                    </a> 
-                    <div class="other-posts-item__date">September 21, 2018</div>
-                  </div>
-                </div>
-                <div class="other-posts-item media">
-                  <a href="#">
-                      <img class="mr-3 other-posts-item__img" src="{{ absolute_url }}  {{ page.image }}">
-                  </a>
-                  <div class="media-body">
-                    <a href="#">
-                      <h6 class="mt-0 other-posts-item__title">New Feature Release: Paste Rep from Clipboard</h6>
-                    </a> 
-                    <div class="other-posts-item__date">September 21, 2018</div>
-                  </div>
-                </div>
-                <div class="other-posts-item media">
-                  <a href="#">
-                      <img class="mr-3 other-posts-item__img" src="{{ absolute_url }}  {{ page.image }}">
-                  </a>
-                  <div class="media-body">
-                    <a href="#">
-                      <h6 class="mt-0 other-posts-item__title">New Feature Release: Paste Rep from Clipboard</h6>
-                    </a> 
-                    <div class="other-posts-item__date">September 21, 2018</div>
-                  </div>
-                </div>
-
+                {% assign recentCount = 0 %}
+                {% for post in site.posts %}
+                  {% assign recentCount = recentCount | plus: 1 %}
+                  <div class="other-posts-item media">
+                      <a href="{{ post.url }}">
+                          <img class="mr-3 other-posts-item__img" src="{{ absolute_url }}  {{ post.image }}">
+                      </a>
+                      <div class="media-body">
+                        <a href="{{ post.url }}">
+                          <h6 class="mt-0 other-posts-item__title">{{ post.title }}</h6>
+                        </a> 
+                        <div class="other-posts-item__date">{{ post.date | date: "%B %e, %Y" }}</div>
+                      </div>
+                    </div>
+                    
+                  {% if recentCount == 3 %}
+                      {% break %}
+                  {% endif %}
+                {% endfor %}
               </div>
             </div>
 
@@ -245,6 +224,7 @@ title: Get Debrief – Debrief Maritime Analysis Tool
             </div>
           </div>
         </div>
+
 
       </div>
       <div class="col-md-3">

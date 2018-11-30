@@ -1,8 +1,4 @@
 blog:
-  - title: Recent Posts
-    list:
-      - item: 'New Feature Release: Paste Rep from Clipboard'
-      - item: 'New Feature: SVG Symbols'
   - title: Recent Comments
     list: 
       - item: 'New Comment 1'

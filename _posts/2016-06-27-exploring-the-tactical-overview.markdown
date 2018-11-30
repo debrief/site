@@ -7,26 +7,15 @@ parent_id: '0'
 published: true
 password: ''
 status: publish
-categories: 
- - name: Customisation example, 
- - name: Debrief Help,
- - name: Releases
-tags:
-- Debrief
-- Debrief Update
-- New Feature
+categories: [debrief-help, releases, customisation-example]
+tags: [debrief, debrief-update, new-feature]
 meta:
   _edit_last: '1'
   post_views_count: '1206'
   _oembed_5c91340ff3aec73919666b3814146424: <iframe width="669" height="502" src="https://www.youtube.com/embed/n4ZO4DAJsaI?feature=oembed"
     frameborder="0" gesture="media" allowfullscreen></iframe>
   _oembed_time_5c91340ff3aec73919666b3814146424: '1508919836'
-author:
-  login: IanMayo
-  email: ian@planetmayo.com
-  display_name: IanMayo
-  first_name: ''
-  last_name: ''
+author: ianmayo
 ---
 <p>For the last year we've been steadily progressing Debrief's data analysis capabilities (read last year's introduction 
 <a href="http://debrief.info/have-your-say-on-a-shiny-new-debrief-capability/">here</a>), adding features in packages focussed on analysts' requirements.</p>

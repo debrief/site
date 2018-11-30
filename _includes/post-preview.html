@@ -43,8 +43,14 @@
     <div class="post-block__categories mr-2">
       <i class="fas fa-folder-open"></i>
       <span>Categories</span>
-      {% for category in post.categories %}
-        <a href="#">{{ category }}</a>
+      {% if post %}
+        {% assign categories = post.categories %}
+      {% else %}
+        {% assign categories = page.categories %}
+      {% endif %}
+      {% for category in categories %}
+      <a href="{{site.baseurl}}/category/{{category|slugize}}">{{category | replace: '-', '&nbsp;' }}</a>
+      {% unless forloop.last %}&nbsp;{% endunless %}
       {% endfor %}
     </div>
     <div class="post-block__views-count">

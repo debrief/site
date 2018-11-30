@@ -8,19 +8,14 @@ parent_id: '0'
 published: true
 password: ''
 status: publish
-categories: [blog, travel]
+categories: [releases, technical-demonstration]
 tags: []
 meta:
   _edit_last: '3'
   _thumbnail_id: '3478'
   post_views_count: '32'
   _wp_old_date: '2018-10-02'
-author:
-  login: IanMayo
-  email: ian@planetmayo.com
-  display_name: IanMayo
-  first_name: ''
-  last_name: ''
+author: ianmayo
 ---
 <p>With the conclusion of Sprint 4, the first major work package ("Epic" in Scrum language) is coming to completion, Export to PPT. In a multi-threaded package of work different members of the team have:</p>
 <ul>

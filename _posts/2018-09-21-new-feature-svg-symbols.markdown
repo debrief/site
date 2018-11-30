@@ -7,18 +7,13 @@ parent_id: '0'
 published: true
 password: ''
 status: publish
-categories: [Releases, Technical Demonstration]
+categories: [releases, technical-demonstration]
 tags: []
 meta:
   _edit_last: '3'
   post_views_count: '38'
   _wp_old_date: '2018-10-02'
-author:
-  login: IanMayo
-  email: ian@planetmayo.com
-  display_name: IanMayo
-  first_name: ''
-  last_name: ''
+author: ianmayo
 ---
 <p>Symbols are used to add value to analysis plots, through giving a visual indication of the vehicle type.</p>
 <p>In the past, the symbols have been hard-coded in Debrief, but now Debrief supports the provision of vectored symbols in the industry standard SVG format.</p>

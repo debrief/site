@@ -1,0 +1,39 @@
+---
+layout: default
+---
+
+<header class="header-blog" style="background-image: url({{ absolute_url }} /assets/images/header_bg_blog.jpg);">
+  <div class="container">
+    <div class="header-blog__container">
+      <h1 class="header-blog__title font-weight-light mb-2">Post by {{ page.name }}</h1>
+    </div>
+  </div>
+</header>
+
+<main class="page-content page-content--blog" aria-label="Content">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-9">
+          <div>
+
+            <div class="blog list">
+                <h1>Filed Under <small>{{ page.cat }}</small></h1>
+            
+                {% for post in site.categories[page.cat] %}
+                    {% include post-preview.html %}
+                {% endfor %}
+            </div>
+
+
+          </div>
+        </div>
+  
+  
+        <div class="col-md-3">
+          {% include blog-sidebar.html %}
+        </div>
+      </div>
+    </div>
+    
+  </main>
+

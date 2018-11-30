@@ -8,8 +8,8 @@ parent_id: '0'
 published: true
 password: ''
 status: publish
-categories: [Releases, Technical Demonstration]
-tags: [new, you]
+categories: [releases, technical-demonstration]
+tags: []
 status: publish
 meta:
   _edit_last: '3'

@@ -16,18 +16,6 @@ title: Get Debrief – Debrief Maritime Analysis Tool
   </div>
 </header>
 
-<div class="post-categories">
-  {% if post %}
-    {% assign categories = post.categories %}
-  {% else %}
-    {% assign categories = page.categories %}
-  {% endif %}
-  {% for category in categories %}
-  <a href="{{site.baseurl}}/category/{{category|slugize}}">{{category}}</a>
-  {% unless forloop.last %}&nbsp;{% endunless %}
-  {% endfor %}
-</div>
-
 <div class="page-content page-content--blog" aria-label="Content">
   <div class="container-fluid">
     <div class="row">
@@ -47,7 +35,7 @@ title: Get Debrief – Debrief Maritime Analysis Tool
                     <div class="post-block__date mr-2">
                         <i class="far fa-calendar-alt"></i>
                         <span>Posted</span>
-                        <span><a href="#"  class="post-block__date-link">{{ page.date | date: "%B %e, %Y" }}</a>,</span>
+                        <span><a href="{{ post.url }}"  class="post-block__date-link">{{ page.date | date: "%B %e, %Y" }}</a>,</span>
                     </div>
                     <div class="post-block__autor">
                         <span>by</span>

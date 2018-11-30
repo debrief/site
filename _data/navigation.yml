@@ -25,11 +25,11 @@ nav:
       - name: FAQ
         link: /faq
       - name: Customisation example
-        link: /customisation-example
+        link: /category/customisation-example
       - name: Use Case Study
-        link: /use-case-study
+        link: /category/use-case-study
       - name: Releases
-        link: /releases
+        link: /category/releases
   - name: Support
     link: /#
     id: NavlinkSupport

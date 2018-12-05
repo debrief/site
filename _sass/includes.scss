@@ -104,6 +104,13 @@
       width: 100%;
     }
   }
+  a {
+    transition: all .3s;
+    @include hover {
+      position: relative;
+      top: 1px;
+    }
+  }
 }
 .blog-widget {
   margin-bottom: 20px;

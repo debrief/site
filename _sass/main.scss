@@ -301,8 +301,35 @@ body {
     color: $navbar-light-color;
     font-weight: 300;
   }
-
 }
+
+.b-last-post {
+  margin-top: 15px;
+  margin-bottom: 25px;
+  &__date {
+    border-radius: 2px;
+    overflow: hidden;
+    background: #f9f9f9;
+    color: #666;
+    float: left;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1;
+    padding: 10px 0 0;
+    text-align: center;
+    width: 50px;
+    span {
+      background: #666;
+      color: #fff;
+      display: block;
+      font-size: 11px;
+      margin: 10px 0 0;
+      padding: 5px 0;
+      text-transform: uppercase;
+    }
+  }
+}
+
 
 
 //FAQ 

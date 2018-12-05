@@ -9,10 +9,65 @@ title: About Us – Debrief Maritime Analysis Tool
     <section class="section-default">
         <div class="container-fluid">
             <h1>OUR VISION</h1>
-            <h4 class="text-center font-weight-light">Advancing Maritime Security Through Data-Driven Analysis</h4>
+            <h4 class="text-center font-weight-light mb-5 pb-3">Advancing Maritime Security Through Data-Driven Analysis</h4>
             <div class="divider-default"></div>
-            <h1>WHAT’S NEW</h1>
+            <h1 class="mb-4 pb-2">WHAT’S NEW</h1>
+            <div class="last-posts-list">
+            {% assign recentCount = 0 %}
+            {% for post in site.posts %}
+                {% assign recentCount = recentCount | plus: 1 %}
+
+                <div class="media b-last-post">
+                    <div class="align-self-start mr-3">
+                        <div class="b-last-post__date">
+                            {{ post.date | date: "%e" }}
+                            <span>{{ post.date | date: "%b" }}</span>
+                        </div>
+                    </div>
+                    <div class="media-body">
+                        <a href="{{ post.url }}">
+                            <h5 class="font-weight-light">{{ post.title }}</h5>
+                        </a>
+                        <p>{{ post.excerpt | strip_html | truncatewords: 55 }}</p>
+                        <a href="{{ post.url }}" target="_self" class="btn btn-default btn-dark-hover btn-secondary font-weight-light btn-sm mx-1 my-2">
+                            Read More
+                            <svg xmlns="http://www.w3.org/2000/svg" width="5" height="14" viewBox="0 0 189 317" fill="#fff">
+                                <g transform="translate(-5 -5)">
+                                    <rect width="48" height="222" x="72.4594" y="120.4594" rx="12" transform="rotate(45 96.4594 231.4594)"/>
+                                    <rect width="48" height="231" x="75.3988" y="-16.4652" rx="12" transform="rotate(-45 99.3988 99.0348)"/>
+                                </g>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                {% if recentCount == 10 %}
+                    {% break %}
+                {% endif %}
+            {% endfor %}
+            </div>
         </div>
+    </section>
+    <section>
+           {% for post in site.posts %}
+                <div class="">
+                        <div class="">
+                                {{ post.date | date: "%B %e, %Y" }}
+                        </div>
+                </div>
+            {% endfor %}
+
+
+            <h2>Archive</h2>
+                {% assign postsByYearMonth = site.posts | group_by_exp:"post", "post.date | date: '%Y %b'"  %}
+                {% for yearMonth in postsByYearMonth %}
+                
+                <a href="{{ year }}">
+                        <h3>{{ yearMonth.name }}</h3>
+                </a>
+                {% endfor %}
+
+
     </section>
 
     <section class="section-default">

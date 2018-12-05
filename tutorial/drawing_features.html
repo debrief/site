@@ -1,0 +1,105 @@
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <title>3.3.&nbsp;Adding drawing features</title><link rel="stylesheet" type="text/css" href="header.css"><meta name="generator" content="DocBook XSL Stylesheets V1.78.1"><meta name="keywords" content="Maritime Analysis, Open Source Tool"><link rel="home" href="index.html" title="Debrief NG User Documentation"><link rel="up" href="formatting_data.html" title="Chapter&nbsp;3.&nbsp;Manipulating track data"><link rel="prev" href="new_chart_features.html" title="3.2.&nbsp;Adding chart features"><link rel="next" href="layer_mgr.html" title="3.4.&nbsp;Layer management"><link rel="preface" href="PrefaceIntro.html" title="Introduction"><link rel="part" href="tutorial.html" title="Part&nbsp;I.&nbsp;Getting started"><link rel="chapter" href="get_start.html" title="Chapter&nbsp;1.&nbsp;First steps"><link rel="part" href="UsingDebrief.html" title="Part&nbsp;II.&nbsp;Using Debrief"><link rel="chapter" href="moving_around.html" title="Chapter&nbsp;2.&nbsp;Moving around the view"><link rel="chapter" href="formatting_data.html" title="Chapter&nbsp;3.&nbsp;Manipulating track data"><link rel="chapter" href="analysing_data.html" title="Chapter&nbsp;4.&nbsp;Analysing Data"><link rel="chapter" href="exporting_data.html" title="Chapter&nbsp;5.&nbsp;Exporting Data"><link rel="chapter" href="symbol_sets.html" title="Chapter&nbsp;6.&nbsp;Symbol sets"><link rel="chapter" href="external_datasets.html" title="Chapter&nbsp;7.&nbsp;External datasets"><link rel="chapter" href="ExercisePlanning.html" title="Chapter&nbsp;8.&nbsp;Exercise planning"><link rel="chapter" href="viewing_narratives.html" title="Chapter&nbsp;9.&nbsp;Viewing narratives"><link rel="chapter" href="ChartBackdrops.html" title="Chapter&nbsp;10.&nbsp;Using chart backdrops"><link rel="chapter" href="sensor_data.html" title="Chapter&nbsp;11.&nbsp;Analysing sensor data"><link rel="chapter" href="tma_data.html" title="Chapter&nbsp;12.&nbsp;Management of TMA and TUA solutions"><link rel="chapter" href="dis_support.html" title="Chapter&nbsp;13.&nbsp;Support for DIS Protocol"><link rel="part" href="maintainers_guide.html" title="Part&nbsp;III.&nbsp;Maintainer's Guide"><link rel="chapter" href="participating.html" title="Chapter&nbsp;14.&nbsp;Participating in Debrief development"><link rel="chapter" href="maintainers.html" title="Chapter&nbsp;15.&nbsp;Debrief maintainer's guide"><link rel="part" href="reference_guide.html" title="Part&nbsp;IV.&nbsp;Reference Guide"><link rel="chapter" href="reference.html" title="Chapter&nbsp;16.&nbsp;Debrief file formats"><link rel="chapter" href="GeoToolsRef.html" title="Chapter&nbsp;17.&nbsp;GeoTools in Debrief"><link rel="chapter" href="chap_debrief_algorithms.html" title="Chapter&nbsp;18.&nbsp;Debrief algorithms"><link rel="chapter" href="chap_genetic_algorithms.html" title="Chapter&nbsp;19.&nbsp;Semi Automated Track Construction (SATC)"><link rel="chapter" href="dis_ref.html" title="Chapter&nbsp;20.&nbsp;System Documentation for DIS integration"><link rel="appendix" href="app_glossary.html" title="Appendix&nbsp;A.&nbsp;Debrief Glossary"><link rel="glossary" href="app_glossary.html#glossary" title="Glossary"><link rel="index" href="the_index.html" title="Index"><link rel="subsection" href="drawing_features.html#the_labels" title="3.3.1.&nbsp;Label"><link rel="subsection" href="drawing_features.html#the_ellipse" title="3.3.2.&nbsp;Ellipse"><link rel="subsection" href="drawing_features.html#the_polygon" title="3.3.3.&nbsp;Polygon"><link rel="subsection" href="drawing_features.html#easy_shapes" title="3.3.4.&nbsp;Rectangle, Circle, Line, Arc"><link rel="subsection" href="drawing_features.html#general_editing" title="3.3.5.&nbsp;General"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">3.3.&nbsp;Adding drawing features</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="new_chart_features.html"><img src="images/prev.gif" alt="Prev"></a>&nbsp;</td><th width="60%" align="center">Chapter&nbsp;3.&nbsp;Manipulating track data</th><td width="20%" align="right">&nbsp;<a accesskey="n" href="layer_mgr.html"><img src="images/next.gif" alt="Next"></a></td></tr></table><hr></div><div class="sect1" id="drawing_features"><div class="titlepage"><div><div><h2 class="title" style="clear: both">3.3.&nbsp;Adding drawing features</h2></div></div></div><div class="toc"><dl class="toc"><dt><span class="sect2"><a href="drawing_features.html#the_labels">3.3.1. Label</a></span></dt><dt><span class="sect2"><a href="drawing_features.html#the_ellipse">3.3.2. Ellipse</a></span></dt><dt><span class="sect2"><a href="drawing_features.html#the_polygon">3.3.3. Polygon</a></span></dt><dt><span class="sect2"><a href="drawing_features.html#easy_shapes">3.3.4. Rectangle, Circle, Line, Arc</a></span></dt><dt><span class="sect2"><a href="drawing_features.html#general_editing">3.3.5. General</a></span></dt></dl></div>
+        
+
+        <p>The <span class="guilabel">Drawing</span> toolbar and menu are used to place geographic features on the plot; features which are geographically fixed. In general, when you create them, their corners must be specified by copying a location from the plot and posting it into the property of the relevant corner. </p><div class="figure" id="drawing_toolbar_demo"><p class="title"><b>Figure&nbsp;3.13.&nbsp;Drawing toolbar</b></p><div class="figure-contents">
+            
+
+            <div class="screenshot">
+              <div class="mediaobject" align="center"><img src="figures/PaletteButtons1.png" align="middle" alt="Drawing toolbar"></div>
+            </div>
+          </div></div><p><br class="figure-break"></p>
+
+        <div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.gif"></td><th align="left">Note</th></tr><tr><td align="left" valign="top">
+          <p>By default, new drawing features are placed in the <code class="computeroutput">Misc</code> layer, from where they can be moved to other layers as required. If you're creating lots of drawing features, and want to place them directly into target layers, select on <span class="guimenuitem">Manually select target layer</span> from the top of the Drawing menu. When this setting is ticked, Debrief will prompt you to select a target layer for each new drawing feature added to the plot. Clear the ticked setting to return the target layer to the <code class="computeroutput">Misc</code> layer.</p>
+        </td></tr></table></div>
+
+        <div class="sect2" id="the_labels"><div class="titlepage"><div><div><h3 class="title">3.3.1.&nbsp;Label</h3></div></div></div>
+          
+
+          <p>The Label <a class="indexterm" name="d5e1285"></a>drawing item allows you to place a labelled symbol on the plot. Typically this may be used to annotate events on the plot, or to add an extra feature which did not warrant its own Debrief REP entry. Like all annotations Labels have time start and end properties. Because of this they can be placed on the Tote (see <a class="xref" href="analysing_data.html#the_tote_area" title="4.1.1.&nbsp;Tote area">Section&nbsp;4.1.1, &#8220;Tote area&#8221;</a>) and used in analysis, as you will learn later.</p>
+
+          <div class="tip" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0" summary="Tip"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Tip]" src="images/tip.gif"></td><th align="left">Tip</th></tr><tr><td align="left" valign="top">
+              <p>A custom editor is supplied (see below) for editing locations of data items, it is used frequently in <span class="application">Debrief</span>. Clicking on the expand button will let you edit individual lat/long fields (shown in figure <a class="xref" href="drawing_features.html#editor_expanded" title="Figure&nbsp;3.15.&nbsp;Location Editor (expanded view)">Figure&nbsp;3.15, &#8220;Location Editor (expanded view)&#8221;</a>). Alternatively, you may set the location to a specific point on the plot. Right-click on the plot and select <span class="guimenuitem">Copy cursor location</span>. Then click once on the location editor to reveal the <span class="guibutton">Paste</span> button (shown in <a class="xref" href="drawing_features.html#editor_paste" title="Figure&nbsp;3.16.&nbsp;Location Editor (paste view)">Figure&nbsp;3.16, &#8220;Location Editor (paste view)&#8221;</a>), and click it to paste the cursor location.</p>
+
+              <div class="figure" id="editor_initial"><p class="title"><b>Figure&nbsp;3.14.&nbsp;Location Editor (initial view)</b></p><div class="figure-contents">
+                
+
+                <div class="screenshot">
+                  <div class="mediaobject" align="center"><img src="figures/LocationEditor.png" align="middle" alt="Location Editor (initial view)"></div>
+                </div>
+              </div></div><br class="figure-break">
+
+              <div class="figure" id="editor_expanded"><p class="title"><b>Figure&nbsp;3.15.&nbsp;Location Editor (expanded view)</b></p><div class="figure-contents">
+                
+
+                <div class="screenshot">
+                  <div class="mediaobject" align="center"><img src="figures/LocationEditor3.png" align="middle" alt="Location Editor (expanded view)"></div>
+                </div>
+              </div></div><br class="figure-break">
+
+              <div class="figure" id="editor_paste"><p class="title"><b>Figure&nbsp;3.16.&nbsp;Location Editor (paste view)</b></p><div class="figure-contents">
+                
+
+                <div class="screenshot">
+                  <div class="mediaobject" align="center"><img src="figures/LocationEditor2.png" align="middle" alt="Location Editor (paste view)"></div>
+                </div>
+              </div></div><br class="figure-break">
+            </td></tr></table></div>
+
+          <div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.gif"></td><th align="left">Note</th></tr><tr><td align="left" valign="top">
+            <p>Note that the text for the label itself can be a multi-line piece of text. When in the text-editor box for the label, just press the return key on your keyboard to move to the next line. The multi-line piece of text will be centre formatted on screen according to the <span class="guilabel">Label Location</span> property. The multi-line label is also available for all labels on the <span class="application">Debrief</span> plot. Note that when the label is stored to disk in the <span class="application">Debrief</span> plot-file format, the '\n' character used internally to represent the new line is converted to a '\\n' string to allow its easy storage.</p>
+          </td></tr></table></div>
+        </div>
+
+        <div class="sect2" id="the_ellipse"><div class="titlepage"><div><div><h3 class="title">3.3.2.&nbsp;Ellipse</h3></div></div></div>
+          
+
+          <p>The Ellipse shape works in much <a class="indexterm" name="d5e1323"></a> the same way as a Label, except an ellipse is drawn on the plot instead of the labelled symbol. The size of the ellipse is dictated by the Maxima and Minima values which specify the lengths of its semi-major and semi-minor axes, expressed in user-selectable distance units. These values are the distances from the centre of the ellipse to the furthest and closest points on its perimeter, respectively. The direction of the ellipse is specified by the orientation, expressed in degrees. <span class="application">Debrief</span> does not check that the maxima is larger that the minima, it merely plots an ellipse oriented about the semi-major axis.</p>
+        </div>
+
+        <div class="sect2" id="the_polygon"><div class="titlepage"><div><div><h3 class="title">3.3.3.&nbsp;Polygon</h3></div></div></div>
+          
+
+          <p>The Polygon drawing feature <a class="indexterm" name="d5e1330"></a>allows more varied shapes to be plotted within Debrief. A series of points (called a Path) are added to a Shape which are the connected up to create a Polygon. The points in the path may be typed in, double-clicked, or dragged to produce the correct polygon.</p>
+
+          <p>When a new polygon is created, its editor panel will open as shown below: </p><div class="figure" id="polygon_demo"><p class="title"><b>Figure&nbsp;3.17.&nbsp;Initial view of polygon</b></p><div class="figure-contents">
+              
+
+              <div class="screenshot">
+                <div class="mediaobject" align="center"><img src="figures/EditPolygon.png" align="middle" alt="Initial view of polygon"></div>
+              </div>
+            </div></div><p><br class="figure-break"></p>
+
+          <p>The properties shown are similar to those shown for most other shapes, with the exception of the actual locations of the polygon. Change the location of the nodes that form the polygon by selecting them in the Outline View then editing them the Properties View (see <a class="xref" href="formatting_data.html#properties_view" title="Figure&nbsp;3.1.&nbsp;Properties view">Figure&nbsp;3.1, &#8220;Properties view&#8221;</a>). New nodes are created by right-clicking on the Polygon (in the Outline View or on the Plot), and selecting <span class="guimenu">Add Node</span>. </p>
+        </div>
+
+        <div class="sect2" id="easy_shapes"><div class="titlepage"><div><div><h3 class="title">3.3.4.&nbsp;Rectangle, Circle, Line, Arc</h3></div></div></div>
+          
+
+          <p>The Rectangle, Circle and Line shapes <a class="indexterm" name="d5e1346"></a>work in the same way as the others described here, the Location Editor described above being used to set the corners, centre, or ends as required.</p><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.gif"></td><th align="left">Note</th></tr><tr><td align="left" valign="top">
+              <p>Some of the more basic drawing items have a single <span class="guilabel">DTG</span> parameter instead of <span class="guilabel">TimeStart</span> and <span class="guilabel">Time_End</span> properties. Where there is a single time, the time-analytical features of Debrief (such as Snail mode) treat the feature as <span class="emphasis"><em>alive</em></span> for three minutes either side of the time value.</p>
+            </td></tr></table></div>
+
+          <div class="tip" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0" summary="Tip"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Tip]" src="images/tip.gif"></td><th align="left">Tip</th></tr><tr><td align="left" valign="top">
+            <p>To draw a line created from an origin with values of range and bearing, first create the line, and put the start point of the line at the origin. Now switch the mouse mode to <span class="guilabel">Range/Bearing</span> ( <span class="guiicon">
+                <span class="inlinemediaobject"><img src="figures/RngBrg.png" align="middle"></span>
+              </span>). Now click on the button labelled <span class="guilabel">Select Point</span> for <span class="guilabel">LineStart</span>, and drag the mouse out from the origin point. The current range and bearing will be displayed at the bottom-left of the screen. When the mouse is at the desired range and bearing right-click and copy the position onto the clipboard. Next, paste that location into the <span class="guilabel">LineEnd</span> value.</p>
+          </td></tr></table></div>
+          <div class="note" id="ShowRangeCalc" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.gif"></td><th align="left">Note</th></tr><tr><td align="left" valign="top">
+            <p>In Summer 2013 the <span class="guilabel">Line Shape</span> annotation received some love and gained new capabilities. One is the ability to have an arrow displayed at one end. This is useful in indicating the direction of travel, or in highlighting a particular location. The second capability is <a class="indexterm" name="d5e1368"></a><span class="guilabel">Show Auto Calc</span> - this displays the calculated range and bearing 1/2 way along the line. Unfortunately this label is only visible on screen - the structure Windows Metafile format doesn't allow us to copy the rotated text across the clipboard to copy it into MS Word. So, you'll only get this rotated text in MS Word is you capture a screenshot, using software such as SnagIt or Hypercam. If you do want to include such a label in your analysis report, and you wish to copy/paste the image via the clipboard, then you can always manually put the range/bearing into the line label, and specify that the label be shown 1/2 way along the line.</p><div class="figure" id="d5e1371"><p class="title"><b>Figure&nbsp;3.18.&nbsp;Calculated Label</b></p><div class="figure-contents">
+                
+                <div class="screenshot">
+                  <div class="mediaobject" align="center"><img src="figures/CalculatedLabel.png" align="middle" alt="Calculated Label"></div>
+                </div>
+              </div></div><p><br class="figure-break"></p>
+          </td></tr></table></div>
+        </div>
+
+        <div class="sect2" id="general_editing"><div class="titlepage"><div><div><h3 class="title">3.3.5.&nbsp;General</h3></div></div></div>
+          
+
+          <p>To edit any existing annotation, double on it on the <a class="glossterm" href="app_glossary.html#g_plt"><em class="glossterm">plot</em></a> or the Outline View to select it - its attributes will then be available from the Properties View. Alternatively, right-click on an item on the Plot or Outline View, and editable attributes are available from the object's drop-down list. Only boolean (true/false) and list-related (top/bottom/left/right etc) are editable from the right-click menu.</p>
+        </div>
+      </div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="new_chart_features.html"><img src="images/prev.gif" alt="Prev"></a>&nbsp;</td><td width="20%" align="center"><a accesskey="u" href="formatting_data.html"><img src="images/up.gif" alt="Up"></a></td><td width="40%" align="right">&nbsp;<a accesskey="n" href="layer_mgr.html"><img src="images/next.gif" alt="Next"></a></td></tr><tr><td width="40%" align="left" valign="top">3.2.&nbsp;Adding chart features&nbsp;</td><td width="20%" align="center"><a accesskey="h" href="index.html"><img src="images/home.gif" alt="Home"></a></td><td width="40%" align="right" valign="top">&nbsp;3.4.&nbsp;Layer management</td></tr></table></div></body></html>

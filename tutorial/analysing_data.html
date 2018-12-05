@@ -1,0 +1,117 @@
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <title>Chapter&nbsp;4.&nbsp;Analysing Data</title><link rel="stylesheet" type="text/css" href="header.css"><meta name="generator" content="DocBook XSL Stylesheets V1.78.1"><meta name="keywords" content="Maritime Analysis, Open Source Tool"><link rel="home" href="index.html" title="Debrief NG User Documentation"><link rel="up" href="UsingDebrief.html" title="Part&nbsp;II.&nbsp;Using Debrief"><link rel="prev" href="GridEditor.html" title="3.8.&nbsp;Using the Grid Editor"><link rel="next" href="controlling_time.html" title="4.2.&nbsp;Controlling time"><link rel="preface" href="PrefaceIntro.html" title="Introduction"><link rel="part" href="tutorial.html" title="Part&nbsp;I.&nbsp;Getting started"><link rel="chapter" href="get_start.html" title="Chapter&nbsp;1.&nbsp;First steps"><link rel="part" href="UsingDebrief.html" title="Part&nbsp;II.&nbsp;Using Debrief"><link rel="chapter" href="moving_around.html" title="Chapter&nbsp;2.&nbsp;Moving around the view"><link rel="chapter" href="formatting_data.html" title="Chapter&nbsp;3.&nbsp;Manipulating track data"><link rel="chapter" href="analysing_data.html" title="Chapter&nbsp;4.&nbsp;Analysing Data"><link rel="chapter" href="exporting_data.html" title="Chapter&nbsp;5.&nbsp;Exporting Data"><link rel="chapter" href="symbol_sets.html" title="Chapter&nbsp;6.&nbsp;Symbol sets"><link rel="chapter" href="external_datasets.html" title="Chapter&nbsp;7.&nbsp;External datasets"><link rel="chapter" href="ExercisePlanning.html" title="Chapter&nbsp;8.&nbsp;Exercise planning"><link rel="chapter" href="viewing_narratives.html" title="Chapter&nbsp;9.&nbsp;Viewing narratives"><link rel="chapter" href="ChartBackdrops.html" title="Chapter&nbsp;10.&nbsp;Using chart backdrops"><link rel="chapter" href="sensor_data.html" title="Chapter&nbsp;11.&nbsp;Analysing sensor data"><link rel="chapter" href="tma_data.html" title="Chapter&nbsp;12.&nbsp;Management of TMA and TUA solutions"><link rel="chapter" href="dis_support.html" title="Chapter&nbsp;13.&nbsp;Support for DIS Protocol"><link rel="part" href="maintainers_guide.html" title="Part&nbsp;III.&nbsp;Maintainer's Guide"><link rel="chapter" href="participating.html" title="Chapter&nbsp;14.&nbsp;Participating in Debrief development"><link rel="chapter" href="maintainers.html" title="Chapter&nbsp;15.&nbsp;Debrief maintainer's guide"><link rel="part" href="reference_guide.html" title="Part&nbsp;IV.&nbsp;Reference Guide"><link rel="chapter" href="reference.html" title="Chapter&nbsp;16.&nbsp;Debrief file formats"><link rel="chapter" href="GeoToolsRef.html" title="Chapter&nbsp;17.&nbsp;GeoTools in Debrief"><link rel="chapter" href="chap_debrief_algorithms.html" title="Chapter&nbsp;18.&nbsp;Debrief algorithms"><link rel="chapter" href="chap_genetic_algorithms.html" title="Chapter&nbsp;19.&nbsp;Semi Automated Track Construction (SATC)"><link rel="chapter" href="dis_ref.html" title="Chapter&nbsp;20.&nbsp;System Documentation for DIS integration"><link rel="appendix" href="app_glossary.html" title="Appendix&nbsp;A.&nbsp;Debrief Glossary"><link rel="glossary" href="app_glossary.html#glossary" title="Glossary"><link rel="index" href="the_index.html" title="Index"><link rel="section" href="analysing_data.html#assigning_tracks" title="4.1.&nbsp;Assigning tracks as primary and secondary"><link rel="section" href="controlling_time.html" title="4.2.&nbsp;Controlling time"><link rel="section" href="measure_range.html" title="4.3.&nbsp;Measuring range and bearing"><link rel="section" href="show_time_vars.html" title="4.4.&nbsp;Show time-related variables"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">Chapter&nbsp;4.&nbsp;Analysing Data</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="GridEditor.html"><img src="images/prev.gif" alt="Prev"></a>&nbsp;</td><th width="60%" align="center">Part&nbsp;II.&nbsp;Using Debrief</th><td width="20%" align="right">&nbsp;<a accesskey="n" href="controlling_time.html"><img src="images/next.gif" alt="Next"></a></td></tr></table><hr></div><div class="chapter" id="analysing_data"><div class="titlepage"><div><div><h2 class="title">Chapter&nbsp;4.&nbsp;Analysing Data</h2></div></div></div><div class="toc"><p><b>Table of Contents</b></p><dl class="toc"><dt><span class="sect1"><a href="analysing_data.html#assigning_tracks">4.1. Assigning tracks as primary and secondary</a></span></dt><dd><dl><dt><span class="sect2"><a href="analysing_data.html#the_tote_area">4.1.1. Tote area</a></span></dt><dt><span class="sect2"><a href="analysing_data.html#more_assigning_tracks">4.1.2. Assigning tracks</a></span></dt><dt><span class="sect2"><a href="analysing_data.html#some_notes">4.1.3. Notes</a></span></dt></dl></dd><dt><span class="sect1"><a href="controlling_time.html">4.2. Controlling time</a></span></dt><dd><dl><dt><span class="sect2"><a href="controlling_time.html#time_controller">4.2.1. The Time Controller</a></span></dt><dt><span class="sect2"><a href="controlling_time.html#display_modes">4.2.2. Display modes</a></span></dt><dt><span class="sect2"><a href="controlling_time.html#relative_mode">4.2.3. Plotting modes</a></span></dt><dt><span class="sect2"><a href="controlling_time.html#highlight_modes">4.2.4. Highlight modes</a></span></dt><dt><span class="sect2"><a href="controlling_time.html#time_display">4.2.5. Time display</a></span></dt><dt><span class="sect2"><a href="controlling_time.html#time_slider">4.2.6. Time slider</a></span></dt><dt><span class="sect2"><a href="controlling_time.html#time_bookmarks">4.2.7. Bookmarking</a></span></dt><dt><span class="sect2"><a href="controlling_time.html#filter_to_time_period">4.2.8. Manipulating according to time period</a></span></dt><dt><span class="sect2"><a href="controlling_time.html#vcr_controls">4.2.9. VCR controls</a></span></dt><dt><span class="sect2"><a href="controlling_time.html#other_ops">4.2.10. Other time operations</a></span></dt></dl></dd><dt><span class="sect1"><a href="measure_range.html">4.3. Measuring range and bearing</a></span></dt><dd><dl><dt><span class="sect2"><a href="measure_range.html#more_range">4.3.1. Range bearing tool</a></span></dt><dt><span class="sect2"><a href="measure_range.html#earth_model">4.3.2. Earth Model</a></span></dt></dl></dd><dt><span class="sect1"><a href="show_time_vars.html">4.4. Show time-related variables</a></span></dt><dd><dl><dt><span class="sect2"><a href="show_time_vars.html#time_var_plot_bar">4.4.1. Time-Variable Plot Tracker-Bar</a></span></dt><dt><span class="sect2"><a href="show_time_vars.html#AnalyseTime_Zero">4.4.2. Analysing time-zero data in time-variable plot</a></span></dt></dl></dd></dl></div>
+      
+
+      <p>Analysis is the core function of <a class="indexterm" name="d5e1706"></a> Debrief. In this section (at last) you are going to gain some familiarity with how Debrief can be used to analyse maritime exercises.</p>
+
+      <div class="sect1" id="assigning_tracks"><div class="titlepage"><div><div><h2 class="title" style="clear: both">4.1.&nbsp;Assigning tracks as primary and secondary</h2></div></div></div><div class="toc"><dl class="toc"><dt><span class="sect2"><a href="analysing_data.html#the_tote_area">4.1.1. Tote area</a></span></dt><dt><span class="sect2"><a href="analysing_data.html#more_assigning_tracks">4.1.2. Assigning tracks</a></span></dt><dt><span class="sect2"><a href="analysing_data.html#some_notes">4.1.3. Notes</a></span></dt></dl></div>
+        
+
+        <div class="sect2" id="the_tote_area"><div class="titlepage"><div><div><h3 class="title">4.1.1.&nbsp;Tote area</h3></div></div></div>
+          
+
+          <p><a class="indexterm" name="d5e1714"></a>We'll have a brief explanation of the Tote at this point, using the image below. </p><div class="figure" id="tote_demo"><p class="title"><b>Figure&nbsp;4.1.&nbsp;The <span class="application">Debrief</span> Tote</b></p><div class="figure-contents">
+              
+
+              <div class="screenshot">
+                <div class="mediaobject" align="center"><img src="figures/ToteLabelled.png" align="middle" alt="The Debrief Tote"></div>
+              </div>
+            </div></div><p><br class="figure-break"></p>
+
+          <p>The <a class="glossterm" href="app_glossary.html#g_tote"><em class="glossterm">Tote</em></a> area is used to show the current and relative status between two or more platform tracks. The information on the <a class="glossterm" href="app_glossary.html#g_tote"><em class="glossterm">Tote</em></a> is dynamic, showing vessel information at the time indicated in the Stepper Control.</p>
+
+          <div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.gif"></td><th align="left">Note</th></tr><tr><td align="left" valign="top">
+            <p>The primary and secondary tracks may not contain values exactly at the time in the time stepper control. For both the tote display and the plot-highlights, Debrief uses the data values recorded on or immediately after the indicated stepper time (see the <a class="xref" href="analysing_data.html#time_calc">Time</a> for more detail).</p>
+          </td></tr></table></div>
+
+          <p>One <a class="glossterm" href="app_glossary.html#g_track"><em class="glossterm">track</em></a><a class="indexterm" name="d5e1731"></a> currently loaded is assigned as the Primary track (the red track in this instance), and then one or more tracks are assigned as <a class="indexterm" name="d5e1733"></a>Secondary tracks. The primary track always shows absolute data such as current course, speed and depth. With just a single secondary track specified, it also shows relative (calculated) data - as illustrated above. The secondary tracks always display both absolute data (course, speed, depth), plus the relative data respective to the primary. Thus, remember that if you want to see the primary track's relative bearing to the secondary, make sure there's just the one secondary track selected.</p>
+
+          <p>Not only tracks can be placed on the Tote. Most annotations (labels, circles, etc) can also be set as primary or secondary track. If no time is available for an annotation it is deemed to always be valid, and calculations are shown although the time field is displayed as "n/a". However, if the annotation has start and end times the tote displays "n/a" when outside that period and calculated data when inside it.</p>
+
+          <div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.gif"></td><th align="left">Note</th></tr><tr><td align="left" valign="top">
+            <p>It may be useful to remember that the Primary Track is usually assigned to the Target, thereby allowing a constant display of target bearing and range.</p>
+          </td></tr></table></div>
+
+          <p>There can be any number of secondary tracks. <span class="application">Debrief</span> displays calculated results of the relationship between each one and the Primary Track. To see the relationship between a pair of secondary tracks, one of them must be set to the Primary track.</p>
+
+          <p>The following calculated data is presented, where the current point on each track is used for the calculation: </p><div class="variablelist"><dl class="variablelist"><dt><span class="term">Range</span></dt><dd>
+                  <p>The range between the current point on the secondary track and the current point on the primary track using the <a class="glossterm" href="app_glossary.html#g_earth_model"><em class="glossterm">earth model</em></a> as described in the Glossary, displayed in the units stored in the Debrief preferences window. Debrief NG introduced the option of showing <a class="glossterm" href="app_glossary.html#g_slant_range"><em class="glossterm">slant range</em></a>, accessible from Debrief's Preferences window. If you have indicated that you want to view slant range, then the range shown is a function of horizontal range and vertical separation.</p>
+                </dd><dt><span class="term">Bearing</span></dt><dd>
+                  <p>The bearing between the points.</p>
+                </dd><dt id="RelBearingDescription"><span class="term">Rel Bearing / ATB</span></dt><dd>
+                  <p>The relative bearing and Angle on The Bow from the perspective of that column's track.. There are two formats used for relative bearing, depending on the setting of <span class="emphasis"><em>Relative bearing format</em></span> in the <span class="guimenu">Window</span>/<span class="guimenu">Preferences</span> dialog. If the format is specified as UK, the R and G characters at the start of the result are short for Red and Green, which indicate that the contact is to the Port or Starboard of the secondary track. If the format is specified as US, the value uses 0 as directly ahead and continues clockwise through 180 (astern) and back round to 359.9.</p>
+                </dd><dt><span class="term">Speed</span></dt><dd>
+                  <p>The current speed of the indicated track (no actual calculation is performed here; the value from the data-file is displayed directly).</p>
+                </dd><dt><span class="term">Course</span></dt><dd>
+                  <p>The current course of the indicated track (no actual calculation is performed here; the value from the data-file is displayed directly).</p>
+                </dd><dt><span class="term">Depth</span></dt><dd>
+                  <p>The current depth of the indicated track (no actual calculation is performed here; the value from the data-file is displayed directly).</p>
+                </dd><dt><span class="term">Brg Rate</span></dt><dd>
+                  <p>The instantaneous bearing rate of the secondary track as observed from the secondary track. This value is explained in the Glossary.</p>
+                </dd><dt id="time_calc"><span class="term">Time</span></dt><dd>
+                  <p>Where track data is not recorded at regular steps, and tracks do not have data at the same time steps, there is a likelihood that the value displayed on the tote will not have been recorded at the current tote time. The time field shows the actual time at which the data value was recorded for that track.</p>
+                </dd></dl></div><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.gif"></td><th align="left">Note</th></tr><tr><td align="left" valign="top">
+              <p>When more than two tracks are loaded, the value <span class="guilabel">n/a</span> is shown in Tote calculations for the primary track which rely on other track data (range, bearing, rel bearing, brg rate). This is because it is unclear which inter-track relationship is being calculated. Where only two tracks are loaded (one primary and one secondary), the tote is able to show relative calculated data for both.</p>
+            </td></tr></table></div>
+        </div>
+
+        <div class="sect2" id="more_assigning_tracks"><div class="titlepage"><div><div><h3 class="title">4.1.2.&nbsp;Assigning tracks</h3></div></div></div>
+          
+
+          <p>Assigning primary and secondary tracks is covered in the respective <a class="glossterm" href="app_glossary.html#g_cheat"><em class="glossterm">Cheat Sheet</em></a>. Icons are provided in the Outline View toolbar to specify if the selected track should be:</p><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem">
+                <p>Made primary</p>
+              </li><li class="listitem">
+                <p>Made secondary</p>
+              </li><li class="listitem">
+                <p>Added to the list of secondaries</p>
+              </li></ol></div><div class="figure" id="d5e1793"><p class="title"><b>Figure&nbsp;4.2.&nbsp;Assigning Tracks</b></p><div class="figure-contents">
+              
+              <div class="screenshot">
+                <div class="mediaobject" align="center"><img src="figures/LayerManagerView.png" align="middle" alt="Assigning Tracks"></div>
+              </div>
+            </div></div><p><br class="figure-break"></p>
+
+          <div class="tip" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0" summary="Tip"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Tip]" src="images/tip.gif"></td><th align="left">Tip</th></tr><tr><td align="left" valign="top">
+            <p>If you have more than two tracks, it can be quicker to assign the primary track manually and then press <span class="guibutton">Auto Populate</span> to assign the remaining tracks as secondary.</p>
+          </td></tr></table></div>
+        </div>
+
+        <div class="sect2" id="some_notes"><div class="titlepage"><div><div><h3 class="title">4.1.3.&nbsp;Notes</h3></div></div></div>
+          
+
+          <div class="warning" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0" summary="Warning"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Warning]" src="images/warning.gif"></td><th align="left">Warning</th></tr><tr><td align="left" valign="top">
+              <p>A Circle currently only has a single "Centre" DTG value - so it will only be highlighted for 3 minutes either side of this point. Better results are obtained by using a Label (which has a picture of a text label on it), since Labels have start and finish DTGs.</p>
+            </td></tr></table></div><p>
+            </p><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.gif"></td><th align="left">Note</th></tr><tr><td align="left" valign="top">
+              <p>It is not just tracks that can be added to the Tote, experiment with right-clicking on features on the plot and see if they have the "Set Primary Track" or "Set Secondary Track" commands available (although read the note below about these). In this way you can make a timed data point (represented by a Circle with a very small radius) the primary track, then add a number of vessel tracks as secondary tracks, and then as you move through the data you can constantly see the vessel range and bearings from this data point. This is particularly useful for seeing vessel ranges and bearings from a <a class="glossterm" href="app_glossary.html#g_sensor"><em class="glossterm">sensor</em></a> such as a sonar buoy. Remember to set the DTG data for the data point to time(s) near those of the track - or else in your example <span class="application">Debrief</span> will assume the "sonar buoy" is not yet active.</p>
+            </td></tr></table></div><p>
+            </p><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.gif"></td><th align="left">Note</th></tr><tr><td align="left" valign="top">
+              <p>The limits on the time period are the outer time limits of the visible data in the primary and secondary tracks currently displayed on the Tote, so following a filter operation (introduced later) the start/end times will be changed to reflect the time limits specified.</p>
+            </td></tr></table></div><p>
+            </p><div class="note" id="time_controls" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.gif"></td><th align="left">Note</th></tr><tr><td align="left" valign="top">
+              <p>The keyboard can also be used for moving backwards and forwards, although <span class="application">Debrief</span> has to know that it's the Stepper that you want the keys to control. So, after clicking on the time-slider control you can then switch to keyboard control of the Tote as follows: </p><div class="itemizedlist"><ul class="itemizedlist compact" style="list-style-type: disc; "><li class="listitem">
+                    <p>Page Up/Down keys: these control small step backward/forward resp.</p>
+                  </li><li class="listitem">
+                    <p>Page Up/Down arrows: these control large step backward/forward resp.</p>
+                  </li><li class="listitem">
+                    <p>Home/End keys: these control goto First/Last resp.</p>
+                  </li></ul></div>
+            </td></tr></table></div><p>
+            </p><div class="tip" id="interp_data" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0" summary="Tip"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Tip]" src="images/tip.gif"></td><th align="left">Tip</th></tr><tr><td align="left" valign="top">
+              <p>Debrief has an interpolates points property which, when ticked, interpolates the positions between actual data points. The highlight cursor changes appearance when on an interpolated data point.</p><div class="figure" id="interpolate_demo"><p class="title"><b>Figure&nbsp;4.3.&nbsp;Display of an interpolated point</b></p><div class="figure-contents">
+                  
+                  <div class="screenshot">
+                    <div class="mediaobject"><img src="figures/interpolated_position.png" alt="Display of an interpolated point"></div>
+                  </div>
+                </div></div><p><br class="figure-break"></p>
+            </td></tr></table></div>
+        </div>
+      </div>
+
+      
+
+      
+
+      
+    </div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="GridEditor.html"><img src="images/prev.gif" alt="Prev"></a>&nbsp;</td><td width="20%" align="center"><a accesskey="u" href="UsingDebrief.html"><img src="images/up.gif" alt="Up"></a></td><td width="40%" align="right">&nbsp;<a accesskey="n" href="controlling_time.html"><img src="images/next.gif" alt="Next"></a></td></tr><tr><td width="40%" align="left" valign="top">3.8.&nbsp;Using the Grid Editor&nbsp;</td><td width="20%" align="center"><a accesskey="h" href="index.html"><img src="images/home.gif" alt="Home"></a></td><td width="40%" align="right" valign="top">&nbsp;4.2.&nbsp;Controlling time</td></tr></table></div></body></html>

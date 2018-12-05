@@ -1,0 +1,283 @@
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <title>11.2.&nbsp;Analysing your data</title><link rel="stylesheet" type="text/css" href="header.css"><meta name="generator" content="DocBook XSL Stylesheets V1.78.1"><meta name="keywords" content="Maritime Analysis, Open Source Tool"><link rel="home" href="index.html" title="Debrief NG User Documentation"><link rel="up" href="sensor_data.html" title="Chapter&nbsp;11.&nbsp;Analysing sensor data"><link rel="prev" href="sensor_data.html" title="Chapter&nbsp;11.&nbsp;Analysing sensor data"><link rel="next" href="tma_data.html" title="Chapter&nbsp;12.&nbsp;Management of TMA and TUA solutions"><link rel="preface" href="PrefaceIntro.html" title="Introduction"><link rel="part" href="tutorial.html" title="Part&nbsp;I.&nbsp;Getting started"><link rel="chapter" href="get_start.html" title="Chapter&nbsp;1.&nbsp;First steps"><link rel="part" href="UsingDebrief.html" title="Part&nbsp;II.&nbsp;Using Debrief"><link rel="chapter" href="moving_around.html" title="Chapter&nbsp;2.&nbsp;Moving around the view"><link rel="chapter" href="formatting_data.html" title="Chapter&nbsp;3.&nbsp;Manipulating track data"><link rel="chapter" href="analysing_data.html" title="Chapter&nbsp;4.&nbsp;Analysing Data"><link rel="chapter" href="exporting_data.html" title="Chapter&nbsp;5.&nbsp;Exporting Data"><link rel="chapter" href="symbol_sets.html" title="Chapter&nbsp;6.&nbsp;Symbol sets"><link rel="chapter" href="external_datasets.html" title="Chapter&nbsp;7.&nbsp;External datasets"><link rel="chapter" href="ExercisePlanning.html" title="Chapter&nbsp;8.&nbsp;Exercise planning"><link rel="chapter" href="viewing_narratives.html" title="Chapter&nbsp;9.&nbsp;Viewing narratives"><link rel="chapter" href="ChartBackdrops.html" title="Chapter&nbsp;10.&nbsp;Using chart backdrops"><link rel="chapter" href="sensor_data.html" title="Chapter&nbsp;11.&nbsp;Analysing sensor data"><link rel="chapter" href="tma_data.html" title="Chapter&nbsp;12.&nbsp;Management of TMA and TUA solutions"><link rel="chapter" href="dis_support.html" title="Chapter&nbsp;13.&nbsp;Support for DIS Protocol"><link rel="part" href="maintainers_guide.html" title="Part&nbsp;III.&nbsp;Maintainer's Guide"><link rel="chapter" href="participating.html" title="Chapter&nbsp;14.&nbsp;Participating in Debrief development"><link rel="chapter" href="maintainers.html" title="Chapter&nbsp;15.&nbsp;Debrief maintainer's guide"><link rel="part" href="reference_guide.html" title="Part&nbsp;IV.&nbsp;Reference Guide"><link rel="chapter" href="reference.html" title="Chapter&nbsp;16.&nbsp;Debrief file formats"><link rel="chapter" href="GeoToolsRef.html" title="Chapter&nbsp;17.&nbsp;GeoTools in Debrief"><link rel="chapter" href="chap_debrief_algorithms.html" title="Chapter&nbsp;18.&nbsp;Debrief algorithms"><link rel="chapter" href="chap_genetic_algorithms.html" title="Chapter&nbsp;19.&nbsp;Semi Automated Track Construction (SATC)"><link rel="chapter" href="dis_ref.html" title="Chapter&nbsp;20.&nbsp;System Documentation for DIS integration"><link rel="appendix" href="app_glossary.html" title="Appendix&nbsp;A.&nbsp;Debrief Glossary"><link rel="glossary" href="app_glossary.html#glossary" title="Glossary"><link rel="index" href="the_index.html" title="Index"><link rel="subsection" href="analyse_sensor_data.html#analyse_sensor_data_intro" title="11.2.1.&nbsp;Introduction"><link rel="subsection" href="analyse_sensor_data.html#BulkSensorData" title="11.2.2.&nbsp;Managing high volumes of sensor data"><link rel="subsection" href="analyse_sensor_data.html#SensorRangePlot" title="11.2.3.&nbsp;View plot of sensor range to target"><link rel="subsection" href="analyse_sensor_data.html#manage_ambiguous" title="11.2.4.&nbsp;Managing ambiguous data"><link rel="subsection" href="analyse_sensor_data.html#doppler_export" title="11.2.5.&nbsp;Exploiting doppler calculations"><link rel="subsection" href="analyse_sensor_data.html#MultiTonalAnalysis" title="11.2.6.&nbsp;Multi tonal frequency analysis"><link rel="subsection" href="analyse_sensor_data.html#multipath_analysis" title="11.2.7.&nbsp;Multipath analysis"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">11.2.&nbsp;Analysing your data</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="sensor_data.html"><img src="images/prev.gif" alt="Prev"></a>&nbsp;</td><th width="60%" align="center">Chapter&nbsp;11.&nbsp;Analysing sensor data</th><td width="20%" align="right">&nbsp;<a accesskey="n" href="tma_data.html"><img src="images/next.gif" alt="Next"></a></td></tr></table><hr></div><div class="sect1" id="analyse_sensor_data"><div class="titlepage"><div><div><h2 class="title" style="clear: both">11.2.&nbsp;Analysing your data</h2></div></div></div><div class="toc"><dl class="toc"><dt><span class="sect2"><a href="analyse_sensor_data.html#analyse_sensor_data_intro">11.2.1. Introduction</a></span></dt><dt><span class="sect2"><a href="analyse_sensor_data.html#BulkSensorData">11.2.2. Managing high volumes of sensor data</a></span></dt><dt><span class="sect2"><a href="analyse_sensor_data.html#SensorRangePlot">11.2.3. View plot of sensor range to target</a></span></dt><dt><span class="sect2"><a href="analyse_sensor_data.html#manage_ambiguous">11.2.4. Managing ambiguous data</a></span></dt><dt><span class="sect2"><a href="analyse_sensor_data.html#doppler_export">11.2.5. Exploiting doppler calculations</a></span></dt><dt><span class="sect2"><a href="analyse_sensor_data.html#MultiTonalAnalysis">11.2.6. Multi tonal frequency analysis</a></span></dt><dt><span class="sect2"><a href="analyse_sensor_data.html#multipath_analysis">11.2.7. Multipath analysis</a></span></dt></dl></div>
+        
+
+        <div class="sect2" id="analyse_sensor_data_intro"><div class="titlepage"><div><div><h3 class="title">11.2.1.&nbsp;Introduction</h3></div></div></div>
+          
+
+          <p>When first loaded, <a class="glossterm" href="app_glossary.html#g_sensor"><em class="glossterm">sensor</em></a> data is not <a class="indexterm" name="d5e3405"></a> made visible, since with any reasonable volume of sensor data the plot quickly becomes illegible. Sensor data is switched on and off individually by accessing the sensor, via its Track, from the Outline View.</p>
+
+          <p>It is once in <a class="glossterm" href="app_glossary.html#g_snail_trail"><em class="glossterm">snail trail</em></a> mode that sensor data is most easily analysed. When in snail mode the Snail display mode performs the following processing: </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
+                <p>For each Track being plotted, the display mode looks to see if it contains any Sensor data.</p>
+              </li><li class="listitem">
+                <p>It then examines each list of Sensor data to see if it's visible. If it is visible, it plots the current sensor contact (nearest to the <a class="glossterm" href="app_glossary.html#g_tote"><em class="glossterm">Tote</em></a> time), followed by the sensor contacts as disappearing contacts running back through the length indicated in the TrailLength parameter in the properties window.</p>
+              </li></ul></div>
+          <p id="TrackFromActive">
+            <b>Generate track from Active Sensor Data.&nbsp;</b>
+            
+              <a class="indexterm" name="d5e3419"></a> If your sensor data has both range and bearing, you have all the data you need to generate a target track. If you right-click on a Sensor, or on a block of sensor cuts in the Outline View then Debrief will inspect them to see if they are suitable for generating a target track. Specifically it will check that they all have a Range value, a Bearing value, and no ambiguous bearing. If the selected data matches these constraints you will be invited to <span class="guimenu">Generate Track from Active Sensor Data</span>, and Debrief will generate a new track, named according to the sensor that produced it.
+          </p>
+        </div>
+
+        <div class="sect2" id="BulkSensorData"><div class="titlepage"><div><div><h3 class="title">11.2.2.&nbsp;Managing high volumes of sensor data</h3></div></div></div>
+          
+
+          <div class="sect3" id="HighVolumeIntro"><div class="titlepage"><div><div><h4 class="title">11.2.2.1.&nbsp;Introduction</h4></div></div></div>
+            
+
+            <p>Modern command systems produce high volumes of sensor data, and a command system that just uses a 3-digit track counter can easily go 'around' the clock when allocating track numbers to contacts.</p>
+
+            <p>Debrief provides capabilities to both ease the challenge of deciding which sensor data is related to a specific target, and to automatically split a single sensor track in multiple tracks when they clearly relate to different targets.</p>
+          </div>
+
+          <div class="sect3" id="FilterHighVolume"><div class="titlepage"><div><div><h4 class="title">11.2.2.2.&nbsp;Filter sensor data of interest</h4></div></div></div>
+            
+
+            <p>With lots of sensor data it can be increasingly difficult to determine which tracks should be made visible - the plot below shows just 12 visible tracks - it's possible to have many hundreds of tracks..</p>
+
+            <div class="screenshot">
+                <div class="mediaobject"><img src="figures/LotsOfTracks.png"><div class="caption"><p>Cumbersome sensor data</p></div></div>
+              </div>
+
+            <p><a class="indexterm" name="d5e3440"></a>The new <span class="guilabel">Bulk Sensor Manager</span> offers an opportunity to determine which sensor data has a direction near to one of the other tracks currently loaded in Debrief. Before opening the Bulk Sensor Manager it's worth telling Debrief which is your 'ownship' track, and which are the tracks of interest. Do this by marking tracks as primary and secondary in the Track Tote (see <a class="xref" href="analysing_data.html#assigning_tracks" title="4.1.&nbsp;Assigning tracks as primary and secondary">Section&nbsp;4.1, &#8220;Assigning tracks as primary and secondary&#8221;</a>). Once you have a primary track set, select <span class="guilabel">Bulk Sensor Manager</span> from the <span class="guilabel">Window/Show View</span> menu. You'll see a plot like the one below:</p><div class="screenshot">
+                <div class="mediaobject"><img src="figures/BulkSensorManager.png"></div>
+              </div>
+
+            <p>As you'll see, the view shows multiple series of track data. Currently visible tracks are displayed in bold lines (the thick green line in the screenshot) - so, you'll typically be trying to determine which blocks of sensor data are close to/similar to target tracks. Sensor data is shown with symbols if it's visible in the plot (see the pink line near the centre-left of the image). Clicking on a block of sensor data in the view also selects that sensor data in the Outline View (though on occasion you need to expand the <span class="guilabel">Sensors</span> folder in the Layer Manager). As blocks of sensor data are selected, they are shown in black in the view. Items can be multiple-selected with the <span class="keysym">&lt;ctrl&gt;</span> key. Once multiple blocks of sensor data are selected in the Outline View you can right-click on them and select 'Merge sensors into <span class="emphasis"><em>xxxx</em></span>'</p>
+
+            <p>Also note that whilst by default comes up with a unique color/symbol combination for each block of sensor data, you can click on the 'Show original colours' palette icon at the top of the view. This will switch the Bulk Sensor Manager to using the sensor data color as configured via the sensor manager.</p>
+          </div>
+
+          <div class="sect3" id="AutoSplitSensorData"><div class="titlepage"><div><div><h4 class="title">11.2.2.3.&nbsp;Automatically split sensor tracks</h4></div></div></div>
+            
+
+            <p>For data from a command system that frequently 'wraps around' the track counter, when the data is read in Debrief will mistakenly assume that the data is all for the same contact: so the data will show as a continuous series to the left of the chart, then there'll be a jump over to were that track number is used again against another contact on the right hand side.</p>
+
+            <p>Debrief offers a tool to automatically split sensor data - the scissors icon at the top of the Bulk Sensor Manager offers 'Auto-split sensor segments'. It will pass through all of the sensor tracks in the primary track, and if there is a jump of more than 15 seconds Debrief splits the successive data into a new tracks. The original and new tracks are then renamed with a "_1", "_2" suffix.</p>
+            <p>In the above screenshot you can see that the purple dataset actually covers 3 periods of sensor data, roughly: 0545-0640, 0710-0720 and 0830-1010. If we click on the Axe toolbar button (<span class="guiicon">
+                <span class="inlinemediaobject"><img src="figures/bulk_sensor_handaxe.png" align="middle"></span>
+              </span>, <span class="guibutton">Auto-split sensor segments</span>), then we will see the tracks separated as in the following screenshot.</p><div class="screenshot">
+                <div class="mediaobject"><img src="figures/BulkSensorManager_PostSplit.png"></div>
+              </div>
+          </div>
+          <div class="sect3" id="d5e3470"><div class="titlepage"><div><div><h4 class="title">11.2.2.4.&nbsp;Trim to track period</h4></div></div></div>
+            
+            <p>Sometimes the data extraction process results in sensor datasets being loaded/provided that cover time periods outside the range of the parent track. These unnecessarily slow down Debrief - so you may choose to delete them. The <span class="guibutton">Trim to track period</span>(<span class="guiicon">
+                <span class="inlinemediaobject"><img src="figures/bulk_sensor_hourglass.png" align="middle"></span>
+              </span>) operation will delete any blocks of sensor data that completely fall outside the time period of the primary track.</p>
+          </div>
+          <div class="sect3" id="d5e3478"><div class="titlepage"><div><div><h4 class="title">11.2.2.5.&nbsp;Remove sensor data unrelated to Secondary Tracks</h4></div></div></div>
+            
+            <p>Sensor data loaded from a command system may contain many, many tracks. Many of the tracks will be of contacts unrelated to the platforms in question. It's quite easy for Debrief to determine sensor data that isn't related to the loaded secondary tracks. By clicking on the <span class="guibutton">Remove sensor data unrelated to Secondary Tracks</span> (<span class="guiicon">
+                <span class="inlinemediaobject"><img src="figures/bulk_sensor_scissors.png" align="middle"></span>
+              </span>) button, Debrief will compare the bearing from the primary track to each secondary track. If a block of sensor data doesn't have a single cut that is within 45 degrees of any secondary track, it will be deleted. Running this operation on the above sample dataset gives this greatly reduced sensor dataset:</p><div class="screenshot">
+                <div class="mediaobject"><img src="figures/BulkSensorManager_trim_unrelated.png"></div>
+              </div>
+          </div>
+          <div class="sect3" id="d5e3490"><div class="titlepage"><div><div><h4 class="title">11.2.2.6.&nbsp;Automatically shading bulk sensor data</h4></div></div></div>
+            
+            <p><a class="indexterm" name="d5e3493"></a>When very long sets of sensor data are exported to a report, it can be difficult for a reader to distinguish newer from old cuts - particularly when they are overlapping. Debrief provides support for this via the two <span class="guimenuitem">Shade</span> operations:</p><div class="screenshot">
+                <div class="mediaobject"><img src="figures/ShadeSensor.png"></div>
+              </div>
+            <p>These two operations shade the selected block of sensor data (or whole sensor) according to two operations - as shown below.</p><div class="screenshot">
+                <div class="mediaobject"><img src="figures/ShadeRainbow.png"></div>
+              </div><div class="screenshot">
+                <div class="mediaobject"><img src="figures/ShadeBlueRed.png"></div>
+              </div>
+          </div>
+
+          <div class="sect3" id="d5e3510"><div class="titlepage"><div><div><h4 class="title">11.2.2.7.&nbsp;Trim length of sensor lines</h4></div></div></div>
+            
+
+            <p>As you'll see in the earlier <span class="emphasis"><em>Cumbersome sensor plot</em></span>, a lot of sensor data can make a plot difficult to interpret. If sensor data isn't provided with a range attribute, then sensor lines are drawn out to infinity (or the edge to the viewport - whichever is nearer...). On a large area plot this may given sensor lines of 10s of nautical miles long. If in truth the detections are only in the thousands of yards, you may wish to give the sensor data a range. To do this, start by multi-selecting a block of sensor data in the Outline View. Next, open the properties window - you'll see the elements have zero range. Just insert an 'indicative' value for range. The sensor lines on the plot will now be clipped to that range - greatly reducing plot clutter.</p><div class="screenshot">
+                <div class="mediaobject"><img src="figures/TrimmedTracks.png"><div class="caption"><p>Trimmed sensor data</p></div></div>
+              </div>
+          </div>
+        </div>
+
+        <div class="sect2" id="SensorRangePlot"><div class="titlepage"><div><div><h3 class="title">11.2.3.&nbsp;View plot of sensor range to target</h3></div></div></div>
+          
+
+          <p>Whilst Debrief makes it easy to view a plot of the range between two vehicles, on occasion you may wish to view a time graph of the range from the array centre to the target. This graph can contain the distance from one or more sensors to a particular target. Open the graph by multi-selecting (&lt;ctrl-click&gt;) a series of sensor wrappers and a single target track (alternately you could select one track plus the 'Sensors' item of another track if you wish to view a range plot that includes all the sensors). If such a combination of objects have been selected in the Outline View, when you right-click on them you are offered the 'View sensor range plot' menu item:</p><div class="screenshot">
+              <div class="mediaobject" align="center"><img src="figures/ViewSensorPlot.png" align="middle"><div class="caption"><p>Popup menu with a track plus multiple sensor selected</p></div></div>
+            </div>
+
+          <p>Note, the Sensor Range Plot reflects the sensor offset length, plus whether the 'Worm in the hole' (see <a class="xref" href="sensor_data.html#SectWormInHole" title="11.1.3.&nbsp;Worm in the hole">Section&nbsp;11.1.3, &#8220;Worm in the hole&#8221;</a>) property is set for each sensor. </p><div class="tip" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0" summary="Tip"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Tip]" src="images/tip.gif"></td><th align="left">Tip</th></tr><tr><td align="left" valign="top">
+              <p>On occasion you may wish to view a sensor range plot of a sensor for which you haven't loaded sensor data. That is, you've loaded &amp; displayed hull-mounted sonar data, but you wish to know the range from the centre of the array to the target. Do this as follows:</p><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem">
+                    <p>Right-click on the ownship track, select 'Add new sensor'</p>
+                  </li><li class="listitem">
+                    <p>Name the new sensor using the wizard, and specify its default color</p>
+                  </li><li class="listitem">
+                    <p>Now select the new sensor in the Outline View - in order that you can edit its properties. In the property window set the correct sensor offset distance (remember it's in metres, and specify negative values to represent a trailing array), and mark that it should use a 'worm in the hole' algorithm</p>
+                  </li><li class="listitem">
+                    <p>Now, back to the Outline View - multi-select the new sensor, and the target track. Right-click on them and select <span class="guilabel">View sensor range plot</span>.</p>
+                  </li></ol></div><p>In this mode of use, the algorithm generates a range for each calculated position on the target track. In the normal mode (where we have sensor data), a range is calculated for each point at which there's a sensor cut (using interpolation to determine the position of the target track).</p>
+            </td></tr></table></div><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.gif"></td><th align="left">Note</th></tr><tr><td align="left" valign="top">
+              <p>Debrief is able to produce a plot of multiple sensors against on track, or the range from one sensor to multiple tracks - but it can't calculate the ranges for multiple sensors against multiple tracks. That would be just ridiculus. Your brain would explode, honest.</p>
+            </td></tr></table></div>
+        </div>
+
+        <div class="sect2" id="manage_ambiguous"><div class="titlepage"><div><div><h3 class="title">11.2.4.&nbsp;Managing ambiguous data</h3></div></div></div>
+          
+
+          <p>Whilst hull-mounted sensor typically produce a single bearing to their contact, towed-arrays typically produce ambiguous bearings. They are aware of the relative bearing to the contact, but are now aware of whether it is to the Port or Starboard of the host platform.</p>
+
+          <p>The Debrief sensor format (DSF) handles ambiguous data by allowing two bearings to be read in, and once that block of sensor data is made visible Debrief plots both sensor bearings.</p>
+
+          <p>In order to analyse the sensor data, or use the sensor data in other analysis, the analyst must decide which is the actual bearing (to be kept), and which is the ambiguous bearing (to be removed).</p>
+
+          <p>Once a decision has been made on which of the two bearings to keep, open that block of sensor data in the Outline View. Then, select the relevant sensor cuts (using &lt;shift&gt; and &lt;control&gt; as necessary to multi-select). Once selected, right-click on one of the items and select <span class="guimenuitem">Keep port bearing</span> or <span class="guimenuitem">Keep starboard bearing</span>.</p>
+        </div>
+
+        <div class="sect2" id="doppler_export"><div class="titlepage"><div><div><h3 class="title">11.2.5.&nbsp;Exploiting doppler calculations</h3></div></div></div>
+          
+
+          <p><a class="indexterm" name="d5e3556"></a>To support the display frequency residuals (as used in <a class="xref" href="tma_support.html#DraggingTracks" title="12.2.3.&nbsp;Dragging tracks">Section&nbsp;12.2.3, &#8220;Dragging tracks&#8221;</a>), Debrief contains a set of doppler frequency calculations (see <a class="xref" href="other_algs.html#freq_alg" title="18.3.1.&nbsp;Frequency algorithms">Section&nbsp;18.3.1, &#8220;Frequency algorithms&#8221;</a>). Should you require this data in a third-party application it is possible to export this calculated data. Do this export as follows:</p><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem">
+                <p>You must have a Debrief plot open that contains ownship plus target tracks</p>
+              </li><li class="listitem">
+                <p>Ownship must be marked (<a class="xref" href="analysing_data.html#assigning_tracks" title="4.1.&nbsp;Assigning tracks as primary and secondary">Section&nbsp;4.1, &#8220;Assigning tracks as primary and secondary&#8221;</a>) as primary track (see <a class="xref" href="analysing_data.html#the_tote_area" title="4.1.1.&nbsp;Tote area">Section&nbsp;4.1.1, &#8220;Tote area&#8221;</a>), and the target track must be the only secondary track</p>
+              </li><li class="listitem">
+                <p>The ownship track must contain sensor data</p>
+              </li><li class="listitem">
+                <p>The target track must have its base frequency assigned.</p>
+              </li><li class="listitem">
+                <p>Using the Time Controller view (see <a class="xref" href="controlling_time.html#time_controller" title="4.2.1.&nbsp;The Time Controller">Section&nbsp;4.2.1, &#8220;The Time Controller&#8221;</a>), select the time period for which data is to be exported</p>
+              </li><li class="listitem">
+                <p>Select <span class="guimenu">Export Doppler Shift data</span></p>
+              </li></ol></div>
+
+          <p>The data is collated using the following algorithm:</p><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem">
+                <p>Loop through the visible blocks of sensor data for the ownship track</p>
+              </li><li class="listitem">
+                <p>Find all target track segments that overlap with this block of sensor data</p>
+              </li><li class="listitem">
+                <p>Loop through this block of sensor data</p>
+              </li><li class="listitem">
+                <p>For each sensor cut, find the position on the target track nearest to this time</p>
+              </li><li class="listitem">
+                <p>Perform a doppler calculation for this sensor cut/target position</p>
+              </li></ol></div>
+
+          <p>The data will now be written to file in csv format: first the base frequency then a series of time-stamped measured and predicted frequencies.</p>
+        </div>
+
+        <div class="sect2" id="MultiTonalAnalysis"><div class="titlepage"><div><div><h3 class="title">11.2.6.&nbsp;Multi tonal frequency analysis</h3></div></div></div>
+          
+
+          <p>There exists the situation in frequency analysis where multiple tonals are held, but the analyst would rather use the highest freq tonals. Here's a strategy for how to manage it,</p>
+
+          <p>First, load the bearing sensor data. Edit the sensor cuts (probably in the grid editor, <a class="xref" href="GridEditor.html" title="3.8.&nbsp;Using the Grid Editor">Section&nbsp;3.8, &#8220;Using the Grid Editor&#8221;</a>) to include the highest freq data held, potentially colouring the blocks of cuts according to the base tonal that they relate to. Go through these blocks of cuts creating a solution for each block - then setting the base frequency for that solution to the respective value.</p>
+
+          <p>You can now switch individual solution blocks on and off, ensuring the stacked dots (<a class="xref" href="formatting_data.html#track_shifting" title="3.1.3.&nbsp;Track shifting">Section&nbsp;3.1.3, &#8220;Track shifting&#8221;</a>)will be working with the correct data values.</p>
+        </div>
+
+        <div class="sect2" id="multipath_analysis"><div class="titlepage"><div><div><h3 class="title">11.2.7.&nbsp;Multipath analysis</h3></div></div></div>
+          
+
+          <p><a class="indexterm" name="d5e3601"></a>Should you have access to multipath sensor data of a target vessel from a host platform, Debrief is able to assist in determining the target depth. In overview, Debrief allows you to compare the measured time interval with one calculated from the relevant dispositions of the two tracks (plus measured sound speeds for that location).</p>
+
+          <div class="sect3" id="multipath_datasets"><div class="titlepage"><div><div><h4 class="title">11.2.7.1.&nbsp;Datasets</h4></div></div></div>
+            
+
+            <p>To perform this analysis you require the following datasets:</p><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem">
+                  <p>Ownship and Target tracks</p>
+                </li><li class="listitem">
+                  <p>A SVP (Sound Velocity Profile) file for the location (using the file format defined in <a class="xref" href="multi_data_files.html#multi_data_svp" title="16.5.2.&nbsp;SVP file">Section&nbsp;16.5.2, &#8220;SVP file&#8221;</a> ). The maximum depth of the SVP is interpreted as the depth of the water column: the depth slider is uses this value as its maximum, and it is used as the maximum permissible value in the optimisation algorithm.</p>
+                </li><li class="listitem">
+                  <p>A file of measured time intervals (using the file format defined in <a class="xref" href="multi_data_files.html#multi_data_delays" title="16.5.3.&nbsp;Time delays file">Section&nbsp;16.5.3, &#8220;Time delays file&#8221;</a>)</p>
+                </li></ol></div>
+          </div>
+
+          <div class="sect3" id="multi_delay_algorithms"><div class="titlepage"><div><div><h4 class="title">11.2.7.2.&nbsp;Time delay algorithms</h4></div></div></div>
+            
+
+            <p>The indirect path length is calculated as follows:</p><div class="screenshot">
+                <div class="mediaobject" align="center"><img src="figures/multi_length_alg.png" align="middle"><div class="caption"><p>Algorithm used to determine indirect path length</p></div></div>
+              </div><p>Where: </p><div class="variablelist"><dl class="variablelist"><dt><span class="term">L<sub>d</sub></span></dt><dd>
+                    <p>Direct path length</p>
+                  </dd><dt><span class="term">L<sub>s,horiz</sub></span></dt><dd>
+                    <p>Horizontal range to the point where the surface path intersects the surface (see diagram below)</p>
+                  </dd><dt><span class="term">L<sub>s</sub></span></dt><dd>
+                    <p>Path length from source to surface</p>
+                  </dd><dt><span class="term">L<sub>r</sub></span></dt><dd>
+                    <p>Path length from surface to receiver</p>
+                  </dd><dt><span class="term">H<sub>d</sub></span></dt><dd>
+                    <p>Horizontal range</p>
+                  </dd><dt><span class="term">Z<sub>s</sub></span></dt><dd>
+                    <p>Source depth</p>
+                  </dd><dt><span class="term">Z<sub>r</sub></span></dt><dd>
+                    <p>Receiver depth</p>
+                  </dd></dl></div><p>These lengths are the calculated as: </p><div class="screenshot">
+                <div class="mediaobject" align="center"><img src="figures/multi_lengths.png" align="middle"><div class="caption"><p>Comparison of acoustic paths</p></div></div>
+              </div><p>Finally the path lengths are divided by the respective sounds speeds to obtain the path travel times, and this the overall time delay:</p><div class="screenshot">
+                <div class="mediaobject" align="center"><img src="figures/multi_delay.png" align="middle"><div class="caption"><p>Calculation of time delay</p></div></div>
+              </div>
+          </div>
+
+          <div class="sect3" id="multi_svp_algorithms"><div class="titlepage"><div><div><h4 class="title">11.2.7.3.&nbsp;Sound Speed algorithms</h4></div></div></div>
+            
+
+            <p>The sounds paths shown in the illustration above may travel through depths that have varying sound speeds. We calculate an average sound speed for the depth profile by calculating a weighted mean for that depth range:</p>
+
+            <p>Source depth = 55 m</p>
+
+            <p>Receiver depth = 30 m</p>
+
+            <p>Sound Speed Profile:</p>
+
+            <div class="informaltable"><table border="1">
+              <thead>
+                <tr>
+                  <td valign="top">Depth (m)</td>
+                  <td valign="top">Speed (m/s)</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td valign="top">0</td>
+                  <td valign="top">1500</td>
+                </tr>
+                <tr>
+                  <td valign="top">30</td>
+                  <td valign="top">1505</td>
+                </tr>
+                <tr>
+                  <td valign="top">40</td>
+                  <td valign="top">1510</td>
+                </tr>
+                <tr>
+                  <td valign="top">60</td>
+                  <td valign="top">1515</td>
+                </tr>
+              </tbody>
+            </table></div>
+
+            <p>Average sound speed between 0 m and 30 m can be ignored as the sound never goes into that region. Average sound speed between 30 m and 40 m is 1507.5 m/s. The sound speed at 55 m is 1513.75 m/s (through linear interpolation). Average sound speed between 40 m and 55 m is 1511.875 m/s. Using the depth range in metres as its weighting value, the overall average sound speed is ((1511.875*15)+(1507.5*10))/25 = 1510.125 m/s</p>
+          </div>
+
+          <div class="sect3" id="d5e3698"><div class="titlepage"><div><div><h4 class="title">11.2.7.4.&nbsp;Optimisation Algorithm</h4></div></div></div>
+            
+
+            <p>Debrief is able to use&nbsp;Dr Michael Thomas Flanagan's (at <a class="ulink" href="www.ee.ucl.ac.uk/~mflanaga" target="_top">www.ee.ucl.ac.uk/~mflanaga</a>, [note: external link]) Nelder Mead simplex optimisation algorithm to determine the optimum target depth to minimise the least-squares error between the calculated and measured curves.</p>
+          </div>
+
+          <div class="sect3" id="multi_ui"><div class="titlepage"><div><div><h4 class="title">11.2.7.5.&nbsp;User interface</h4></div></div></div>
+            
+
+            <p>Perform multi-path analysis using the Multipath analysis view. Open this view by selecting it from the <span class="guilabel">Window/Show View</span> menu. </p><div class="screenshot">
+                <div class="mediaobject"><img src="figures/multi_empty.png"><div class="caption"><p>Initial view of multipath analysis view</p></div></div>
+              </div><p>As you'll see from the above screenshot, the panel is laid out with a series of controls above an xy plot. The controls at the top of the view indicate the files being used for SVP and time-delays, a slider control is provided to let you trial target depths, plus there's a <span class="emphasis"><em>magic</em></span> button that runs an optimisation algorithm - generating a <span class="emphasis"><em>best-guess</em></span> of target-depth by minimising the time-delay error.</p>
+
+            <p>So, start off by dragging in your SVP and time-delay files - dropping them over the respective <span class="emphasis"><em>[pending]</em></span> label. Next, ensure your 'ownship' track is marked as the current primary track, and your target track is the secondary track in the Debrief Track Tote (as explained in <a class="xref" href="analysing_data.html#more_assigning_tracks" title="4.1.2.&nbsp;Assigning tracks">Section&nbsp;4.1.2, &#8220;Assigning tracks&#8221;</a>).</p>
+
+            <p>Once you've loaded the data and assigned the tracks, the slider control will become enabled and you can drag it to trial new target depths. The xy plot will update to show a comparison of the calculated time delays against the measured delay. You'll determine the target depth estimate by using the slider to place the blue (calculated) line as close as possible to the red (measured) line.</p><div class="screenshot">
+                <div class="mediaobject"><img src="figures/multi_working.png"><div class="caption"><p>Multipath analysis view with data loaded</p></div></div>
+              </div>
+
+            <p>An alternative to working out the estimated target depth by eye/experimentation is to click on the magic top-hat icon. A <a class="ulink" href="http://www.ee.ucl.ac.uk/~mflanaga/java/Minimisation.html" target="_top">Nelder and Mead simplex optimisation algorithm</a> [note: external link] will now run - with the slider set to the result on completion. Should you be interested in the performance of this iterative optimisation algorithm, a summary of each step is placed as an information message in the error log (viewable by selecting <span class="guimenu">Window</span>/<span class="guimenu">Show View</span>/<span class="guimenuitem">Error Log</span>). The log will show the 'score' for each target depth trialled - normally only around 10-20 depths are necessary to reach an optimum.</p>
+
+            <p>Note, during development, on occasion the optimisation algorithm failed to produce a realistic target depth. On each occasion this was a symptom of there not being a valid result in the available target range (0 to 1000m) - which itself was symptomatic of invalid data files: dropping the data-files into the wrong 'slot' or mistakenly using units different to those specified in the reference (see <a class="xref" href="multi_data_files.html#multi_data_delays" title="16.5.3.&nbsp;Time delays file">Section&nbsp;16.5.3, &#8220;Time delays file&#8221;</a>).</p>
+          </div>
+        </div>
+      </div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="sensor_data.html"><img src="images/prev.gif" alt="Prev"></a>&nbsp;</td><td width="20%" align="center"><a accesskey="u" href="sensor_data.html"><img src="images/up.gif" alt="Up"></a></td><td width="40%" align="right">&nbsp;<a accesskey="n" href="tma_data.html"><img src="images/next.gif" alt="Next"></a></td></tr><tr><td width="40%" align="left" valign="top">Chapter&nbsp;11.&nbsp;Analysing sensor data&nbsp;</td><td width="20%" align="center"><a accesskey="h" href="index.html"><img src="images/home.gif" alt="Home"></a></td><td width="40%" align="right" valign="top">&nbsp;Chapter&nbsp;12.&nbsp;Management of TMA and TUA solutions</td></tr></table></div></body></html>

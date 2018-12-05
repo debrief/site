@@ -38,11 +38,11 @@ nav:
       - name: Getting Support
         link: /support
       - name: User Guide
-        link: /user-guide
+        link: /tutorial/index.html
       - name: Self-teach tutorial (PDF)
         link: /library/DebriefNG_Tutorial.pdf
       - name: Replay File Format
-        link: /replay-file-format
+        link: /tutorial/reference.html
   - name: Blog
     link: /blog
     id: NavlinkBlog

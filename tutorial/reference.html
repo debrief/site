@@ -1,0 +1,723 @@
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <title>Chapter&nbsp;16.&nbsp;Debrief file formats</title><link rel="stylesheet" type="text/css" href="header.css"><meta name="generator" content="DocBook XSL Stylesheets V1.78.1"><meta name="keywords" content="Maritime Analysis, Open Source Tool"><link rel="home" href="index.html" title="Debrief NG User Documentation"><link rel="up" href="reference_guide.html" title="Part&nbsp;IV.&nbsp;Reference Guide"><link rel="prev" href="reference_guide.html" title="Part&nbsp;IV.&nbsp;Reference Guide"><link rel="next" href="debrief_file_format.html" title="16.2.&nbsp;Debrief file format"><link rel="preface" href="PrefaceIntro.html" title="Introduction"><link rel="part" href="tutorial.html" title="Part&nbsp;I.&nbsp;Getting started"><link rel="chapter" href="get_start.html" title="Chapter&nbsp;1.&nbsp;First steps"><link rel="part" href="UsingDebrief.html" title="Part&nbsp;II.&nbsp;Using Debrief"><link rel="chapter" href="moving_around.html" title="Chapter&nbsp;2.&nbsp;Moving around the view"><link rel="chapter" href="formatting_data.html" title="Chapter&nbsp;3.&nbsp;Manipulating track data"><link rel="chapter" href="analysing_data.html" title="Chapter&nbsp;4.&nbsp;Analysing Data"><link rel="chapter" href="exporting_data.html" title="Chapter&nbsp;5.&nbsp;Exporting Data"><link rel="chapter" href="symbol_sets.html" title="Chapter&nbsp;6.&nbsp;Symbol sets"><link rel="chapter" href="external_datasets.html" title="Chapter&nbsp;7.&nbsp;External datasets"><link rel="chapter" href="ExercisePlanning.html" title="Chapter&nbsp;8.&nbsp;Exercise planning"><link rel="chapter" href="viewing_narratives.html" title="Chapter&nbsp;9.&nbsp;Viewing narratives"><link rel="chapter" href="ChartBackdrops.html" title="Chapter&nbsp;10.&nbsp;Using chart backdrops"><link rel="chapter" href="sensor_data.html" title="Chapter&nbsp;11.&nbsp;Analysing sensor data"><link rel="chapter" href="tma_data.html" title="Chapter&nbsp;12.&nbsp;Management of TMA and TUA solutions"><link rel="chapter" href="dis_support.html" title="Chapter&nbsp;13.&nbsp;Support for DIS Protocol"><link rel="part" href="maintainers_guide.html" title="Part&nbsp;III.&nbsp;Maintainer's Guide"><link rel="chapter" href="participating.html" title="Chapter&nbsp;14.&nbsp;Participating in Debrief development"><link rel="chapter" href="maintainers.html" title="Chapter&nbsp;15.&nbsp;Debrief maintainer's guide"><link rel="part" href="reference_guide.html" title="Part&nbsp;IV.&nbsp;Reference Guide"><link rel="chapter" href="reference.html" title="Chapter&nbsp;16.&nbsp;Debrief file formats"><link rel="chapter" href="GeoToolsRef.html" title="Chapter&nbsp;17.&nbsp;GeoTools in Debrief"><link rel="chapter" href="chap_debrief_algorithms.html" title="Chapter&nbsp;18.&nbsp;Debrief algorithms"><link rel="chapter" href="chap_genetic_algorithms.html" title="Chapter&nbsp;19.&nbsp;Semi Automated Track Construction (SATC)"><link rel="chapter" href="dis_ref.html" title="Chapter&nbsp;20.&nbsp;System Documentation for DIS integration"><link rel="appendix" href="app_glossary.html" title="Appendix&nbsp;A.&nbsp;Debrief Glossary"><link rel="glossary" href="app_glossary.html#glossary" title="Glossary"><link rel="index" href="the_index.html" title="Index"><link rel="section" href="reference.html#replay_file_format" title="16.1.&nbsp;Replay file format"><link rel="section" href="debrief_file_format.html" title="16.2.&nbsp;Debrief file format"><link rel="section" href="Section_KML.html" title="16.3.&nbsp;KML file format"><link rel="section" href="Section_Flat.html" title="16.4.&nbsp;Flat file format"><link rel="section" href="multi_data_files.html" title="16.5.&nbsp;Multipath analysis datafiles"><link rel="section" href="format_2087_files.html" title="16.6.&nbsp;S2087 Track files"><link rel="section" href="SVG_symbol_format.html" title="16.7.&nbsp;SVG Symbol Format"><link rel="section" href="BRT_format.html" title="16.8.&nbsp;Third Party BRT Format"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">Chapter&nbsp;16.&nbsp;Debrief file formats</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="reference_guide.html"><img src="images/prev.gif" alt="Prev"></a>&nbsp;</td><th width="60%" align="center">Part&nbsp;IV.&nbsp;Reference Guide</th><td width="20%" align="right">&nbsp;<a accesskey="n" href="debrief_file_format.html"><img src="images/next.gif" alt="Next"></a></td></tr></table><hr></div><div class="chapter" id="reference"><div class="titlepage"><div><div><h2 class="title">Chapter&nbsp;16.&nbsp;Debrief file formats</h2></div></div></div><div class="toc"><p><b>Table of Contents</b></p><dl class="toc"><dt><span class="sect1"><a href="reference.html#replay_file_format">16.1. Replay file format</a></span></dt><dd><dl><dt><span class="sect2"><a href="reference.html#replay_track_format">16.1.1. Track data</a></span></dt><dt><span class="sect2"><a href="reference.html#replay_symbology">16.1.2. Symbology attributes</a></span></dt><dt><span class="sect2"><a href="reference.html#replay_annotation_format">16.1.3. Annotation Data Intro</a></span></dt><dt><span class="sect2"><a href="reference.html#replay_core_annotations">16.1.4. Core Elements</a></span></dt><dt><span class="sect2"><a href="reference.html#entry_comments">16.1.5. Entry comments</a></span></dt><dt><span class="sect2"><a href="reference.html#towed_array_annotations">16.1.6. Towed Array Extensions</a></span></dt><dt><span class="sect2"><a href="reference.html#replay_dynamic_annotations">16.1.7. Dynamic Elements</a></span></dt><dt><span class="sect2"><a href="reference.html#replay_dynamic_track_annotations">16.1.8. Dynamic Track Annotations</a></span></dt><dt><span class="sect2"><a href="reference.html#replay_format_annotations">16.1.9. Formatting helpers</a></span></dt></dl></dd><dt><span class="sect1"><a href="debrief_file_format.html">16.2. Debrief file format</a></span></dt><dd><dl><dt><span class="sect2"><a href="debrief_file_format.html#more_file_format">16.2.1. Introduction</a></span></dt><dt><span class="sect2"><a href="debrief_file_format.html#more_adopting_xml">16.2.2. Adoption of XML</a></span></dt></dl></dd><dt><span class="sect1"><a href="Section_KML.html">16.3. KML file format</a></span></dt><dd><dl><dt><span class="sect2"><a href="Section_KML.html#IntroToKML">16.3.1. Introduction to KML file format</a></span></dt><dt><span class="sect2"><a href="Section_KML.html#KML_LineString">16.3.2. LineString KML files</a></span></dt><dt><span class="sect2"><a href="Section_KML.html#KML_MultiGeometry">16.3.3. MultiGeometry KML files</a></span></dt></dl></dd><dt><span class="sect1"><a href="Section_Flat.html">16.4. Flat file format</a></span></dt><dd><dl><dt><span class="sect2"><a href="Section_Flat.html#IntroToFlat">16.4.1. Introduction to Flat file (SAM) format</a></span></dt><dt><span class="sect2"><a href="Section_Flat.html#FlatSchema">16.4.2. Schema for Flat file format</a></span></dt></dl></dd><dt><span class="sect1"><a href="multi_data_files.html">16.5. Multipath analysis datafiles</a></span></dt><dd><dl><dt><span class="sect2"><a href="multi_data_files.html#multi_data_intro">16.5.1. Introduction</a></span></dt><dt><span class="sect2"><a href="multi_data_files.html#multi_data_svp">16.5.2. SVP file</a></span></dt><dt><span class="sect2"><a href="multi_data_files.html#multi_data_delays">16.5.3. Time delays file</a></span></dt></dl></dd><dt><span class="sect1"><a href="format_2087_files.html">16.6. S2087 Track files</a></span></dt><dd><dl><dt><span class="sect2"><a href="format_2087_files.html#Intro2087">16.6.1. Introduction</a></span></dt><dt><span class="sect2"><a href="format_2087_files.html#Fileformat2087">16.6.2. File format</a></span></dt></dl></dd><dt><span class="sect1"><a href="SVG_symbol_format.html">16.7. SVG Symbol Format</a></span></dt><dd><dl><dt><span class="sect2"><a href="SVG_symbol_format.html#d5e5571">16.7.1. Introduction</a></span></dt><dt><span class="sect2"><a href="SVG_symbol_format.html#d5e5575">16.7.2. Implementation</a></span></dt><dt><span class="sect2"><a href="SVG_symbol_format.html#d5e5593">16.7.3. Here are some examples:</a></span></dt></dl></dd><dt><span class="sect1"><a href="BRT_format.html">16.8. Third Party BRT Format</a></span></dt><dd><dl><dt><span class="sect2"><a href="BRT_format.html#d5e5603">16.8.1. Introduction</a></span></dt><dt><span class="sect2"><a href="BRT_format.html#d5e5607">16.8.2. Format</a></span></dt></dl></dd></dl></div>
+      
+
+      <div class="sect1" id="replay_file_format"><div class="titlepage"><div><div><h2 class="title" style="clear: both">16.1.&nbsp;Replay file format</h2></div></div></div><div class="toc"><dl class="toc"><dt><span class="sect2"><a href="reference.html#replay_track_format">16.1.1. Track data</a></span></dt><dt><span class="sect2"><a href="reference.html#replay_symbology">16.1.2. Symbology attributes</a></span></dt><dt><span class="sect2"><a href="reference.html#replay_annotation_format">16.1.3. Annotation Data Intro</a></span></dt><dt><span class="sect2"><a href="reference.html#replay_core_annotations">16.1.4. Core Elements</a></span></dt><dt><span class="sect2"><a href="reference.html#entry_comments">16.1.5. Entry comments</a></span></dt><dt><span class="sect2"><a href="reference.html#towed_array_annotations">16.1.6. Towed Array Extensions</a></span></dt><dt><span class="sect2"><a href="reference.html#replay_dynamic_annotations">16.1.7. Dynamic Elements</a></span></dt><dt><span class="sect2"><a href="reference.html#replay_dynamic_track_annotations">16.1.8. Dynamic Track Annotations</a></span></dt><dt><span class="sect2"><a href="reference.html#replay_format_annotations">16.1.9. Formatting helpers</a></span></dt></dl></div>
+        
+
+        <div class="sect2" id="replay_track_format"><div class="titlepage"><div><div><h3 class="title">16.1.1.&nbsp;Track data</h3></div></div></div>
+          
+
+          <p><span class="application">Debrief</span> accepts files in the <a class="indexterm" name="d5e4681"></a><a class="indexterm" name="d5e4683"></a>
+            <span class="application">Replay</span> datafile format. This format uses an character string containing data/time, vessel name, position, heading, depth and speed. More than one vessel track can be stored in each file. The gaps between the data fields can be any whitespace characters, that is any number of spaces or tabs, but there must be a value for each data field. </p><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.gif"></td><th align="left">Note</th></tr><tr><td align="left" valign="top">
+              <p>Whilst file formats recorded here are shown against an 80 character index marker - the fields can be of any width - the data is broken down using delimiters, not fixed field widths.</p>
+            </td></tr></table></div>
+
+          <p>The file-naming convention for files in the <a class="glossterm" href="app_glossary.html#g_replay"><em class="glossterm">Replay</em></a> format is to have a <code class="filename">.REP</code> suffix.</p>
+
+          <p>Through an extension to the format, annotation data can also be accepted. The annotation data format is described below. Whilst annotation and track data may be stored in single file, it is recommended that they are stored in separate files, to ease reading and plotting track-data only.</p>
+
+          <p>The standard data format is as follows:</p><pre class="screen">            <span class="markup">
+1234567890123456789012345678901234567890123456789012345678901234567890123456789
+YYMMDD HHMMSS.SSS XXXXXX SY DD MM SS.SS H DDD MM SS.SS H CCC.C SS.S DDD xx...xx
+            </span> </pre><p>or since Autumn 2004 multi-word track names can be entered by enclosing them in double-quotation marks (") and 4-figure year values are supported: </p><pre class="screen" id="quoted_track_names">            <span class="markup">
+12345678901234567890123456789012345678901234567890123456789012345678901234567890
+YYYYMMDD HHMMSS.SSS "XYX XYX XYX" SY DD MM SS.SS H DDD MM SS.SS H CCC.C SS.S DDD xx...xxx
+            </span>      </pre>
+
+          <p>The field descriptions are: </p><div class="table" id="debrief_position_structure"><p class="title"><b>Table&nbsp;16.1.&nbsp;Fields in Debrief position entry</b></p><div class="table-contents">
+              
+
+              <table summary="Fields in Debrief position entry" border="1"><colgroup><col class="col01"><col class="col1"></colgroup><thead><tr><th><p>Field number</p></th><th><p>Description</p></th></tr></thead><tbody><tr><td><p>1</p></td><td><p>Date, either 2 of 4 figure date, followed by month then date</p></td></tr><tr><td><p>2</p></td><td><p>Time</p></td></tr><tr><td><p>3</p></td><td><p>Vessel Name - either as single, unquoted word, or as a multi-word phrase enclosed in quotation marks.</p></td></tr><tr><td><p>4</p></td><td><p>Symbology (2 or 5 chars, see below)</p></td></tr><tr><td><p>5</p></td><td><p>Latitude Degrees (Debrief is able to handle decimal degrees - provide zeros for mins and secs)</p></td></tr><tr><td><p>6</p></td><td><p>Latitude Minutes (Debrief is able to handle decimal mins - provide zeros for secs)</p></td></tr><tr><td><p>7</p></td><td><p>Latitude Seconds</p></td></tr><tr><td><p>8</p></td><td><p>Latitude Hemisphere</p></td></tr><tr><td><p>9</p></td><td><p>Longitude Degrees (Debrief is able to handle decimal degrees - provide zeros for mins and secs)</p></td></tr><tr><td><p>10</p></td><td><p>Longitude Minutes (Debrief is able to handle decimal mins - provide zeros for secs)</p></td></tr><tr><td><p>11</p></td><td><p>Longitude Seconds</p></td></tr><tr><td><p>12</p></td><td><p>Longitude Hemisphere</p></td></tr><tr><td><p>13</p></td><td><p>Heading (0..359.9 degrees)</p></td></tr><tr><td><p>14</p></td><td><p>Speed (knots)</p></td></tr><tr><td><p>15</p></td><td><p>Depth (metres) <a href="#ftn.d5e4786" class="footnote"><sup class="footnote" id="d5e4786">[a]</sup></a></p></td></tr><tr><td>16</td><td>Text label (optional). Any text appearing after the depth value is used as a label for that position. If no label is supplied a time-related label is generated. <span class="emphasis"><em>Note: since Jan 2018 it has been possible to also provide a comment. See <a class="xref" href="reference.html#entry_comments" title="16.1.5.&nbsp;Entry comments">Section&nbsp;16.1.5, &#8220;Entry comments&#8221;</a></em></span></td></tr></tbody><tbody class="footnotes"><tr><td colspan="2"><div id="ftn.d5e4786" class="footnote">
+                          <p><a href="#d5e4786" class="para"><sup class="para">[a] </sup></a>Where depth data is not available, the IEE symbol NaN (Not a Number) may be used. <span class="application">Debrief</span> reflects the absence of this data where applicable.</p>
+                        </div></td></tr></tbody></table>
+            </div></div><p><br class="table-break"></p>
+        </div>
+
+        <div class="sect2" id="replay_symbology"><div class="titlepage"><div><div><h3 class="title">16.1.2.&nbsp;Symbology attributes</h3></div></div></div>
+          
+
+          <p><a class="indexterm" name="d5e4797"></a>The symbology data field describes the representation required for this vessel track, specifying the colour of track to use and symbol-type to represent that vehicle. The Symbol style read in is used when tracks are to be shown by using symbol (in 2D or 3D). Control of when symbols are shown, and examples of the symbols are shown in <a class="xref" href="symbol_sets.html" title="Chapter&nbsp;6.&nbsp;Symbol sets">Chapter&nbsp;6, <i>Symbol sets</i></a>. 
+            </p><div class="table" id="debrief_Sym_colors"><p class="title"><b>Table&nbsp;16.2.&nbsp;Debrief symbology color codes</b></p><div class="table-contents">
+              
+              <table summary="Debrief symbology color codes" border="1"><colgroup><col width="20%" class="c3"><col class="c4"><col width="20%" class="newCol3"><col class="newCol4"></colgroup><thead><tr><th colspan="4">
+                      <p>Colour</p>
+                    </th></tr></thead><tbody><tr><td>
+                      <p>A</p>
+                    </td><td>
+                      <p>Blue</p>
+                    </td><td>
+                      <p>J</p>
+                    </td><td>
+                      <p>Light Green</p>
+                    </td></tr><tr><td>
+                      <p>B</p>
+                    </td><td>
+                      <p>Green</p>
+                    </td><td>
+                      <p>K</p>
+                    </td><td>
+                      <p>Pink</p>
+                    </td></tr><tr><td>
+                      <p>C</p>
+                    </td><td>
+                      <p>Red</p>
+                    </td><td>
+                      <p>L</p>
+                    </td><td>
+                      <p>Gold</p>
+                    </td></tr><tr><td>
+                      <p>D</p>
+                    </td><td>
+                      <p>Yellow</p>
+                    </td><td>
+                      <p>M</p>
+                    </td><td>
+                      <p>Light Grey</p>
+                    </td></tr><tr><td>
+                      <p>E</p>
+                    </td><td>
+                      <p>Magenta</p>
+                    </td><td>
+                      <p>N</p>
+                    </td><td>
+                      <p>Grey</p>
+                    </td></tr><tr><td>
+                      <p>F</p>
+                    </td><td>
+                      <p>Orange</p>
+                    </td><td>
+                      <p>O</p>
+                    </td><td>
+                      <p>Dark Grey</p>
+                    </td></tr><tr><td>
+                      <p>G</p>
+                    </td><td>
+                      <p>Purple</p>
+                    </td><td>
+                      <p>P</p>
+                    </td><td>
+                      <p>White</p>
+                    </td></tr><tr><td>
+                      <p>H</p>
+                    </td><td>
+                      <p>Cyan</p>
+                    </td><td>
+                      <p>Q</p>
+                    </td><td>
+                      <p>Black</p>
+                    </td></tr><tr><td>
+                      <p>I</p>
+                    </td><td>
+                      <p>Brown </p>
+                    </td><td>&nbsp;</td><td>&nbsp;</td></tr></tbody></table>
+            </div></div><p><br class="table-break">
+            </p><div class="table" id="debrief_Sym"><p class="title"><b>Table&nbsp;16.3.&nbsp;Debrief symbology symbol codes</b></p><div class="table-contents">
+              
+              <table summary="Debrief symbology symbol codes" border="1"><colgroup><col width="20%" class="c1"><col class="c2"><col width="20%" class="newCol3"><col class="newCol4"></colgroup><thead><tr><th colspan="2">Internal Symbols</th><th colspan="2">SVG Symbols</th></tr></thead><tbody><tr><td>
+                      <p>A</p>
+                    </td><td>
+                      <p>Aircraft</p>
+                    </td><td>
+                      <p>a</p>
+                    </td><td>
+                      <p>Merchant</p>
+                    </td></tr><tr><td>
+                      <p>C</p>
+                    </td><td>
+                      <p>Carrier</p>
+                    </td><td>
+                      <p>b</p>
+                    </td><td>
+                      <p>Fishing</p>
+                    </td></tr><tr><td>
+                      <p>D</p>
+                    </td><td>
+                      <p>Destroyer</p>
+                    </td><td>
+                      <p>c</p>
+                    </td><td>
+                      <p>Pleasure_craft</p>
+                    </td></tr><tr><td>
+                      <p>F</p>
+                    </td><td>
+                      <p>Frigate</p>
+                    </td><td>
+                      <p>d</p>
+                    </td><td>
+                      <p>Coastguard law enforcement</p>
+                    </td></tr><tr><td>
+                      <p>H</p>
+                    </td><td>
+                      <p>Helicopter</p>
+                    </td><td>
+                      <p>e</p>
+                    </td><td>
+                      <p>Friend Surface</p>
+                    </td></tr><tr><td>
+                      <p>M</p>
+                    </td><td>
+                      <p>Merchant</p>
+                    </td><td>
+                      <p>f</p>
+                    </td><td>
+                      <p>Friend Subsurface</p>
+                    </td></tr><tr><td>
+                      <p>N</p>
+                    </td><td>
+                      <p>Minesweeper</p>
+                    </td><td>
+                      <p>g</p>
+                    </td><td>
+                      <p>Neutral Air</p>
+                    </td></tr><tr><td>
+                      <p>P</p>
+                    </td><td>
+                      <p>Torpedo</p>
+                    </td><td>
+                      <p>h</p>
+                    </td><td>
+                      <p>Neutral Surface</p>
+                    </td></tr><tr><td>
+                      <p>R</p>
+                    </td><td>
+                      <p>Troop Carrier</p>
+                    </td><td>
+                      <p>i</p>
+                    </td><td>
+                      <p>Neutral Subsurface</p>
+                    </td></tr><tr><td>
+                      <p>S</p>
+                    </td><td>
+                      <p>Submarine</p>
+                    </td><td>
+                      <p>j</p>
+                    </td><td>
+                      <p>Enemy Air</p>
+                    </td></tr><tr><td>
+                      <p>T</p>
+                    </td><td>
+                      <p>TA Frigate</p>
+                    </td><td>
+                      <p>k</p>
+                    </td><td>
+                      <p>Enemy Surface</p>
+                    </td></tr><tr><td>
+                      <p>U</p>
+                    </td><td>
+                      <p>Cruiser</p>
+                    </td><td>
+                      <p>l</p>
+                    </td><td>
+                      <p>Enemy Subsurface</p>
+                    </td></tr><tr><td>
+                      <p>V</p>
+                    </td><td>
+                      <p>Fishing Vessel</p>
+                    </td><td>
+                      <p>m</p>
+                    </td><td>
+                      <p>Unknown Air</p>
+                    </td></tr><tr><td>
+                      <p>@</p>
+                    </td><td>
+                      <p>Unknown</p>
+                    </td><td>
+                      <p>n</p>
+                    </td><td>
+                      <p>Unknown Surface</p>
+                    </td></tr><tr><td>
+                      <p>I</p>
+                    </td><td>
+                      <p>Cross</p>
+                    </td><td>
+                      <p>o</p>
+                    </td><td>
+                      <p>Unknown Subsurface</p>
+                    </td></tr><tr><td>
+                      <p>J</p>
+                    </td><td>
+                      <p>Square</p>
+                    </td><td>
+                      <p>p</p>
+                    </td><td>
+                      <p>Buoy_1</p>
+                    </td></tr><tr><td>
+                      <p>K</p>
+                    </td><td>
+                      <p>Datum</p>
+                    </td><td>
+                      <p>q</p>
+                    </td><td>
+                      <p>Buoy_2</p>
+                    </td></tr><tr><td>
+                      <p>L</p>
+                    </td><td>
+                      <p>Reference Position</p>
+                    </td><td>
+                      <p>r</p>
+                    </td><td>
+                      <p>Missile</p>
+                    </td></tr><tr><td>
+                      <p>Q</p>
+                    </td><td>
+                      <p>Circle</p>
+                    </td><td>
+                      <p>s</p>
+                    </td><td>
+                      <p>Torpedo</p>
+                    </td></tr><tr><td>
+                      <p>W</p>
+                    </td><td>
+                      <p>Wreck</p>
+                    </td><td>
+                      <p>t</p>
+                    </td><td>
+                      <p>Generic arrow</p>
+                    </td></tr><tr><td>
+                      <p>E</p>
+                    </td><td>
+                      <p>Filled Square</p>
+                    </td><td>
+                      <p>u</p>
+                    </td><td>
+                      <p>Drop point</p>
+                    </td></tr><tr><td>
+                      <p>G</p>
+                    </td><td>
+                      <p>Filled Circle</p>
+                    </td><td>
+                      <p>v</p>
+                    </td><td>
+                      <p>Splash point</p>
+                    </td></tr><tr><td>
+                      <p>0</p>
+                    </td><td>
+                      <p>Active Buoy</p>
+                    </td><td>
+                      <p>w</p>
+                    </td><td>
+                      <p>Vector_1</p>
+                    </td></tr><tr><td>
+                      <p>1</p>
+                    </td><td>
+                      <p>DIFAR Buoy</p>
+                    </td><td>
+                      <p>x</p>
+                    </td><td>
+                      <p>Vector_2</p>
+                    </td></tr><tr><td>
+                      <p>2</p>
+                    </td><td>
+                      <p>LOFAR Buoy</p>
+                    </td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>
+                      <p>3</p>
+                    </td><td>
+                      <p>BARRA Buoy</p>
+                    </td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>
+                      <p>4</p>
+                    </td><td>
+                      <p>Hidar Buoy</p>
+                    </td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>
+                      <p>5</p>
+                    </td><td>
+                      <p>Kingpin Marker</p>
+                    </td><td>&nbsp;</td><td>&nbsp;</td></tr></tbody></table>
+
+            </div></div><p><br class="table-break">Here's an illustration of how the new colors appear against the range of Debrief background colors:</p><div class="figure" id="shades_2015"><p class="title"><b>Figure&nbsp;16.1.&nbsp;2015 Debrief shades</b></p><div class="figure-contents">
+              
+              <div class="screenshot">
+                <div class="mediaobject"><img src="figures/NewTrackColors.png" alt="2015 Debrief shades"></div>
+              </div>
+            </div></div><p><br class="figure-break">
+            </p><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.gif"></td><th align="left">Note</th></tr><tr><td align="left" valign="top">
+              <p>In 2015 the Debrief symbology attributes were extended to allow richer formatting to be applied to data on import. The new attributes mean it is possible to use a 2 or 5 character symbology element for each REP line. This was of particular value in supporting quick turnaround, in-stride, fast-look analysis. It is also of value when high volumes of annotations are produced using a simulation environment such as <a class="ulink" href="https://www.atlas-elektronik.com/what-we-do/submarine-systems/odin/" target="_top">Odin</a>.</p>
+            </td></tr></table></div><p>
+            </p><div class="table" id="debrief_ExtendedSym"><p class="title"><b>Table&nbsp;16.4.&nbsp;Debrief extended symbology data fields</b></p><div class="table-contents">
+              
+              <table summary="Debrief extended symbology data fields" border="1"><colgroup><col class="c1"><col class="c2"><col class="c3"><col class="c4"><col class="c5"><col class="c6"></colgroup><thead><tr><th colspan="2">
+                      <p>Line Type</p>
+                    </th><th colspan="2">
+                      <p>Line Thickness</p>
+                    </th><th colspan="2">
+                      <p>Fill Style</p>
+                    </th></tr></thead><tbody><tr><td>
+                      <p>@</p>
+                    </td><td>
+                      <p>SOLID</p>
+                    </td><td>
+                      <p>0</p>
+                    </td><td>
+                      <p>Hairwidth</p>
+                    </td><td>
+                      <p>0</p>
+                    </td><td>
+                      <p>No-fill</p>
+                    </td></tr><tr><td>
+                      <p>A</p>
+                    </td><td>
+                      <p>DOTTED</p>
+                    </td><td>
+                      <p>1</p>
+                    </td><td>
+                      <p>1 pixel</p>
+                    </td><td>
+                      <p>1</p>
+                    </td><td>
+                      <p>Solid fill</p>
+                    </td></tr><tr><td>
+                      <p>B</p>
+                    </td><td>
+                      <p>DOT_DASH</p>
+                    </td><td>
+                      <p>2</p>
+                    </td><td>
+                      <p>2 pixels</p>
+                    </td><td>
+                      <p>2</p>
+                    </td><td>
+                      <p>Semi-transparent fill</p>
+                    </td></tr><tr><td>
+                      <p>C</p>
+                    </td><td>
+                      <p>SHORT_DASHES</p>
+                    </td><td>
+                      <p>3</p>
+                    </td><td>
+                      <p>3 pixels</p>
+                    </td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>
+                      <p>D</p>
+                    </td><td>
+                      <p>LONG_DASHES</p>
+                    </td><td>
+                      <p>4</p>
+                    </td><td>
+                      <p>4 pixels</p>
+                    </td><td>&nbsp;</td><td>&nbsp;</td></tr><tr><td>
+                      <p>E</p>
+                    </td><td>
+                      <p>UNCONNECTED</p>
+                    </td><td>
+                      <p>5</p>
+                    </td><td>
+                      <p>5 pixels</p>
+                    </td><td>&nbsp;</td><td>&nbsp;</td></tr></tbody></table>
+            </div></div><p><br class="table-break">
+            </p><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.gif"></td><th align="left">Note</th></tr><tr><td align="left" valign="top">
+              <p>In 2017 the Debrief symbology attributes were extended to allow the provision of some optional named parameters. The first of these is the specification of the layer into which the annotation should be inserted. Note: in the initial implementation spaces are not allowed in the entries. The second of these is the specification of the SVG Symbol to be used in the track.</p>
+            </td></tr></table></div><p>
+            </p><div class="table" id="debrief_NamedSym"><p class="title"><b>Table&nbsp;16.5.&nbsp;Debrief extended symbology data fields</b></p><div class="table-contents">
+              
+              <table summary="Debrief extended symbology data fields" border="1"><colgroup><col class="c1"><col class="c2"></colgroup><thead><tr><th>
+                      <p>Example</p>
+                    </th><th>
+                      <p>Usage</p>
+                    </th></tr></thead><tbody><tr><td>
+                      <p>[LAYER=Other_Target_Layer]</p>
+                    </td><td>
+                      <p>Put this annotation into the layer named "Other_Target_Layer". Note: spaces not allowed. Use this mechanism to load a track as a high performing <a class="glossterm" href="app_glossary.html#g_lightweight"><em class="glossterm">Lightweight Track.</em></a><a class="indexterm" name="d5e5266"></a><a class="indexterm" name="d5e5268"></a></p>
+                    </td></tr><tr><td>
+                      <p>[SYMBOL=SVG_ICON_NAME]</p>
+                    </td><td>
+                      <p>This annotation places the specified icon as a symbol. Note: spaces not allowed. Icon name must be the exact name that appears in the SVG Section.</p>
+                    </td></tr></tbody></table>
+            </div></div><p><br class="table-break"> Please, take a look at the following example of the extended symbology at use </p><pre class="screen" id="extended_symbology_example">            <span class="markup">
+951212 050700.000 NELSON @C[SYMBOL=missile] 22 11 10.08 N 21 43 20.34 W 270.5   2.0      0 
+951212 050701.000 COLLINGWOOD @C[SYMBOL=torpedo,LAYER=Support] 22 11 10.08 N 21 43 20.34 W 270.5   2.0      0 
+            </span>      </pre><p>
+          </p>
+        </div>
+        <div class="sect2" id="replay_annotation_format"><div class="titlepage"><div><div><h3 class="title">16.1.3.&nbsp;Annotation Data Intro</h3></div></div></div>
+          
+
+          <p>In addition to the positional vessel track data, annotations can also be added. Each annotation is placed on a single line in a replay file, each line beginning with the comment marker; a semi-colon ';'.To put a comment on a line, begin with two semi-colons.</p>
+          <p>
+            </p><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.gif"></td><th align="left">Note</th></tr><tr><td align="left" valign="top">
+              <p>Note, when null positions are entered for <a class="glossterm" href="app_glossary.html#g_sensor"><em class="glossterm">Sensor</em></a> data, the position is taken from the track named in "ownship name". Debrief finds the nearest track location equal to or greater than the indicated time, and uses this as the sensor lat and long.</p>
+            </td></tr></table></div><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.gif"></td><th align="left">Note</th></tr><tr><td align="left" valign="top">
+              <p>As with normal positional data, annotation entries which use a track/ownship name may contain multi-word phrases if they are enclosed in quotation marks ("), and the year can be expressed as 2 or 4 figures.</p>
+            </td></tr></table></div><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.gif"></td><th align="left">Note</th></tr><tr><td align="left" valign="top">
+              <p>Debrief can handle decimal values for degrees or minutes. If you original data is in decimal degrees or degrees plus decimal minutes feel free to use these values directly, but remember to provide a zero for the unused column(s). Examples of this are shown below. </p><pre class="screen">
+                  <span class="markup">
+;; example using D, M, S
+951212 050100.000 NELSON @C 22 11 10.58 N 21 42 2.98 W 269.7 2.0 0
+;; example using D
+951212 050100.000 NELSON @C 22.455 0 0 N 21.432 0 0 W 269.7 2.0 0
+;; example using D, M
+951212 050100.000 NELSON @C 22 11.6678 0 N 21 42.543 0 W 269.7 2.0 0
+                  </span>
+                </pre><p>
+              </p>
+            </td></tr></table></div><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.gif"></td><th align="left">Note</th></tr><tr><td align="left" valign="top">
+              <p>Where labels are provided for shapes, Debrief allows multi-line text labels - just insert a \n character to indicate the line-break</p>
+            </td></tr></table></div>
+
+          <p><a class="glossterm" href="app_glossary.html#g_annotation"><em class="glossterm">Annotation</em></a> positions are specified in degrees as in the standard replay file format, and symbology representations are as in the above tables.</p>
+        </div>
+        <div class="sect2" id="replay_core_annotations"><div class="titlepage"><div><div><h3 class="title">16.1.4.&nbsp;Core Elements</h3></div></div></div>
+          
+          <p><a class="indexterm" name="d5e5298"></a>The format for the different types of annotations is: </p><pre class="screen" width="70">            <span class="markup">
+123456789012345678901234567890123456789012345678901234567890123456789
+0123456789012345678901234567890 
+
+;LINE: @@ DD MM SS H DDD MM SS.S H DD MM SS.S H DDD MM SS H XX.XXX 
+;; symb, start lat &amp; long, end lat &amp; long, text label (optional) 
+
+;VECTOR: @@ DD MM SS H DDD MM SS.S H RRR BBB XX.XXX
+;; symb, start lat &amp; long, range (yds), brg (degs) , text label (optional)
+
+;TEXT: @@ DD MM SS H DDD MM SS H XX..XX 
+;; symb, lat &amp; long, text (note: trailing text is optional, so just the symbol can be specified) 
+
+;NARRATIVE:  YYMMDD HHMMSS  TTT.TTT  XX..XX 
+;; dtg, track name, narrative entry 
+
+;TIMETEXT: @@ YYMMDD HHMMSS DD MM SS.S H DDD MM SS.S H XX..XX 
+;; symb, date, lat &amp; long, text 
+
+;PERIODTEXT: @@ YYMMDD HHMMSS YYMMDD HHMMSS DD MM SS.S H DDD MM SS.S H 
+DDD XX..XX 
+;; symb, start date, end date, lat &amp; long, Depth(optional) text 
+
+;GRID: @@ DD MM SS.S H DDD MM SS.S H MM.MM MM.MM XX..XX 
+;; symb, centre lat &amp; long (N13) lat increment, long increment, text 
+
+;RECT: @@ DD MM SS.S H DDD MM SS.S H DD MM SS.S H DDD MM SS.S H XX..XX
+;; symb, tl corner lat &amp; long, br corner lat &amp; long, label
+
+;POLY: @@ YYMMDD HHMMSS YYMMDD HHMMSS DD MM SS.S H DDD MM SS.S H DD MM SS.S H DDD MM SS.S H DD MM SS.S H DDD MM SS.S H  XX...XX
+;POLY: @@ DD MM SS.S H DDD MM SS.S H DD MM SS.S H DDD MM SS.S H DD MM SS.S H DDD MM SS.S H  XX...XX
+;; symb, start date (optional), end date (optional), lat &amp; long 1, lat &amp; long 2, lat &amp; long xxx (until end of line, or non-numeric label encountered)
+
+;POLYLINE: @@ YYMMDD HHMMSS YYMMDD HHMMSS DD MM SS.S H DDD MM SS.S H DD MM SS.S H DDD MM SS.S H DD MM SS.S H DDD MM SS.S H  XX...XX
+;POLYLINE: @@ DD MM SS.S H DDD MM SS.S H DD MM SS.S H DDD MM SS.S H DD MM SS.S H DDD MM SS.S H  XX...XX
+;; (this is an open polygon) symb, start date (optional), end date (optional), lat &amp; long 1, lat &amp; long 2, lat &amp; long xxx (until end of line, or non-numeric label encountered)
+
+;SGSAGEOG: @@ YYMMDD HHMMSS YYMMDD HHMMSS DD MM SS.S H DDD MM SS.S H 
+DD MM SS.S H DDD MM SS.S H XX..XX 
+;; symb, start date, end date, tl lat &amp; long, br lat &amp; long, 
+text label (1 word) 
+
+;SGSAGRID: @@ YYMMDD HHMMSS YYMMDD HHMMSS AA NN AA NN XX..XX 
+;; symb, start date, end date, tl corner, br corner, text label (1 word) 
+
+;WHEEL: @@ YYMMDD HHMMSS DD MM SS.S H DDD MM SS.S H YYY YYY XX.XX
+;; symb, centre date, centre lat, centre long, inner radius (yards), 
+outer radius (yards), label
+
+;CIRCLE: @@ DD MM SS.S H DDD MM SS.S H YYY XX.XX 
+;; symb, centre lat, centre long, radius (yards), label 
+
+;ELLIPSE: BD YYMMDD HHMMSS DD MM SS.SS H DD MM SS.SS H CCC XXXX YYYY xx.xx 
+;; symb, date, time, lat, long, orientation, maxima (yards), 
+minima (yards), label 
+
+;BRG: BD YYMMDD HHMMSS DD MM SS.SS H DD MM SS.SS H CCC XXXX xx.xx 
+;; symb, date, time, lat, long, orientation, length (yards), label (one word) 
+
+;SENSOR: YYMMDD HHMMSS.SSS AAAAAA @@ DD MM SS.SS H DDD MM SS.SS H 
+BBB.B RRRR yy..yy xx..xx 
+;; date, ownship name, symbology, sensor lat/long (or the single word NULL), 
+bearing (degs), range(yds) [or the single world NULL], sensor name, label (to end of line),
+, optional comment - see <a class="xref" href="reference.html#entry_comments" title="16.1.5.&nbsp;Entry comments">Section&nbsp;16.1.5, &#8220;Entry comments&#8221;</a>
+
+;SENSOR2: YYMMDD HHMMSS.SSS AAAAAA @@ DD MM SS.SS H DDD MM SS.SS H BBB.B CCC.C 
+FFF.F RRRR yy..yy xx..xx
+;; date, ownship name, symbology, sensor lat/long (or the single word NULL), 
+bearing (degs) [or the single word NULL], ambigous bearing (degs) [or the 
+single word NULL], frequency(Hz) [or the single word NULL],  range(yds) 
+[or the single word NULL], sensor name, label (to end of line), optional
+comment - see <a class="xref" href="reference.html#entry_comments" title="16.1.5.&nbsp;Entry comments">Section&nbsp;16.1.5, &#8220;Entry comments&#8221;</a>
+
+;SENSOR3: YYMMDD HHMMSS.SSS AAAAAA @@ DD MM SS.SS H DDD MM SS.SS H BBB.B  CCC.C 
+FFF.F GGG.G RRRR yy..yy xx..xx
+;; date, ownship name, symbology, sensor lat/long (or the single word NULL), 
+bearing (degs) [or the single word NULL], bearing accuracy (degs) 
+[or the single word NULL], frequency(Hz) [or the single word NULL], 
+frequency accuracy (Hz) [or the single word NULL], range(yds) 
+[or the single word NULL], sensor name, label (to end of line), optional
+comment - see <a class="xref" href="reference.html#entry_comments" title="16.1.5.&nbsp;Entry comments">Section&nbsp;16.1.5, &#8220;Entry comments&#8221;</a>
+
+;TMA_POS: YYMMDD HHMMSS.SSS AAAAAA @@ DD MM SS.SS H DDD MM SS.SS H 
+TT...TT OOO.O  XXXX YYYY  CCC SSS DDD xx.xx 
+;; date, time, ownship name, symbology, tma lat, tma long, track name, 
+ellipse orientation (deg from north),  maxima (yds), minima (yds), course, 
+speed, depth (m), label string
+
+;TMA_RB: YYMMDD HHMMSS.SSS AAAAAA @@ BBB.B RRR.R TT...TT OOO.O 
+XXXX YYYY  CCC SSS DDD xx.xx 
+;; date, time, ownship name, symbology, bearing (deg), range (yds), 
+track name, elipse orientation (deg from north),  maxima (yds), minima (yds), 
+course, speed, depth (m), label string
+
+;NARRATIVE:  YYMMDD HHMMSS  TTT.TTT  XX..XX
+ ;; dtg, track name, narrative entry. Note the track name can be multi-word if 
+surrounded by quotes (").
+
+;NARRATIVE2:  YYMMDD HHMMSS  TTT.TTT AA..AA XX..XX
+ ;; dtg, track name, narrative entry-type, narrative entry.  Note the track name 
+and entry type can be multi-word if surrounded by quotes (").
+            </span>   </pre><p>
+          </p>
+        </div>
+        <div class="sect2" id="entry_comments"><div class="titlepage"><div><div><h3 class="title">16.1.5.&nbsp;Entry comments</h3></div></div></div>
+          
+          <p><a class="indexterm" name="d5e5309"></a> Note: some entry types allow an additional comment to be appended to the end of an entry. The comment follows a <span class="emphasis"><em>//</em></span> separator.</p>
+          <pre class="screen" width="70"><span class="markup">
+951212 050100.000 NONSUCH @A@00 22 12 10.51 N 21 32 14.81 W 269.9 2.0 0
+;; label is normal DTG value, comment is empty (legacy behaviour)
+
+951212 050200.000 NONSUCH @A@00 22 12 10.51 N 21 32 14.81 W 269.9 2.0 0 Standard label
+;; label is "Standard label", comment is empty (legacy behaviour)
+
+951212 050300.000 NONSUCH @A@00 22 12 10.51 N 21 32 27.27 W 268.7 2.0 0 Standard label // Custom comment
+;; label is "Standard label", comment is "Custom comment"
+
+951212 050400.000 NONSUCH @BA10 22 12 10.28 N 21 32 40.33 W 270.6 2.0 0 // Custom comment
+;; label is normal DTG value, comment is "Custom comment"
+
+;SENSOR2: 951212 051600.000 NEL_STYLE2 @B NULL 59.3 300.8 49.96 NULL SENSOR LABEL // COMMENT
+;; label is "SENSOR LABEL", comment is "COMMENT"
+          </span>
+          </pre>
+          <p>For track positions, it's possible to indicate whether the comment should be shown, using the <span class="guibutton">Comment Showing</span> attribute of the position. The comment is always placed opposite the label, even if the label isn't shown</p>
+        </div>
+        <div class="sect2" id="towed_array_annotations"><div class="titlepage"><div><div><h3 class="title">16.1.6.&nbsp;Towed Array Extensions</h3></div></div></div>
+          
+          <p><a class="indexterm" name="d5e5320"></a>In Spring 2017 additional annotations were introduced to support more complex Towed Array datasets </p><pre class="screen" width="70"><span class="markup">
+
+;TA_FORE_AFT: 090722 041522 NONSUCH SENSOR_A_1 44.2 260.2 45.4 262.3
+;; data from module sensors, in depth/heading pairs
+;; date-time, platform, sensor, two pairs of depth (m) &amp; heading (degs) data.  Or replace the pairs with four NULL values.
+
+;TA_MODULES: YYMMDD HHMMSS AAAAAA BBBBBB DD.D HH.H ... DD.D HH.H
+;; 12 sets of depth/heading data from module sensors. Either first 4, or last 8 will be populated
+;; the other pairs should have zero values
+;; date-time, platform, sensor, pairs of depth &amp; heading data, to the end of line.
+;; But, if you're not interested in the spec at all, you could just include four NULL values.
+
+;TA_COG_ABS: YYMMDD HHMMSS AAAAAA BBBBBB LAT.Y LONG.X DD.D
+;; absolute measurement of towed array aperture Centre of Gravity
+;; date-time, platform, sensor, lat/long (Degrees) depth (m). Lat/Lon/D may be null.
+
+;TA_COG_REL: YYMMDD HHMMSS AAAAAA BBBBBB XX.X YY.Y DD.D
+;; relative measurement of towed array aperture Centre of Gravity
+;; date-time, platform, sensor, x/y/depth(m). X/Y/D may be null
+
+            </span>   </pre><p>
+          </p>
+        </div>
+        <div class="sect2" id="replay_dynamic_annotations"><div class="titlepage"><div><div><h3 class="title">16.1.7.&nbsp;Dynamic Elements</h3></div></div></div>
+          
+
+          <p>In addition to individual annotation shapes it is possible to define a dynamic annotation. Do this by using a series of dynamic annotations, all with the same annotation name. Once loaded, Debrief will only show the shape nearest to the current scenario time (according to the Time Controller). The dynamic annotations largely take the same format as their non-dynamic equivalents as described above, save for the introduction of a Shape Name</p>
+
+          <p><a class="indexterm" name="d5e5329"></a>The format for the different types of dynamic annotations is: </p><pre class="screen" width="70">
+            <span class="markup">
+;;DYNAMIC_CIRCLE: @@@@@ "NAME" YYMMDD HHMMSS DD MM SS.S H DDD MM SS.S H YYY XX.XX 
+;;DYNAMIC_POLY: @@@@@ "NAME" YYMMDD HHMMSS DD MM SS.S H DDD MM SS.S H DD MM SS.S H DDD MM SS.S H DD MM SS.S H DDD MM SS.S H  XX...XX
+;;DYNAMIC_RECT: @@@@@ "NAME" YYMMDD HHMMSS DD MM SS.S H DDD MM SS.S H DD MM SS.S H DDD MM SS.S H XX..XX
+;; symb, shape name, date-time [other fields as in the standard annotation type]
+;; example:
+;DYNAMIC_CIRCLE: @@011 "Circle Track A" 151212 143000 54 05 12.1 N 4 0 12.4 W 1000 At time 1430 
+;DYNAMIC_CIRCLE: @@011 "Circle Track B" 151212 143100 54 05 14.1 N 4 0 12.1 W 1100 At time 1431         
+;DYNAMIC_POLY: @@011 "Circle Track C" 151212 143200 54 05 15.1 N 4 0 12.1 W  54 06 15.1 N 4 0 11.1 W  54 05 13.1 N 4 1 14.1 W At time 1432         
+;DYNAMIC_RECT: @@011 "Circle Track D" 151212 143300 54 05 17.1 N 4 0 12.1 W  54 05 10.1 N 4 0 12.6 W At time 1433
+            </span>
+            </pre><p>
+          </p>
+        </div>
+        <div class="sect2" id="replay_dynamic_track_annotations"><div class="titlepage"><div><div><h3 class="title">16.1.8.&nbsp;Dynamic Track Annotations</h3></div></div></div>
+          
+
+          <p>
+            </p><div class="screenshot">
+              <div class="mediaobject"><img src="figures/DynamicArcs.png"></div>
+            </div><p> It is also possible to attach annotations to tracks - so that the annotation moves (and rotates) with the track. These annotations can be grouped. This allows the dynamic shape itself to change dimensions during its life, but with the whole collection of shapes switched on and off as one.</p>
+          <p> Here are a series of examples (but note that the REP lines have been abbreviated): </p><div class="screenshot">
+              <div class="mediaobject" align="center"><img src="figures/arcs_1.png" align="middle"></div>
+            </div><p>
+            </p><div class="screenshot">
+              <div class="mediaobject" align="center"><img src="figures/arcs_2.png" align="middle"></div>
+            </div><p>
+            </p><div class="screenshot">
+              <div class="mediaobject" align="center"><img src="figures/arcs_3.png" align="middle"></div>
+            </div><p>
+          </p>
+
+          <p><a class="indexterm" name="d5e5355"></a>The format for the different types of dynamic track annotations is shown below. Note that each line may contain a series of definitions, and that the distance units are in yards.</p><pre class="screen" width="70">
+            <span class="markup">
+;SENSORARC YYMMDD HHMMSS.SSS YYMMDD HHMMSS.SSS TRACKNAME SYMBOLOGY LEFT RIGHT INNER OUTER [LEFT RIGHT INNER OUTER] LABEL
+;; (start time, end time, parent track, styling, min-max angles of the arc, inner-outer radiuses, collective label.
+;; simple example
+
+;SENSORARC 951212 062800 951212 063000 NELSON @@ -75 35 0 1000 "fwd dynamic"
+;; dynamic example - so donut spreads outwards in time using 3 steps
+
+;SENSORARC: 951212 053000 951212 054000 NELSON @A 0 360 500 1000 CZ_Ring
+;SENSORARC: 951212 054000 951212 055000 NELSON @B 0 360 600 1100 CZ_Ring
+;SENSORARC: 951212 055000 951212 060000 NELSON @C 0 360 700 1200 CZ_Ring
+            </span>
+            </pre><p>
+            </p><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.gif"></td><th align="left">Note</th></tr><tr><td align="left" valign="top">
+              <p>A NULL can be provided instead of one or more of the times. This will result in the dynamic shape being used for part or all of the track lifetime.</p>
+            </td></tr></table></div><p>
+          </p>
+        </div>
+        <div class="sect2" id="replay_format_annotations"><div class="titlepage"><div><div><h3 class="title">16.1.9.&nbsp;Formatting helpers</h3></div></div></div>
+          
+          <p> Entries can be included in REP files to help format data as it is loaded. These commands can specify the frequency at which labels/symbols are shown, or perform other presentation configuration, either on specific tracks/layers or for all data. </p><div class="screenshot">
+              <div class="mediaobject" align="center"><img src="figures/FormatExample.png" align="middle"></div>
+            </div><p>
+            </p><div class="tip" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0" summary="Tip"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Tip]" src="images/tip.gif"></td><th align="left">Tip</th></tr><tr><td align="left" valign="top">
+              <p>You can use these helpers to create a set of default look &amp; feels for your plots. Create a set of label, symbol, arrow markers to suit your data, then store them in a REP file, called something like <code class="filename">LONG_RANGE_FORMAT.REP</code>. Then, when conducting a new piece of analysis of long range tracks, start by opening this REP file. Now, when you drag in your tracks, they will all get formatted according to your preferred styling.</p>
+            </td></tr></table></div><p>
+          </p>
+
+          <p><a class="indexterm" name="d5e5373"></a>The format for these helpers is shown below.</p><pre class="screen" width="70">
+            <span class="markup">
+;FORMAT_FIX: 30_min_lab LABEL NULL NULL TRUE 1800000
+;; 30_min_lab - name for this formatter (shown in outline view) 
+;; LABEL - what we're applying to (SYMBOL, LABEL, ARROW)
+;; NULL - track name we apply to (or null for all tracks)
+;; NULL - symbology we apply to (e.g. @A) (or null for all tracks) 
+;; TRUE - whether interval should fall on regular interval or start
+;;        from first data point
+;; 1800000 - interval (in millis) to apply formatting
+
+;FORMAT_FIX: 10_min_sym SYMBOL NELSON NULL TRUE 600000 
+;; show symbol on every 10 minute marker (00:00,00:10, 00:20, etc) 
+;;    for track Nelson
+
+;FORMAT_LAYER_HIDE: format_name layer_name
+;; name for this formatter, name of the layer to hide 
+
+;FORMAT_LAYER_HIDE: format_name layer_1_name "layer 2 name"
+;; name for this formatter, name of the layers to hide
+;;     quotes can be used if name contains spaces 
+
+;FORMAT_TRACK_NAME_AT_END: format_name track_names
+;; name for this formatter, list of track names for which the name 
+;;     should be shown at the end, or empty to apply to all tracks
+            </span>
+            </pre><p>
+            </p><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.gif"></td><th align="left">Note</th></tr><tr><td align="left" valign="top">
+              <p>A NULL can be provided instead of one or more of the times. This will result in the dynamic shape being used for part or all of the track lifetime.</p>
+            </td></tr></table></div><p>
+          </p>
+        </div>
+      </div>
+
+      
+
+      
+
+      
+
+      
+      
+      
+      
+
+    </div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="reference_guide.html"><img src="images/prev.gif" alt="Prev"></a>&nbsp;</td><td width="20%" align="center"><a accesskey="u" href="reference_guide.html"><img src="images/up.gif" alt="Up"></a></td><td width="40%" align="right">&nbsp;<a accesskey="n" href="debrief_file_format.html"><img src="images/next.gif" alt="Next"></a></td></tr><tr><td width="40%" align="left" valign="top">Part&nbsp;IV.&nbsp;Reference Guide&nbsp;</td><td width="20%" align="center"><a accesskey="h" href="index.html"><img src="images/home.gif" alt="Home"></a></td><td width="40%" align="right" valign="top">&nbsp;16.2.&nbsp;Debrief file format</td></tr></table></div></body></html>

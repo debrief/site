@@ -1,0 +1,74 @@
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <title>Chapter&nbsp;9.&nbsp;Viewing narratives</title><link rel="stylesheet" type="text/css" href="header.css"><meta name="generator" content="DocBook XSL Stylesheets V1.78.1"><meta name="keywords" content="Maritime Analysis, Open Source Tool"><link rel="home" href="index.html" title="Debrief NG User Documentation"><link rel="up" href="UsingDebrief.html" title="Part&nbsp;II.&nbsp;Using Debrief"><link rel="prev" href="xy_planning.html" title="8.4.&nbsp;XY plots of planning tracks"><link rel="next" href="ChartBackdrops.html" title="Chapter&nbsp;10.&nbsp;Using chart backdrops"><link rel="preface" href="PrefaceIntro.html" title="Introduction"><link rel="part" href="tutorial.html" title="Part&nbsp;I.&nbsp;Getting started"><link rel="chapter" href="get_start.html" title="Chapter&nbsp;1.&nbsp;First steps"><link rel="part" href="UsingDebrief.html" title="Part&nbsp;II.&nbsp;Using Debrief"><link rel="chapter" href="moving_around.html" title="Chapter&nbsp;2.&nbsp;Moving around the view"><link rel="chapter" href="formatting_data.html" title="Chapter&nbsp;3.&nbsp;Manipulating track data"><link rel="chapter" href="analysing_data.html" title="Chapter&nbsp;4.&nbsp;Analysing Data"><link rel="chapter" href="exporting_data.html" title="Chapter&nbsp;5.&nbsp;Exporting Data"><link rel="chapter" href="symbol_sets.html" title="Chapter&nbsp;6.&nbsp;Symbol sets"><link rel="chapter" href="external_datasets.html" title="Chapter&nbsp;7.&nbsp;External datasets"><link rel="chapter" href="ExercisePlanning.html" title="Chapter&nbsp;8.&nbsp;Exercise planning"><link rel="chapter" href="viewing_narratives.html" title="Chapter&nbsp;9.&nbsp;Viewing narratives"><link rel="chapter" href="ChartBackdrops.html" title="Chapter&nbsp;10.&nbsp;Using chart backdrops"><link rel="chapter" href="sensor_data.html" title="Chapter&nbsp;11.&nbsp;Analysing sensor data"><link rel="chapter" href="tma_data.html" title="Chapter&nbsp;12.&nbsp;Management of TMA and TUA solutions"><link rel="chapter" href="dis_support.html" title="Chapter&nbsp;13.&nbsp;Support for DIS Protocol"><link rel="part" href="maintainers_guide.html" title="Part&nbsp;III.&nbsp;Maintainer's Guide"><link rel="chapter" href="participating.html" title="Chapter&nbsp;14.&nbsp;Participating in Debrief development"><link rel="chapter" href="maintainers.html" title="Chapter&nbsp;15.&nbsp;Debrief maintainer's guide"><link rel="part" href="reference_guide.html" title="Part&nbsp;IV.&nbsp;Reference Guide"><link rel="chapter" href="reference.html" title="Chapter&nbsp;16.&nbsp;Debrief file formats"><link rel="chapter" href="GeoToolsRef.html" title="Chapter&nbsp;17.&nbsp;GeoTools in Debrief"><link rel="chapter" href="chap_debrief_algorithms.html" title="Chapter&nbsp;18.&nbsp;Debrief algorithms"><link rel="chapter" href="chap_genetic_algorithms.html" title="Chapter&nbsp;19.&nbsp;Semi Automated Track Construction (SATC)"><link rel="chapter" href="dis_ref.html" title="Chapter&nbsp;20.&nbsp;System Documentation for DIS integration"><link rel="appendix" href="app_glossary.html" title="Appendix&nbsp;A.&nbsp;Debrief Glossary"><link rel="glossary" href="app_glossary.html#glossary" title="Glossary"><link rel="index" href="the_index.html" title="Index"><link rel="section" href="viewing_narratives.html#narrative_intro" title="9.1.&nbsp;Introduction to narrative data"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">Chapter&nbsp;9.&nbsp;Viewing narratives</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="xy_planning.html"><img src="images/prev.gif" alt="Prev"></a>&nbsp;</td><th width="60%" align="center">Part&nbsp;II.&nbsp;Using Debrief</th><td width="20%" align="right">&nbsp;<a accesskey="n" href="ChartBackdrops.html"><img src="images/next.gif" alt="Next"></a></td></tr></table><hr></div><div class="chapter" id="viewing_narratives"><div class="titlepage"><div><div><h2 class="title">Chapter&nbsp;9.&nbsp;Viewing narratives</h2></div></div></div><div class="toc"><p><b>Table of Contents</b></p><dl class="toc"><dt><span class="sect1"><a href="viewing_narratives.html#narrative_intro">9.1. Introduction to narrative data</a></span></dt><dd><dl><dt><span class="sect2"><a href="viewing_narratives.html#more_narr_intro">9.1.1. Introduction</a></span></dt><dt><span class="sect2"><a href="viewing_narratives.html#preparing_narrative_data">9.1.2. Preparing the data</a></span></dt><dt><span class="sect2"><a href="viewing_narratives.html#more_loading_narr">9.1.3. Loading the data</a></span></dt><dt><span class="sect2"><a href="viewing_narratives.html#viewing_narrative_data">9.1.4. Viewing the data</a></span></dt></dl></dd></dl></div>
+      
+
+      <div class="sect1" id="narrative_intro"><div class="titlepage"><div><div><h2 class="title" style="clear: both">9.1.&nbsp;Introduction to narrative data</h2></div></div></div><div class="toc"><dl class="toc"><dt><span class="sect2"><a href="viewing_narratives.html#more_narr_intro">9.1.1. Introduction</a></span></dt><dt><span class="sect2"><a href="viewing_narratives.html#preparing_narrative_data">9.1.2. Preparing the data</a></span></dt><dt><span class="sect2"><a href="viewing_narratives.html#more_loading_narr">9.1.3. Loading the data</a></span></dt><dt><span class="sect2"><a href="viewing_narratives.html#viewing_narrative_data">9.1.4. Viewing the data</a></span></dt></dl></div>
+        
+
+        <div class="sect2" id="more_narr_intro"><div class="titlepage"><div><div><h3 class="title">9.1.1.&nbsp;Introduction</h3></div></div></div>
+          
+
+          <p>The term <span class="guilabel">Narrative Data</span> is used within <span class="application">Debrief</span> to refer to time-stamped textual data recorded during an exercise.</p>
+
+          <p>Typically this data would be narrative data recorded to provide an overview of events within an exercise <a class="glossterm" href="app_glossary.html#g_serial"><em class="glossterm">serial</em></a>, but an equally valid use of the facility would be for a textual record of information exported from a recording device. An example of this could be control messages returned from a weapon, or readings taken from an onboard sensor.</p>
+        </div>
+
+        <div class="sect2" id="preparing_narrative_data"><div class="titlepage"><div><div><h3 class="title">9.1.2.&nbsp;Preparing the data</h3></div></div></div>
+          
+
+          <p><a class="indexterm" name="d5e3161"></a>Narrative data is loaded into Debrief using the ;NARRATIVE and ;NARRATIVE2 replay file format entries as described at <a class="xref" href="reference.html#replay_annotation_format" title="16.1.3.&nbsp;Annotation Data Intro">Section&nbsp;16.1.3, &#8220;Annotation Data Intro&#8221;</a>.</p>
+
+          <p>The narrative data can be located in a <code class="filename">.REP</code> file of its own, or together with other Debrief track and annotation data.</p>
+        </div>
+
+        <div class="sect2" id="more_loading_narr"><div class="titlepage"><div><div><h3 class="title">9.1.3.&nbsp;Loading the data</h3></div></div></div>
+          
+
+          <p>Narrative data is loaded into <span class="application">Debrief</span> in the same way as other data, by dragging and dropping from a REP file formatted as above, or by using the <span class="emphasis"><em>Generate New Narrative entry</em></span> wizard. Open the wizard by either right-clicking on the <span class="emphasis"><em>Narratives</em></span> entry in the Outline View, or by right-clicking in blank area of the Outline View if this is the first narrative entry.</p><div class="figure" id="add_narr_data"><p class="title"><b>Figure&nbsp;9.1.&nbsp;New narrative entry wizard</b></p><div class="figure-contents">
+              
+              <div class="screenshot">
+                <div class="mediaobject"><img src="figures/NewNarrativeEntryWizard.png" alt="New narrative entry wizard"></div>
+              </div>
+            </div></div><p><br class="figure-break"></p>
+        </div>
+
+        <div class="sect2" id="viewing_narrative_data"><div class="titlepage"><div><div><h3 class="title">9.1.4.&nbsp;Viewing the data</h3></div></div></div>
+          
+
+          <p><a class="indexterm" name="d5e3182"></a>Once the data is loaded into Debrief, it is displayed in a list window - with one entry per line. When stepping through the data the "current" entry is highlighted, but the user is also able to double-click on an entry to move the Debrief step time to the time this entry was recorded. </p><div class="figure" id="viewing_narrative_demo"><p class="title"><b>Figure&nbsp;9.2.&nbsp;Viewing a narrative</b></p><div class="figure-contents">
+              
+
+              <div class="screenshot">
+                <div class="mediaobject"><img src="figures/Narr_1.png" alt="Viewing a narrative"></div>
+              </div>
+            </div></div><p><br class="figure-break">Three settings affect how the Narrative Viewer integrates with the current plot time (as indicated on the Time Controller (see <a class="xref" href="controlling_time.html#time_controller" title="4.2.1.&nbsp;The Time Controller">Section&nbsp;4.2.1, &#8220;The Time Controller&#8221;</a>). </p><div class="variablelist"><dl class="variablelist"><dt><span class="term"><span class="guiicon">
+                    <span class="inlinemediaobject"><img src="figures/wrap.png"></span>
+                  </span></span></dt><dd>
+                  <p>Trim the narrative entries to the visible screen space</p>
+                </dd><dt><span class="term"><span class="guiicon">
+                    <span class="inlinemediaobject"><img src="figures/synced.png"></span>
+                  </span></span></dt><dd>
+                  <p>Highlight the narrative entry nearest to the current plot time.</p>
+                </dd><dt><span class="term"><span class="guiicon">
+                    <span class="inlinemediaobject"><img src="figures/clock.png"></span>
+                  </span></span></dt><dd>
+                  <p>Change the plot-time to that of a narrative entry when the user double-clicks on it.</p>
+                </dd></dl></div>
+
+          <p>Also, the narrative viewer is able to filter your data for you. Double-click on the <span class="guibutton">Source</span> or <span class="guibutton">Type</span> headings and a filter dialog will open.</p><div class="figure" id="filtering_narrative"><p class="title"><b>Figure&nbsp;9.3.&nbsp;Filtering a narrative by Type</b></p><div class="figure-contents">
+              
+              <div class="screenshot">
+                <div class="mediaobject" align="center"><img src="figures/narr_filter.png" align="middle" alt="Filtering a narrative by Type"></div>
+              </div>
+            </div></div><p><br class="figure-break"></p><div class="figure" id="d5e3226"><p class="title"><b>Figure&nbsp;9.4.&nbsp;Filtering a narrative by Source</b></p><div class="figure-contents">
+              
+              <div class="screenshot">
+                <div class="mediaobject" align="center"><img src="figures/narr_filter_src.png" align="middle" alt="Filtering a narrative by Source"></div>
+              </div>
+            </div></div><p><br class="figure-break">In the examples shown, select which types of data you wish to see in the filtered narrative by either double-clicking on them or selecting one then clicking the right arrow. When you've selected which data you want to see, click <span class="guibutton">OK</span>.</p>
+
+          <p>The drop-down menu for the narrative viewer also allows you to select how you want the date column formatted - helpful for very frequent or infrequent narrative entries.</p>
+        </div>
+      </div>
+    </div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="xy_planning.html"><img src="images/prev.gif" alt="Prev"></a>&nbsp;</td><td width="20%" align="center"><a accesskey="u" href="UsingDebrief.html"><img src="images/up.gif" alt="Up"></a></td><td width="40%" align="right">&nbsp;<a accesskey="n" href="ChartBackdrops.html"><img src="images/next.gif" alt="Next"></a></td></tr><tr><td width="40%" align="left" valign="top">8.4.&nbsp;XY plots of planning tracks&nbsp;</td><td width="20%" align="center"><a accesskey="h" href="index.html"><img src="images/home.gif" alt="Home"></a></td><td width="40%" align="right" valign="top">&nbsp;Chapter&nbsp;10.&nbsp;Using chart backdrops</td></tr></table></div></body></html>

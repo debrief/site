@@ -1,0 +1,96 @@
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <title>Chapter&nbsp;15.&nbsp;Debrief maintainer's guide</title><link rel="stylesheet" type="text/css" href="header.css"><meta name="generator" content="DocBook XSL Stylesheets V1.78.1"><meta name="keywords" content="Maritime Analysis, Open Source Tool"><link rel="home" href="index.html" title="Debrief NG User Documentation"><link rel="up" href="maintainers_guide.html" title="Part&nbsp;III.&nbsp;Maintainer's Guide"><link rel="prev" href="debrief_feedback.html" title="14.5.&nbsp;Providing feedback"><link rel="next" href="fault_diagnosis.html" title="15.2.&nbsp;Fault-diagnosis instructions"><link rel="preface" href="PrefaceIntro.html" title="Introduction"><link rel="part" href="tutorial.html" title="Part&nbsp;I.&nbsp;Getting started"><link rel="chapter" href="get_start.html" title="Chapter&nbsp;1.&nbsp;First steps"><link rel="part" href="UsingDebrief.html" title="Part&nbsp;II.&nbsp;Using Debrief"><link rel="chapter" href="moving_around.html" title="Chapter&nbsp;2.&nbsp;Moving around the view"><link rel="chapter" href="formatting_data.html" title="Chapter&nbsp;3.&nbsp;Manipulating track data"><link rel="chapter" href="analysing_data.html" title="Chapter&nbsp;4.&nbsp;Analysing Data"><link rel="chapter" href="exporting_data.html" title="Chapter&nbsp;5.&nbsp;Exporting Data"><link rel="chapter" href="symbol_sets.html" title="Chapter&nbsp;6.&nbsp;Symbol sets"><link rel="chapter" href="external_datasets.html" title="Chapter&nbsp;7.&nbsp;External datasets"><link rel="chapter" href="ExercisePlanning.html" title="Chapter&nbsp;8.&nbsp;Exercise planning"><link rel="chapter" href="viewing_narratives.html" title="Chapter&nbsp;9.&nbsp;Viewing narratives"><link rel="chapter" href="ChartBackdrops.html" title="Chapter&nbsp;10.&nbsp;Using chart backdrops"><link rel="chapter" href="sensor_data.html" title="Chapter&nbsp;11.&nbsp;Analysing sensor data"><link rel="chapter" href="tma_data.html" title="Chapter&nbsp;12.&nbsp;Management of TMA and TUA solutions"><link rel="chapter" href="dis_support.html" title="Chapter&nbsp;13.&nbsp;Support for DIS Protocol"><link rel="part" href="maintainers_guide.html" title="Part&nbsp;III.&nbsp;Maintainer's Guide"><link rel="chapter" href="participating.html" title="Chapter&nbsp;14.&nbsp;Participating in Debrief development"><link rel="chapter" href="maintainers.html" title="Chapter&nbsp;15.&nbsp;Debrief maintainer's guide"><link rel="part" href="reference_guide.html" title="Part&nbsp;IV.&nbsp;Reference Guide"><link rel="chapter" href="reference.html" title="Chapter&nbsp;16.&nbsp;Debrief file formats"><link rel="chapter" href="GeoToolsRef.html" title="Chapter&nbsp;17.&nbsp;GeoTools in Debrief"><link rel="chapter" href="chap_debrief_algorithms.html" title="Chapter&nbsp;18.&nbsp;Debrief algorithms"><link rel="chapter" href="chap_genetic_algorithms.html" title="Chapter&nbsp;19.&nbsp;Semi Automated Track Construction (SATC)"><link rel="chapter" href="dis_ref.html" title="Chapter&nbsp;20.&nbsp;System Documentation for DIS integration"><link rel="appendix" href="app_glossary.html" title="Appendix&nbsp;A.&nbsp;Debrief Glossary"><link rel="glossary" href="app_glossary.html#glossary" title="Glossary"><link rel="index" href="the_index.html" title="Index"><link rel="section" href="maintainers.html#more_maintainers_guidance" title="15.1.&nbsp;Installation guidance"><link rel="section" href="fault_diagnosis.html" title="15.2.&nbsp;Fault-diagnosis instructions"><link rel="section" href="ChartStorage.html" title="15.3.&nbsp;Storing Chart Folios"><link rel="section" href="debrief_props.html" title="15.4.&nbsp;Debrief properties"><link rel="section" href="xml_ppt.html" title="15.5.&nbsp;Master template for export scenario to PowerPoint"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">Chapter&nbsp;15.&nbsp;Debrief maintainer's guide</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="debrief_feedback.html"><img src="images/prev.gif" alt="Prev"></a>&nbsp;</td><th width="60%" align="center">Part&nbsp;III.&nbsp;Maintainer's Guide</th><td width="20%" align="right">&nbsp;<a accesskey="n" href="fault_diagnosis.html"><img src="images/next.gif" alt="Next"></a></td></tr></table><hr></div><div class="chapter" id="maintainers"><div class="titlepage"><div><div><h2 class="title">Chapter&nbsp;15.&nbsp;Debrief maintainer's guide</h2></div></div></div><div class="toc"><p><b>Table of Contents</b></p><dl class="toc"><dt><span class="sect1"><a href="maintainers.html#more_maintainers_guidance">15.1. Installation guidance</a></span></dt><dd><dl><dt><span class="sect2"><a href="maintainers.html#more_install_guidance">15.1.1. System requirements</a></span></dt><dt><span class="sect2"><a href="maintainers.html#RightClickIntegration">15.1.2. Implementing 'open with' support for DebriefNG</a></span></dt><dt><span class="sect2"><a href="maintainers.html#more_directory_structure">15.1.3. Directory structure</a></span></dt><dt><span class="sect2"><a href="maintainers.html#mulit_user">15.1.4. Multi-user Debrief installation</a></span></dt><dt><span class="sect2"><a href="maintainers.html#CentralUpdates">15.1.5. Centralised software updates</a></span></dt><dt><span class="sect2"><a href="maintainers.html#starting_debrief">15.1.6. Starting the program</a></span></dt><dt><span class="sect2"><a href="maintainers.html#UseOfEnglishLocale">15.1.7. Use of English locale</a></span></dt></dl></dd><dt><span class="sect1"><a href="fault_diagnosis.html">15.2. Fault-diagnosis instructions</a></span></dt><dd><dl><dt><span class="sect2"><a href="fault_diagnosis.html#more_fault_diagnosis">15.2.1. How-to</a></span></dt></dl></dd><dt><span class="sect1"><a href="ChartStorage.html">15.3. Storing Chart Folios</a></span></dt><dt><span class="sect1"><a href="debrief_props.html">15.4. Debrief properties</a></span></dt><dd><dl><dt><span class="sect2"><a href="debrief_props.html#more_deb_props">15.4.1. Introduction</a></span></dt></dl></dd><dt><span class="sect1"><a href="xml_ppt.html">15.5. Master template for export scenario to PowerPoint</a></span></dt><dd><dl><dt><span class="sect2"><a href="xml_ppt.html#d5e4553">15.5.1. Introduction</a></span></dt><dt><span class="sect2"><a href="xml_ppt.html#PPTX_FolderStructure">15.5.2. Folder structure</a></span></dt><dt><span class="sect2"><a href="xml_ppt.html#d5e4633">15.5.3. Master slide</a></span></dt></dl></dd></dl></div>
+      
+
+      <div class="sect1" id="more_maintainers_guidance"><div class="titlepage"><div><div><h2 class="title" style="clear: both">15.1.&nbsp;Installation guidance</h2></div></div></div><div class="toc"><dl class="toc"><dt><span class="sect2"><a href="maintainers.html#more_install_guidance">15.1.1. System requirements</a></span></dt><dt><span class="sect2"><a href="maintainers.html#RightClickIntegration">15.1.2. Implementing 'open with' support for DebriefNG</a></span></dt><dt><span class="sect2"><a href="maintainers.html#more_directory_structure">15.1.3. Directory structure</a></span></dt><dt><span class="sect2"><a href="maintainers.html#mulit_user">15.1.4. Multi-user Debrief installation</a></span></dt><dt><span class="sect2"><a href="maintainers.html#CentralUpdates">15.1.5. Centralised software updates</a></span></dt><dt><span class="sect2"><a href="maintainers.html#starting_debrief">15.1.6. Starting the program</a></span></dt><dt><span class="sect2"><a href="maintainers.html#UseOfEnglishLocale">15.1.7. Use of English locale</a></span></dt></dl></div>
+        
+
+        <div class="sect2" id="more_install_guidance"><div class="titlepage"><div><div><h3 class="title">15.1.1.&nbsp;System requirements</h3></div></div></div>
+          
+
+          <div class="table" id="debrief_reqts"><p class="title"><b>Table&nbsp;15.1.&nbsp;Requirements for <span class="application">Debrief</span></b></p><div class="table-contents">
+              
+
+              <table summary="Requirements for Debrief" border="1"><colgroup><col><col><col></colgroup><thead><tr><th><p>Requirement</p></th><th><p>Minimum</p></th><th><p>Recommended</p></th></tr></thead><tbody><tr><td><p>Processor</p></td><td><p>800 MHz</p></td><td><p>1400 MHz</p></td></tr><tr><td><p>Memory</p></td><td><p>256 Mb</p></td><td><p>1024 Mb</p></td></tr><tr><td><p>Java Virtual Machine</p></td><td><p>JVM 1.5</p></td><td><p>As new as possible. JVM 1.5 includes significant performance improvements, particularly in the list processing used extensively within Debrief</p></td></tr><tr><td><p>XML Libraries</p></td><td><p>SAX and DOM support (through the enclosed jaxp.jar and parser.jar libraries)</p></td><td><p></p></td></tr><tr><td><p>OpenMap libraries (used for plotting NIMA's Vector Map data)</p></td><td><p>4.2.1 (through the enclosed openmap.jar library)</p></td><td><p></p></td></tr></tbody></table>
+            </div></div><p><br class="table-break"></p>
+        </div>
+
+        <div class="sect2" id="RightClickIntegration"><div class="titlepage"><div><div><h3 class="title">15.1.2.&nbsp;Implementing 'open with' support for DebriefNG</h3></div></div></div>
+          
+
+          <p>Since Winter 2010, DebriefNG can be opened by <a class="indexterm" name="d5e4400"></a> on a Debrief data file (rep (<a class="xref" href="reference.html#replay_file_format" title="16.1.&nbsp;Replay file format">Section&nbsp;16.1, &#8220;Replay file format&#8221;</a>) or DPF (<a class="xref" href="debrief_file_format.html" title="16.2.&nbsp;Debrief file format">Section&nbsp;16.2, &#8220;Debrief file format&#8221;</a>)). But, first DebriefNG must be associated with files of that file-type, via Windows Explorer. Do this as follows<a href="#ftn.d5e4404" class="footnote"><sup class="footnote" id="d5e4404">[3]</sup></a>:</p><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem">
+                <p>Open Windows Explorer</p>
+              </li><li class="listitem">
+                <p>Navigate to a Debrief <code class="filename">REP</code> file</p>
+              </li><li class="listitem">
+                <p>Right-click on the file and select 'Open With'</p>
+              </li><li class="listitem">
+                <p>Now browse to the DebriefNG.exe executable, typically contained in the <code class="filename">c:\DebriefNG</code>. You may also wish to select '<span class="guilabel">Always use this application</span>'.</p>
+              </li><li class="listitem">
+                <p>Now repeat this process for a Debrief <code class="filename">dpf</code> file , you can select '<span class="guilabel">Always use this application</span>' - since dpf files aren' used by many applications. Debrief did use the <code class="filename">xml</code> suffix, but that related to lots of files - so in Oct 2014 we adopted <code class="filename">.dpf</code>. </p>
+              </li></ol></div>
+        </div>
+
+        <div class="sect2" id="more_directory_structure"><div class="titlepage"><div><div><h3 class="title">15.1.3.&nbsp;Directory structure</h3></div></div></div>
+          
+
+          <p>Debrief installs itself into a <code class="filename">Debrief NG</code> folder in the top level of your C:\ drive.. Within the Debrief NG folder you will find the DebriefNG executable in the top-level, together with some additional <code class="filename">dll</code> files used for optimised graphics (<code class="filename">gdiplus.dll</code>), and copy to clipboard (<code class="filename">JavaClipboard.dll</code>).</p>
+
+          <p>The <code class="filename">configuration</code> folder contains details of Debrief's initial settings together with the locations of update download sites.</p>
+
+          <p>The <code class="filename">features</code> and <code class="filename">plugins</code> folders include details of what Eclipse plugins are present (where each feature is actually a group of plugins), together with the plugins themselves. The <code class="filename">workspace</code> folder is a default workspace provided for new users. It contains current work projects together with a large volume of metadata representing change history, screen layout and user preferences.</p>
+        </div>
+
+        <div class="sect2" id="mulit_user"><div class="titlepage"><div><div><h3 class="title">15.1.4.&nbsp;Multi-user Debrief installation</h3></div></div></div>
+          
+
+          <p>The conventional way of installing Debrief is for each user to have their own copy, maintaining their own sets of plugins and updates (as above). There is an alternate installation scenario, however - for all users to share a common Debrief installation. An advantage of this scenario is that software updates only need to be performed once, at the central location. By default, however, shared installations are troublesome for Debrief - since all users will be looking at a single set of settings - so administrator participation is necessary.</p>
+
+          <p>Whilst a number of theoretical solutions exist for this problem, the most reliable solution to emerge is to force Debrief NG to use the workspace in the users own login directory (since each user has a unique login directory). This also overcomes the challenge of new users having to select a workspace before they know what a workspace is.</p>
+
+          <p>Thus, the Debrief shortcut (.ini file) has been modified to explicitly indicate that the workspace is in the a folder in the user login area:</p><pre class="screen">-data
+@user.home/.DebriefNG</pre><p>The '.' character before the DebriefNG folder name follows a convention that is normally sufficient to make the operating system make the folder hidden by default.</p><div class="tip" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0" summary="Tip"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Tip]" src="images/tip.gif"></td><th align="left">Tip</th></tr><tr><td align="left" valign="top">
+              <p>When users are upgrading from older versions of DebriefNG, the application will ignore the last workspace location, and load a new, blank workspace from the new user directory. If the user now closes Debrief the workspace data can be copied from the old location into the new location, which will get read when the application re-opens.</p>
+            </td></tr></table></div>
+        </div>
+
+        <div class="sect2" id="CentralUpdates"><div class="titlepage"><div><div><h3 class="title">15.1.5.&nbsp;Centralised software updates</h3></div></div></div>
+          
+
+          <p>In the Autumn 2009 updates Debrief adopted the Eclipse p2 <span class="emphasis"><em>update</em></span> mechanism. With this update came support for centralised updates. Centralised updates allow updated Debrief components to be placed at a central location on shared network storage, with individual Debrief installations automatically updating from it.</p>
+
+          <p>Start by locating a central shared folder, and creating a <span class="emphasis"><em>Repository</em></span> folder in it. This is where your Debrief maintainer will unzip Debrief updates. Next, you must tell the individual Debrief installations where the repository is. Do this from the <span class="guilabel">Preferences</span>
+            <span class="guilabel">Install/Update</span>
+            <span class="guilabel">Available Software Sites</span> dialog:</p><div class="figure" id="ReposLocation"><p class="title"><b>Figure&nbsp;15.1.&nbsp;Repository location dialog</b></p><div class="figure-contents">
+              
+
+              <div class="screenshot">
+                <div class="mediaobject"><img src="figures/ReposLocation.png" alt="Repository location dialog"></div>
+              </div>
+            </div></div><p><br class="figure-break"></p>
+
+          <p>Then, to update a Debrief installation select <span class="emphasis"><em>Check for updates</em></span> from the <span class="emphasis"><em>Help</em></span> menu. Note, the <span class="emphasis"><em>Install/Updates</em></span> section of Debrief preferences also includes options for automatic software updates.</p>
+        </div>
+
+        <div class="sect2" id="starting_debrief"><div class="titlepage"><div><div><h3 class="title">15.1.6.&nbsp;Starting the program</h3></div></div></div>
+          
+
+          <p>The shortcut placed on the <span class="guimenu">Start|Program Files|Debrief NG</span> menu actually calls the <code class="filename">DebriefNG.exe</code> file found in the startup directory. This application triggers the startup of Debrief, passing to it the parameters contained in the <code class="filename">DebriefNG.ini</code> file. This file contains options to select the initial perspective, the memory allocation, and additional files to include on the classpath.</p>
+        </div>
+
+        <div class="sect2" id="UseOfEnglishLocale"><div class="titlepage"><div><div><h3 class="title">15.1.7.&nbsp;Use of English locale</h3></div></div></div>
+          
+
+          <p>Note that Debrief fails when on an machine set to a non-English locale, such as French(Canada). The application cannot read data-files correctly, nor can it populate screen editors. The workaround to this problem is to explicitly direct Debrief to startup using an English locale. Do this by launching Debrief with the "-nl en" command parameter. This can be performed either by modifying the shortcut used to start Debrief, or by adding the command parameter to the <code class="filename">Debrief.ini</code> configuration file (though this will have to be re-performed after each Debrief update).</p>
+        </div>
+      </div>
+
+      
+      
+
+      
+      
+    <div class="footnotes"><br><hr style="width:100; text-align:left;margin-left: 0"><div id="ftn.d5e4404" class="footnote">
+              <p><a href="#d5e4404" class="para"><sup class="para">[3] </sup></a>Note, across the range of versions of MS Windows a variety of user interface phrases exist. The steps in this process contain the text that will loosely match that which you'll see</p>
+            </div></div></div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="debrief_feedback.html"><img src="images/prev.gif" alt="Prev"></a>&nbsp;</td><td width="20%" align="center"><a accesskey="u" href="maintainers_guide.html"><img src="images/up.gif" alt="Up"></a></td><td width="40%" align="right">&nbsp;<a accesskey="n" href="fault_diagnosis.html"><img src="images/next.gif" alt="Next"></a></td></tr><tr><td width="40%" align="left" valign="top">14.5.&nbsp;Providing feedback&nbsp;</td><td width="20%" align="center"><a accesskey="h" href="index.html"><img src="images/home.gif" alt="Home"></a></td><td width="40%" align="right" valign="top">&nbsp;15.2.&nbsp;Fault-diagnosis instructions</td></tr></table></div></body></html>

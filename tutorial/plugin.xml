@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<plugin name="Debrief NG User Guide" id="org.mwc.debrief.help" version="1.0" provider-name="Maritime Warfare Centre">
+   <extension point="org.eclipse.help.toc">
+      <toc file="toc.xml" primary="true"/>
+   </extension>
+   <extension point="org.eclipse.help.index">
+      <index file="index.xml"/>
+   </extension>
+</plugin>

@@ -2,7 +2,7 @@ all:
   - title: GRID EDITOR
     text: 'Yes, the onboard sensors may be less than perfect. Don’t worry, Debrief’s Grid Editor allows you to use your understanding of the data to perform a range of grooming operations: from removing outliers, inserting missing data, right through to smoothing values to remove quantisation artifacts'
     image: ../assets/images/GridEditor-300x300.png
-    link: http://www.debrief.info/tutorial/GridEditor.html
+    link: /tutorial/GridEditor.html
     category: reconstruction
     reconstruction: true
     analysis: false
@@ -10,56 +10,56 @@ all:
   - title: GRAPH EXPORT
     text: 'It’s not just track plots that can be exported from Debrief.  All those Time-Variable plots can also be exported, to be inserted directly into your Analysis Report or Quick-Look Briefing document.'
     image: ../assets/images/GraphExport-300x286.png
-    link: http://www.debrief.info/tutorial/show_time_vars.html
+    link: /tutorial/show_time_vars.html
     reconstruction: false
     analysis: false
     presentation: true
   - title: GNATURAL EARTH
     text: 'Everybody likes detailed charts. The Debrief Natural Earth background dataset delivers natural looking maps, with bathymetric shading. Developed by a professional cartographer, our custom set of Natural Earth themes & styles is dedicated to the maritime domain. Our maps will certainly put a shine on your next briefing'
     image: ../assets/images/NaturalEarth-300x300.png
-    link: http://www.debrief.info/tutorial/external_datasets.html#natural_earth
+    link: /tutorial/external_datasets.html#natural_earth
     reconstruction: false
     analysis: true
     presentation: true
   - title: OUTLINE VIEW
     text: 'You may have a lot of different types of data loaded, but the Outline view - a layered tree of all of the currently loaded data - makes it easy to edit, analyse and format. Right-clicking opens  contextual editing, giving you quick access to editable properties and transformations - even with multiple items selected.'
     image: ../assets/images/OutlineView-300x300.png
-    link: http://www.debrief.info/tutorial/layer_mgr.html#layer_mgr_intro
+    link: /tutorial/layer_mgr.html#layer_mgr_intro
     reconstruction: true
     analysis: true
     presentation: false
   - title: Narratives
     text: 'It’s easy to use the Narrative Viewer to combine time-stamped textual data with the dynamic track plot.  Human or system-generated text entries can be attributed to any one of the platforms, or to a particular message type, and then quickly filtered to focus on a particular entry type.'
     image: ../assets/images/Narratives-300x300.png
-    link: http://www.debrief.info/tutorial/viewing_narratives.html
+    link: /tutorial/viewing_narratives.html
     reconstruction: true
     analysis: true
     presentation: false
   - title: TRACK TOTE
     text: 'Don’t worry about pulling out your protractor and slide rule to calculate the relative geometry between subject platforms.  Once a participant is denoted as primary, you can add any number of other platforms as secondaries. Immediately, Debrief displays their range, bearing, and platform states, synced to the currently displayed time'
     image: ../assets/images/TrackTote-300x278.png
-    link: http://www.debrief.info/tutorial/analysing_data.html#the_tote_area
+    link: /tutorial/analysing_data.html#the_tote_area
     reconstruction: false
     analysis: true
     presentation: false
   - title: TIME CONTROLLER
     text: 'The Time Controller is the home of all time-related activity.  You’ll use the main slider to control the point in time at which data is displayed. But this composite control goes a lot further to help you select and refine your snapshot. Use it to show or hide data, to show whole tracks or just recent points, to orient the plot, and to highlight the current location by marker, platform symbol or sensor coverage rings.'
     image: ../assets/images/TimeController-300x220.png
-    link: http://www.debrief.info/tutorial/controlling_time.html#time_controller
+    link: /tutorial/controlling_time.html#time_controller
     reconstruction: false
     analysis: true
     presentation: true
   - title: ADMIRALTY CHART IMPORT
     text: 'You always need to see accurate tracks.  But on occasion, it’s the background context that is fundamental to understanding the on-board decision making process.  Or, you just need to give some chart context to help your reader understand exactly where the trial took place.  Support for Admiralty Charts means it’s possible to view a whole chart catalog, then load only the charts of interest'
     image: ../assets/images/AdmiraltyChart-300x300.png
-    link: http://www.debrief.info/tutorial/ChartBackdrops.html
+    link: /tutorial/ChartBackdrops.html
     reconstruction: false
     analysis: true
     presentation: true
   - title: PLOT EXPORT
     text: 'We all know that conducting effective data-driven analysis is only half of the challenge.  Your analysis has to be persuasive, and make an impact.  With Debrief it’s quick and easy to copy a plot to the clipboard, then paste it directly into your favourite office suite.'
     image: ../assets/images/PlotExport-300x300.png
-    link: http://www.debrief.info/tutorial/exporting_data.html
+    link: /tutorial/exporting_data.html
     reconstruction: false
     analysis: false
     presentation: true

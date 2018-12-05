@@ -1,0 +1,250 @@
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <title>4.2.&nbsp;Controlling time</title><link rel="stylesheet" type="text/css" href="header.css"><meta name="generator" content="DocBook XSL Stylesheets V1.78.1"><meta name="keywords" content="Maritime Analysis, Open Source Tool"><link rel="home" href="index.html" title="Debrief NG User Documentation"><link rel="up" href="analysing_data.html" title="Chapter&nbsp;4.&nbsp;Analysing Data"><link rel="prev" href="analysing_data.html" title="Chapter&nbsp;4.&nbsp;Analysing Data"><link rel="next" href="measure_range.html" title="4.3.&nbsp;Measuring range and bearing"><link rel="preface" href="PrefaceIntro.html" title="Introduction"><link rel="part" href="tutorial.html" title="Part&nbsp;I.&nbsp;Getting started"><link rel="chapter" href="get_start.html" title="Chapter&nbsp;1.&nbsp;First steps"><link rel="part" href="UsingDebrief.html" title="Part&nbsp;II.&nbsp;Using Debrief"><link rel="chapter" href="moving_around.html" title="Chapter&nbsp;2.&nbsp;Moving around the view"><link rel="chapter" href="formatting_data.html" title="Chapter&nbsp;3.&nbsp;Manipulating track data"><link rel="chapter" href="analysing_data.html" title="Chapter&nbsp;4.&nbsp;Analysing Data"><link rel="chapter" href="exporting_data.html" title="Chapter&nbsp;5.&nbsp;Exporting Data"><link rel="chapter" href="symbol_sets.html" title="Chapter&nbsp;6.&nbsp;Symbol sets"><link rel="chapter" href="external_datasets.html" title="Chapter&nbsp;7.&nbsp;External datasets"><link rel="chapter" href="ExercisePlanning.html" title="Chapter&nbsp;8.&nbsp;Exercise planning"><link rel="chapter" href="viewing_narratives.html" title="Chapter&nbsp;9.&nbsp;Viewing narratives"><link rel="chapter" href="ChartBackdrops.html" title="Chapter&nbsp;10.&nbsp;Using chart backdrops"><link rel="chapter" href="sensor_data.html" title="Chapter&nbsp;11.&nbsp;Analysing sensor data"><link rel="chapter" href="tma_data.html" title="Chapter&nbsp;12.&nbsp;Management of TMA and TUA solutions"><link rel="chapter" href="dis_support.html" title="Chapter&nbsp;13.&nbsp;Support for DIS Protocol"><link rel="part" href="maintainers_guide.html" title="Part&nbsp;III.&nbsp;Maintainer's Guide"><link rel="chapter" href="participating.html" title="Chapter&nbsp;14.&nbsp;Participating in Debrief development"><link rel="chapter" href="maintainers.html" title="Chapter&nbsp;15.&nbsp;Debrief maintainer's guide"><link rel="part" href="reference_guide.html" title="Part&nbsp;IV.&nbsp;Reference Guide"><link rel="chapter" href="reference.html" title="Chapter&nbsp;16.&nbsp;Debrief file formats"><link rel="chapter" href="GeoToolsRef.html" title="Chapter&nbsp;17.&nbsp;GeoTools in Debrief"><link rel="chapter" href="chap_debrief_algorithms.html" title="Chapter&nbsp;18.&nbsp;Debrief algorithms"><link rel="chapter" href="chap_genetic_algorithms.html" title="Chapter&nbsp;19.&nbsp;Semi Automated Track Construction (SATC)"><link rel="chapter" href="dis_ref.html" title="Chapter&nbsp;20.&nbsp;System Documentation for DIS integration"><link rel="appendix" href="app_glossary.html" title="Appendix&nbsp;A.&nbsp;Debrief Glossary"><link rel="glossary" href="app_glossary.html#glossary" title="Glossary"><link rel="index" href="the_index.html" title="Index"><link rel="subsection" href="controlling_time.html#time_controller" title="4.2.1.&nbsp;The Time Controller"><link rel="subsection" href="controlling_time.html#display_modes" title="4.2.2.&nbsp;Display modes"><link rel="subsection" href="controlling_time.html#relative_mode" title="4.2.3.&nbsp;Plotting modes"><link rel="subsection" href="controlling_time.html#highlight_modes" title="4.2.4.&nbsp;Highlight modes"><link rel="subsection" href="controlling_time.html#time_display" title="4.2.5.&nbsp;Time display"><link rel="subsection" href="controlling_time.html#time_slider" title="4.2.6.&nbsp;Time slider"><link rel="subsection" href="controlling_time.html#time_bookmarks" title="4.2.7.&nbsp;Bookmarking"><link rel="subsection" href="controlling_time.html#filter_to_time_period" title="4.2.8.&nbsp;Manipulating according to time period"><link rel="subsection" href="controlling_time.html#vcr_controls" title="4.2.9.&nbsp;VCR controls"><link rel="subsection" href="controlling_time.html#other_ops" title="4.2.10.&nbsp;Other time operations"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">4.2.&nbsp;Controlling time</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="analysing_data.html"><img src="images/prev.gif" alt="Prev"></a>&nbsp;</td><th width="60%" align="center">Chapter&nbsp;4.&nbsp;Analysing Data</th><td width="20%" align="right">&nbsp;<a accesskey="n" href="measure_range.html"><img src="images/next.gif" alt="Next"></a></td></tr></table><hr></div><div class="sect1" id="controlling_time"><div class="titlepage"><div><div><h2 class="title" style="clear: both">4.2.&nbsp;Controlling time</h2></div></div></div><div class="toc"><dl class="toc"><dt><span class="sect2"><a href="controlling_time.html#time_controller">4.2.1. The Time Controller</a></span></dt><dt><span class="sect2"><a href="controlling_time.html#display_modes">4.2.2. Display modes</a></span></dt><dt><span class="sect2"><a href="controlling_time.html#relative_mode">4.2.3. Plotting modes</a></span></dt><dt><span class="sect2"><a href="controlling_time.html#highlight_modes">4.2.4. Highlight modes</a></span></dt><dt><span class="sect2"><a href="controlling_time.html#time_display">4.2.5. Time display</a></span></dt><dt><span class="sect2"><a href="controlling_time.html#time_slider">4.2.6. Time slider</a></span></dt><dt><span class="sect2"><a href="controlling_time.html#time_bookmarks">4.2.7. Bookmarking</a></span></dt><dt><span class="sect2"><a href="controlling_time.html#filter_to_time_period">4.2.8. Manipulating according to time period</a></span></dt><dt><span class="sect2"><a href="controlling_time.html#vcr_controls">4.2.9. VCR controls</a></span></dt><dt><span class="sect2"><a href="controlling_time.html#other_ops">4.2.10. Other time operations</a></span></dt></dl></div>
+        
+        <p>Time is managed within Debrief through the use of the Time Controller. As with all views, this is accessible through the Window &gt; Show View menu.</p>
+
+        <div class="sect2" id="time_controller"><div class="titlepage"><div><div><h3 class="title">4.2.1.&nbsp;The Time Controller</h3></div></div></div>
+          
+
+          <p><a class="indexterm" name="d5e1837"></a>The Time Controller is a view that provides a number of functions, including displaying the current serial time, allowing control of that time, and providing access to a series of time-related functions in <span class="application">Debrief</span>.</p><div class="figure" id="time_controller_demo"><p class="title"><b>Figure&nbsp;4.4.&nbsp;Time Controller view</b></p><div class="figure-contents">
+              
+              <div class="screenshot">
+                <div class="mediaobject" align="center"><img src="figures/TimeController.png" align="middle" alt="Time Controller view"></div>
+              </div>
+            </div></div><p><br class="figure-break">Your temporal (time-related) view of track data is dependent on three settings:</p><div class="variablelist"><dl class="variablelist"><dt><span class="term">Display Mode</span></dt><dd>
+                  <p>How the track is displayed</p>
+                </dd><dt><span class="term">Plotting mode</span></dt><dd>
+                  <p>Whether the data dynamically adjusts to follow the location/orientation of the primary track</p>
+                </dd><dt><span class="term">Highlight Mode</span></dt><dd>
+                  <p>How the current position is displayed</p>
+                </dd></dl></div>
+
+          <p>You access these modes using the buttons on the Time Controller toolbar and the Time Controller drop-down menu.</p><div class="figure" id="TimeControllerMenu"><p class="title"><b>Figure&nbsp;4.5.&nbsp;Time Controller menu</b></p><div class="figure-contents">
+              
+
+              <div class="screenshot">
+                <div class="mediaobject"><img src="figures/TimeController3.png" alt="Time Controller menu"></div>
+              </div>
+            </div></div><p><br class="figure-break">As you can see, the first three items on the menu allow you to select the current Display/Plotting/Highlight modes. In each sub-menu is a command to edit the currently mode. Later menu options allow you to format how information is displayed on the menu, and perform other time-related activities.</p>
+
+        </div>
+        <div class="sect2" id="display_modes"><div class="titlepage"><div><div><h3 class="title">4.2.2.&nbsp;Display modes</h3></div></div></div>
+          
+
+          <p>The first three icons on the Time Controller toolbar allow you to choose two combinations of plotting modes. The first two control how data is displayed: in Normal Mode, all exercise data is displayed, whereas in Snail mode, only the current position and a series of recent points are displayed (similar to a Snail with trail following behind it).</p>
+
+          <p>As you'd imagine, Normal Mode is the mode that is used for most analysis tasks. It's North oriented and shows all relevant data. It's also quite simple, only having two properties, both of which control the presentation of the highlight:</p><div class="variablelist"><dl class="variablelist"><dt><span class="term">Color</span></dt><dd>
+                  <p>Yes, the Color of the highlight</p>
+                </dd><dt><span class="term">Size</span></dt><dd>
+                  <p>I know, I know, it's the size of the rectangle used to plot the highlight (measured in pixels)</p>
+                </dd></dl></div><div class="figure" id="normal_trail_demo"><p class="title"><b>Figure&nbsp;4.6.&nbsp;Example of a normal trail</b></p><div class="figure-contents">
+              
+
+              <div class="screenshot">
+                <div class="mediaobject" align="center"><img src="figures/NormalTrailImage.png" align="middle" alt="Example of a normal trail"></div>
+              </div>
+            </div></div><p><br class="figure-break"></p>
+
+          <p>The Snail Trail is used for specific analysis tasks when you need to concentrate on the specific activities around a certain time, without the clutter of the remaining track data.</p>
+
+          <div class="figure" id="snail_trail_demo"><p class="title"><b>Figure&nbsp;4.7.&nbsp;Example of a snail trail</b></p><div class="figure-contents">
+              
+
+              <div class="screenshot">
+                <div class="mediaobject" align="center"><img src="figures/SnailTrailImage.png" align="middle" alt="Example of a snail trail"></div>
+              </div>
+            </div></div><p><br class="figure-break">The circle represents the current position, the stalk direction represents the current course, and its length gives a relative idea of the vessel speed (when compared to the length of the other vessel's stalk, <span class="emphasis"><em>boys will be boys</em></span>). The dots trailing back from the current position are a <a class="glossterm" href="app_glossary.html#g_snail_trail"><em class="glossterm">snail trail</em></a> of points going back in time. If you move forward and backward with the stepper control you will see these trails moving. The following properties are editable for a snail trail:</p><div class="variablelist"><p class="title"><b>Snail trail properties</b></p><dl class="variablelist"><dt><span class="term">Fade Points</span></dt><dd>
+                  <p>this will cause the points in the trail to fade away to the background colour</p>
+                </dd><dt><span class="term">Link positions</span></dt><dd>
+                  <p>this will plot a line between the points in the trail</p>
+                </dd><dt><span class="term">Plot Track Name</span></dt><dd>
+                  <p>this will plot the track name alongside the current position</p>
+                </dd><dt><span class="term">Point Size</span></dt><dd>
+                  <p>this will change the size of the points together with the thickness of the lines drawn on the plot,</p>
+                </dd><dt><span class="term">Trail Length</span></dt><dd>
+                  <p>this will change the time period covered by the trail</p>
+                </dd><dt><span class="term">Vector Stretch</span></dt><dd>
+                  <p>this will change the <span class="emphasis"><em>amplification</em></span> applied to the speed when drawing the speed vector; very fast vessels (or weapons) will need the this stretch reduced to allow stalks of sensible length.</p>
+                </dd></dl></div>
+        </div>
+
+        <div class="sect2" id="relative_mode"><div class="titlepage"><div><div><h3 class="title">4.2.3.&nbsp;Plotting modes</h3></div></div></div>
+          
+
+          <p>The plotting mode affects the origin and orientation of the plot. In <span class="emphasis"><em>Normal</em></span> mode the plot viewport stays static as the time changes, but if <span class="emphasis"><em>Primary Centred/North oriented</em></span> mode is selected, the viewport moves to track the primary participant. Beyond that, the <span class="emphasis"><em>Primary Centred/North oriented</em></span> mode orients the plot to match the heading of the primary track. This mode is particularly useful for presenting a scenario from the perspective of the primary participant, but the quickly changing orientation can be off-putting.</p>
+
+          <div class="tip" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0" summary="Tip"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Tip]" src="images/tip.gif"></td><th align="left">Tip</th></tr><tr><td align="left" valign="top">
+            <p>Primary Centered/North Oriented mode is particularly useful for analysing one vessel trailing another. If you make the trailing vessel the primary track and the vessel being trailed the secondary track, as you step forward through the serial you will clearly be able to see the relative bearing of the contact as held by the trailing vessel.</p>
+
+            <p>The sample shown below gives a demonstration of the use of this mode. You can quickly see that the blue vessel is directly ahead of the red trailing vessel, and your use of the Range Ring Highlighter gives us a quick indication of range. </p><div class="figure" id="relative_display_demo"><p class="title"><b>Figure&nbsp;4.8.&nbsp;Sample of primary centered/North oriented mode</b></p><div class="figure-contents">
+                
+                <div class="screenshot">
+                  <div class="mediaobject" align="center"><img src="figures/relative_demo.png" align="middle" alt="Sample of primary centered/North oriented mode"></div>
+                </div>
+              </div></div><p><br class="figure-break"></p>
+          </td></tr></table></div>
+        </div>
+
+        <div class="sect2" id="highlight_modes"><div class="titlepage"><div><div><h3 class="title">4.2.4.&nbsp;Highlight modes</h3></div></div></div>
+          
+
+          <p>Three highlight modes are provided:</p><div class="variablelist"><dl class="variablelist"><dt><span class="term">Default Highlight</span></dt><dd>
+                  <p>Shows a rectangle at the current position. From the default highlight properties you are able to select the colour and size of the rectangle to plot. If a track has sensor data present, and the sensor has a non-zero array offset, then it is possible (via the PlotArrayCentre track property) to direct Debrief to plot a diagonal cross icon at the array centre.</p>
+                </dd><dt><span class="term">Symbol Highlight</span></dt><dd>
+                  <p>Shows the symbol (<a class="xref" href="symbol_sets.html" title="Chapter&nbsp;6.&nbsp;Symbol sets">Chapter&nbsp;6, <i>Symbol sets</i></a>) currently assigned in the properties for each track. From the symbol highlight properties you are able to select the size at which the symbols should be plotted.</p>
+                </dd><dt><span class="term">Highlight off</span></dt><dd>
+                  <p>For when you don't want a highlight to be shown (such as when taking a screenshot using <span class="application">PrintScreen</span>)</p>
+                </dd><dt><span class="term">Range Ring Highlight</span></dt><dd>
+                  <p>This mode shows a series of <a class="indexterm" name="d5e1959"></a> around the current location. The editable properties are listed below.</p>
+                </dd></dl></div>
+
+          <p>For range rings you are able to edit the following properties:</p><div class="variablelist"><dl class="variablelist"><dt><span class="term">Arc Start</span></dt><dd>
+                  <p>The start angle for the arc of coverage. The arc will be plotted relative to platform heading, with negative values plotted to the Port-Side.</p>
+                </dd><dt><span class="term">Arc End</span></dt><dd>
+                  <p>The ending angle for the arc of coverage, travelling clockwise</p>
+                </dd><dt><span class="term">Color</span></dt><dd>
+                  <p>The colour to plot the range rings</p>
+                </dd><dt><span class="term">Num Rings</span></dt><dd>
+                  <p>How many range rings to plot, uniformly distributed from the center to the outer radius</p>
+                </dd><dt><span class="term">Radius</span></dt><dd>
+                  <p>The radius of the outermost range ring</p>
+                </dd><dt><span class="term">Spoke separation</span></dt><dd>
+                  <p>The angular separation of the spokes plotted within the range rings, centered on current heading.</p>
+                </dd></dl></div>
+        </div>
+
+        <div class="sect2" id="time_display"><div class="titlepage"><div><div><h3 class="title">4.2.5.&nbsp;Time display</h3></div></div></div>
+          
+
+          <p>The green digits of the time display are tied closely to the slider-bar immediately beneath them. Dragging the slider controls the current display time together with how the current data is displayed. Other Debrief views, such as the Narrative Viewer (<a class="xref" href="viewing_narratives.html" title="Chapter&nbsp;9.&nbsp;Viewing narratives">Chapter&nbsp;9, <i>Viewing narratives</i></a>) and the Time-Variable (<a class="xref" href="show_time_vars.html" title="4.4.&nbsp;Show time-related variables">Section&nbsp;4.4, &#8220;Show time-related variables&#8221;</a> graphs) update in response to time changes from the time slider.</p>
+
+          <p>A range of display formats are provided to make the displayed time more consistent with that in a supporting document, or of sufficient fidelity to support the current analysis.</p>
+        </div>
+
+        <div class="sect2" id="time_slider"><div class="titlepage"><div><div><h3 class="title">4.2.6.&nbsp;Time slider</h3></div></div></div>
+          
+
+          <p>Beneath the time-display is the time-slider, used to quickly move through a time-period. By default the slider is of infinite resolution, stopping exactly on the second/millisecond proportionate to the position of the slider. Debrief can be configured such that the slider stops on higher resolutions by selecting the relevant increment from the <span class="guibutton">Time slider increment</span> list in the Time Controller's drop-down menu.</p>
+          <p> You can also use your mouse wheel to move forwards and backwards in time, though you have to ensure the Time Slider has focus first. Note that pressing the Shift key causes extra large steps, and the Alt key causes extra small steps. </p>
+        </div>
+
+        <div class="sect2" id="time_bookmarks"><div class="titlepage"><div><div><h3 class="title">4.2.7.&nbsp;Bookmarking</h3></div></div></div>
+          
+
+          <p>Debrief NG introduces the concept of <a class="glossterm" href="app_glossary.html#g_bookmarks"><em class="glossterm">Bookmarks</em></a>. These represent the combination of a DTG, a remark, and the name of a plot-file, and are displayed in the <span class="guibutton">Bookmarks</span> view. With the view open you can quickly move between significant events across a number of files. Bookmarks are added by clicking on the <span class="guiicon">
+              <span class="inlinemediaobject"><img src="figures/AddBookmark.png"></span>
+            </span><span class="guimenuitem">Add DTG as bookmark</span> command from the <span class="guiicon">Time Controller</span>'s drop-down menu. The bookmarks view will not automatically open, but the bookmarks themselves will be present when it is. The current DTG is used as a default remark - but you'll get most mileage our of the bookmarks by describing the event that you're bookmarking.</p>
+        </div>
+
+        <div class="sect2" id="filter_to_time_period"><div class="titlepage"><div><div><h3 class="title">4.2.8.&nbsp;Manipulating according to time period</h3></div></div></div>
+          
+
+          <p>The pair of <a class="indexterm" name="d5e2012"></a>Time Filter Bars at the foot of the <span class="guiicon">Time Controller</span> view allow you to set start and finish times. These times are not set in support of a single Debrief operation, but are used across a range of operations. When dragging the sliders, hold down the shift-key to move in whole segments (hours, days, as appropriate). Drag the shaded section to retain the period length but change its origin (again using the shift-key if appropriate).</p><div class="tip" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0" summary="Tip"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Tip]" src="images/tip.gif"></td><th align="left">Tip</th></tr><tr><td align="left" valign="top">
+              <p>On occasion it's not possible to put the time slider markers on exactly the right time value - particularly if your plot covers a long timer period. In these circumstances, if you double-click on either the start or finish arrow, their exact time is made available for editing in the Properties View (see <a class="xref" href="formatting_data.html#property_editing" title="3.1.&nbsp;Property editing">Section&nbsp;3.1, &#8220;Property editing&#8221;</a>). Alternatively, hold the CTRL key down whilst clicking on a start/end marker, and a cute little window will open to let you put the time on a whole minute value.</p>
+            </td></tr></table></div>
+
+          <div class="sect3" id="filter_time_period"><div class="titlepage"><div><div><h4 class="title">4.2.8.1.&nbsp;Filter to time period</h4></div></div></div>
+            
+
+            <p>When the <span class="guibutton"><span class="inlinemediaobject"><img src="figures/FilterToTimePeriod.png"></span>Filter to time period</span> radio button is depressed, changing the time of the start or end time-sliders will automatically filter the displayed data to the indicated period. In this mode, you can select a 6-hour period (for example), and drag it through the full serial time with shift-key depressed to view a moving "window" of data. In addition to filtering the visible data to the indicated period, the period covered by the time-slider is also reduced. Drag out the start/end time-sliders to return to the original time period.</p>
+          </div>
+
+          <div class="sect3" id="ExportToFlatFile"><div class="titlepage"><div><div><h4 class="title">4.2.8.2.&nbsp;Export to Flat File (SAM) format</h4></div></div></div>
+            
+
+            <p><a class="indexterm" name="d5e2029"></a>This option allows you to export primary and secondary data as a flat-file format. As part of this, data can be constrained to a particular time period and can also include any visible sensor data for those tracks. This file format consists of a data file of tab-separated variables and is described further in <a class="xref" href="Section_Flat.html" title="16.4.&nbsp;Flat file format">Section&nbsp;16.4, &#8220;Flat file format&#8221;</a>. When you perform this export, Debrief will remember the folder and sensor type used in previous export operations.</p>
+
+            <div class="sect4" id="ExportToSamAlg"><div class="titlepage"><div><div><h5 class="title">4.2.8.2.1.&nbsp;SAM Export algorithm</h5></div></div></div>
+              
+
+              <p>This algorithm works as follows:</p><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem">
+                    <p>Check data is compliant (primary &amp; secondary tracks, and some sensor data present for specified period</p>
+                  </li><li class="listitem">
+                    <p>Write header information to file</p>
+                  </li><li class="listitem">
+                    <p>Looping thorough specified period in 1 second steps:</p><div class="orderedlist"><ol class="orderedlist" type="a"><li class="listitem">
+                          <p>Calculate primary track location at specified time (via interpolation)</p>
+                        </li><li class="listitem">
+                          <p>Calculate sensor location at specified time (via interpolation)</p>
+                        </li><li class="listitem">
+                          <p>Calculate secondary track location at specified time (via interpolation)</p>
+                        </li><li class="listitem">
+                          <p>Output this data record calculating values from above as applicable</p>
+                        </li></ol></div>
+                  </li></ol></div>
+            </div>
+          </div>
+          <div class="sect3" id="d5e2052"><div class="titlepage"><div><div><h4 class="title">4.2.8.3.&nbsp;Updated Export to Flat File (SAM) format</h4></div></div></div>
+            
+            <p>In Spring 2012 the <a class="indexterm" name="d5e2055"></a> capability was extended to include the following enhancements:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
+                  <p>Include doppler calculations</p>
+                </li><li class="listitem">
+                  <p>Optionally support second sensor</p>
+                </li><li class="listitem">
+                  <p>Support a wider range of sensor types</p>
+                </li><li class="listitem">
+                  <p>Allow the protective marking to be specified</p>
+                </li><li class="listitem">
+                  <p>Allow sensor depth to be specifed (incl Aft depth for towed sensor)</p>
+                </li></ul></div><div class="figure" id="d5e2069"><p class="title"><b>Figure&nbsp;4.9.&nbsp;Sample improved SAM Export dialog</b></p><div class="figure-contents">
+                
+                <div class="screenshot">
+                  <div class="mediaobject" align="center"><img src="figures/SAM2Export.png" align="middle" alt="Sample improved SAM Export dialog"></div>
+                </div>
+              </div></div><p><br class="figure-break"></p>
+          </div>
+
+          <div class="sect3" id="CopyToClip"><div class="titlepage"><div><div><h4 class="title">4.2.8.4.&nbsp;Copy to clipboard</h4></div></div></div>
+            
+
+            <p><a class="indexterm" name="d5e2078"></a>Another operation that relies on the selected time period is exporting calculated data to the clipboard. This operation is available from the <span class="guiicon">
+                <span class="inlinemediaobject"><img src="figures/Calculator.png"></span>
+              </span><span class="guibutton">Time Controller</span>'s drop-down menu, and it performs a series of calculations for each data-point in the indicated time period. These calculations are then placed on the system clipboard in Comma-Separated-Variable format for reuse in other applications, <span class="application">Microsoft Excel</span>, for instance.<a href="#ftn.d5e2087" class="footnote"><sup class="footnote" id="d5e2087">[1]</sup></a></p><div class="tip" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0" summary="Tip"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Tip]" src="images/tip.gif"></td><th align="left">Tip</th></tr><tr><td align="left" valign="top">
+                <p>The Colour parameter shows the colour of the track point used in that calculation. On occasion analysts colour a track according to whether that participant is in contact or not. Exporting the colour flag to Excel allows the post-analysis data to be filtered according to periods in contact - or any other time-dependent aspect specified by the analyst. The application of a particular colour to sections of track is performed within the Outline View.</p>
+              </td></tr></table></div><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.gif"></td><th align="left">Note</th></tr><tr><td align="left" valign="top">
+                <p>The last two columns output give identifier information: the first of these is the name of the current item in this <a class="glossterm" href="app_glossary.html#g_track"><em class="glossterm">track</em></a>, and the second is the point in the primary <a class="glossterm" href="app_glossary.html#g_track"><em class="glossterm">track</em></a> nearest to the current time stamp: that-is the point in the primary track which has been used for the calculated results.</p>
+              </td></tr></table></div>
+          </div>
+        </div>
+
+        <div class="sect2" id="vcr_controls"><div class="titlepage"><div><div><h3 class="title">4.2.9.&nbsp;VCR controls</h3></div></div></div>
+          
+
+          <p>The VCR controls allow you to move forwards and backwards in time through the plot. Looking at the order of buttons in the Time Controller screenshot above, the commands allow you to move to the beginning, move a large step backwards, move a small step backwards and repeat the last time step continuously (small or large step, backwards or forwards). The remaining buttons repeat these operations in the "forward" direction. The size of small and large steps is controlled by the Time Controller properties window, accessed by selecting <span class="guimenu">Properties</span>/<span class="guimenuitem">Time Controller</span>. Also available from this set of properties is the <span class="guibutton">Step Interval</span>; the time interval that Debrief waits before automatically moving forwards.</p>
+        </div>
+
+        <div class="sect2" id="other_ops"><div class="titlepage"><div><div><h3 class="title">4.2.10.&nbsp;Other time operations</h3></div></div></div>
+          
+
+          <p>Beyond the operations available from the Time Controller, the time-period is used to support other Debrief operations. The most significant of these operations is when producing time variable plots (see <a class="xref" href="show_time_vars.html" title="4.4.&nbsp;Show time-related variables">Section&nbsp;4.4, &#8220;Show time-related variables&#8221;</a>). The current time period settings dictate the extent of what information is calculated for these plots.</p>
+        </div>
+
+      <div class="footnotes"><br><hr style="width:100; text-align:left;margin-left: 0"><div id="ftn.d5e2087" class="footnote">
+                <p><a href="#d5e2087" class="para"><sup class="para">[1] </sup></a>A header line is written first, indicating the contents of each column: </p><div class="itemizedlist"><ul class="itemizedlist compact" style="list-style-type: disc; "><li class="listitem">
+                      <p>Track Time(hhmmss)</p>
+                    </li><li class="listitem">
+                      <p>Depth(metres)</p>
+                    </li><li class="listitem">
+                      <p>Speed(Knots)</p>
+                    </li><li class="listitem">
+                      <p>Course(degs)</p>
+                    </li><li class="listitem">
+                      <p>Range(yards)</p>
+                    </li><li class="listitem">
+                      <p>Bearing(degs)</p>
+                    </li><li class="listitem">
+                      <p>Rel Bearing(degs - using <code class="varname">Relative bearing format</code> specified in the <span class="guimenu">Window</span>/<span class="guimenu">Preferences</span>dialog)</p>
+                    </li><li class="listitem">
+                      <p>Brg Rate(deg/min)</p>
+                    </li><li class="listitem">
+                      <p>Color (for this track point)</p>
+                    </li><li class="listitem">
+                      <p>Name</p>
+                    </li><li class="listitem">
+                      <p>PrimaryName</p>
+                    </li></ul></div>
+                <p>The results from the primary track are listed first, which (as in the <a class="glossterm" href="app_glossary.html#g_tote"><em class="glossterm">Tote</em></a>) do not show results of calculated operations: </p><pre class="screen">NELSON 12/Dec/95 05:00:00 000 02.00 269.7 n/a n/a n/a n/a 0500 0500</pre>
+                <p>Then the secondary tracks are listed: </p><pre class="screen">
+ BUNKUM 12/Dec/95 05:50:00 000 00.00 000.0 12381 311.0 R49.0 R0.264 F5 0550</pre>
+              </div></div></div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="analysing_data.html"><img src="images/prev.gif" alt="Prev"></a>&nbsp;</td><td width="20%" align="center"><a accesskey="u" href="analysing_data.html"><img src="images/up.gif" alt="Up"></a></td><td width="40%" align="right">&nbsp;<a accesskey="n" href="measure_range.html"><img src="images/next.gif" alt="Next"></a></td></tr><tr><td width="40%" align="left" valign="top">Chapter&nbsp;4.&nbsp;Analysing Data&nbsp;</td><td width="20%" align="center"><a accesskey="h" href="index.html"><img src="images/home.gif" alt="Home"></a></td><td width="40%" align="right" valign="top">&nbsp;4.3.&nbsp;Measuring range and bearing</td></tr></table></div></body></html>

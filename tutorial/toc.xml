@@ -1,0 +1,513 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<toc label="Debrief NG User Documentation" topic="html/legacy/index.html">
+   <topic label="Introduction" href="html/legacy/PrefaceIntro.html">
+      <topic label="Welcome" href="html/legacy/PrefaceIntro.html#intro_welcome"/>
+      <topic label="History" href="html/legacy/History.html">
+         <topic label="Prehistory" href="html/legacy/History.html#PreHistory"/>
+         <topic label="The Switch to Open Source" href="html/legacy/History.html#SwitchToOpen"/>
+         <topic label="Debrief 2001 onwards" href="html/legacy/History.html#TwoThouOnwards"/>
+      </topic>
+      <topic label="Debrief users" href="html/legacy/users.html"/>
+      <topic label="Document conventions" href="html/legacy/conventions.html"/>
+   </topic>
+   <topic label="Getting started" href="html/legacy/tutorial.html">
+      <topic label="First steps" href="html/legacy/get_start.html">
+         <topic label="Before Installing Debrief" href="html/legacy/get_start.html#pre_install_debrief">
+            <topic label="Obtaining Debrief" href="html/legacy/get_start.html#obtainingDebrief"/>
+            <topic label="Where to get help on Debrief" href="html/legacy/get_start.html#where_to_get_help"/>
+            <topic label="Debrief on CD-Rom" href="html/legacy/get_start.html#onCD_Rom"/>
+         </topic>
+         <topic label="Performing installation" href="html/legacy/running_installer.html"/>
+         <topic label="Configuring reference data" href="html/legacy/setting_location_prefs.html"/>
+         <topic label="Start Debrief" href="html/legacy/start_up.html">
+            <topic label="Opening the application" href="html/legacy/start_up.html#opening_application"/>
+            <topic label="A Debrief Walkthrough" href="html/legacy/start_up.html#debrief_walkthrough"/>
+            <topic label="Navigating around Debrief" href="html/legacy/start_up.html#navigating_debrief">
+               <topic label="Editors" href="html/legacy/start_up.html#debrief_editors"/>
+               <topic label="Views" href="html/legacy/start_up.html#debrief_views"/>
+               <topic label="Toolbars" href="html/legacy/start_up.html#debrief_toolbars"/>
+            </topic>
+            <topic label="Loading your first plot" href="html/legacy/start_up.html#first_plot"/>
+         </topic>
+         <topic label="Importing track data" href="html/legacy/import_range_data.html">
+            <topic label="Introduction to Replay files" href="html/legacy/import_range_data.html#intro_to_replay"/>
+            <topic label="The Debrief file format" href="html/legacy/import_range_data.html#DebrieffileFormat"/>
+            <topic label="Importing data" href="html/legacy/import_range_data.html#import_section"/>
+            <topic label="Import modes" href="html/legacy/import_range_data.html#import_modes"/>
+         </topic>
+      </topic>
+   </topic>
+   <topic label="Using Debrief" href="html/legacy/UsingDebrief.html">
+      <topic label="Moving around the view" href="html/legacy/moving_around.html">
+         <topic label="Introduction" href="html/legacy/moving_around.html#move_intro"/>
+         <topic label="Mouse mode buttons" href="html/legacy/toggle_buttons.html"/>
+         <topic label="Click buttons" href="html/legacy/the_click_btns.html"/>
+         <topic label="Chart Overview" href="html/legacy/overview_window.html"/>
+         <topic label="Undo" href="html/legacy/undo_btn.html"/>
+         <topic label="Formatting the plot" href="html/legacy/format_the_plot.html"/>
+      </topic>
+      <topic label="Manipulating track data" href="html/legacy/formatting_data.html">
+         <topic label="Property editing" href="html/legacy/formatting_data.html#property_editing">
+            <topic label="Edit track" href="html/legacy/formatting_data.html#edit_track"/>
+            <topic label="Set label, symbol and arrow display intervals" href="html/legacy/formatting_data.html#sym_intervals"/>
+            <topic label="Track shifting" href="html/legacy/formatting_data.html#track_shifting"/>
+         </topic>
+         <topic label="Adding chart features" href="html/legacy/new_chart_features.html">
+            <topic label="Chart features toolbar" href="html/legacy/new_chart_features.html#chart_toolbar"/>
+            <topic label="Scale" href="html/legacy/new_chart_features.html#the_Scale"/>
+            <topic label="Time Display (Absolute)" href="html/legacy/new_chart_features.html#time_display_absolute"/>
+            <topic label="Time Display (Relative)" href="html/legacy/new_chart_features.html#time_display_relative"/>
+            <topic label="Grid" href="html/legacy/new_chart_features.html#the_grid"/>
+            <topic label="Local Grid" href="html/legacy/new_chart_features.html#the_local_grid"/>
+            <topic label="Coastline" href="html/legacy/new_chart_features.html#the_coastline"/>
+            <topic label="ETOPO gridded bathy" href="html/legacy/new_chart_features.html#etopo_gridded_bathy"/>
+            <topic label="Chart Library" href="html/legacy/new_chart_features.html#ChartLibrary"/>
+            <topic label="Vectored data" href="html/legacy/new_chart_features.html#vectored_data"/>
+            <topic label="Natural Earth" href="html/legacy/new_chart_features.html#NaturalEarth_title"/>
+         </topic>
+         <topic label="Adding drawing features" href="html/legacy/drawing_features.html">
+            <topic label="Label" href="html/legacy/drawing_features.html#the_labels"/>
+            <topic label="Ellipse" href="html/legacy/drawing_features.html#the_ellipse"/>
+            <topic label="Polygon" href="html/legacy/drawing_features.html#the_polygon"/>
+            <topic label="Rectangle, Circle, Line, Arc" href="html/legacy/drawing_features.html#easy_shapes"/>
+            <topic label="General" href="html/legacy/drawing_features.html#general_editing"/>
+         </topic>
+         <topic label="Layer management" href="html/legacy/layer_mgr.html">
+            <topic label="Outline View" href="html/legacy/layer_mgr.html#layer_mgr_intro"/>
+            <topic label="Cut/Copy and Paste" href="html/legacy/layer_mgr.html#cut_copy_paste"/>
+         </topic>
+         <topic label="Saving and re-opening plots" href="html/legacy/save_reopen.html">
+            <topic label="Save" href="html/legacy/save_reopen.html#save_Detail"/>
+            <topic label="Adding more data to a plot" href="html/legacy/save_reopen.html#adding_more_data"/>
+         </topic>
+         <topic label="Lightweight tracks" href="html/legacy/LightweightTracks.html">
+            <topic label="Introduction" href="html/legacy/LightweightTracks.html#IntroLightweight"/>
+            <topic label="Managing lightweight tracks" href="html/legacy/LightweightTracks.html#managing_lightweight"/>
+         </topic>
+         <topic label="Grooming track data" href="html/legacy/GroomingTrackData.html">
+            <topic label="Introduction" href="html/legacy/GroomingTrackData.html#IntroGrooming"/>
+            <topic label="Resampling track and sensor data" href="html/legacy/GroomingTrackData.html#ResamplingData"/>
+            <topic label="Splitting track sections" href="html/legacy/GroomingTrackData.html#SplitTrackSections"/>
+            <topic label="Joining track sections" href="html/legacy/GroomingTrackData.html#JoinTrackSections"/>
+            <topic label="Combining track sections" href="html/legacy/GroomingTrackData.html#CombineTrackSections"/>
+            <topic label="Generating infill segments" href="html/legacy/GroomingTrackData.html#GenerateInfill"/>
+            <topic label="Removing Jumps" href="html/legacy/GroomingTrackData.html#RemoveJumpsUser"/>
+            <topic label="Transferring a relative track to another host" href="html/legacy/GroomingTrackData.html#tx_to_other_track"/>
+            <topic label="Smoothing out back-tracking jumps" href="html/legacy/GroomingTrackData.html#smooth_backtrack_jumps"/>
+         </topic>
+         <topic label="Using the Grid Editor" href="html/legacy/GridEditor.html">
+            <topic label="Introduction" href="html/legacy/GridEditor.html#GridIntro"/>
+            <topic label="Use of Grid Editor" href="html/legacy/GridEditor.html#UseOfGrid"/>
+         </topic>
+      </topic>
+      <topic label="Analysing Data" href="html/legacy/analysing_data.html">
+         <topic label="Assigning tracks as primary and secondary" href="html/legacy/analysing_data.html#assigning_tracks">
+            <topic label="Tote area" href="html/legacy/analysing_data.html#the_tote_area"/>
+            <topic label="Assigning tracks" href="html/legacy/analysing_data.html#more_assigning_tracks"/>
+            <topic label="Notes" href="html/legacy/analysing_data.html#some_notes"/>
+         </topic>
+         <topic label="Controlling time" href="html/legacy/controlling_time.html">
+            <topic label="The Time Controller" href="html/legacy/controlling_time.html#time_controller"/>
+            <topic label="Display modes" href="html/legacy/controlling_time.html#display_modes"/>
+            <topic label="Plotting modes" href="html/legacy/controlling_time.html#relative_mode"/>
+            <topic label="Highlight modes" href="html/legacy/controlling_time.html#highlight_modes"/>
+            <topic label="Time display" href="html/legacy/controlling_time.html#time_display"/>
+            <topic label="Time slider" href="html/legacy/controlling_time.html#time_slider"/>
+            <topic label="Bookmarking" href="html/legacy/controlling_time.html#time_bookmarks"/>
+            <topic label="Manipulating according to time period" href="html/legacy/controlling_time.html#filter_to_time_period">
+               <topic label="Filter to time period" href="html/legacy/controlling_time.html#filter_time_period"/>
+               <topic label="Export to Flat File (SAM) format" href="html/legacy/controlling_time.html#ExportToFlatFile">
+                  <topic label="SAM Export algorithm" href="html/legacy/controlling_time.html#ExportToSamAlg"/>
+               </topic>
+               <topic label="Updated Export to Flat File (SAM) format" href="html/legacy/controlling_time.html#d5e2052"/>
+               <topic label="Copy to clipboard" href="html/legacy/controlling_time.html#CopyToClip"/>
+            </topic>
+            <topic label="VCR controls" href="html/legacy/controlling_time.html#vcr_controls"/>
+            <topic label="Other time operations" href="html/legacy/controlling_time.html#other_ops"/>
+         </topic>
+         <topic label="Measuring range and bearing" href="html/legacy/measure_range.html">
+            <topic label="Range bearing tool" href="html/legacy/measure_range.html#more_range"/>
+            <topic label="Earth Model" href="html/legacy/measure_range.html#earth_model"/>
+         </topic>
+         <topic label="Show time-related variables" href="html/legacy/show_time_vars.html">
+            <topic label="Time-Variable Plot Tracker-Bar" href="html/legacy/show_time_vars.html#time_var_plot_bar"/>
+            <topic label="Analysing time-zero data in time-variable plot" href="html/legacy/show_time_vars.html#AnalyseTime_Zero"/>
+         </topic>
+      </topic>
+      <topic label="Exporting Data" href="html/legacy/exporting_data.html">
+         <topic label="Exporting images" href="html/legacy/exporting_data.html#more_Exporting_data">
+            <topic label="Resizing, ready for export" href="html/legacy/exporting_data.html#resize_for_export"/>
+            <topic label="Exporting to WMF" href="html/legacy/exporting_data.html#more_export_images"/>
+         </topic>
+         <topic label="Exporting engagements to PowerPoint" href="html/legacy/ExportingToPPT.html">
+            <topic label="Introduction" href="html/legacy/ExportingToPPT.html#d5e2362"/>
+            <topic label="Export process" href="html/legacy/ExportingToPPT.html#d5e2368">
+               <topic label="Assigning donor template" href="html/legacy/ExportingToPPT.html#d5e2370"/>
+               <topic label="Resizing plot area" href="html/legacy/ExportingToPPT.html#d5e2382"/>
+               <topic label="Collate data" href="html/legacy/ExportingToPPT.html#d5e2390"/>
+               <topic label="Perform export" href="html/legacy/ExportingToPPT.html#d5e2396"/>
+            </topic>
+         </topic>
+      </topic>
+      <topic label="Symbol sets" href="html/legacy/symbol_sets.html">
+         <topic label="Introduction" href="html/legacy/symbol_sets.html#more_sym_sets">
+            <topic label="Use in labels" href="html/legacy/symbol_sets.html#buoy_labels"/>
+            <topic label="Use in tracks" href="html/legacy/symbol_sets.html#more_using_symbols"/>
+         </topic>
+      </topic>
+      <topic label="External datasets" href="html/legacy/external_datasets.html">
+         <topic label="Natural Earth data" href="html/legacy/external_datasets.html#natural_earth">
+            <topic label="Introduction" href="html/legacy/external_datasets.html#ne_intro"/>
+            <topic label="Using Natural Earth" href="html/legacy/external_datasets.html#ne_use">
+               <topic label="Downloading" href="html/legacy/external_datasets.html#d5e2511"/>
+               <topic label="Configuration" href="html/legacy/external_datasets.html#d5e2517"/>
+               <topic label="Usage" href="html/legacy/external_datasets.html#d5e2524"/>
+            </topic>
+         </topic>
+         <topic label="VPF data" href="html/legacy/vpf_data.html">
+            <topic label="Introduction" href="html/legacy/vpf_data.html#vpf_intro"/>
+            <topic label="Introduction to VMAP Level 0" href="html/legacy/vpf_data.html#VMAP_intro"/>
+            <topic label="Obtaining VPF data" href="html/legacy/vpf_data.html#getting_vpf"/>
+            <topic label="Storing VPF data" href="html/legacy/vpf_data.html#storing_vpf"/>
+            <topic label="Configuring Debrief to read VPF data" href="html/legacy/vpf_data.html#configure_for_vpf"/>
+            <topic label="Thank heavens for Open Source" href="html/legacy/vpf_data.html#thanks_open_source"/>
+         </topic>
+         <topic label="Viewing VPF data" href="html/legacy/view_vpf.html">
+            <topic label="Introduction" href="html/legacy/view_vpf.html#more_view_vpf"/>
+            <topic label="Creating VPF layers" href="html/legacy/view_vpf.html#create_vpf"/>
+            <topic label="Storing VPF settings" href="html/legacy/view_vpf.html#more_store_vpf"/>
+            <topic label="VPF best practice" href="html/legacy/view_vpf.html#vpf_best_practice"/>
+         </topic>
+         <topic label="Configuring VPF defaults" href="html/legacy/configure_vpf.html">
+            <topic label="The problem" href="html/legacy/configure_vpf.html#more_config_vpf"/>
+            <topic label="The solution" href="html/legacy/configure_vpf.html#vpf_how"/>
+            <topic label="How to do it - 1" href="html/legacy/configure_vpf.html#vpf_how_to"/>
+            <topic label="How to do it - 2" href="html/legacy/configure_vpf.html#how_to_create_default_layers"/>
+            <topic label="How to do it - 3" href="html/legacy/configure_vpf.html#step_3_xml"/>
+            <topic label="At last!" href="html/legacy/configure_vpf.html#steps_complete"/>
+         </topic>
+         <topic label="ETOPO Data" href="html/legacy/etopo_data.html">
+            <topic label="Configuring Debrief to read ETOPO data" href="html/legacy/etopo_data.html#etopo_install"/>
+            <topic label="Background to ETOPO data" href="html/legacy/etopo_data.html#etopo_background"/>
+         </topic>
+      </topic>
+      <topic label="Exercise planning" href="html/legacy/ExercisePlanning.html">
+         <topic label="Introduction" href="html/legacy/ExercisePlanning.html#planning_intro"/>
+         <topic label="Creating tracks" href="html/legacy/create_planning.html"/>
+         <topic label="Manipulating tracks" href="html/legacy/manipulate_planning.html"/>
+         <topic label="XY plots of planning tracks" href="html/legacy/xy_planning.html"/>
+      </topic>
+      <topic label="Viewing narratives" href="html/legacy/viewing_narratives.html">
+         <topic label="Introduction to narrative data" href="html/legacy/viewing_narratives.html#narrative_intro">
+            <topic label="Introduction" href="html/legacy/viewing_narratives.html#more_narr_intro"/>
+            <topic label="Preparing the data" href="html/legacy/viewing_narratives.html#preparing_narrative_data"/>
+            <topic label="Loading the data" href="html/legacy/viewing_narratives.html#more_loading_narr"/>
+            <topic label="Viewing the data" href="html/legacy/viewing_narratives.html#viewing_narrative_data"/>
+         </topic>
+      </topic>
+      <topic label="Using chart backdrops" href="html/legacy/ChartBackdrops.html">
+         <topic label="Introduction" href="html/legacy/ChartBackdrops.html#ChartIntro">
+            <topic label="File types" href="html/legacy/ChartBackdrops.html#ChartFileTypes"/>
+         </topic>
+         <topic label="Loading data" href="html/legacy/loadCharts.html"/>
+      </topic>
+      <topic label="Analysing sensor data" href="html/legacy/sensor_data.html">
+         <topic label="Getting your data in" href="html/legacy/sensor_data.html#more_sensor_data">
+            <topic label="Introduction" href="html/legacy/sensor_data.html#sensor_Data_intro"/>
+            <topic label="Viewing Sensor Data Time Period" href="html/legacy/sensor_data.html#SensorTimePeriod"/>
+            <topic label="Worm in the hole" href="html/legacy/sensor_data.html#SectWormInHole"/>
+            <topic label="Sensor offset lengths editor" href="html/legacy/sensor_data.html#SensorOffsetsEditor"/>
+            <topic label="Preparing Sensor Data" href="html/legacy/sensor_data.html#prepare_sensor_data"/>
+            <topic label="Relative Data" href="html/legacy/sensor_data.html#rel_sensor_data"/>
+         </topic>
+         <topic label="Analysing your data" href="html/legacy/analyse_sensor_data.html">
+            <topic label="Introduction" href="html/legacy/analyse_sensor_data.html#analyse_sensor_data_intro"/>
+            <topic label="Managing high volumes of sensor data" href="html/legacy/analyse_sensor_data.html#BulkSensorData">
+               <topic label="Introduction" href="html/legacy/analyse_sensor_data.html#HighVolumeIntro"/>
+               <topic label="Filter sensor data of interest" href="html/legacy/analyse_sensor_data.html#FilterHighVolume"/>
+               <topic label="Automatically split sensor tracks" href="html/legacy/analyse_sensor_data.html#AutoSplitSensorData"/>
+               <topic label="Trim to track period" href="html/legacy/analyse_sensor_data.html#d5e3470"/>
+               <topic label="Remove sensor data unrelated to Secondary Tracks" href="html/legacy/analyse_sensor_data.html#d5e3478"/>
+               <topic label="Automatically shading bulk sensor data" href="html/legacy/analyse_sensor_data.html#d5e3490"/>
+               <topic label="Trim length of sensor lines" href="html/legacy/analyse_sensor_data.html#d5e3510"/>
+            </topic>
+            <topic label="View plot of sensor range to target" href="html/legacy/analyse_sensor_data.html#SensorRangePlot"/>
+            <topic label="Managing ambiguous data" href="html/legacy/analyse_sensor_data.html#manage_ambiguous"/>
+            <topic label="Exploiting doppler calculations" href="html/legacy/analyse_sensor_data.html#doppler_export"/>
+            <topic label="Multi tonal frequency analysis" href="html/legacy/analyse_sensor_data.html#MultiTonalAnalysis"/>
+            <topic label="Multipath analysis" href="html/legacy/analyse_sensor_data.html#multipath_analysis">
+               <topic label="Datasets" href="html/legacy/analyse_sensor_data.html#multipath_datasets"/>
+               <topic label="Time delay algorithms" href="html/legacy/analyse_sensor_data.html#multi_delay_algorithms"/>
+               <topic label="Sound Speed algorithms" href="html/legacy/analyse_sensor_data.html#multi_svp_algorithms"/>
+               <topic label="Optimisation Algorithm" href="html/legacy/analyse_sensor_data.html#d5e3698"/>
+               <topic label="User interface" href="html/legacy/analyse_sensor_data.html#multi_ui"/>
+            </topic>
+         </topic>
+      </topic>
+      <topic label="Management of TMA and TUA solutions" href="html/legacy/tma_data.html">
+         <topic label="TUA data" href="html/legacy/tma_data.html#more_tma_data">
+            <topic label="Introduction" href="html/legacy/tma_data.html#tma_intro"/>
+            <topic label="Loading TUA data in bulk" href="html/legacy/tma_data.html#pre_tma_data"/>
+            <topic label="Loading small amounts of TUA data" href="html/legacy/tma_data.html#TUA_WIZARD"/>
+            <topic label="Relative data" href="html/legacy/tma_data.html#rel_tma_data"/>
+            <topic label="Analysing TUA data" href="html/legacy/tma_data.html#analysing_tma_data"/>
+         </topic>
+         <topic label="TMA Management" href="html/legacy/tma_support.html">
+            <topic label="Introduction" href="html/legacy/tma_support.html#TMAMgtIntro"/>
+            <topic label="Generating track segments" href="html/legacy/tma_support.html#GeneratingTracks"/>
+            <topic label="Dragging tracks" href="html/legacy/tma_support.html#DraggingTracks"/>
+            <topic label="Combining tracks" href="html/legacy/tma_support.html#CombiningTracksMarker"/>
+         </topic>
+         <topic label="Semi-Automated TMA generation" href="html/legacy/satc.html">
+            <topic label="Bearings Only TMA" href="html/legacy/satc.html#SATC_tma"/>
+            <topic label="Glossary" href="html/legacy/satc.html#satc_concepts"/>
+            <topic label="Overview of SATC" href="html/legacy/satc.html#satc_intro"/>
+            <topic label="User Interface" href="html/legacy/satc.html#satc_ui"/>
+         </topic>
+      </topic>
+      <topic label="Support for DIS Protocol" href="html/legacy/dis_support.html">
+         <topic label="Introduction" href="html/legacy/dis_support.html#dis_intro"/>
+         <topic label="Configuring DIS" href="html/legacy/dis_config.html">
+            <topic label="Network configuration" href="html/legacy/dis_config.html#dis_net_config"/>
+            <topic label="Configuring the launch of an external simulator" href="html/legacy/dis_config.html#dis_exe_config"/>
+            <topic label="Giving Debrief an identity" href="html/legacy/dis_config.html#dis_debrief_config"/>
+            <topic label="Filtering DIS traffic" href="html/legacy/dis_config.html#dis_filter_config"/>
+         </topic>
+         <topic label="Monitoring a DIS simulation" href="html/legacy/dis_usage.html">
+            <topic label="Running a local simulator" href="html/legacy/dis_usage.html#LocalSimulator"/>
+            <topic label="Interacting with a DIS simulation" href="html/legacy/dis_usage.html#DisInteration"/>
+            <topic label="Other settings" href="html/legacy/dis_usage.html#OtherSettings"/>
+            <topic label="Logging DIS messages" href="html/legacy/dis_usage.html#logging"/>
+            <topic label="Performance graph" href="html/legacy/dis_usage.html#PerfGraph"/>
+         </topic>
+         <topic label="DIS Tips &amp; Tricks" href="html/legacy/dis_tips.html">
+            <topic label="Specifying format parameters in advance" href="html/legacy/dis_tips.html#FormatParameters"/>
+            <topic label="Running Debrief's DIS simulator" href="html/legacy/dis_tips.html#RunningDis"/>
+            <topic label="Track the simulator using the Console" href="html/legacy/dis_tips.html#dis_console"/>
+         </topic>
+      </topic>
+   </topic>
+   <topic label="Maintainer's Guide" href="html/legacy/maintainers_guide.html">
+      <topic label="Participating in Debrief development" href="html/legacy/participating.html">
+         <topic label="Debrief online" href="html/legacy/participating.html#debrief_online"/>
+         <topic label="Keeping up to date" href="html/legacy/debrief_news.html">
+            <topic label="Twitter" href="html/legacy/debrief_news.html#Twitter"/>
+            <topic label="Email" href="html/legacy/debrief_news.html#Email"/>
+         </topic>
+         <topic label="Debrief at the Maritime Warfare Centre" href="html/legacy/debrief_at_mwc.html">
+            <topic label="Installing Debrief" href="html/legacy/debrief_at_mwc.html#install_debrief"/>
+            <topic label="Keeping your Debrief installation up to date" href="html/legacy/debrief_at_mwc.html#debrief_up_to_date"/>
+         </topic>
+         <topic label="Debrief across the Internet" href="html/legacy/debrief_on_internet.html">
+            <topic label="Installing Debrief" href="html/legacy/debrief_on_internet.html#more_install_debrief"/>
+            <topic label="Keeping your Debrief installation up to date" href="html/legacy/debrief_on_internet.html#debrief_install_up_to_date"/>
+         </topic>
+         <topic label="Providing feedback" href="html/legacy/debrief_feedback.html">
+            <topic label="Reporting bugs" href="html/legacy/debrief_feedback.html#debrief_bugs"/>
+            <topic label="Requesting new features" href="html/legacy/debrief_feedback.html#debrief_features"/>
+         </topic>
+      </topic>
+      <topic label="Debrief maintainer's guide" href="html/legacy/maintainers.html">
+         <topic label="Installation guidance" href="html/legacy/maintainers.html#more_maintainers_guidance">
+            <topic label="System requirements" href="html/legacy/maintainers.html#more_install_guidance"/>
+            <topic label="Implementing 'open with' support for DebriefNG" href="html/legacy/maintainers.html#RightClickIntegration"/>
+            <topic label="Directory structure" href="html/legacy/maintainers.html#more_directory_structure"/>
+            <topic label="Multi-user Debrief installation" href="html/legacy/maintainers.html#mulit_user"/>
+            <topic label="Centralised software updates" href="html/legacy/maintainers.html#CentralUpdates"/>
+            <topic label="Starting the program" href="html/legacy/maintainers.html#starting_debrief"/>
+            <topic label="Use of English locale" href="html/legacy/maintainers.html#UseOfEnglishLocale"/>
+         </topic>
+         <topic label="Fault-diagnosis instructions" href="html/legacy/fault_diagnosis.html">
+            <topic label="How-to" href="html/legacy/fault_diagnosis.html#more_fault_diagnosis"/>
+         </topic>
+         <topic label="Storing Chart Folios" href="html/legacy/ChartStorage.html"/>
+         <topic label="Debrief properties" href="html/legacy/debrief_props.html">
+            <topic label="Introduction" href="html/legacy/debrief_props.html#more_deb_props"/>
+         </topic>
+         <topic label="Master template for export scenario to PowerPoint" href="html/legacy/xml_ppt.html">
+            <topic label="Introduction" href="html/legacy/xml_ppt.html#d5e4553"/>
+            <topic label="Folder structure" href="html/legacy/xml_ppt.html#PPTX_FolderStructure"/>
+            <topic label="Master slide" href="html/legacy/xml_ppt.html#d5e4633"/>
+         </topic>
+      </topic>
+   </topic>
+   <topic label="Reference Guide" href="html/legacy/reference_guide.html">
+      <topic label="Debrief file formats" href="html/legacy/reference.html">
+         <topic label="Replay file format" href="html/legacy/reference.html#replay_file_format">
+            <topic label="Track data" href="html/legacy/reference.html#replay_track_format"/>
+            <topic label="Symbology attributes" href="html/legacy/reference.html#replay_symbology"/>
+            <topic label="Annotation Data Intro" href="html/legacy/reference.html#replay_annotation_format"/>
+            <topic label="Core Elements" href="html/legacy/reference.html#replay_core_annotations"/>
+            <topic label="Entry comments" href="html/legacy/reference.html#entry_comments"/>
+            <topic label="Towed Array Extensions" href="html/legacy/reference.html#towed_array_annotations"/>
+            <topic label="Dynamic Elements" href="html/legacy/reference.html#replay_dynamic_annotations"/>
+            <topic label="Dynamic Track Annotations" href="html/legacy/reference.html#replay_dynamic_track_annotations"/>
+            <topic label="Formatting helpers" href="html/legacy/reference.html#replay_format_annotations"/>
+         </topic>
+         <topic label="Debrief file format" href="html/legacy/debrief_file_format.html">
+            <topic label="Introduction" href="html/legacy/debrief_file_format.html#more_file_format"/>
+            <topic label="Adoption of XML" href="html/legacy/debrief_file_format.html#more_adopting_xml"/>
+         </topic>
+         <topic label="KML file format" href="html/legacy/Section_KML.html">
+            <topic label="Introduction to KML file format" href="html/legacy/Section_KML.html#IntroToKML"/>
+            <topic label="LineString KML files" href="html/legacy/Section_KML.html#KML_LineString"/>
+            <topic label="MultiGeometry KML files" href="html/legacy/Section_KML.html#KML_MultiGeometry"/>
+         </topic>
+         <topic label="Flat file format" href="html/legacy/Section_Flat.html">
+            <topic label="Introduction to Flat file (SAM) format" href="html/legacy/Section_Flat.html#IntroToFlat"/>
+            <topic label="Schema for Flat file format" href="html/legacy/Section_Flat.html#FlatSchema"/>
+         </topic>
+         <topic label="Multipath analysis datafiles" href="html/legacy/multi_data_files.html">
+            <topic label="Introduction" href="html/legacy/multi_data_files.html#multi_data_intro"/>
+            <topic label="SVP file" href="html/legacy/multi_data_files.html#multi_data_svp"/>
+            <topic label="Time delays file" href="html/legacy/multi_data_files.html#multi_data_delays"/>
+         </topic>
+         <topic label="S2087 Track files" href="html/legacy/format_2087_files.html">
+            <topic label="Introduction" href="html/legacy/format_2087_files.html#Intro2087"/>
+            <topic label="File format" href="html/legacy/format_2087_files.html#Fileformat2087"/>
+         </topic>
+         <topic label="SVG Symbol Format" href="html/legacy/SVG_symbol_format.html">
+            <topic label="Introduction" href="html/legacy/SVG_symbol_format.html#d5e5571"/>
+            <topic label="Implementation" href="html/legacy/SVG_symbol_format.html#d5e5575"/>
+            <topic label="Here are some examples:" href="html/legacy/SVG_symbol_format.html#d5e5593"/>
+         </topic>
+         <topic label="Third Party BRT Format" href="html/legacy/BRT_format.html">
+            <topic label="Introduction" href="html/legacy/BRT_format.html#d5e5603"/>
+            <topic label="Format" href="html/legacy/BRT_format.html#d5e5607"/>
+         </topic>
+      </topic>
+      <topic label="GeoTools in Debrief" href="html/legacy/GeoToolsRef.html">
+         <topic label="Introduction" href="html/legacy/GeoToolsRef.html#GeoToolsIntro"/>
+      </topic>
+      <topic label="Debrief algorithms" href="html/legacy/chap_debrief_algorithms.html">
+         <topic label="Range/Bearing calculations within Debrief" href="html/legacy/chap_debrief_algorithms.html#rng_brg_calcs">
+            <topic label="LEGACY - The Rhumb-Line formulae" href="html/legacy/chap_debrief_algorithms.html#rhumb-lines"/>
+            <topic label="LEGACY - Short-distance sailing" href="html/legacy/chap_debrief_algorithms.html#short_dist_sailing"/>
+         </topic>
+         <topic label="Worm in the hole algorithm" href="html/legacy/WormInHole.html">
+            <topic label="Overview" href="html/legacy/WormInHole.html#WormOverview"/>
+            <topic label="Example" href="html/legacy/WormInHole.html#WormExample"/>
+            <topic label="Algorithm" href="html/legacy/WormInHole.html#WormAlgorithm"/>
+         </topic>
+         <topic label="Other Debrief algorithms" href="html/legacy/other_algs.html">
+            <topic label="Frequency algorithms" href="html/legacy/other_algs.html#freq_alg"/>
+         </topic>
+         <topic label="Remove Jumps" href="html/legacy/RemoveJumpsRef.html">
+            <topic label="Background" href="html/legacy/RemoveJumpsRef.html#RemoveJumpsBack"/>
+            <topic label="Algorithm" href="html/legacy/RemoveJumpsRef.html#RemoveJumpsAlg"/>
+         </topic>
+         <topic label="Contouring algorithm" href="html/legacy/contouring_algorithm.html">
+            <topic label="Introduction" href="html/legacy/contouring_algorithm.html#contour_intro"/>
+            <topic label="CONREC" href="html/legacy/contouring_algorithm.html#conrec_intro"/>
+            <topic label="Algorithm" href="html/legacy/contouring_algorithm.html#conrec_alg"/>
+            <topic label="Example" href="html/legacy/contouring_algorithm.html#conrec_demo"/>
+            <topic label="Subroutine" href="html/legacy/contouring_algorithm.html#conrec_sub"/>
+            <topic label="Example" href="html/legacy/contouring_algorithm.html#more_conrec_demo"/>
+            <topic label="Note" href="html/legacy/contouring_algorithm.html#conrec_note"/>
+         </topic>
+      </topic>
+      <topic label="Semi Automated Track Construction (SATC)" href="html/legacy/chap_genetic_algorithms.html">
+         <topic label="High-Level SATC Concepts" href="html/legacy/chap_genetic_algorithms.html#d5e5865">
+            <topic label="Strategy" href="html/legacy/chap_genetic_algorithms.html#d5e5870"/>
+            <topic label="Process" href="html/legacy/chap_genetic_algorithms.html#d5e5875"/>
+            <topic label="Data Concepts" href="html/legacy/chap_genetic_algorithms.html#d5e5878">
+               <topic label="Scenario" href="html/legacy/chap_genetic_algorithms.html#d5e5880"/>
+               <topic label="Problem space" href="html/legacy/chap_genetic_algorithms.html#d5e5883"/>
+               <topic label="Vehicle Track" href="html/legacy/chap_genetic_algorithms.html#d5e5886"/>
+               <topic label="Leg" href="html/legacy/chap_genetic_algorithms.html#d5e5889"/>
+               <topic label="Vehicle State" href="html/legacy/chap_genetic_algorithms.html#d5e5892"/>
+               <topic label="Bounded Vehicle State" href="html/legacy/chap_genetic_algorithms.html#d5e5895"/>
+               <topic label="Straight Leg" href="html/legacy/chap_genetic_algorithms.html#d5e5902"/>
+               <topic label="Alteration Leg" href="html/legacy/chap_genetic_algorithms.html#d5e5905"/>
+               <topic label="Contribution" href="html/legacy/chap_genetic_algorithms.html#d5e5908">
+                  <topic label="Contribution attributes" href="html/legacy/chap_genetic_algorithms.html#d5e5911"/>
+                  <topic label="Contribution abilities" href="html/legacy/chap_genetic_algorithms.html#d5e5929"/>
+               </topic>
+               <topic label="Reference contribution" href="html/legacy/chap_genetic_algorithms.html#d5e5939"/>
+               <topic label="Forecast Contribution" href="html/legacy/chap_genetic_algorithms.html#d5e5943"/>
+               <topic label="Measurement contribution" href="html/legacy/chap_genetic_algorithms.html#d5e5946"/>
+               <topic label="Analysis contribution" href="html/legacy/chap_genetic_algorithms.html#d5e5950"/>
+            </topic>
+            <topic label="Algorithms" href="html/legacy/chap_genetic_algorithms.html#d5e5953">
+               <topic label="Constrain the global problem space" href="html/legacy/chap_genetic_algorithms.html#d5e5955"/>
+               <topic label="Generate and assess candidate solutions" href="html/legacy/chap_genetic_algorithms.html#d5e6004"/>
+               <topic label="Solution generator" href="html/legacy/chap_genetic_algorithms.html#d5e6020"/>
+               <topic label="Genetic algorithm" href="html/legacy/chap_genetic_algorithms.html#d5e6049"/>
+               <topic label="Collate optimal solutions" href="html/legacy/chap_genetic_algorithms.html#d5e6062"/>
+               <topic label="Manoeuvre Detection Algorithm" href="html/legacy/chap_genetic_algorithms.html#d5e6074">
+                  <topic label="Bearing-based MDA" href="html/legacy/chap_genetic_algorithms.html#d5e6077"/>
+                  <topic label="State-analysis MDA" href="html/legacy/chap_genetic_algorithms.html#d5e6085"/>
+               </topic>
+            </topic>
+            <topic label="Examples of contributions" href="html/legacy/chap_genetic_algorithms.html#d5e6088">
+               <topic label="Vehicle performance reference contribution" href="html/legacy/chap_genetic_algorithms.html#d5e6090">
+                  <topic label="Attributes" href="html/legacy/chap_genetic_algorithms.html#d5e6092"/>
+                  <topic label="Abilities" href="html/legacy/chap_genetic_algorithms.html#d5e6096"/>
+               </topic>
+               <topic label="Bearing measurement contribution" href="html/legacy/chap_genetic_algorithms.html#d5e6109">
+                  <topic label="Attributes" href="html/legacy/chap_genetic_algorithms.html#d5e6111"/>
+                  <topic label="Abilities" href="html/legacy/chap_genetic_algorithms.html#d5e6114"/>
+               </topic>
+               <topic label="Speed analysis contribution" href="html/legacy/chap_genetic_algorithms.html#d5e6127">
+                  <topic label="Attributes" href="html/legacy/chap_genetic_algorithms.html#d5e6129"/>
+                  <topic label="Abilities" href="html/legacy/chap_genetic_algorithms.html#d5e6132"/>
+               </topic>
+               <topic label="Speed forecast contribution" href="html/legacy/chap_genetic_algorithms.html#d5e6138">
+                  <topic label="Attributes" href="html/legacy/chap_genetic_algorithms.html#d5e6140"/>
+                  <topic label="Abilities" href="html/legacy/chap_genetic_algorithms.html#d5e6143"/>
+               </topic>
+               <topic label="Straight leg forecast contribution" href="html/legacy/chap_genetic_algorithms.html#d5e6154">
+                  <topic label="Attributes" href="html/legacy/chap_genetic_algorithms.html#d5e6156"/>
+                  <topic label="Abilities" href="html/legacy/chap_genetic_algorithms.html#d5e6159"/>
+               </topic>
+            </topic>
+         </topic>
+         <topic label="Optimisation Strategies" href="html/legacy/ga_optimisation.html">
+            <topic label="Brute Force" href="html/legacy/ga_optimisation.html#d5e6168"/>
+            <topic label="Simulated Annealing" href="html/legacy/ga_optimisation.html#d5e6171"/>
+            <topic label="Genetic Algortihm" href="html/legacy/ga_optimisation.html#d5e6178"/>
+         </topic>
+         <topic label="Solution Generator based on Genetic Algorithm" href="html/legacy/satc_ga.html">
+            <topic label="Definitions" href="html/legacy/satc_ga.html#d5e6183"/>
+            <topic label="Structure" href="html/legacy/satc_ga.html#d5e6231">
+               <topic label="Islands" href="html/legacy/satc_ga.html#d5e6233"/>
+               <topic label="Genetic algorithm" href="html/legacy/satc_ga.html#d5e6245"/>
+            </topic>
+            <topic label="Candidate Factory" href="html/legacy/satc_ga.html#candidate_factory"/>
+            <topic label="Chromosome selection strategy" href="html/legacy/satc_ga.html#chromosome_selection"/>
+            <topic label="Genetic operators" href="html/legacy/satc_ga.html#d5e6302">
+               <topic label="Crossover" href="html/legacy/satc_ga.html#crossover">
+                  <topic label="One-point list crossover" href="html/legacy/satc_ga.html#d5e6308"/>
+                  <topic label="Arithmetic crossover" href="html/legacy/satc_ga.html#d5e6346"/>
+               </topic>
+               <topic label="Mutation" href="html/legacy/satc_ga.html#mutation">
+                  <topic label="Random mutation" href="html/legacy/satc_ga.html#d5e6403"/>
+                  <topic label="Mutation to vertex" href="html/legacy/satc_ga.html#d5e6414"/>
+               </topic>
+               <topic label="Standard VFA strategy" href="html/legacy/satc_ga.html#standard_VFA"/>
+               <topic label="Optimised point generation" href="html/legacy/satc_ga.html#optimised_generation"/>
+            </topic>
+            <topic label="Fitness function" href="html/legacy/satc_ga.html#d5e6525"/>
+            <topic label="Island attributes" href="html/legacy/satc_ga.html#island_attributes">
+               <topic label="Elite island characteristics (beta)" href="html/legacy/satc_ga.html#d5e6580"/>
+               <topic label="Simple and complex island characteristics" href="html/legacy/satc_ga.html#d5e6605"/>
+            </topic>
+         </topic>
+      </topic>
+      <topic label="System Documentation for DIS integration" href="html/legacy/dis_ref.html">
+         <topic label="Introduction" href="html/legacy/dis_ref.html#DisIntro">
+            <topic label="DIS Standard" href="html/legacy/dis_ref.html#DisStandard"/>
+            <topic label="Adding support for further DIS message types" href="html/legacy/dis_ref.html#FurtherDIS"/>
+         </topic>
+         <topic label="Command line options" href="html/legacy/dis_command_line.html"/>
+         <topic label="Messages supported" href="html/legacy/dis_messages.html"/>
+         <topic label="Other DIS specifics" href="html/legacy/other_dis_specifics.html"/>
+      </topic>
+   </topic>
+   <topic label="Debrief Glossary" href="html/legacy/app_glossary.html">
+      <topic label="Introduction" href="html/legacy/app_glossary.html#gloss_intro"/>
+      <topic label="Glossary" href="html/legacy/app_glossary.html#glossary"/>
+   </topic>
+   <topic label="Index" href="html/legacy/the_index.html"/>
+   <topic label="Colophon" href="html/legacy/colophon.html"/>
+</toc>

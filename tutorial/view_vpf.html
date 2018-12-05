@@ -1,0 +1,132 @@
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <title>7.3.&nbsp;Viewing VPF data</title><link rel="stylesheet" type="text/css" href="header.css"><meta name="generator" content="DocBook XSL Stylesheets V1.78.1"><meta name="keywords" content="Maritime Analysis, Open Source Tool"><link rel="home" href="index.html" title="Debrief NG User Documentation"><link rel="up" href="external_datasets.html" title="Chapter&nbsp;7.&nbsp;External datasets"><link rel="prev" href="vpf_data.html" title="7.2.&nbsp;VPF data"><link rel="next" href="configure_vpf.html" title="7.4.&nbsp;Configuring VPF defaults"><link rel="preface" href="PrefaceIntro.html" title="Introduction"><link rel="part" href="tutorial.html" title="Part&nbsp;I.&nbsp;Getting started"><link rel="chapter" href="get_start.html" title="Chapter&nbsp;1.&nbsp;First steps"><link rel="part" href="UsingDebrief.html" title="Part&nbsp;II.&nbsp;Using Debrief"><link rel="chapter" href="moving_around.html" title="Chapter&nbsp;2.&nbsp;Moving around the view"><link rel="chapter" href="formatting_data.html" title="Chapter&nbsp;3.&nbsp;Manipulating track data"><link rel="chapter" href="analysing_data.html" title="Chapter&nbsp;4.&nbsp;Analysing Data"><link rel="chapter" href="exporting_data.html" title="Chapter&nbsp;5.&nbsp;Exporting Data"><link rel="chapter" href="symbol_sets.html" title="Chapter&nbsp;6.&nbsp;Symbol sets"><link rel="chapter" href="external_datasets.html" title="Chapter&nbsp;7.&nbsp;External datasets"><link rel="chapter" href="ExercisePlanning.html" title="Chapter&nbsp;8.&nbsp;Exercise planning"><link rel="chapter" href="viewing_narratives.html" title="Chapter&nbsp;9.&nbsp;Viewing narratives"><link rel="chapter" href="ChartBackdrops.html" title="Chapter&nbsp;10.&nbsp;Using chart backdrops"><link rel="chapter" href="sensor_data.html" title="Chapter&nbsp;11.&nbsp;Analysing sensor data"><link rel="chapter" href="tma_data.html" title="Chapter&nbsp;12.&nbsp;Management of TMA and TUA solutions"><link rel="chapter" href="dis_support.html" title="Chapter&nbsp;13.&nbsp;Support for DIS Protocol"><link rel="part" href="maintainers_guide.html" title="Part&nbsp;III.&nbsp;Maintainer's Guide"><link rel="chapter" href="participating.html" title="Chapter&nbsp;14.&nbsp;Participating in Debrief development"><link rel="chapter" href="maintainers.html" title="Chapter&nbsp;15.&nbsp;Debrief maintainer's guide"><link rel="part" href="reference_guide.html" title="Part&nbsp;IV.&nbsp;Reference Guide"><link rel="chapter" href="reference.html" title="Chapter&nbsp;16.&nbsp;Debrief file formats"><link rel="chapter" href="GeoToolsRef.html" title="Chapter&nbsp;17.&nbsp;GeoTools in Debrief"><link rel="chapter" href="chap_debrief_algorithms.html" title="Chapter&nbsp;18.&nbsp;Debrief algorithms"><link rel="chapter" href="chap_genetic_algorithms.html" title="Chapter&nbsp;19.&nbsp;Semi Automated Track Construction (SATC)"><link rel="chapter" href="dis_ref.html" title="Chapter&nbsp;20.&nbsp;System Documentation for DIS integration"><link rel="appendix" href="app_glossary.html" title="Appendix&nbsp;A.&nbsp;Debrief Glossary"><link rel="glossary" href="app_glossary.html#glossary" title="Glossary"><link rel="index" href="the_index.html" title="Index"><link rel="subsection" href="view_vpf.html#more_view_vpf" title="7.3.1.&nbsp;Introduction"><link rel="subsection" href="view_vpf.html#create_vpf" title="7.3.2.&nbsp;Creating VPF layers"><link rel="subsection" href="view_vpf.html#more_store_vpf" title="7.3.3.&nbsp;Storing VPF settings"><link rel="subsection" href="view_vpf.html#vpf_best_practice" title="7.3.4.&nbsp;VPF best practice"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">7.3.&nbsp;Viewing VPF data</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="vpf_data.html"><img src="images/prev.gif" alt="Prev"></a>&nbsp;</td><th width="60%" align="center">Chapter&nbsp;7.&nbsp;External datasets</th><td width="20%" align="right">&nbsp;<a accesskey="n" href="configure_vpf.html"><img src="images/next.gif" alt="Next"></a></td></tr></table><hr></div><div class="sect1" id="view_vpf"><div class="titlepage"><div><div><h2 class="title" style="clear: both">7.3.&nbsp;Viewing VPF data</h2></div></div></div><div class="toc"><dl class="toc"><dt><span class="sect2"><a href="view_vpf.html#more_view_vpf">7.3.1. Introduction</a></span></dt><dt><span class="sect2"><a href="view_vpf.html#create_vpf">7.3.2. Creating VPF layers</a></span></dt><dt><span class="sect2"><a href="view_vpf.html#more_store_vpf">7.3.3. Storing VPF settings</a></span></dt><dt><span class="sect2"><a href="view_vpf.html#vpf_best_practice">7.3.4. VPF best practice</a></span></dt></dl></div>
+        
+
+        <div class="sect2" id="more_view_vpf"><div class="titlepage"><div><div><h3 class="title">7.3.1.&nbsp;Introduction</h3></div></div></div>
+          
+
+          <p><span class="application">Debrief</span> does not pay <a class="indexterm" name="d5e2695"></a> any attention to <a class="glossterm" href="app_glossary.html#g_vpf"><em class="glossterm">VPF</em></a> data until it loads a plot which requires the data, or until the user requests that VPF layers be added.</p>
+
+          <p>VPF layers are loaded into a plot using the "Create VPF Layers" button: <span class="guiicon">
+              <span class="inlinemediaobject"><img src="figures/create_vpf.png"></span>
+            </span></p>
+
+          <p>Yes, it's a shrunken version of NIMA's VPF logo. If VPF layers have been loaded into <span class="application">Debrief</span>, their details are stored in the plot file (i.e., whether they are switched on or off, and their colour). Note that the data itself is not stored in the plot file, just the names of the layers you're using (so there's no significant increase in file size).</p>
+        </div>
+
+        <div class="sect2" id="create_vpf"><div class="titlepage"><div><div><h3 class="title">7.3.2.&nbsp;Creating VPF layers</h3></div></div></div>
+          
+
+          <p>Once loaded into a plot configure the VPF data by switching to the <span class="guibutton">Layer Manager</span>. In there, open the <span class="guilabel">Chart Features</span> layer, to see the new VPF layer. </p><div class="figure" id="LayerMangerDemo_VPF"><p class="title"><b>Figure&nbsp;7.6.&nbsp;VPF Data in Outline View</b></p><div class="figure-contents">
+              
+
+              <div class="screenshot">
+                <div class="mediaobject" align="center"><img src="figures/VPF_Layer1.png" align="middle" alt="VPF Data in Outline View"></div>
+              </div>
+            </div></div><p><br class="figure-break"></p>
+
+          <p>Click on the VPF layer to open it up, showing which VPF databases are currently loaded. In this example you can see that I have the VMap Level 0 (vmaplv0) data together with some Digital Nautical Chart (DNC) data. Each layer shows how many items are on that layer, and the empty check box shows that each layer is not currently visible. </p><div class="figure" id="chart_layers_Demo"><p class="title"><b>Figure&nbsp;7.7.&nbsp;Layers within Chart Features</b></p><div class="figure-contents">
+              
+
+              <div class="screenshot">
+                <div class="mediaobject" align="center"><img src="figures/VPF_Layer2.png" align="middle" alt="Layers within Chart Features"></div>
+              </div>
+            </div></div><p><br class="figure-break"></p>
+
+          <p>You are going to switch on coastline data first, so click open up the <span class="guilabel">vmaplv0</span> database by clicking on the expand folder symbol. You will see the list of VMap themes listed. Later on, feel free to open them up and view the data they contain, but for now you will concentrate on the coastlines. The order of the themes may be different on your machine, this is of no concern. </p><div class="figure" id="list_of_vpf_layers"><p class="title"><b>Figure&nbsp;7.8.&nbsp;List of VPF layers</b></p><div class="figure-contents">
+              
+
+              <div class="screenshot">
+                <div class="mediaobject" align="center"><img src="figures/VPF_Layer3.png" align="middle" alt="List of VPF layers"></div>
+              </div>
+            </div></div><p><br class="figure-break"></p>
+
+          <p>Next, open up the Boundaries theme to see which Boundaries can be plotted by VMap. </p><div class="figure" id="boundaries_theme_demo"><p class="title"><b>Figure&nbsp;7.9.&nbsp;Boundaries theme</b></p><div class="figure-contents">
+              
+
+              <div class="screenshot">
+                <div class="mediaobject" align="center"><img src="figures/VPF_Layer4.png" align="middle" alt="Boundaries theme"></div>
+              </div>
+            </div></div><p><br class="figure-break"></p>
+          <div class="figure" id="d5e2739"><p class="title"><b>Figure&nbsp;7.10.&nbsp;Coastlines feature</b></p><div class="figure-contents">
+            
+            <p>Now you are going to configure the plotting of coastlines.</p>
+            <div class="screenshot">
+              <div class="mediaobject" align="center"><img src="figures/VPF_Layer5.png" align="middle" alt="Coastlines feature"></div>
+            </div>
+          </div></div><br class="figure-break">
+
+          <p>Right-click on the <span class="guilabel">Coastlines</span> entry, and from the <span class="guilabel">Coastlines</span> drop-down list, select <span class="guilabel">Color</span>, and then <span class="guilabel">Light Grey</span>. Note that <span class="guilabel">White</span> is the default colour for all VPF features.</p>
+
+          <p>Next, right-click on the coastlines entry again, and make the <span class="guilabel">coastline</span> Visible.</p>
+
+          <p>Whilst we've made the <span class="guilabel">Coastlines</span> visible, the layers above it aren't, so now you make its parents visible. Right-click on the <span class="guilabel">Boundaries</span> layer and make it visible. Next right-click on the <span class="guilabel">vmaplv0</span> layer to make that too visible.</p>
+
+          <p>Nothing has yet appeared on the plot, but that is because you are not current over any coastline. Now zoom out 6 times until the plot looks like that below: </p><div class="figure" id="first_coastline_demo"><p class="title"><b>Figure&nbsp;7.11.&nbsp;First coastline</b></p><div class="figure-contents">
+              
+
+              <div class="screenshot">
+                <div class="mediaobject" align="center"><img src="figures/VPL_Layer6.gif" align="middle" alt="First coastline"></div>
+              </div>
+            </div></div><p><br class="figure-break"></p>
+
+          <p>Now you can see your new coastline of Africa.</p>
+
+          <p>Select the Pan control from the Plot toolbar: <span class="guiicon">
+              <span class="inlinemediaobject"><img src="figures/Pan.png"></span>
+            </span></p>
+
+          <p>Now drag the plot southwards to move the view up towards Europe. Keep dragging until you have a clear view of a more familiar coastline, that of the British Isles. From this view you will add depth contours. </p><div class="figure" id="british_coast_demo"><p class="title"><b>Figure&nbsp;7.12.&nbsp;Coastline of British Isles</b></p><div class="figure-contents">
+              
+
+              <div class="screenshot">
+                <div class="mediaobject" align="center"><img src="figures/VPF_Layer7.gif" align="middle" alt="Coastline of British Isles"></div>
+              </div>
+            </div></div><p><br class="figure-break"></p>
+
+          <p>Right-click on the <span class="guilabel">Depth Contours</span> entry in the <span class="guilabel">Boundaries</span> layer and switch its colour to <span class="guilabel">Grey</span>. Also switch the <span class="guilabel">Contours</span> entry to <span class="guilabel">Visible</span>.</p>
+
+          <p>Depth contours will now appear: </p><div class="figure" id="improved_british_coast_demo"><p class="title"><b>Figure&nbsp;7.13.&nbsp;Coastline of British Isles with depth contours</b></p><div class="figure-contents">
+              
+
+              <div class="screenshot">
+                <div class="mediaobject" align="center"><img src="figures/VPF_Layer8.gif" align="middle" alt="Coastline of British Isles with depth contours"></div>
+              </div>
+            </div></div><p><br class="figure-break"></p>
+
+          <div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.gif"></td><th align="left">Note</th></tr><tr><td align="left" valign="top">
+            <p>Note, the VMap CD-ROM gives the following description with relation to depth contours: </p><div class="blockquote"><blockquote class="blockquote">
+                <p>Depth contours (BE015) were derived from digital bathymetric data provided by Defense Mapping Agency. Depths are expressed in the following intervals: 200, 600, 1000. 2000, 4000, 6000, and 8000 meters.</p>
+              </blockquote></div>
+          </td></tr></table></div>
+
+          <p>Feel free to zoom in on the data to see just how detailed the data gets (around Cowes on the Isle of Wight sections of coastline of only 200 yards length are clearly visible).</p>
+
+          <p>Also zoom out to view the whole of the British Isles and experiment with switching on features in other layers.</p>
+
+          <p>The plot below shows UK railways (from the Transportation Layer), and UK is shaded in by making the Administrative Areas (from the Boundaries Layer) visible. </p><div class="figure" id="railways_image"><p class="title"><b>Figure&nbsp;7.14.&nbsp;Railways of British Isles</b></p><div class="figure-contents">
+              
+
+              <div class="screenshot">
+                <div class="mediaobject" align="center"><img src="figures/VPF_Layer9.gif" align="middle" alt="Railways of British Isles"></div>
+              </div>
+            </div></div><p><br class="figure-break"></p>
+
+          <p>Alternatively zoom and pan across to your home, see the accuracy of your part of the coastline.</p>
+        </div>
+
+        <div class="sect2" id="more_store_vpf"><div class="titlepage"><div><div><h3 class="title">7.3.3.&nbsp;Storing VPF settings</h3></div></div></div>
+          
+
+          <p>As explained earlier, when you save the <a class="glossterm" href="app_glossary.html#g_vpf"><em class="glossterm">VPF</em></a> plot your VPF settings get saved with it. So have a go at saving your current view, exiting/re-starting <span class="application">Debrief</span> then re-loading it. You should find yourself seeing the same view which you saved.</p>
+        </div>
+
+        <div class="sect2" id="vpf_best_practice"><div class="titlepage"><div><div><h3 class="title">7.3.4.&nbsp;VPF best practice</h3></div></div></div>
+          
+
+          <p>There's no doubting the volume of data available through VPF, and the VMap Level 0 database in particular. The next level down from VMap Level 0 is VMap Level 1; which contains approximately 10 times more detailed information.</p>
+
+          <p>How much of it is of use is more subjective though, so it's best to lead your strategy for its use by your analysis requirements.</p>
+        </div>
+      </div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="vpf_data.html"><img src="images/prev.gif" alt="Prev"></a>&nbsp;</td><td width="20%" align="center"><a accesskey="u" href="external_datasets.html"><img src="images/up.gif" alt="Up"></a></td><td width="40%" align="right">&nbsp;<a accesskey="n" href="configure_vpf.html"><img src="images/next.gif" alt="Next"></a></td></tr><tr><td width="40%" align="left" valign="top">7.2.&nbsp;VPF data&nbsp;</td><td width="20%" align="center"><a accesskey="h" href="index.html"><img src="images/home.gif" alt="Home"></a></td><td width="40%" align="right" valign="top">&nbsp;7.4.&nbsp;Configuring VPF defaults</td></tr></table></div></body></html>

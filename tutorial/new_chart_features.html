@@ -1,0 +1,220 @@
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <title>3.2.&nbsp;Adding chart features</title><link rel="stylesheet" type="text/css" href="header.css"><meta name="generator" content="DocBook XSL Stylesheets V1.78.1"><meta name="keywords" content="Maritime Analysis, Open Source Tool"><link rel="home" href="index.html" title="Debrief NG User Documentation"><link rel="up" href="formatting_data.html" title="Chapter&nbsp;3.&nbsp;Manipulating track data"><link rel="prev" href="formatting_data.html" title="Chapter&nbsp;3.&nbsp;Manipulating track data"><link rel="next" href="drawing_features.html" title="3.3.&nbsp;Adding drawing features"><link rel="preface" href="PrefaceIntro.html" title="Introduction"><link rel="part" href="tutorial.html" title="Part&nbsp;I.&nbsp;Getting started"><link rel="chapter" href="get_start.html" title="Chapter&nbsp;1.&nbsp;First steps"><link rel="part" href="UsingDebrief.html" title="Part&nbsp;II.&nbsp;Using Debrief"><link rel="chapter" href="moving_around.html" title="Chapter&nbsp;2.&nbsp;Moving around the view"><link rel="chapter" href="formatting_data.html" title="Chapter&nbsp;3.&nbsp;Manipulating track data"><link rel="chapter" href="analysing_data.html" title="Chapter&nbsp;4.&nbsp;Analysing Data"><link rel="chapter" href="exporting_data.html" title="Chapter&nbsp;5.&nbsp;Exporting Data"><link rel="chapter" href="symbol_sets.html" title="Chapter&nbsp;6.&nbsp;Symbol sets"><link rel="chapter" href="external_datasets.html" title="Chapter&nbsp;7.&nbsp;External datasets"><link rel="chapter" href="ExercisePlanning.html" title="Chapter&nbsp;8.&nbsp;Exercise planning"><link rel="chapter" href="viewing_narratives.html" title="Chapter&nbsp;9.&nbsp;Viewing narratives"><link rel="chapter" href="ChartBackdrops.html" title="Chapter&nbsp;10.&nbsp;Using chart backdrops"><link rel="chapter" href="sensor_data.html" title="Chapter&nbsp;11.&nbsp;Analysing sensor data"><link rel="chapter" href="tma_data.html" title="Chapter&nbsp;12.&nbsp;Management of TMA and TUA solutions"><link rel="chapter" href="dis_support.html" title="Chapter&nbsp;13.&nbsp;Support for DIS Protocol"><link rel="part" href="maintainers_guide.html" title="Part&nbsp;III.&nbsp;Maintainer's Guide"><link rel="chapter" href="participating.html" title="Chapter&nbsp;14.&nbsp;Participating in Debrief development"><link rel="chapter" href="maintainers.html" title="Chapter&nbsp;15.&nbsp;Debrief maintainer's guide"><link rel="part" href="reference_guide.html" title="Part&nbsp;IV.&nbsp;Reference Guide"><link rel="chapter" href="reference.html" title="Chapter&nbsp;16.&nbsp;Debrief file formats"><link rel="chapter" href="GeoToolsRef.html" title="Chapter&nbsp;17.&nbsp;GeoTools in Debrief"><link rel="chapter" href="chap_debrief_algorithms.html" title="Chapter&nbsp;18.&nbsp;Debrief algorithms"><link rel="chapter" href="chap_genetic_algorithms.html" title="Chapter&nbsp;19.&nbsp;Semi Automated Track Construction (SATC)"><link rel="chapter" href="dis_ref.html" title="Chapter&nbsp;20.&nbsp;System Documentation for DIS integration"><link rel="appendix" href="app_glossary.html" title="Appendix&nbsp;A.&nbsp;Debrief Glossary"><link rel="glossary" href="app_glossary.html#glossary" title="Glossary"><link rel="index" href="the_index.html" title="Index"><link rel="subsection" href="new_chart_features.html#chart_toolbar" title="3.2.1.&nbsp;Chart features toolbar"><link rel="subsection" href="new_chart_features.html#the_Scale" title="3.2.2.&nbsp;Scale"><link rel="subsection" href="new_chart_features.html#time_display_absolute" title="3.2.3.&nbsp;Time Display (Absolute)"><link rel="subsection" href="new_chart_features.html#time_display_relative" title="3.2.4.&nbsp;Time Display (Relative)"><link rel="subsection" href="new_chart_features.html#the_grid" title="3.2.5.&nbsp;Grid"><link rel="subsection" href="new_chart_features.html#the_local_grid" title="3.2.6.&nbsp;Local Grid"><link rel="subsection" href="new_chart_features.html#the_coastline" title="3.2.7.&nbsp;Coastline"><link rel="subsection" href="new_chart_features.html#etopo_gridded_bathy" title="3.2.8.&nbsp;ETOPO gridded bathy"><link rel="subsection" href="new_chart_features.html#ChartLibrary" title="3.2.9.&nbsp;Chart Library"><link rel="subsection" href="new_chart_features.html#vectored_data" title="3.2.10.&nbsp;Vectored data"><link rel="subsection" href="new_chart_features.html#NaturalEarth_title" title="3.2.11.&nbsp;Natural Earth"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">3.2.&nbsp;Adding chart features</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="formatting_data.html"><img src="images/prev.gif" alt="Prev"></a>&nbsp;</td><th width="60%" align="center">Chapter&nbsp;3.&nbsp;Manipulating track data</th><td width="20%" align="right">&nbsp;<a accesskey="n" href="drawing_features.html"><img src="images/next.gif" alt="Next"></a></td></tr></table><hr></div><div class="sect1" id="new_chart_features"><div class="titlepage"><div><div><h2 class="title" style="clear: both">3.2.&nbsp;Adding chart features</h2></div></div></div><div class="toc"><dl class="toc"><dt><span class="sect2"><a href="new_chart_features.html#chart_toolbar">3.2.1. Chart features toolbar</a></span></dt><dt><span class="sect2"><a href="new_chart_features.html#the_Scale">3.2.2. Scale</a></span></dt><dt><span class="sect2"><a href="new_chart_features.html#time_display_absolute">3.2.3. Time Display (Absolute)</a></span></dt><dt><span class="sect2"><a href="new_chart_features.html#time_display_relative">3.2.4. Time Display (Relative)</a></span></dt><dt><span class="sect2"><a href="new_chart_features.html#the_grid">3.2.5. Grid</a></span></dt><dt><span class="sect2"><a href="new_chart_features.html#the_local_grid">3.2.6. Local Grid</a></span></dt><dt><span class="sect2"><a href="new_chart_features.html#the_coastline">3.2.7. Coastline</a></span></dt><dt><span class="sect2"><a href="new_chart_features.html#etopo_gridded_bathy">3.2.8. ETOPO gridded bathy</a></span></dt><dt><span class="sect2"><a href="new_chart_features.html#ChartLibrary">3.2.9. Chart Library</a></span></dt><dt><span class="sect2"><a href="new_chart_features.html#vectored_data">3.2.10. Vectored data</a></span></dt><dt><span class="sect2"><a href="new_chart_features.html#NaturalEarth_title">3.2.11. Natural Earth</a></span></dt></dl></div>
+        
+
+        <div class="sect2" id="chart_toolbar"><div class="titlepage"><div><div><h3 class="title">3.2.1.&nbsp;Chart features toolbar</h3></div></div></div>
+          
+
+          <p>Debrief also allows you to add items to the <a class="glossterm" href="app_glossary.html#g_plt"><em class="glossterm">plot</em></a>.</p>
+
+          <p>These items are contained in two menus; <span class="guilabel">Chart Features</span> and <span class="guilabel">Drawing</span>. In <span class="application">Debrief</span>, hover the mouse over them to see what type of item they create. </p><div class="figure" id="chart_features_demo"><p class="title"><b>Figure&nbsp;3.3.&nbsp;Chart features menu</b></p><div class="figure-contents">
+              
+
+              <div class="screenshot">
+                <div class="mediaobject" align="center"><img src="figures/PaletteButtons2.png" align="middle" alt="Chart features menu"></div>
+              </div>
+            </div></div><p><br class="figure-break"></p>
+
+          <div class="important" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0" summary="Important"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Important]" src="images/important.gif"></td><th align="left">Important</th></tr><tr><td align="left" valign="top">
+            <p>It is important to note that each time you click on an item from the toolbar, a new instance of it is created, it does not re-open an existing item.</p>
+          </td></tr></table></div>
+        </div>
+
+        <div class="sect2" id="the_Scale"><div class="titlepage"><div><div><h3 class="title">3.2.2.&nbsp;Scale</h3></div></div></div>
+          
+
+          <p>The Scale button provides a scale, indicating <a class="indexterm" name="d5e969"></a> to the viewer the current area of coverage of the plot. Once created the scale values can be set automatically or manually, as described below: </p><div class="variablelist"><dl class="variablelist"><dt><span class="term">Auto Mode</span></dt><dd>
+                  <p>In auto-mode Debrief assesses the current screen size and area of data covered, and attempts to set the most appropriate range of values and step size for the scale. A good working practice is to switch to auto-mode to allow Debrief to estimate the optimal values, then switch out of auto-mode to fine-tune the <span class="guilabel">ScaleMax</span> and <span class="guilabel">ScaleStep</span> values provided.</p>
+                </dd><dt><span class="term">Color</span></dt><dd>
+                  <p>The colour used to draw the scale.</p>
+                </dd><dt><span class="term">Location</span></dt><dd>
+                  <p>The corner of the plot where the scale is placed.</p>
+                </dd><dt><span class="term">ScaleMax</span></dt><dd>
+                  <p>The maximum value of the scale (in yards)</p>
+                </dd><dt><span class="term">ScaleStep</span></dt><dd>
+                  <p>The size of the steps used to break up the scale (again in yards)</p>
+                </dd><dt><span class="term">Visible</span></dt><dd>
+                  <p>You can clear the visibility flag to temporarily hide a scale, allowing you to switch between scales, for example.</p>
+                </dd><dt><span class="term">Units</span></dt><dd>
+                  <p>Use this list to select the units displayed in the scale</p>
+                </dd></dl></div>
+
+          <div class="figure" id="sample_scale_demo"><p class="title"><b>Figure&nbsp;3.4.&nbsp;Sample scale</b></p><div class="figure-contents">
+              
+
+              <div class="screenshot">
+                <div class="mediaobject" align="center"><img src="figures/scale_demo.gif" align="middle" alt="Sample scale"></div>
+              </div>
+            </div></div><p><br class="figure-break"></p>
+        </div>
+        <div class="sect2" id="time_display_absolute"><div class="titlepage"><div><div><h3 class="title">3.2.3.&nbsp;Time Display (Absolute)</h3></div></div></div>
+          
+          <p>Debrief offers 2 types of time display within the <span class="emphasis"><em>plot editor</em></span>: absolute and relative. We will cover <a class="xref" href="new_chart_features.html#time_display_relative" title="3.2.4.&nbsp;Time Display (Relative)">Section&nbsp;3.2.4, &#8220;Time Display (Relative)&#8221;</a> in the following section. The <span class="emphasis"><em>Time Display (Absolute) </em></span>button opens up a new layer within the <span class="emphasis"><em>Outline view</em></span>:</p><div class="figure" id="d5e1016"><p class="title"><b>Figure&nbsp;3.5.&nbsp;Time Display (Absolute)</b></p><div class="figure-contents">
+              
+              <div class="screenshot">
+                <div class="mediaobject" align="center"><img src="figures/chart_feat_add_timedisplay.png" align="middle" alt="Time Display (Absolute)"></div>
+              </div>
+            </div></div><p><br class="figure-break"></p>
+          <p>Additional timers can be added, as required.</p>
+          <p>As can be seen in the screenshot above, <span class="bold"><strong>Dynamic Features (1 items)</strong></span> is added to the <span class="emphasis"><em>Outline view</em></span>, the <span class="emphasis"><em>Time Display (Absolute) </em></span>properties display in the <span class="emphasis"><em>Properties view</em></span>, and the <span class="bold"><strong>Absolute Time</strong></span><span class="bold"><strong> </strong></span>is shown in the bottom right of the <span class="emphasis"><em>plot editor</em></span>; this is its default position.</p>
+          <p>In the <span class="emphasis"><em>Properties view</em></span>, you can modify the display properties:</p>
+          <div class="variablelist"><dl class="variablelist"><dt><span class="term">Background color</span></dt><dd>
+                <p>By default, the background color for the time display is white (RGB 255, 255, 255), but can be changed as required.</p>
+              </dd><dt><span class="term">Color</span></dt><dd>
+                <p>The font colour used in the display.</p>
+              </dd><dt><span class="term">Font</span></dt><dd>
+                <p>The font type used.</p>
+              </dd><dt><span class="term">Location</span></dt><dd>
+                <p>The default location for the time display is Bottom Right, but Bottom Left, Top Right, and Top Left are also available.</p>
+              </dd><dt><span class="term">Name</span></dt><dd>
+                <p>You can rename this time display as required. Once done, its name will change in the <span class="emphasis"><em>Outline view</em></span>:</p>
+                <div class="figure" id="d5e1055"><p class="title"><b>Figure&nbsp;3.6.&nbsp;Renaming Time Display</b></p><div class="figure-contents">
+                  
+                  <div class="screenshot">
+                    <div class="mediaobject" align="center"><img src="figures/time_display_absolute_multiples.png" align="middle" alt="Renaming Time Display"></div>
+                  </div>
+                </div></div><br class="figure-break">
+              </dd><dt><span class="term">Prefix</span></dt><dd>
+                <p>By default, the display does not have a prefix, but you can set this here. For example:</p>
+                <div class="screenshot">
+                  <div class="mediaobject" align="center"><img src="figures/time_display_prefix.png" align="middle"></div>
+                </div>
+              </dd><dt><span class="term">Suffix</span></dt><dd>
+                <p>Similarly, you can also specify a suffix:</p>
+                <div class="screenshot">
+                  <div class="mediaobject" align="center"><img src="figures/time_display_suffix.png" align="middle"></div>
+                </div>
+              </dd><dt><span class="term">Time-related</span></dt><dd>
+                <p>Use this option to change the <span class="bold"><strong>Time format</strong></span>: </p>
+                <div class="screenshot">
+                  <div class="mediaobject" align="center"><img src="figures/time_display_timeformat.png" align="middle"></div>
+                </div>
+              </dd><dt><span class="term">Visibility</span></dt><dd>
+                <p>This option is a simple toggle option which allows you to show or hide the time display.</p>
+              </dd></dl></div>
+        </div>
+        <div class="sect2" id="time_display_relative"><div class="titlepage"><div><div><h3 class="title">3.2.4.&nbsp;Time Display (Relative)</h3></div></div></div>
+          
+          <p>Debrief also allows you to add a relative time display to the <span class="emphasis"><em>plot editor</em></span>. You add this in the same manner as you add a <span class="emphasis"><em>Time Display (Absolute)</em></span>. It will show as follows: </p><div class="figure" id="d5e1095"><p class="title"><b>Figure&nbsp;3.7.&nbsp;Time Display (Relative)</b></p><div class="figure-contents">
+              
+              <div class="screenshot">
+                <div class="mediaobject" align="center"><img src="figures/chart_feat_add_timedisplay_rel.png" align="middle" alt="Time Display (Relative)"></div>
+              </div>
+            </div></div><p><br class="figure-break"></p><div class="variablelist"><dl class="variablelist"><dt><span class="term">Background color</span></dt><dd>
+                  <p>By default, the background color for the time display is white (RGB 255, 255, 255), but can be changed as required.</p>
+                </dd><dt><span class="term">Color</span></dt><dd>
+                  <p>The font colour used in the display (set to RGB 64, 64, 64 by default).</p>
+                </dd><dt><span class="term">Font</span></dt><dd>
+                  <p>The font type used.</p>
+                </dd><dt><span class="term">Location</span></dt><dd>
+                  <p>The default location for the time display is Bottom Right, but Bottom Left, Top Right, and Top Left are also available.</p>
+                </dd><dt><span class="term">Name</span></dt><dd>
+                  <p>You can rename this time display as required. As shown in the image above, this will change in the <span class="emphasis"><em>Outline view</em></span>.</p>
+                </dd><dt><span class="term">Negative color</span></dt><dd>
+                  <p>If you step back through the timer in the <span class="emphasis"><em>Time Controller view</em></span>, the absolute time could precede the <span class="emphasis"><em>time origin</em></span> specified for this relative time display. If so, specifying a negative colour provides a clear indication here:</p>
+                  <p></p>
+                  <div class="screenshot">
+                    <div class="mediaobject" align="center"><img src="figures/time_display_negative_time.png" align="middle"></div>
+                  </div>
+                </dd><dt><span class="term">Prefix</span></dt><dd>
+                  <p>As with the <span class="emphasis"><em>Time Display (Absolute)</em></span> you can specify a prefix for the relative timer (the image above has been assigned ML1:) .</p>
+                </dd><dt><span class="term">Suffix</span></dt><dd>
+                  <p>If your time display warrants a suffix, you can add this here.</p>
+                </dd><dt><span class="term">Time Related</span></dt><dd>
+                  <p>The absolute display only has a single time related option (time format), but the relative display has an additional one (time origin).</p>
+                </dd><dt><span class="term">Time format</span></dt><dd>
+                  <p>Select from a number of time format options.</p>
+                </dd><dt><span class="term">Time origin</span></dt><dd>
+                  <p>Unlike the absolute time display, which mirrors the time from the <span class="emphasis"><em>Time controller view</em></span>, the relative time is set to coincide with an event in the current scenario. You can specify the exact start time here:</p>
+                  <div class="screenshot">
+                    <div class="mediaobject" align="center"><img src="figures/time_display_time_origin.png" align="middle"></div>
+                  </div>
+                </dd><dt><span class="term">Visibility</span></dt><dd>
+                  <p>This is a simple toggle option which allows you to turn the time display on or off without deleting it from the <span class="emphasis"><em>Outline view</em></span>. </p>
+                </dd></dl></div>
+        </div>
+
+        <div class="sect2" id="the_grid"><div class="titlepage"><div><div><h3 class="title">3.2.5.&nbsp;Grid</h3></div></div></div>
+          
+
+          <p>Next, try with a new grid: <span class="guiicon">
+              <span class="inlinemediaobject"><img src="figures/GridBtn.png"></span>
+            </span></p><div class="variablelist"><dl class="variablelist"><dt><span class="term">Auto Mode</span></dt><dd>
+                  <p>In auto-mode Debrief assesses the current screen size and area of data covered, and attempts to set the most appropriate range of values and step size for the scale. A good working practice is to switch to auto-mode to allow Debrief to estimate the optimal values, then switch out of auto-mode to fine-tune the <span class="guilabel">ScaleMax</span> and <span class="guilabel">ScaleStep</span> values provided.</p>
+                </dd><dt><span class="term">Color</span></dt><dd>
+                  <p>The colour used to draw the scale.</p>
+                </dd><dt><span class="term">Delta</span></dt><dd>
+                  <p>The interval between plotted lines</p>
+                </dd><dt><span class="term">PlotLabels</span></dt><dd>
+                  <p>Whether to label the grid. See tip below for details regarding how the labels are formatted</p>
+                </dd><dt><span class="term">Visible</span></dt><dd>
+                  <p>Whether you can hide the grid, of course.</p>
+                </dd></dl></div>
+
+          <div class="tip" id="grid_labels" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0" summary="Tip"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Tip]" src="images/tip.gif"></td><th align="left">Tip</th></tr><tr><td align="left" valign="top">
+            <p>Two methods are used to produce grid lines: </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
+                  <p><span class="emphasis"><em>Lat/Long Grid</em></span>. Where angular delta units are selected (degrees, minutes), vertical and horizontal grid lines are calculated relative to the latitude of the plot (thus a 1 degree grid requested at 60 degrees North will have grid lines of 60nm separation in latitude, but with lines of longitude at 30nm separation).</p>
+                </li><li class="listitem">
+                  <p><span class="emphasis"><em>Square Grid</em></span>. Where distance related delta units are selected (m, yd, km, nm, etc), the vertical and horizontal grid lines are constructed using the same delta distance (thus a selected delta of 1 kyd will have lines of 1 kyd separation in the horizontal and vertical).</p>
+                </li></ul></div>
+          </td></tr></table></div>
+        </div>
+
+        <div class="sect2" id="the_local_grid"><div class="titlepage"><div><div><h3 class="title">3.2.6.&nbsp;Local Grid</h3></div></div></div>
+          
+
+          <p>The Local Grid ( <span class="guiicon">
+              <span class="inlinemediaobject"><img src="figures/local_grid.png"></span>
+            </span>) is a modified grid for which the origin has been over-ridden. Change the <span class="guilabel">Origin</span> attribute to move the grid origin. The <span class="guilabel">PlotOrigin</span> attribute has been provided to draw a small point at the origin of the grid - useful when initially designing/recording the grid.</p>
+        </div>
+
+        <div class="sect2" id="the_coastline"><div class="titlepage"><div><div><h3 class="title">3.2.7.&nbsp;Coastline</h3></div></div></div>
+          
+
+          <p>The <span class="application">Debrief</span> installation includes a <a class="indexterm" name="d5e1217"></a>low-resolution coastline datafile. Whilst it does cover the whole globe, it does so at a low resolution, so is only useful for an overview. The vectored chart data discussed later provides a much lower resolution of data. </p><div class="figure" id="coastline_demo"><p class="title"><b>Figure&nbsp;3.8.&nbsp;Sample of default coastline data</b></p><div class="figure-contents">
+              
+
+              <div class="screenshot">
+                <div class="mediaobject" align="center"><img src="figures/old_coastline.gif" align="middle" alt="Sample of default coastline data"></div>
+              </div>
+            </div></div><p><br class="figure-break"></p>
+        </div>
+        <div class="sect2" id="etopo_gridded_bathy"><div class="titlepage"><div><div><h3 class="title">3.2.8.&nbsp;ETOPO gridded bathy</h3></div></div></div>
+          
+          <p>Whilst the VPF dataset <a class="indexterm" name="d5e1229"></a>provides a contoured bathymetry within broad depth steps, the ETOPO dataset provides a gridded bathymetry in 5' or 2' steps. When you ask Debrief to plot an ETOPO background, Debrief will try to load an ETOPO-2 dataset first, followed by an ETOPO-5 dataset if that is unavailable. The image below provides a sample of the level of detail supplied. </p><div class="figure" id="ETOPO_Demo"><p class="title"><b>Figure&nbsp;3.9.&nbsp;Sample of ETOPO gridded bathymetry</b></p><div class="figure-contents">
+              
+              <div class="screenshot">
+                <div class="mediaobject" align="center"><img src="figures/etopo_data.gif" align="middle" alt="Sample of ETOPO gridded bathymetry"></div>
+              </div>
+            </div></div><p><br class="figure-break"></p>
+        </div>
+        <div class="sect2" id="ChartLibrary"><div class="titlepage"><div><div><h3 class="title">3.2.9.&nbsp;Chart Library</h3></div></div></div>
+          
+          <p>Debrief also allows you to load 3rd-party chart libraries. This is covered in <a class="xref" href="loadCharts.html" title="10.2.&nbsp;Loading data">Section&nbsp;10.2, &#8220;Loading data&#8221;</a></p><div class="figure" id="d5e1241"><p class="title"><b>Figure&nbsp;3.10.&nbsp;Sample of chart library portfolio</b></p><div class="figure-contents">
+              
+              <div class="screenshot">
+                <div class="mediaobject" align="center"><img src="figures/ChartFolio.png" align="middle" alt="Sample of chart library portfolio"></div>
+              </div>
+            </div></div><p><br class="figure-break"></p>
+        </div>
+        <div class="sect2" id="vectored_data"><div class="titlepage"><div><div><h3 class="title">3.2.10.&nbsp;Vectored data</h3></div></div></div>
+          
+          <p>The addition of vectored chart data is also covered later in this document, in <a class="xref" href="view_vpf.html" title="7.3.&nbsp;Viewing VPF data">Section&nbsp;7.3, &#8220;Viewing VPF data&#8221;</a>. The image below provides a sample of the level of detail supplied. </p><div class="figure" id="vectored_Coast_demo"><p class="title"><b>Figure&nbsp;3.11.&nbsp;Sample of vectored coastline data</b></p><div class="figure-contents">
+              
+              <div class="screenshot">
+                <div class="mediaobject" align="center"><img src="figures/VPF_Layer9.gif" align="middle" alt="Sample of vectored coastline data"></div>
+              </div>
+            </div></div><p><br class="figure-break"></p>
+        </div>
+        <div class="sect2" id="NaturalEarth_title"><div class="titlepage"><div><div><h3 class="title">3.2.11.&nbsp;Natural Earth</h3></div></div></div>
+          
+          <p>In the same manner that we loaded the Chart Library, we do exactly the same thing with Natural Earth.</p><div class="figure" id="d5e1260"><p class="title"><b>Figure&nbsp;3.12.&nbsp;Sample of Natural Earth</b></p><div class="figure-contents">
+              
+              <div class="screenshot">
+                <div class="mediaobject" align="center"><img src="figures/NE_110M.png" align="middle" alt="Sample of Natural Earth"></div>
+              </div>
+            </div></div><p><br class="figure-break">For further information, refer to <a class="xref" href="external_datasets.html#natural_earth" title="7.1.&nbsp;Natural Earth data">Section&nbsp;7.1, &#8220;Natural Earth data&#8221;</a>
+          </p>
+        </div>
+      </div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="formatting_data.html"><img src="images/prev.gif" alt="Prev"></a>&nbsp;</td><td width="20%" align="center"><a accesskey="u" href="formatting_data.html"><img src="images/up.gif" alt="Up"></a></td><td width="40%" align="right">&nbsp;<a accesskey="n" href="drawing_features.html"><img src="images/next.gif" alt="Next"></a></td></tr><tr><td width="40%" align="left" valign="top">Chapter&nbsp;3.&nbsp;Manipulating track data&nbsp;</td><td width="20%" align="center"><a accesskey="h" href="index.html"><img src="images/home.gif" alt="Home"></a></td><td width="40%" align="right" valign="top">&nbsp;3.3.&nbsp;Adding drawing features</td></tr></table></div></body></html>

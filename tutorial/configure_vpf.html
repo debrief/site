@@ -1,0 +1,178 @@
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <title>7.4.&nbsp;Configuring VPF defaults</title><link rel="stylesheet" type="text/css" href="header.css"><meta name="generator" content="DocBook XSL Stylesheets V1.78.1"><meta name="keywords" content="Maritime Analysis, Open Source Tool"><link rel="home" href="index.html" title="Debrief NG User Documentation"><link rel="up" href="external_datasets.html" title="Chapter&nbsp;7.&nbsp;External datasets"><link rel="prev" href="view_vpf.html" title="7.3.&nbsp;Viewing VPF data"><link rel="next" href="etopo_data.html" title="7.5.&nbsp;ETOPO Data"><link rel="preface" href="PrefaceIntro.html" title="Introduction"><link rel="part" href="tutorial.html" title="Part&nbsp;I.&nbsp;Getting started"><link rel="chapter" href="get_start.html" title="Chapter&nbsp;1.&nbsp;First steps"><link rel="part" href="UsingDebrief.html" title="Part&nbsp;II.&nbsp;Using Debrief"><link rel="chapter" href="moving_around.html" title="Chapter&nbsp;2.&nbsp;Moving around the view"><link rel="chapter" href="formatting_data.html" title="Chapter&nbsp;3.&nbsp;Manipulating track data"><link rel="chapter" href="analysing_data.html" title="Chapter&nbsp;4.&nbsp;Analysing Data"><link rel="chapter" href="exporting_data.html" title="Chapter&nbsp;5.&nbsp;Exporting Data"><link rel="chapter" href="symbol_sets.html" title="Chapter&nbsp;6.&nbsp;Symbol sets"><link rel="chapter" href="external_datasets.html" title="Chapter&nbsp;7.&nbsp;External datasets"><link rel="chapter" href="ExercisePlanning.html" title="Chapter&nbsp;8.&nbsp;Exercise planning"><link rel="chapter" href="viewing_narratives.html" title="Chapter&nbsp;9.&nbsp;Viewing narratives"><link rel="chapter" href="ChartBackdrops.html" title="Chapter&nbsp;10.&nbsp;Using chart backdrops"><link rel="chapter" href="sensor_data.html" title="Chapter&nbsp;11.&nbsp;Analysing sensor data"><link rel="chapter" href="tma_data.html" title="Chapter&nbsp;12.&nbsp;Management of TMA and TUA solutions"><link rel="chapter" href="dis_support.html" title="Chapter&nbsp;13.&nbsp;Support for DIS Protocol"><link rel="part" href="maintainers_guide.html" title="Part&nbsp;III.&nbsp;Maintainer's Guide"><link rel="chapter" href="participating.html" title="Chapter&nbsp;14.&nbsp;Participating in Debrief development"><link rel="chapter" href="maintainers.html" title="Chapter&nbsp;15.&nbsp;Debrief maintainer's guide"><link rel="part" href="reference_guide.html" title="Part&nbsp;IV.&nbsp;Reference Guide"><link rel="chapter" href="reference.html" title="Chapter&nbsp;16.&nbsp;Debrief file formats"><link rel="chapter" href="GeoToolsRef.html" title="Chapter&nbsp;17.&nbsp;GeoTools in Debrief"><link rel="chapter" href="chap_debrief_algorithms.html" title="Chapter&nbsp;18.&nbsp;Debrief algorithms"><link rel="chapter" href="chap_genetic_algorithms.html" title="Chapter&nbsp;19.&nbsp;Semi Automated Track Construction (SATC)"><link rel="chapter" href="dis_ref.html" title="Chapter&nbsp;20.&nbsp;System Documentation for DIS integration"><link rel="appendix" href="app_glossary.html" title="Appendix&nbsp;A.&nbsp;Debrief Glossary"><link rel="glossary" href="app_glossary.html#glossary" title="Glossary"><link rel="index" href="the_index.html" title="Index"><link rel="subsection" href="configure_vpf.html#more_config_vpf" title="7.4.1.&nbsp;The problem"><link rel="subsection" href="configure_vpf.html#vpf_how" title="7.4.2.&nbsp;The solution"><link rel="subsection" href="configure_vpf.html#vpf_how_to" title="7.4.3.&nbsp;How to do it - 1"><link rel="subsection" href="configure_vpf.html#how_to_create_default_layers" title="7.4.4.&nbsp;How to do it - 2"><link rel="subsection" href="configure_vpf.html#step_3_xml" title="7.4.5.&nbsp;How to do it - 3"><link rel="subsection" href="configure_vpf.html#steps_complete" title="7.4.6.&nbsp;At last!"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">7.4.&nbsp;Configuring VPF defaults</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="view_vpf.html"><img src="images/prev.gif" alt="Prev"></a>&nbsp;</td><th width="60%" align="center">Chapter&nbsp;7.&nbsp;External datasets</th><td width="20%" align="right">&nbsp;<a accesskey="n" href="etopo_data.html"><img src="images/next.gif" alt="Next"></a></td></tr></table><hr></div><div class="sect1" id="configure_vpf"><div class="titlepage"><div><div><h2 class="title" style="clear: both">7.4.&nbsp;Configuring VPF defaults</h2></div></div></div><div class="toc"><dl class="toc"><dt><span class="sect2"><a href="configure_vpf.html#more_config_vpf">7.4.1. The problem</a></span></dt><dt><span class="sect2"><a href="configure_vpf.html#vpf_how">7.4.2. The solution</a></span></dt><dt><span class="sect2"><a href="configure_vpf.html#vpf_how_to">7.4.3. How to do it - 1</a></span></dt><dt><span class="sect2"><a href="configure_vpf.html#how_to_create_default_layers">7.4.4. How to do it - 2</a></span></dt><dt><span class="sect2"><a href="configure_vpf.html#step_3_xml">7.4.5. How to do it - 3</a></span></dt><dt><span class="sect2"><a href="configure_vpf.html#steps_complete">7.4.6. At last!</a></span></dt></dl></div>
+        
+
+        <div class="sect2" id="more_config_vpf"><div class="titlepage"><div><div><h3 class="title">7.4.1.&nbsp;The problem</h3></div></div></div>
+          
+
+          <p>Yes, VPF and VMap in <a class="indexterm" name="d5e2819"></a>particular provide a great volume of information which may help with analysis and will certainly improve the quality of "overview" images in reports.</p>
+
+          <p>With this great volume comes a management overhead however. You could have constrained <span class="application">Debrief</span> to only use VMap data, and then only load a sub-set of it (coastlines &amp; depth contours). Instead, however, it loads the full set.</p>
+
+          <p>How can you make it easier to use?</p>
+
+          <p>Read on.</p>
+
+          <div class="warning" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0" summary="Warning"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Warning]" src="images/warning.gif"></td><th align="left">Warning</th></tr><tr><td align="left" valign="top">
+            <p>You'll need to know how to use a text editor and have a rough familiarity with <a class="glossterm" href="app_glossary.html#g_xml"><em class="glossterm">XML</em></a> or HTML text.</p>
+          </td></tr></table></div>
+        </div>
+
+        <div class="sect2" id="vpf_how"><div class="titlepage"><div><div><h3 class="title">7.4.2.&nbsp;The solution</h3></div></div></div>
+          
+
+          <p>How does it <span class="application">Debrief</span> handle VPF data? </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
+                <p>When you save a plot with VPF data loaded, <span class="application">Debrief</span> stores the names of all of the layers loaded, together with the colours and visibility of any features on them.</p>
+              </li><li class="listitem">
+                <p>When you re-load an existing session with VPF data, <span class="application">Debrief</span> reads what layers the users wants and only loads those layers.</p>
+              </li></ul></div>
+
+          <p>Accordingly, you could create a datafile containing only the layers you want, and drop this file into <span class="application">Debrief</span> sessions. This should give us a simplified set of VPF layers.</p>
+
+          <p>When you drag/drop a <a class="glossterm" href="app_glossary.html#g_xml"><em class="glossterm">DPF</em></a> file into an existing session, the Layers in the <a class="glossterm" href="app_glossary.html#g_xml"><em class="glossterm">DPF</em></a> file are copied into the existing session, although the projection, Tote, and GUI parameters are ignored.</p>
+        </div>
+
+        <div class="sect2" id="vpf_how_to"><div class="titlepage"><div><div><h3 class="title">7.4.3.&nbsp;How to do it - 1</h3></div></div></div>
+          
+
+          <p>So what you do is open a new <span class="application">Debrief</span> session and load the smallest REP file you have into it - (just to give your data an "origin").</p>
+
+          <p>Then add your VPF layers using the <span class="guibutton">Create VPF Layers</span> button on the <span class="guilabel">Chart Features</span> toolbar. Customise these layers so that the layers/features of interest are made visible and set to your desired colours.</p>
+
+          <p>Finally save the view to a plot file in an easily accessible location - call it <code class="filename">default_layers.dpf</code></p>
+        </div>
+
+        <div class="sect2" id="how_to_create_default_layers"><div class="titlepage"><div><div><h3 class="title">7.4.4.&nbsp;How to do it - 2</h3></div></div></div>
+          
+
+          <p>You are now going to edit this file to remove all unnecessary details except for your <a class="glossterm" href="app_glossary.html#g_layer"><em class="glossterm">layer</em></a>s.</p>
+
+          <p>Open a text editor (such as <span class="application">Notepad</span> in <span class="application">MS Windows</span>), and load your new .DPF file into it.</p>
+
+          <p>The contents of the file should be something like that shown below:</p>
+
+          <pre class="screen" width="70">
+      &lt;?xml version="1.0" encoding="UTF-8"?&gt;
+
+      &lt;plot Created="Thu Jul 19 15:04:41 GMT+01:00 2001" Name="Debrief Plot"&gt;
+      &lt;session&gt;
+      &lt;layers&gt;
+      &lt;layer Name="Chart Features" Visible="TRUE"&gt;
+      &lt;vpf_database Visible="TRUE"&gt;
+      &lt;vpf_library Visible="TRUE" Name="vmaplv0"&gt;
+      &lt;vpf_coverage Visible="FALSE" Type="ind" Description="Industry"&gt;
+      &lt;vpf_feature Visible="FALSE" Type="extracta" Description="Extraction
+        Areas"&gt;
+      &lt;colour Value="WHITE" /&gt;
+      &lt;/vpf_feature&gt;
+      &lt;vpf_feature Visible="FALSE" Type="storagep" Description="Storage Point 
+        Features"&gt;
+      &lt;colour Value="WHITE" /&gt;
+      &lt;/vpf_feature&gt;
+      &lt;vpf_feature Visible="FALSE" Type="indtxt" Description="Industry Coverage
+        Text"&gt;
+      &lt;colour Value="WHITE" /&gt;
+      &lt;/vpf_feature&gt;
+              </pre>
+
+          <p>..... and so on, until</p>
+
+          <pre class="screen" width="70">
+      &lt;layer Name="Annotations" Visible="TRUE"&gt;
+      &lt;rectangle Label=" trial" LabelLocation="Left"&gt;
+      &lt;colour Value="YELLOW" /&gt;
+      &lt;fontcolour Value="YELLOW" /&gt;
+      &lt;font Family="Sans Serif" Size="12" Bold="FALSE" Italic="FALSE" /&gt;
+      &lt;tl&gt;
+      &lt;shortLocation Lat="-9.2166417" Long="156.2783694" Depth="0.000" /&gt;
+      &lt;/tl&gt;
+      &lt;/rectangle&gt;
+      &lt;/layer&gt;
+      &lt;/layers&gt;
+      &lt;projection Type="Flat" Border="1.050" Relative="FALSE"&gt;
+      &lt;tl&gt;
+      &lt;shortLocation Lat="60.6482349" Long="-15.0669609" Depth="0.000" /&gt;
+      &lt;/tl&gt;
+      &lt;br&gt;
+      &lt;shortLocation Lat="47.9097909" Long="3.0063981" Depth="0.000" /&gt;
+      &lt;/br&gt;
+      &lt;/projection&gt;
+      &lt;gui&gt;
+      &lt;tote /&gt;
+      &lt;component Type="Stepper"&gt;
+      &lt;property Name="AutoStep" Value="1000" /&gt;
+      &lt;property Name="Highlighter" Value="Default Highlight" /&gt;
+      &lt;property Name="StepLarge" Value="600000.000" /&gt;
+      &lt;property Name="CurrentTime" Value="691231 235959.999" /&gt;
+      &lt;/component&gt;
+      &lt;/gui&gt;
+      &lt;/session&gt;
+      &lt;details Text="Saved with Debrief version dated 19 Jul 01 12:44" /&gt;
+      &lt;/plot&gt;
+                        </pre>
+        </div>
+
+        <div class="sect2" id="step_3_xml"><div class="titlepage"><div><div><h3 class="title">7.4.5.&nbsp;How to do it - 3</h3></div></div></div>
+          
+
+          <p>As you can see above, the file starts with an entry beginning with the characters <span class="guilabel">&lt;?xml</span>. This line indicates that you are handling <a class="glossterm" href="app_glossary.html#g_xml"><em class="glossterm">XML</em></a> data.</p>
+
+          <p>Next you have a series of lines of data, which start with <span class="guilabel">&lt;plot&gt;</span> and end with <span class="guilabel">&lt;/plot&gt;</span>. This format is similar to that found in HTML, and indicates that this file contains details of plot. Inside the <span class="guilabel">&lt;plot&gt;</span> you can see a <span class="guilabel">&lt;session&gt;</span>, which in turn contains a <span class="guilabel">&lt;layers&gt;</span> object, containing a series of <span class="guilabel">&lt;layer&gt;</span> items, followed by a <span class="guilabel">&lt;projection&gt;</span>, and a <span class="guilabel">&lt;gui&gt;</span>.</p>
+
+          <p>What you are going to do is strip out everything except the Layers object, and then thin this out.</p>
+
+          <p>So, move the cursor to the <span class="guilabel">&lt;layers&gt;</span> line. Delete everything before this (except for the <span class="guilabel">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span> line.</p>
+
+          <p>Now move down to the <span class="guilabel">&lt;/layers&gt;</span> line, and delete everything from it to the end of the file.</p>
+
+          <p>As you look at the layers, you can see that each layer has a name ( <span class="guilabel">Chart Features</span> is the first one in the example above). It is the <span class="guilabel">Chart Features</span> layer which you want to keep, so navigate down to the next Layer (which may have a track name), and delete that and all others (down to, but not including the <span class="guilabel">&lt;/layers&gt;</span> line which marks the end of the data).</p>
+
+          <p>Within the <span class="guilabel">Chart Features</span> layer you can see an entry named <span class="guilabel">&lt;vpf_database&gt;</span> - this is the vpf data. Inside the vpf_database are <span class="guilabel">&lt;vpf_library&gt;</span> entries, one for each library loaded (probably just VMaplv0 in your instance).</p>
+
+          <p>Inside the <span class="guilabel">&lt;vpf_library&gt;</span> are a series of <span class="guilabel">&lt;vpf_coverage&gt;</span> entries. It is these which you will thin out. Work down through them deleting any you don't want. In your instance you only want to keep the boundaries data, so you will delete all other coverages. So, select blocks of text beginning with <span class="guilabel">&lt;vpf_coverage&gt;</span> and ending with <span class="guilabel">&lt;/vpf_coverage&gt;</span> and delete those you don't want.</p>
+
+          <p>Finally, delete any &lt;vpf_features&gt; you don't want.</p>
+
+          <p>I've deleted all those I don't want, leaving the text below:</p>
+
+          <pre class="screen" width="70">
+      &lt;?xml version="1.0" encoding="UTF-8"?&gt;
+      &lt;layers&gt;
+      &lt;layer Name="Chart Features" Visible="TRUE"&gt;
+      &lt;vpf_database Visible="TRUE"&gt;
+      &lt;vpf_library Visible="TRUE" Name="vmaplv0"&gt;
+      &lt;vpf_coverage Visible="TRUE" Type="bnd" Description="Boundaries"&gt;
+      &lt;vpf_feature Visible="TRUE" Type="oceansea" Description="Oceans/Seas"&gt;
+      &lt;colour Value="BLUE" /&gt;
+      &lt;/vpf_feature&gt;
+      &lt;vpf_feature Visible="FALSE" Type="polbndl" Description="Political
+        Boundaries"&gt;
+      &lt;colour Value="WHITE" /&gt;
+      &lt;/vpf_feature&gt;
+      &lt;vpf_feature Visible="TRUE" Type="polbnda" Description="Administrative
+        Areas"&gt;
+      &lt;colour Value="WHITE" /&gt;
+      &lt;/vpf_feature&gt;
+      &lt;vpf_feature Visible="FALSE" Type="depthl" Description="Depth Contours"&gt;
+      &lt;colour Value="WHITE" /&gt;
+      &lt;/vpf_feature&gt;
+      &lt;vpf_feature Visible="TRUE" Type="coastl" Description="Coastlines"&gt;
+      &lt;colour Value="CYAN" /&gt;
+      &lt;/vpf_feature&gt;
+      &lt;/vpf_coverage&gt;
+      &lt;/vpf_library&gt;
+      &lt;/vpf_database&gt;
+      &lt;/layer&gt;
+      &lt;/layers&gt;
+            </pre>
+        </div>
+
+        <div class="sect2" id="steps_complete"><div class="titlepage"><div><div><h3 class="title">7.4.6.&nbsp;At last!</h3></div></div></div>
+          
+
+          <p>Now, you can drag and drop this file into any <span class="application">Debrief</span> session to instantly give you your "favourite" set of layers.</p>
+
+          <p>To test it, follow the steps described above (or copy the text I've just given you into a blank text file and save it as <code class="filename">default_layers.dpf</code>). Then create a new <span class="application">Debrief</span> session, load one of your demo tracks ( <code class="filename">boat1.rep</code>), then drag in <code class="filename">default_layers.dpf</code>. Zoom out, and have a look at the lovely, pre-formatted data.</p>
+        </div>
+      </div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="view_vpf.html"><img src="images/prev.gif" alt="Prev"></a>&nbsp;</td><td width="20%" align="center"><a accesskey="u" href="external_datasets.html"><img src="images/up.gif" alt="Up"></a></td><td width="40%" align="right">&nbsp;<a accesskey="n" href="etopo_data.html"><img src="images/next.gif" alt="Next"></a></td></tr><tr><td width="40%" align="left" valign="top">7.3.&nbsp;Viewing VPF data&nbsp;</td><td width="20%" align="center"><a accesskey="h" href="index.html"><img src="images/home.gif" alt="Home"></a></td><td width="40%" align="right" valign="top">&nbsp;7.5.&nbsp;ETOPO Data</td></tr></table></div></body></html>

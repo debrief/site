@@ -1,0 +1,70 @@
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <title>Chapter&nbsp;12.&nbsp;Management of TMA and TUA solutions</title><link rel="stylesheet" type="text/css" href="header.css"><meta name="generator" content="DocBook XSL Stylesheets V1.78.1"><meta name="keywords" content="Maritime Analysis, Open Source Tool"><link rel="home" href="index.html" title="Debrief NG User Documentation"><link rel="up" href="UsingDebrief.html" title="Part&nbsp;II.&nbsp;Using Debrief"><link rel="prev" href="analyse_sensor_data.html" title="11.2.&nbsp;Analysing your data"><link rel="next" href="tma_support.html" title="12.2.&nbsp;TMA Management"><link rel="preface" href="PrefaceIntro.html" title="Introduction"><link rel="part" href="tutorial.html" title="Part&nbsp;I.&nbsp;Getting started"><link rel="chapter" href="get_start.html" title="Chapter&nbsp;1.&nbsp;First steps"><link rel="part" href="UsingDebrief.html" title="Part&nbsp;II.&nbsp;Using Debrief"><link rel="chapter" href="moving_around.html" title="Chapter&nbsp;2.&nbsp;Moving around the view"><link rel="chapter" href="formatting_data.html" title="Chapter&nbsp;3.&nbsp;Manipulating track data"><link rel="chapter" href="analysing_data.html" title="Chapter&nbsp;4.&nbsp;Analysing Data"><link rel="chapter" href="exporting_data.html" title="Chapter&nbsp;5.&nbsp;Exporting Data"><link rel="chapter" href="symbol_sets.html" title="Chapter&nbsp;6.&nbsp;Symbol sets"><link rel="chapter" href="external_datasets.html" title="Chapter&nbsp;7.&nbsp;External datasets"><link rel="chapter" href="ExercisePlanning.html" title="Chapter&nbsp;8.&nbsp;Exercise planning"><link rel="chapter" href="viewing_narratives.html" title="Chapter&nbsp;9.&nbsp;Viewing narratives"><link rel="chapter" href="ChartBackdrops.html" title="Chapter&nbsp;10.&nbsp;Using chart backdrops"><link rel="chapter" href="sensor_data.html" title="Chapter&nbsp;11.&nbsp;Analysing sensor data"><link rel="chapter" href="tma_data.html" title="Chapter&nbsp;12.&nbsp;Management of TMA and TUA solutions"><link rel="chapter" href="dis_support.html" title="Chapter&nbsp;13.&nbsp;Support for DIS Protocol"><link rel="part" href="maintainers_guide.html" title="Part&nbsp;III.&nbsp;Maintainer's Guide"><link rel="chapter" href="participating.html" title="Chapter&nbsp;14.&nbsp;Participating in Debrief development"><link rel="chapter" href="maintainers.html" title="Chapter&nbsp;15.&nbsp;Debrief maintainer's guide"><link rel="part" href="reference_guide.html" title="Part&nbsp;IV.&nbsp;Reference Guide"><link rel="chapter" href="reference.html" title="Chapter&nbsp;16.&nbsp;Debrief file formats"><link rel="chapter" href="GeoToolsRef.html" title="Chapter&nbsp;17.&nbsp;GeoTools in Debrief"><link rel="chapter" href="chap_debrief_algorithms.html" title="Chapter&nbsp;18.&nbsp;Debrief algorithms"><link rel="chapter" href="chap_genetic_algorithms.html" title="Chapter&nbsp;19.&nbsp;Semi Automated Track Construction (SATC)"><link rel="chapter" href="dis_ref.html" title="Chapter&nbsp;20.&nbsp;System Documentation for DIS integration"><link rel="appendix" href="app_glossary.html" title="Appendix&nbsp;A.&nbsp;Debrief Glossary"><link rel="glossary" href="app_glossary.html#glossary" title="Glossary"><link rel="index" href="the_index.html" title="Index"><link rel="section" href="tma_data.html#more_tma_data" title="12.1.&nbsp;TUA data"><link rel="section" href="tma_support.html" title="12.2.&nbsp;TMA Management"><link rel="section" href="satc.html" title="12.3.&nbsp;Semi-Automated TMA generation"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">Chapter&nbsp;12.&nbsp;Management of TMA and TUA solutions</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="analyse_sensor_data.html"><img src="images/prev.gif" alt="Prev"></a>&nbsp;</td><th width="60%" align="center">Part&nbsp;II.&nbsp;Using Debrief</th><td width="20%" align="right">&nbsp;<a accesskey="n" href="tma_support.html"><img src="images/next.gif" alt="Next"></a></td></tr></table><hr></div><div class="chapter" id="tma_data"><div class="titlepage"><div><div><h2 class="title">Chapter&nbsp;12.&nbsp;Management of TMA and TUA solutions</h2></div></div></div><div class="toc"><p><b>Table of Contents</b></p><dl class="toc"><dt><span class="sect1"><a href="tma_data.html#more_tma_data">12.1. TUA data</a></span></dt><dd><dl><dt><span class="sect2"><a href="tma_data.html#tma_intro">12.1.1. Introduction</a></span></dt><dt><span class="sect2"><a href="tma_data.html#pre_tma_data">12.1.2. Loading TUA data in bulk</a></span></dt><dt><span class="sect2"><a href="tma_data.html#TUA_WIZARD">12.1.3. Loading small amounts of TUA data</a></span></dt><dt><span class="sect2"><a href="tma_data.html#rel_tma_data">12.1.4. Relative data</a></span></dt><dt><span class="sect2"><a href="tma_data.html#analysing_tma_data">12.1.5. Analysing TUA data</a></span></dt></dl></dd><dt><span class="sect1"><a href="tma_support.html">12.2. TMA Management</a></span></dt><dd><dl><dt><span class="sect2"><a href="tma_support.html#TMAMgtIntro">12.2.1. Introduction</a></span></dt><dt><span class="sect2"><a href="tma_support.html#GeneratingTracks">12.2.2. Generating track segments</a></span></dt><dt><span class="sect2"><a href="tma_support.html#DraggingTracks">12.2.3. Dragging tracks</a></span></dt><dt><span class="sect2"><a href="tma_support.html#CombiningTracksMarker">12.2.4. Combining tracks</a></span></dt></dl></dd><dt><span class="sect1"><a href="satc.html">12.3. Semi-Automated TMA generation</a></span></dt><dd><dl><dt><span class="sect2"><a href="satc.html#SATC_tma">12.3.1. Bearings Only TMA</a></span></dt><dt><span class="sect2"><a href="satc.html#satc_concepts">12.3.2. Glossary</a></span></dt><dt><span class="sect2"><a href="satc.html#satc_intro">12.3.3. Overview of SATC</a></span></dt><dt><span class="sect2"><a href="satc.html#satc_ui">12.3.4. User Interface</a></span></dt></dl></dd></dl></div>
+      
+
+      <div class="sect1" id="more_tma_data"><div class="titlepage"><div><div><h2 class="title" style="clear: both">12.1.&nbsp;TUA data</h2></div></div></div><div class="toc"><dl class="toc"><dt><span class="sect2"><a href="tma_data.html#tma_intro">12.1.1. Introduction</a></span></dt><dt><span class="sect2"><a href="tma_data.html#pre_tma_data">12.1.2. Loading TUA data in bulk</a></span></dt><dt><span class="sect2"><a href="tma_data.html#TUA_WIZARD">12.1.3. Loading small amounts of TUA data</a></span></dt><dt><span class="sect2"><a href="tma_data.html#rel_tma_data">12.1.4. Relative data</a></span></dt><dt><span class="sect2"><a href="tma_data.html#analysing_tma_data">12.1.5. Analysing TUA data</a></span></dt></dl></div>
+        
+
+        <div class="sect2" id="tma_intro"><div class="titlepage"><div><div><h3 class="title">12.1.1.&nbsp;Introduction</h3></div></div></div>
+          
+
+          <p><a class="glossterm" href="app_glossary.html#g_tma_solution"><em class="glossterm">TMA</em></a> algorithms are used to produce an estimate of range by analysing a sequences of sensor contacts which only contain bearing (and optionally range). The output of the algorithm is typically a series of estimated target locations with optional estimates for course, speed and depth. Uncertainty in bearing and range may be indicated by representing the target location as an ellipsoidal Target Uncertainty Area (TUA).</p>
+
+          <p>TUA contact data is always related to one of the currently loaded tracks, and may be represented either as an absolute location (at the centre of the ellipse) or as a range and bearing from the nearest point on that loaded track. The strategy for use of absolute versus relative data is described earlier in <a class="xref" href="sensor_data.html#prepare_sensor_data" title="11.1.5.&nbsp;Preparing Sensor Data">Section&nbsp;11.1.5, &#8220;Preparing Sensor Data&#8221;</a>.</p>
+        </div>
+
+        <div class="sect2" id="pre_tma_data"><div class="titlepage"><div><div><h3 class="title">12.1.2.&nbsp;Loading TUA data in bulk</h3></div></div></div>
+          
+
+          <p>TUA data is loaded into Debrief in REP files, just like any other Debrief data. The line format is: </p><pre class="screen">
+              <span class="markup">
+;TMA_POS: YYMMDD HHMMSS.SSS AAAAAA @@ DD MM SS.SS H DDD MM SS.SS H 
+TT...TT OOO.O  XXXX YYYY  CCC SSS DDD xx.xx 
+;; date, time, ownship name, symbology, tma lat, tma long, track name, 
+ellipse orientation (deg from north),  maxima (yds), minima (yds), 
+course, speed, depth (m), label string
+
+;TMA_RB: YYMMDD HHMMSS.SSS AAAAAA @@ BBB.B RRR.R TT...TT OOO.O
+XXXX YYYY  CCC SSS DDD xx.xx 
+;; date, time, ownship name, symbology, bearing (deg), range (yds), 
+track name, ellipse orientation (deg from north),  maxima (yds),
+ minima (yds), course, speed, depth (m), label string
+              </span>
+            </pre><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.gif"></td><th align="left">Note</th></tr><tr><td align="left" valign="top">
+              <p>There are two annotation format to represent TUA solutions (TMA_POS and TMA_RB). TMA_POS is used to define a TMA solution at a particular location, and TMA_RB is used to define a TMA solution at a specific range and bearing from the current ownship location at that specific DTG. Where a solution ellipse is not known the orientation, maxima and minima values can be represented by a single NULL value.</p>
+            </td></tr></table></div>
+        </div>
+
+        <div class="sect2" id="TUA_WIZARD"><div class="titlepage"><div><div><h3 class="title">12.1.3.&nbsp;Loading small amounts of TUA data</h3></div></div></div>
+          
+
+          <p>An alternate route to loading TUA data is to use the 'Generate TUA Ellipse' wizard. Right-click on a Track or the <span class="guilabel">Solutions</span> layer inside a track, and select the respective menu item. The time for the ellipse is taken from the Time Controller, though you may type in any time. Follow the steps, and when the wizard closes you will have created your TUA ellipse. Clearly, if you have lots of TUAs to load, you're better off by loading the data into Debrief via a data-files as described above.</p>
+        </div>
+
+        <div class="sect2" id="rel_tma_data"><div class="titlepage"><div><div><h3 class="title">12.1.4.&nbsp;Relative data</h3></div></div></div>
+          
+
+          <p>When (as described above) Debrief plots data using a range and bearing, it follows the following procedure: </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
+                <p>The first time the TUA solution is plotted, it examines its parent track to find the vessel position nearest to (or greater than) the TUA solution DTG.</p>
+              </li><li class="listitem">
+                <p>The TUA solution then calculates the position of its centre relative to this origin</p>
+              </li></ul></div>
+        </div>
+
+        <div class="sect2" id="analysing_tma_data"><div class="titlepage"><div><div><h3 class="title">12.1.5.&nbsp;Analysing TUA data</h3></div></div></div>
+          
+
+          <p>When first loaded, TUA data is not <a class="indexterm" name="d5e3763"></a> made visible, since with any reasonable volume of TUA data the plot quickly becomes illegible. TUA data is switched on and off individually by accessing the whole TUA track, via its Track, from the Outline View.</p>
+
+          <p>It is once in <a class="glossterm" href="app_glossary.html#g_snail_trail"><em class="glossterm">snail trail</em></a> mode that TUA data is most easily analysed. When in snail mode the Snail display mode performs the following processing: </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
+                <p>For each Track being plotted, the display mode looks to see if it contains any TUA data.</p>
+              </li><li class="listitem">
+                <p>It then examines each list of TUA data to see if it's visible. If it is visible, it plots the current TUA solution (nearest to the <a class="glossterm" href="app_glossary.html#g_tote"><em class="glossterm">Tote</em></a> time), followed by the TUA solution as disappearing solutions running back through the length indicated in the TrailLength parameter in the properties window.</p>
+              </li></ul></div>
+        </div>
+      </div>
+
+      
+      
+    </div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="analyse_sensor_data.html"><img src="images/prev.gif" alt="Prev"></a>&nbsp;</td><td width="20%" align="center"><a accesskey="u" href="UsingDebrief.html"><img src="images/up.gif" alt="Up"></a></td><td width="40%" align="right">&nbsp;<a accesskey="n" href="tma_support.html"><img src="images/next.gif" alt="Next"></a></td></tr><tr><td width="40%" align="left" valign="top">11.2.&nbsp;Analysing your data&nbsp;</td><td width="20%" align="center"><a accesskey="h" href="index.html"><img src="images/home.gif" alt="Home"></a></td><td width="40%" align="right" valign="top">&nbsp;12.2.&nbsp;TMA Management</td></tr></table></div></body></html>

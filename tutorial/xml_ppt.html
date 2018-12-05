@@ -1,0 +1,80 @@
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <title>15.5.&nbsp;Master template for export scenario to PowerPoint</title><link rel="stylesheet" type="text/css" href="header.css"><meta name="generator" content="DocBook XSL Stylesheets V1.78.1"><meta name="keywords" content="Maritime Analysis, Open Source Tool"><link rel="home" href="index.html" title="Debrief NG User Documentation"><link rel="up" href="maintainers.html" title="Chapter&nbsp;15.&nbsp;Debrief maintainer's guide"><link rel="prev" href="debrief_props.html" title="15.4.&nbsp;Debrief properties"><link rel="next" href="reference_guide.html" title="Part&nbsp;IV.&nbsp;Reference Guide"><link rel="preface" href="PrefaceIntro.html" title="Introduction"><link rel="part" href="tutorial.html" title="Part&nbsp;I.&nbsp;Getting started"><link rel="chapter" href="get_start.html" title="Chapter&nbsp;1.&nbsp;First steps"><link rel="part" href="UsingDebrief.html" title="Part&nbsp;II.&nbsp;Using Debrief"><link rel="chapter" href="moving_around.html" title="Chapter&nbsp;2.&nbsp;Moving around the view"><link rel="chapter" href="formatting_data.html" title="Chapter&nbsp;3.&nbsp;Manipulating track data"><link rel="chapter" href="analysing_data.html" title="Chapter&nbsp;4.&nbsp;Analysing Data"><link rel="chapter" href="exporting_data.html" title="Chapter&nbsp;5.&nbsp;Exporting Data"><link rel="chapter" href="symbol_sets.html" title="Chapter&nbsp;6.&nbsp;Symbol sets"><link rel="chapter" href="external_datasets.html" title="Chapter&nbsp;7.&nbsp;External datasets"><link rel="chapter" href="ExercisePlanning.html" title="Chapter&nbsp;8.&nbsp;Exercise planning"><link rel="chapter" href="viewing_narratives.html" title="Chapter&nbsp;9.&nbsp;Viewing narratives"><link rel="chapter" href="ChartBackdrops.html" title="Chapter&nbsp;10.&nbsp;Using chart backdrops"><link rel="chapter" href="sensor_data.html" title="Chapter&nbsp;11.&nbsp;Analysing sensor data"><link rel="chapter" href="tma_data.html" title="Chapter&nbsp;12.&nbsp;Management of TMA and TUA solutions"><link rel="chapter" href="dis_support.html" title="Chapter&nbsp;13.&nbsp;Support for DIS Protocol"><link rel="part" href="maintainers_guide.html" title="Part&nbsp;III.&nbsp;Maintainer's Guide"><link rel="chapter" href="participating.html" title="Chapter&nbsp;14.&nbsp;Participating in Debrief development"><link rel="chapter" href="maintainers.html" title="Chapter&nbsp;15.&nbsp;Debrief maintainer's guide"><link rel="part" href="reference_guide.html" title="Part&nbsp;IV.&nbsp;Reference Guide"><link rel="chapter" href="reference.html" title="Chapter&nbsp;16.&nbsp;Debrief file formats"><link rel="chapter" href="GeoToolsRef.html" title="Chapter&nbsp;17.&nbsp;GeoTools in Debrief"><link rel="chapter" href="chap_debrief_algorithms.html" title="Chapter&nbsp;18.&nbsp;Debrief algorithms"><link rel="chapter" href="chap_genetic_algorithms.html" title="Chapter&nbsp;19.&nbsp;Semi Automated Track Construction (SATC)"><link rel="chapter" href="dis_ref.html" title="Chapter&nbsp;20.&nbsp;System Documentation for DIS integration"><link rel="appendix" href="app_glossary.html" title="Appendix&nbsp;A.&nbsp;Debrief Glossary"><link rel="glossary" href="app_glossary.html#glossary" title="Glossary"><link rel="index" href="the_index.html" title="Index"><link rel="subsection" href="xml_ppt.html#d5e4553" title="15.5.1.&nbsp;Introduction"><link rel="subsection" href="xml_ppt.html#PPTX_FolderStructure" title="15.5.2.&nbsp;Folder structure"><link rel="subsection" href="xml_ppt.html#d5e4633" title="15.5.3.&nbsp;Master slide"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">15.5.&nbsp;Master template for export scenario to PowerPoint</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="debrief_props.html"><img src="images/prev.gif" alt="Prev"></a>&nbsp;</td><th width="60%" align="center">Chapter&nbsp;15.&nbsp;Debrief maintainer's guide</th><td width="20%" align="right">&nbsp;<a accesskey="n" href="reference_guide.html"><img src="images/next.gif" alt="Next"></a></td></tr></table><hr></div><div class="sect1" id="xml_ppt"><div class="titlepage"><div><div><h2 class="title" style="clear: both">15.5.&nbsp;Master template for export scenario to <a class="indexterm" name="d5e4550"></a>PowerPoint</h2></div></div></div><div class="toc"><dl class="toc"><dt><span class="sect2"><a href="xml_ppt.html#d5e4553">15.5.1. Introduction</a></span></dt><dt><span class="sect2"><a href="xml_ppt.html#PPTX_FolderStructure">15.5.2. Folder structure</a></span></dt><dt><span class="sect2"><a href="xml_ppt.html#d5e4633">15.5.3. Master slide</a></span></dt></dl></div>
+        
+        <div class="sect2" id="d5e4553"><div class="titlepage"><div><div><h3 class="title">15.5.1.&nbsp;Introduction</h3></div></div></div>
+          
+          <p>In Summer 2018 the ability to export an engagement/scenario to MS PowerPoint was introduced. In the past analysis had captured engagement to video, then included this video in a presentation. Hey, in the far distant past export video was a capability build into Debrief - though it as dropped since Debrief wasn't able to compress the videos, and they were huge.</p>
+          <p>The new strategy involves capturing the screen coordinates of scenario participants while Debrief is playing through an engagement, then injecting them as an animation into a specially formatted donor PowerPoint file.</p>
+          <p>This section will introduce the donor template file, and how to collate/maintain it.</p>
+          <p>The donor file includes the following elements (named as specified), used as in the image below it: </p><div class="variablelist" id="donor_elements"><p class="title"><b>Designated elements in template file</b></p><dl class="variablelist compact"><dt><span class="term">Map Frame</span></dt><dd>
+                  <p>Frame into which the chart is plotted. (Rectangle shape named <code class="code">map</code>)</p>
+                </dd><dt><span class="term">Vehicle Marker</span></dt><dd>
+                  <p>Marker to indicate current platform location (with platform name). (Callout named <code class="code">marker</code>)</p>
+                </dd><dt><span class="term">Vehicle track</span></dt><dd>
+                  <p>Marker that is used to build up historic platform track. (Line named <code class="code">track</code>.)</p>
+                </dd><dt><span class="term">Narrative Events</span></dt><dd>
+                  <p>List of visible narrative/diary events, populated as time progresses. (Line named <code class="code">narrative</code>.)</p>
+                </dd><dt><span class="term">Current Time</span></dt><dd>
+                  <p>Current scenario time. (Text element named <code class="code">time</code>.)</p>
+                </dd><dt><span class="term">Footprint</span></dt><dd>
+                  <p>Footprint to indicate the steps of the past plataform's positions. (Object named <code class="code">footprint</code>)</p>
+                </dd><dt><span class="term">Scale Value</span></dt><dd>
+                  <p>Text value that indicates that distance. (Object named <code class="code">ScaleValue</code>)</p>
+                </dd><dt><span class="term">Scale Bar</span></dt><dd>
+                  <p>This will consist of a rectangle, with width sized according to a particular distance. (Object named <code class="code">ScaleBar</code>)</p>
+                </dd></dl></div><p>
+            </p><div class="figure" id="TemplateEntries"><p class="title"><b>Figure&nbsp;15.2.&nbsp;Elements of master template</b></p><div class="figure-contents">
+              
+              <div class="screenshot">
+                <div class="mediaobject"><img src="figures/MasterTemplate2.png" alt="Elements of master template"></div>
+              </div>
+            </div></div><p><br class="figure-break">
+          </p>
+          <p> The use of this template allows an analyst's parent organisation to design a template that includes corporate branding, in order that the animated engagement tidily integrates into an outer presentation. </p>
+        </div>
+        <div class="sect2" id="PPTX_FolderStructure"><div class="titlepage"><div><div><h3 class="title">15.5.2.&nbsp;Folder structure</h3></div></div></div>
+          
+          <p>A <code class="filename">pptx</code> file is actually a renamed <code class="filename">zip</code> archive. The archive contains a series of folders/files, of which we are interested in two: </p><div class="figure" id="PPTX_FolderStructureDiag"><p class="title"><b>Figure&nbsp;15.3.&nbsp;PowerPoint folder structure</b></p><div class="figure-contents">
+              
+              <div class="screenshot">
+                <div class="mediaobject"><img src="figures/FolderStructure.png" alt="PowerPoint folder structure"></div>
+              </div>
+            </div></div><p><br class="figure-break">
+            </p><div class="variablelist"><dl class="variablelist compact"><dt><span class="term">Overall presentation</span></dt><dd>
+                  <p>This document contains metadata relating to the whole presentation, including the slide dimensions. The slide dimensions are signficant since some element positioning is performed relative to the size of the slide</p><div class="screenshot">
+                      <div class="mediaobject"><img src="figures/SlideDimensions.png"></div>
+                    </div><p>
+                  </p>
+                </dd><dt><span class="term">Master slide</span></dt><dd>
+                  <p>This is the document that represents the specific slide that we're writing into, and it contains the named elements detailed above in <a class="xref" href="xml_ppt.html#donor_elements" title="Designated elements in template file">Designated elements in template file</a></p>
+                </dd></dl></div><p>
+          </p>
+        </div>
+        <div class="sect2" id="d5e4633"><div class="titlepage"><div><div><h3 class="title">15.5.3.&nbsp;Master slide</h3></div></div></div>
+          
+          <p>Significant elements in the master slide are denoted using their <code class="code">name</code> attribute: </p><div class="screenshot">
+              <div class="mediaobject"><img src="figures/ElementName.png"></div>
+            </div><p> The donor file is built using the following process: </p><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem">
+                <p>Create a one-slide presentation that contains the elements described in the earlier table</p>
+              </li><li class="listitem">
+                <p>Rename the .<code class="filename">pptx</code> file to .<code class="filename">zip</code></p>
+              </li><li class="listitem">
+                <p>Expand the zip-file into a new folder (probably via right-click)</p>
+              </li><li class="listitem">
+                <p>Navigat to the slide1.xml file, located in the folder as detailed above in <a class="xref" href="xml_ppt.html#PPTX_FolderStructure" title="15.5.2.&nbsp;Folder structure">Section&nbsp;15.5.2, &#8220;Folder structure&#8221;</a></p>
+              </li><li class="listitem">
+                <p>Work through each required element, naming the relevant xml element using the ids listed earlier. Finding the relevant elements in the XML file can be made easier by inserting recognisable blocks (<span class="emphasis"><em>Trumpton</em></span>) of text into the element using PowerPoint, then looking for that text in the XML editor.</p>
+              </li><li class="listitem">
+                <p>Re-package the folder into a zip-file</p>
+              </li><li class="listitem">
+                <p>Rename the .<code class="filename">zip</code> file back to .<code class="filename">pptx</code></p>
+              </li></ol></div><p>
+          </p>
+          <p>One the master slide has been produced, use Debrief preferences to indicate its location: </p><div class="screenshot">
+              <div class="mediaobject"><img src="figures/DonorPreference.png"></div>
+            </div><p>
+          </p>
+          <p>Note the <span class="emphasis"><em>Map element dimensions</em></span> attribute in the above screenshot. Once a master template has been specified, the map element dimensions are retrieved. This is to allow the analyst to size the Debrief plot to the same dimensions, which will ensure the highest quality animated export - since the Debrief Plot and the target rectangular frame will be of identical proportions.</p>
+        </div>
+      </div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="debrief_props.html"><img src="images/prev.gif" alt="Prev"></a>&nbsp;</td><td width="20%" align="center"><a accesskey="u" href="maintainers.html"><img src="images/up.gif" alt="Up"></a></td><td width="40%" align="right">&nbsp;<a accesskey="n" href="reference_guide.html"><img src="images/next.gif" alt="Next"></a></td></tr><tr><td width="40%" align="left" valign="top">15.4.&nbsp;Debrief properties&nbsp;</td><td width="20%" align="center"><a accesskey="h" href="index.html"><img src="images/home.gif" alt="Home"></a></td><td width="40%" align="right" valign="top">&nbsp;Part&nbsp;IV.&nbsp;Reference Guide</td></tr></table></div></body></html>

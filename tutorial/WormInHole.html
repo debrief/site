@@ -1,0 +1,61 @@
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <title>18.2.&nbsp;Worm in the hole algorithm</title><link rel="stylesheet" type="text/css" href="header.css"><meta name="generator" content="DocBook XSL Stylesheets V1.78.1"><meta name="keywords" content="Maritime Analysis, Open Source Tool"><link rel="home" href="index.html" title="Debrief NG User Documentation"><link rel="up" href="chap_debrief_algorithms.html" title="Chapter&nbsp;18.&nbsp;Debrief algorithms"><link rel="prev" href="chap_debrief_algorithms.html" title="Chapter&nbsp;18.&nbsp;Debrief algorithms"><link rel="next" href="other_algs.html" title="18.3.&nbsp;Other Debrief algorithms"><link rel="preface" href="PrefaceIntro.html" title="Introduction"><link rel="part" href="tutorial.html" title="Part&nbsp;I.&nbsp;Getting started"><link rel="chapter" href="get_start.html" title="Chapter&nbsp;1.&nbsp;First steps"><link rel="part" href="UsingDebrief.html" title="Part&nbsp;II.&nbsp;Using Debrief"><link rel="chapter" href="moving_around.html" title="Chapter&nbsp;2.&nbsp;Moving around the view"><link rel="chapter" href="formatting_data.html" title="Chapter&nbsp;3.&nbsp;Manipulating track data"><link rel="chapter" href="analysing_data.html" title="Chapter&nbsp;4.&nbsp;Analysing Data"><link rel="chapter" href="exporting_data.html" title="Chapter&nbsp;5.&nbsp;Exporting Data"><link rel="chapter" href="symbol_sets.html" title="Chapter&nbsp;6.&nbsp;Symbol sets"><link rel="chapter" href="external_datasets.html" title="Chapter&nbsp;7.&nbsp;External datasets"><link rel="chapter" href="ExercisePlanning.html" title="Chapter&nbsp;8.&nbsp;Exercise planning"><link rel="chapter" href="viewing_narratives.html" title="Chapter&nbsp;9.&nbsp;Viewing narratives"><link rel="chapter" href="ChartBackdrops.html" title="Chapter&nbsp;10.&nbsp;Using chart backdrops"><link rel="chapter" href="sensor_data.html" title="Chapter&nbsp;11.&nbsp;Analysing sensor data"><link rel="chapter" href="tma_data.html" title="Chapter&nbsp;12.&nbsp;Management of TMA and TUA solutions"><link rel="chapter" href="dis_support.html" title="Chapter&nbsp;13.&nbsp;Support for DIS Protocol"><link rel="part" href="maintainers_guide.html" title="Part&nbsp;III.&nbsp;Maintainer's Guide"><link rel="chapter" href="participating.html" title="Chapter&nbsp;14.&nbsp;Participating in Debrief development"><link rel="chapter" href="maintainers.html" title="Chapter&nbsp;15.&nbsp;Debrief maintainer's guide"><link rel="part" href="reference_guide.html" title="Part&nbsp;IV.&nbsp;Reference Guide"><link rel="chapter" href="reference.html" title="Chapter&nbsp;16.&nbsp;Debrief file formats"><link rel="chapter" href="GeoToolsRef.html" title="Chapter&nbsp;17.&nbsp;GeoTools in Debrief"><link rel="chapter" href="chap_debrief_algorithms.html" title="Chapter&nbsp;18.&nbsp;Debrief algorithms"><link rel="chapter" href="chap_genetic_algorithms.html" title="Chapter&nbsp;19.&nbsp;Semi Automated Track Construction (SATC)"><link rel="chapter" href="dis_ref.html" title="Chapter&nbsp;20.&nbsp;System Documentation for DIS integration"><link rel="appendix" href="app_glossary.html" title="Appendix&nbsp;A.&nbsp;Debrief Glossary"><link rel="glossary" href="app_glossary.html#glossary" title="Glossary"><link rel="index" href="the_index.html" title="Index"><link rel="subsection" href="WormInHole.html#WormOverview" title="18.2.1.&nbsp;Overview"><link rel="subsection" href="WormInHole.html#WormExample" title="18.2.2.&nbsp;Example"><link rel="subsection" href="WormInHole.html#WormAlgorithm" title="18.2.3.&nbsp;Algorithm"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">18.2.&nbsp;Worm in the hole algorithm</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="chap_debrief_algorithms.html"><img src="images/prev.gif" alt="Prev"></a>&nbsp;</td><th width="60%" align="center">Chapter&nbsp;18.&nbsp;Debrief algorithms</th><td width="20%" align="right">&nbsp;<a accesskey="n" href="other_algs.html"><img src="images/next.gif" alt="Next"></a></td></tr></table><hr></div><div class="sect1" id="WormInHole"><div class="titlepage"><div><div><h2 class="title" style="clear: both">18.2.&nbsp;Worm in the hole algorithm</h2></div></div></div><div class="toc"><dl class="toc"><dt><span class="sect2"><a href="WormInHole.html#WormOverview">18.2.1. Overview</a></span></dt><dt><span class="sect2"><a href="WormInHole.html#WormExample">18.2.2. Example</a></span></dt><dt><span class="sect2"><a href="WormInHole.html#WormAlgorithm">18.2.3. Algorithm</a></span></dt></dl></div>
+        
+
+        <div class="sect2" id="WormOverview"><div class="titlepage"><div><div><h3 class="title">18.2.1.&nbsp;Overview</h3></div></div></div>
+          
+
+          <p><a class="indexterm" name="d5e5667"></a>Frequently vehicles in Debrief use sensors with a different datum to the host platform - either because they're several metres from the position recorded datum on board the platform, or because they're an offboard sensor dragged behind the sensor. For an onboard sensor it is acceptable to locate the sensor by reference to its sensor length offset in conjunction with the current heading. However for an offboard sensor this coarse calculation may not be representative of the actual sensor location. When a platform is on a straight-line course, it is acceptable to plot the sensor datum back along the reverse heading. But, when a platform has travelled through a turn, plotting the sensor datum at the reciprocal of the platform heading will place the sensor in an unrealistic location. To counter this, Debrief offers a 'Worm in the hole' sensor locating model.</p>
+
+          <p>The 'worm in the hole' algorithm takes the sensor length offset value, and determines the point this specified distance back along the platform track. The metaphor is that a worm has opened a tunnel through a body of material. The sensor is being dragged through this tunnel, and we determine the sensor location accordingly.</p>
+
+          <div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.gif"></td><th align="left">Note</th></tr><tr><td align="left" valign="top">
+            <p>This is not a perfect algorithm. In truth, during a turn the forces on a towed array will cause it to slip sideways, cutting off the corner to an extent. It is the responsibility of the analyst to appraise himself with array performance and determine the applicability of the worm in the hole algorithm - though note its results are much more accurate than the non-worm in the hole straight line model.</p>
+          </td></tr></table></div>
+        </div>
+
+        <div class="sect2" id="WormExample"><div class="titlepage"><div><div><h3 class="title">18.2.2.&nbsp;Example</h3></div></div></div>
+          
+
+          <p>The screenshot belows shows a comparison of the two models. The red ownship track has positions at times 100,200,300 and 400. The sensor track has positions at times 100,140,280,350. The array is 400m long.</p>
+
+          <p>The two array models show the same value for the first 3 points plotted: in the first two of these the array falls behind the start of the ownship track - thus the reciprocal of ownship heading is necessary to determine the position. In the third position, the length of the 400m array falls completely within the 600m leg.</p>
+
+          <p>The fourth position is, however, different. The straight-line model plots it back along the reciprocal of the platform heading at time 300. The worm in the hole model, however, turns back along the ownship track from position 200 to 300. At time 350, the ownship platform will be 1/2 way down between positions 300 and 400 - this will consume 1/2 of the 600m separation (300m), leaving another 100m of array to be consumed - this the algorithm moves 100m back down between the points at 200 &amp; 300.</p><div class="screenshot">
+              <div class="mediaobject"><img src="figures/WormInHole.png"></div>
+            </div>
+        </div>
+
+        <div class="sect2" id="WormAlgorithm"><div class="titlepage"><div><div><h3 class="title">18.2.3.&nbsp;Algorithm</h3></div></div></div>
+          
+
+          <p>The worm in the hole algorithm is implemented as follows:</p><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem">
+                <p>Determine platform track, the time at which sensor location is required, the specified length offset, and whether the sensor is 'ticked' for 'worm in the hole algorithm'.</p>
+              </li><li class="listitem">
+                <p>Work through the platform track to find the position immediately after the specified dtg, together with a list of points preceding that. These represent the 'nextPoint' and the backTrack from that dtg.</p>
+              </li><li class="listitem">
+                <p>Calculate the platform position at the specified dtg by interpolating between the last item of the backTrack and the nextPoint , at the specified dtg. Name this new position nextPoint - it represents the platform position at the specified dtg</p>
+              </li><li class="listitem">
+                <p>Now repeatedly perform the following:</p><div class="orderedlist"><ol class="orderedlist" type="a"><li class="listitem">
+                      <p>Work out the distance from nextPoint to the last item in the backTrack</p>
+                    </li><li class="listitem">
+                      <p>If this distance is greater than the remaining array offset length then:</p><div class="orderedlist"><ol class="orderedlist" type="i"><li class="listitem">
+                            <p>Work out the proportion of the distance that the remaining sensor length represents, name it timeDelta</p>
+                          </li><li class="listitem">
+                            <p>Interpolate back from nextPoint to the last item in the backTrack by the timeDelta parameter. This is the resultant sensor location</p>
+                          </li></ol></div>
+                    </li><li class="listitem">
+                      <p>If the calculated distance is less than the remaining sensor length then</p><div class="orderedlist"><ol class="orderedlist" type="i"><li class="listitem">
+                            <p>reduce the remaining sensor length by the calculated distance (to represent the array being 'consumed' by the backTrack)</p>
+                          </li><li class="listitem">
+                            <p>if there are any more points in the backTrack then</p><div class="orderedlist"><ol class="orderedlist" type="A"><li class="listitem">
+                                  <p>store the last point on the backTrack as nextPoint, and move back along the backTrack by one element</p>
+                                </li></ol></div><p> else</p><div class="orderedlist"><ol class="orderedlist" type="A"><li class="listitem">
+                                  <p>calculate the offset back from the start of the platform track, of the remaining sensor length, along the reciprocal of the vessel heading. This is the resultant sensor location.</p>
+                                </li></ol></div>
+                          </li></ol></div>
+                    </li></ol></div>
+              </li></ol></div>
+        </div>
+      </div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="chap_debrief_algorithms.html"><img src="images/prev.gif" alt="Prev"></a>&nbsp;</td><td width="20%" align="center"><a accesskey="u" href="chap_debrief_algorithms.html"><img src="images/up.gif" alt="Up"></a></td><td width="40%" align="right">&nbsp;<a accesskey="n" href="other_algs.html"><img src="images/next.gif" alt="Next"></a></td></tr><tr><td width="40%" align="left" valign="top">Chapter&nbsp;18.&nbsp;Debrief algorithms&nbsp;</td><td width="20%" align="center"><a accesskey="h" href="index.html"><img src="images/home.gif" alt="Home"></a></td><td width="40%" align="right" valign="top">&nbsp;18.3.&nbsp;Other Debrief algorithms</td></tr></table></div></body></html>

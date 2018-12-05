@@ -1,0 +1,141 @@
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <title>3.7.&nbsp;Grooming track data</title><link rel="stylesheet" type="text/css" href="header.css"><meta name="generator" content="DocBook XSL Stylesheets V1.78.1"><meta name="keywords" content="Maritime Analysis, Open Source Tool"><link rel="home" href="index.html" title="Debrief NG User Documentation"><link rel="up" href="formatting_data.html" title="Chapter&nbsp;3.&nbsp;Manipulating track data"><link rel="prev" href="LightweightTracks.html" title="3.6.&nbsp;Lightweight tracks"><link rel="next" href="GridEditor.html" title="3.8.&nbsp;Using the Grid Editor"><link rel="preface" href="PrefaceIntro.html" title="Introduction"><link rel="part" href="tutorial.html" title="Part&nbsp;I.&nbsp;Getting started"><link rel="chapter" href="get_start.html" title="Chapter&nbsp;1.&nbsp;First steps"><link rel="part" href="UsingDebrief.html" title="Part&nbsp;II.&nbsp;Using Debrief"><link rel="chapter" href="moving_around.html" title="Chapter&nbsp;2.&nbsp;Moving around the view"><link rel="chapter" href="formatting_data.html" title="Chapter&nbsp;3.&nbsp;Manipulating track data"><link rel="chapter" href="analysing_data.html" title="Chapter&nbsp;4.&nbsp;Analysing Data"><link rel="chapter" href="exporting_data.html" title="Chapter&nbsp;5.&nbsp;Exporting Data"><link rel="chapter" href="symbol_sets.html" title="Chapter&nbsp;6.&nbsp;Symbol sets"><link rel="chapter" href="external_datasets.html" title="Chapter&nbsp;7.&nbsp;External datasets"><link rel="chapter" href="ExercisePlanning.html" title="Chapter&nbsp;8.&nbsp;Exercise planning"><link rel="chapter" href="viewing_narratives.html" title="Chapter&nbsp;9.&nbsp;Viewing narratives"><link rel="chapter" href="ChartBackdrops.html" title="Chapter&nbsp;10.&nbsp;Using chart backdrops"><link rel="chapter" href="sensor_data.html" title="Chapter&nbsp;11.&nbsp;Analysing sensor data"><link rel="chapter" href="tma_data.html" title="Chapter&nbsp;12.&nbsp;Management of TMA and TUA solutions"><link rel="chapter" href="dis_support.html" title="Chapter&nbsp;13.&nbsp;Support for DIS Protocol"><link rel="part" href="maintainers_guide.html" title="Part&nbsp;III.&nbsp;Maintainer's Guide"><link rel="chapter" href="participating.html" title="Chapter&nbsp;14.&nbsp;Participating in Debrief development"><link rel="chapter" href="maintainers.html" title="Chapter&nbsp;15.&nbsp;Debrief maintainer's guide"><link rel="part" href="reference_guide.html" title="Part&nbsp;IV.&nbsp;Reference Guide"><link rel="chapter" href="reference.html" title="Chapter&nbsp;16.&nbsp;Debrief file formats"><link rel="chapter" href="GeoToolsRef.html" title="Chapter&nbsp;17.&nbsp;GeoTools in Debrief"><link rel="chapter" href="chap_debrief_algorithms.html" title="Chapter&nbsp;18.&nbsp;Debrief algorithms"><link rel="chapter" href="chap_genetic_algorithms.html" title="Chapter&nbsp;19.&nbsp;Semi Automated Track Construction (SATC)"><link rel="chapter" href="dis_ref.html" title="Chapter&nbsp;20.&nbsp;System Documentation for DIS integration"><link rel="appendix" href="app_glossary.html" title="Appendix&nbsp;A.&nbsp;Debrief Glossary"><link rel="glossary" href="app_glossary.html#glossary" title="Glossary"><link rel="index" href="the_index.html" title="Index"><link rel="subsection" href="GroomingTrackData.html#IntroGrooming" title="3.7.1.&nbsp;Introduction"><link rel="subsection" href="GroomingTrackData.html#ResamplingData" title="3.7.2.&nbsp;Resampling track and sensor data"><link rel="subsection" href="GroomingTrackData.html#SplitTrackSections" title="3.7.3.&nbsp;Splitting track sections"><link rel="subsection" href="GroomingTrackData.html#JoinTrackSections" title="3.7.4.&nbsp;Joining track sections"><link rel="subsection" href="GroomingTrackData.html#CombineTrackSections" title="3.7.5.&nbsp;Combining track sections"><link rel="subsection" href="GroomingTrackData.html#GenerateInfill" title="3.7.6.&nbsp;Generating infill segments"><link rel="subsection" href="GroomingTrackData.html#RemoveJumpsUser" title="3.7.7.&nbsp;Removing Jumps"><link rel="subsection" href="GroomingTrackData.html#tx_to_other_track" title="3.7.8.&nbsp;Transferring a relative track to another host"><link rel="subsection" href="GroomingTrackData.html#smooth_backtrack_jumps" title="3.7.9.&nbsp;Smoothing out back-tracking jumps"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">3.7.&nbsp;Grooming track data</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="LightweightTracks.html"><img src="images/prev.gif" alt="Prev"></a>&nbsp;</td><th width="60%" align="center">Chapter&nbsp;3.&nbsp;Manipulating track data</th><td width="20%" align="right">&nbsp;<a accesskey="n" href="GridEditor.html"><img src="images/next.gif" alt="Next"></a></td></tr></table><hr></div><div class="sect1" id="GroomingTrackData"><div class="titlepage"><div><div><h2 class="title" style="clear: both">3.7.&nbsp;Grooming track data</h2></div></div></div><div class="toc"><dl class="toc"><dt><span class="sect2"><a href="GroomingTrackData.html#IntroGrooming">3.7.1. Introduction</a></span></dt><dt><span class="sect2"><a href="GroomingTrackData.html#ResamplingData">3.7.2. Resampling track and sensor data</a></span></dt><dt><span class="sect2"><a href="GroomingTrackData.html#SplitTrackSections">3.7.3. Splitting track sections</a></span></dt><dt><span class="sect2"><a href="GroomingTrackData.html#JoinTrackSections">3.7.4. Joining track sections</a></span></dt><dt><span class="sect2"><a href="GroomingTrackData.html#CombineTrackSections">3.7.5. Combining track sections</a></span></dt><dt><span class="sect2"><a href="GroomingTrackData.html#GenerateInfill">3.7.6. Generating infill segments</a></span></dt><dt><span class="sect2"><a href="GroomingTrackData.html#RemoveJumpsUser">3.7.7. Removing Jumps</a></span></dt><dt><span class="sect2"><a href="GroomingTrackData.html#tx_to_other_track">3.7.8. Transferring a relative track to another host</a></span></dt><dt><span class="sect2"><a href="GroomingTrackData.html#smooth_backtrack_jumps">3.7.9. Smoothing out back-tracking jumps</a></span></dt></dl></div>
+        
+
+        <div class="sect2" id="IntroGrooming"><div class="titlepage"><div><div><h3 class="title">3.7.1.&nbsp;Introduction</h3></div></div></div>
+          
+
+          <p>Track data can arrive at Debrief in vary degrees of quality. Traditionally MWC pre-process track data to remove jumps and generally smooth the data. The 2009 Single Sided Reconstruction extensions (see <a class="xref" href="History.html#TwoThouOnwards" title="2.3.&nbsp;Debrief 2001 onwards">Section&nbsp;2.3, &#8220;Debrief 2001 onwards&#8221;</a>) added functionality to Debrief to perform elementary track operations, including smoothing and removal of jumps. One approach to avoiding the jumps commonly associated with data from inertial navigation systems is to load the data in DR mode (see <a class="xref" href="import_range_data.html#import_modes" title="1.5.4.&nbsp;Import modes">Section&nbsp;1.5.4, &#8220;Import modes&#8221;</a>). The alternative is to move the track before/after the jump to line up the two sections.</p>
+          <div class="figure" id="d5e1523"><p class="title"><b>Figure&nbsp;3.21.&nbsp;Grooming Track Data</b></p><div class="figure-contents">
+            
+            <div class="screenshot">
+              <div class="mediaobject" align="center"><img src="figures/TrackWithJump.png" align="middle" alt="Grooming Track Data"></div>
+            </div>
+          </div></div><br class="figure-break">
+        </div>
+
+        <div class="sect2" id="ResamplingData"><div class="titlepage"><div><div><h3 class="title">3.7.2.&nbsp;Resampling track and sensor data</h3></div></div></div>
+          
+
+          <p><a class="indexterm" name="d5e1532"></a><a class="indexterm" name="d5e1534"></a>On occasion the data loaded into Debrief is of the wrong frequency:</p><div class="variablelist"><dl class="variablelist"><dt><span class="term">Too dense</span></dt><dd>
+                  <p>a track may have data items at a frequency higher than that necessary for the current analysis, resulting in slower than necessary Debrief performance. Alternately, a period of sensor data may be too dense, obscuring the underlying patterns in the data (such as a bearing fan)</p>
+                </dd><dt><span class="term">Too sparse</span></dt><dd>
+                  <p>During track reconstruction, it may emerge that the sensor data is of much higher frequency than the position data. After reconstruction, when stepping through a track in time the positions may <span class="emphasis"><em>jump</em></span> to the specified time - indicating the positions are too sparse. Resolve this by either resampling the positions or by directing the track to use interpolated points.</p>
+                </dd></dl></div><p>Problems associated with data density are handled differently between tracks and blocks of sensor data. Tracks are resampled using the <span class="guilabel">ResamplePositionsAt</span> property - which adds or removes position observations as necessary. Sensor data is resampled using the <span class="guilabel">VisibleFrequency</span> property - though note that this does not add or remove points, it merely changes their visibility.</p>
+
+          <p>Note: sensor and TUA data have a characteristic where there may be empty periods when the contact is not held. It would be wrong to continue interpolating data points during these periods, so data points are not generated if there is a gap of more than 3 minutes between data points.</p>
+        </div>
+
+        <div class="sect2" id="SplitTrackSections"><div class="titlepage"><div><div><h3 class="title">3.7.3.&nbsp;Splitting track sections</h3></div></div></div>
+          
+
+          <p><a class="indexterm" name="d5e1553"></a>Before a jump can be removed from a track, the track must be split. To split a track, first decide where the split should be made, and right-click on the point where the split should happen (either on the plot or in the Outline View). The popup menu will provide options to split the track immediately before or after the indicated point.</p><div class="tip" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0" summary="Tip"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Tip]" src="images/tip.gif"></td><th align="left">Tip</th></tr><tr><td align="left" valign="top">
+              <p>It might be worthwhile enabling the <span class="bold"><strong>Start/End time labels</strong></span> attribute so you can see exactly where the start and end times for each track segment begin and end. Refer to tutorial 2, <span class="bold"><strong>Viewing some data</strong></span>, and the procedure for <span class="bold"><strong>Adding data to a plot</strong></span>. </p>
+            </td></tr></table></div><div class="figure" id="d5e1561"><p class="title"><b>Figure&nbsp;3.22.&nbsp;Splitting Track Sections</b></p><div class="figure-contents">
+              
+              <div class="screenshot">
+                <div class="mediaobject" align="center"><img src="figures/SplitTrackMenu.png" align="middle" alt="Splitting Track Sections"></div>
+              </div>
+            </div></div><p><br class="figure-break"></p>
+
+          <p>On completion you'll see a visible split in the track, and the track represented as two segments in the Outline View.The track segments are named according to the DTG of their start point. The two track segments can now be manipulated separately (dragged) using the 'drag TMA segment' tool as described later (see <a class="xref" href="tma_support.html#DraggingTracks" title="12.2.3.&nbsp;Dragging tracks">Section&nbsp;12.2.3, &#8220;Dragging tracks&#8221;</a>).</p>
+          <div class="figure" id="d5e1569"><p class="title"><b>Figure&nbsp;3.23.&nbsp;Track Sections Split</b></p><div class="figure-contents">
+            
+            <div class="screenshot">
+              <div class="mediaobject" align="center"><img src="figures/TrackAfterSplit.png" align="middle" alt="Track Sections Split"></div>
+            </div>
+          </div></div><br class="figure-break">
+        </div>
+
+        <div class="sect2" id="JoinTrackSections"><div class="titlepage"><div><div><h3 class="title">3.7.4.&nbsp;Joining track sections</h3></div></div></div>
+          
+
+          <p><a class="indexterm" name="d5e1578"></a>Once track segments have been manipulated (see <a class="xref" href="tma_support.html#DraggingTracks" title="12.2.3.&nbsp;Dragging tracks">Section&nbsp;12.2.3, &#8220;Dragging tracks&#8221;</a>), they can be rejoined. To rejoin tracks, select them both/all in the Outline View (using the <span class="guilabel">Control</span> key as appropriate). Then right-click and select Merge Tracks as shown below. Note, you can select which track becomes the 'host'. </p><div class="figure" id="d5e1583"><p class="title"><b>Figure&nbsp;3.24.&nbsp;Joining Track Sections</b></p><div class="figure-contents">
+              
+              <div class="screenshot">
+                <div class="mediaobject" align="center"><img src="figures/MergeTracks.png" align="middle" alt="Joining Track Sections"></div>
+              </div>
+            </div></div><p><br class="figure-break"></p>
+
+          <p>The Debrief merge algorithm is not able to handle overlapping tracks, since it cannot resolve which overlapping segment to favour. This is a task best undertaken by the analyst. So, Debrief will produce a warning when the analyst tries to merge overlapping tracks. When it does, just delete one or more overlapping points and trigger the operation again.</p>
+          <p>Once you have performed a <span class="guibutton">merge</span> operation on a collection of track segments they are no longer relative to the ownship track (in terms of range/bearing). They are now standalone tracks and can by Copy/Paste-d into another Debrief plot if you wish. The equivalent operation to make a TMA Segment standalone is to select <span class="guibutton">Convert [xxx] into standalone track</span></p>
+        </div>
+
+        <div class="sect2" id="CombineTrackSections"><div class="titlepage"><div><div><h3 class="title">3.7.5.&nbsp;Combining track sections</h3></div></div></div>
+          
+
+          <p><a class="indexterm" name="d5e1596"></a>On occasion, once a series of track segments have been built up (or created using the Generate TMA wizard) you may wish to <span class="emphasis"><em>combine</em></span> them in order to make their management easier. If you wish to keep them as individual entities instead of merging them into a single new track segment, you may combine the track segments (available when you right-click on more than one TMA Solution). Performing this operation puts the segments into a single parent track whilst retaining them within this as single entities. This is particularly relevant for TMA Track Segments, since you may wish to continue dragging them individually as you refine your estimates of course/speed.</p>
+        </div>
+        <div class="sect2" id="GenerateInfill"><div class="titlepage"><div><div><h3 class="title">3.7.6.&nbsp;Generating infill segments</h3></div></div></div>
+          
+
+          <p><a class="indexterm" name="d5e1603"></a> In addition to combining periods of track (legs), Debrief is able to generate sections of track to join existing sections. It performs this using a series of Cubic Spline calculations. The Splines cover Lat, Long, Depth, Course and Speed. In this way, the infill segment introduces track points that provide a smooth transition in the above attributes from one track to the other. The time interval used for the data points in the infill section is taken from the time interval between the first two points of the second segment. On the plot, the infill segment is shown as a dotted line, to indicate that its series of purely calculated positions, and not based on any observed measurements. </p><div class="tip" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0" summary="Tip"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Tip]" src="images/tip.gif"></td><th align="left">Tip</th></tr><tr><td align="left" valign="top">
+              <p>These infill sections are actually dynamic. So, as you move/drag your manual TMA legs around, Debrief will recalculate their positions each time you drop the track. Go on, have a go. It's really flash.</p>
+            </td></tr></table></div><p>
+            </p><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.gif"></td><th align="left">Note</th></tr><tr><td align="left" valign="top">
+              <p>If you delete the track segment either side of the dynamic infill track section, then the infill section will also be deleted - since its positions can no longer be calculated.</p>
+            </td></tr></table></div><p>
+          </p>
+        </div>
+        <div class="sect2" id="RemoveJumpsUser"><div class="titlepage"><div><div><h3 class="title">3.7.7.&nbsp;Removing Jumps</h3></div></div></div>
+          
+          <a class="indexterm" name="d5e1612"></a>
+          <a class="indexterm" name="d5e1615"></a>
+          <p>A consequence of submarine dived inertial navigation is that the recorded track shows large jumps each time a GPS position fix is introduced, correcting the accumulated drift whilst dived.</p>
+          <p>Debrief is able to automatically remove jumps, transforming less accurate track periods so that they tidily match high-confidence (but infrequent) GPS fixes. A jump is determined as two consecutive updates where the speed in the second update is 3 or more times larger than that in the previous update. The following fictional diagram shows a period of drift, with two green markers indicating the start/end of the dived period. A GPS fix was obtained at the green marker near the North-West. Then the submarine dived, and the drift error grew cumulatively. The next GPS fix was obtained at the time of the green marker near the South East. </p><div class="figure" id="d5e1620"><p class="title"><b>Figure&nbsp;3.25.&nbsp;Removing Track Jumps</b></p><div class="figure-contents">
+              
+              <div class="screenshot">
+                <div class="mediaobject" align="center"><img src="figures/JumpOne.png" align="middle" alt="Removing Track Jumps"></div>
+              </div>
+            </div></div><p><br class="figure-break"></p>
+          <p>To remove jumps for this period, the analyst opens the Outline View, then selects positions for the whole period representing the drift section of track, from the first green marker to the second green marker (inclusive). </p><div class="tip" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0" summary="Tip"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Tip]" src="images/tip.gif"></td><th align="left">Tip</th></tr><tr><td align="left" valign="top">
+              <p>Use the shift-key to select a continuous sequence of items</p>
+            </td></tr></table></div><p> After right-clicking on this period of position data the analyst will select <span class="guibutton">Remove jumps in selected positions</span>. The algorithm determines the size of the large jump at the end of the period, then works through the selected positions, applying a proportion of that large jump to each position, ensuring the green positions remain unchanged. </p><div class="figure" id="d5e1630"><p class="title"><b>Figure&nbsp;3.26.&nbsp;Track Jumps Removed</b></p><div class="figure-contents">
+              
+              <div class="screenshot">
+                <div class="mediaobject" align="center"><img src="figures/JumpTwo.png" align="middle" alt="Track Jumps Removed"></div>
+              </div>
+            </div></div><p><br class="figure-break"> In addition to selecting a discrete period of positions, it is possible to right-click on a track's <span class="emphasis"><em>Positions</em></span> element in the Outline View, then selecting <span class="guibutton">Remove jumps for selected track</span>. But, please note that this will probably give a sub-optimal solution. When the whole track is selected, Debrief uses the first point in that track as the first lock point. For a more accurate tidied track, manually select the positions, ensuring a real GPS fix is used as the first point. </p><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.gif"></td><th align="left">Note</th></tr><tr><td align="left" valign="top">
+              <p>Read more about the algorithm underpinning Remove Jumps in Chapter 3 of the Reference Guide <a class="xref" href="RemoveJumpsRef.html" title="18.4.&nbsp;Remove Jumps">Section&nbsp;18.4, &#8220;Remove Jumps&#8221;</a></p>
+            </td></tr></table></div>
+        </div>
+        <div class="sect2" id="tx_to_other_track"><div class="titlepage"><div><div><h3 class="title">3.7.8.&nbsp;Transferring a relative track to another host</h3></div></div></div>
+          
+          <a class="indexterm" name="d5e1643"></a>
+          <p>Sometimes single-sided reconstruction is performed at a range of fidelities. A DR reconstruction may be used to get maximum accuracy over a couple of hours. In parallel, an OTG reconstruction may be considering the route of a platform over several days. The track segment generated for the first can't be cut/pasted onto the second, because the ownship platform will have followed a different route (DR vs OTG). The following procedure can be used to solve this issue</p>
+          <p>The track segment from the DR reconstruction can be considered as a set of range/bearing vectors from the DR primary track. We can then generate a new leg of target data by using these offsets to the primary track on the OTG plot.</p>
+          <p>To do this, right-click on the reconstructed track and select <span class="emphasis"><em>Copy to clipboard as offsets from [Primary track name]</em></span>. This operation has put the set of offsets, time-stamps, and original track name onto the clipboard.</p>
+          <p>Next, either from this plot or a large-scale OTG plot, right-click on the new ownship track, and select <span class="emphasis"><em>Create new track by adding clipboard bearings to [Selected track name]</em></span>. A new track will be added to the plot, where each point was generated by adding an offset to the nearest point-in-time on the subject track.</p>
+        </div>
+        <div class="sect2" id="smooth_backtrack_jumps"><div class="titlepage"><div><div><h3 class="title">3.7.9.&nbsp;Smoothing out back-tracking jumps</h3></div></div></div>
+          
+          <a class="indexterm" name="d5e1654"></a>
+          <p>
+            </p><div class="figure" id="d5e1658"><p class="title"><b>Figure&nbsp;3.27.&nbsp;Smoothing back-tracking jumps Jumps</b></p><div class="figure-contents">
+              
+              <div class="screenshot">
+                <div class="mediaobject" align="center"><img src="figures/smooth_back_jumps.png" align="middle" alt="Smoothing back-tracking jumps Jumps"></div>
+              </div>
+            </div></div><p><br class="figure-break">
+            The above illustration shows a phenomenum sometimes encountered in some track recorded track data. Individual points jump back down the path already travelled.  These jumps jar with the attention of the person viewing the track plot, and can introduce errors to the single-sided reconstruction.
+            </p>
+          <p>
+            There is a pattern to the errors. They always just involve a single measurement (not a series of measurements), and the jump is always back along the path already travelled.
+          </p>
+          <p>An algorithm has been derived to locate, and remove these jumps. The algortihm works as follows:</p><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem">
+              <p>Walk forwards along the track segment, remembering the previous 3 positions</p>
+            </li><li class="listitem">
+              <p>Once the three previous positions are all populated, they are notionally titled n-3, n-2 and n-1, with hte current position at n.</p>
+            </li><li class="listitem">
+              <p>Calculate the direction from n-3 to n-2.  This is the general direction of travel</p>
+            </li><li class="listitem">
+              <p>If n-1 represents a step backwards along this direction, a jump may have happened</p>
+            </li><li class="listitem">
+              <p>If the direction from n to n-2 is back on the original direction, then a jump certainly occurred.</p>
+            </li><li class="listitem">
+              <p>If a jump has occurred, then replace the location of n-1 with a point at the same time that has been interpolated between n-2 and n.</p>
+            </li></ol></div><p>
+          </p>
+        </div>
+      </div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="LightweightTracks.html"><img src="images/prev.gif" alt="Prev"></a>&nbsp;</td><td width="20%" align="center"><a accesskey="u" href="formatting_data.html"><img src="images/up.gif" alt="Up"></a></td><td width="40%" align="right">&nbsp;<a accesskey="n" href="GridEditor.html"><img src="images/next.gif" alt="Next"></a></td></tr><tr><td width="40%" align="left" valign="top">3.6.&nbsp;Lightweight tracks&nbsp;</td><td width="20%" align="center"><a accesskey="h" href="index.html"><img src="images/home.gif" alt="Home"></a></td><td width="40%" align="right" valign="top">&nbsp;3.8.&nbsp;Using the Grid Editor</td></tr></table></div></body></html>

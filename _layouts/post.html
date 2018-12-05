@@ -132,6 +132,15 @@ title: Get Debrief – Debrief Maritime Analysis Tool
           </div>
         </div>
 
+        <div class="post-page-nav d-flex flex-column flex-sm-row justify-content-between align-items-center">
+            {% if page.previous.url %}
+                <a class="post-page-nav__link prev" href="{{page.previous.url}}"><span>&laquo;</span> {{page.previous.title}}</a>
+            {% endif %}
+            {% if page.next.url %}
+                <a class="post-page-nav__link next" href="{{page.next.url}}">{{page.next.title}} <span>&raquo;</span></a>
+            {% endif %}
+        </div>
+
         <div class="author-block">
           <div class="row pt-3">
             <div class="col-sm-2 text-center">

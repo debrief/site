@@ -139,6 +139,32 @@
   }
 }
 
+// Post navigation
+.post-page-nav {
+  &__link {
+    padding: 2px 14px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    @include hover-focus-active {
+      background-color: #000033;
+      color: #fff;
+    }
+    span {
+      font-size: 19px;
+      line-height: 1;
+    }
+    @include media-breakpoint-down (xs) {
+      font-size: 12px;
+      text-align: center;
+      width: 100%;
+      span {
+        font-size: 15px;
+      }
+    }
+  }
+}
+
 // Author block
 .author-block {
   margin-top: 3em;

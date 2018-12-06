@@ -1,9 +1,14 @@
 //Main
 html {
   font-size: 15px;
+  height: 100vh;
 }
 body {
   font-weight: 300;
+  min-height: 100vh;
+}
+main {
+  flex: 1 0 auto;
 }
 
 .page-content {
@@ -54,6 +59,12 @@ body {
 
 
 //Items
+.error-page {
+  font-size: 4rem;
+  line-height: 1;
+  margin-bottom: 35px;
+}
+
 .divider-default:after {
   background-image: url(../images/divider-default.png);
   background-repeat: no-repeat;

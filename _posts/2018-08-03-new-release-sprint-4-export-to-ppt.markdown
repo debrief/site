@@ -2,7 +2,7 @@
 layout: default
 title: 'New Release: Sprint 4: Export to PPT'
 date: 2018-08-03 13:08:13.000000000 +01:00
-image: '../assets/images/Export-to-PPT.jpg'
+image: '/assets/images/Export-to-PPT.jpg'
 type: post
 parent_id: '0'
 published: true

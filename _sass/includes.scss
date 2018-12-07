@@ -138,3 +138,21 @@
   }
 }
 
+
+
+//Pagination 
+.pagination {
+  justify-content: center;
+  &__link {
+    padding: 5px 14px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    &--active,
+    &:hover {
+      background-color: #000033;
+      border-color: #eee;
+      color: #fff;
+    }
+  }
+}

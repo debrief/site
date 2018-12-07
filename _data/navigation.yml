@@ -44,6 +44,6 @@ nav:
       - name: Replay File Format
         link: /tutorial/reference.html
   - name: Blog
-    link: /blog
+    link: /blog/
     id: NavlinkBlog
 

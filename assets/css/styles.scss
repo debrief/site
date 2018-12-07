@@ -1,13 +1,18 @@
 ---
 ---
-
+// Main scss
 @import "variables";
 @import "bootstrap";
-  
 @import "main";
+
+// Pages scss
+@import "home";
+@import "post";
+@import "about-us";
+@import "faq";
+
+// Includes scss
 @import "navigation";
 @import "footer";
 @import "includes";
-@import "home";
-@import "post";
 @import "social-link";

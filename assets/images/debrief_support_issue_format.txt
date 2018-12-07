@@ -1,0 +1,39 @@
+Address to: support@debrief.info
+
+Subject = New Issue with Debrief
+
+Body =
+
+Dear Debrief Support Team,
+
+I've found an issue with Debrief.
+
+1) My Debrief version is: <version here>
+
+2) My Java version is: <version here>
+
+3) I was performing the following steps when the error occurred:
+
+a.
+
+b...
+
+4)  The expected result (if known) was:
+
+a.
+
+b...
+
+5) The actual result I got was:
+
+a.
+
+b...
+
+6) Here's some more information:
+
+a.
+
+b...
+
+Providing the issue in that format really does help us resolve bugs much quicker, and we appreciate you helping us here.

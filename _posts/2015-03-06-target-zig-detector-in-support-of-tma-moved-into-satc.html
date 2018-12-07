@@ -1,22 +1,14 @@
 ---
 layout: post
 title: Target Zig Detector in support of TMA moved into SATC
-date: 2015-03-06 01:24:29.000000000 +00:00
-type: post
-parent_id: '0'
-published: true
-password: ''
-status: publish
+image: '/assets/images/MDA_Button.png'
 categories: [customisation-example, use-case-study]
-tags: []
 meta:
-  _edit_last: '1'
-  _thumbnail_id: '2730'
   post_views_count: '1937'
 author: ianmayo
 ---
 <h2>Abstract</h2>
-<p>Since last Autumn we’ve been working on a significant part of SATC (Semi Automatic Track Construction – see more <a title="SATC in Debrief help guidance" href="/tutorial/index.html#satc.html" target="_blank">here</a>).</p>
+<p>Since last Autumn we’ve been working on a significant part of SATC (Semi Automatic Track Construction – see more <a title="SATC in Debrief help guidance" href="{{ site.url }}/tutorial/index.html#satc.html" target="_blank">here</a>).</p>
 <p>The genetic algorithms in SATC are now quite mature, and do a good job of producing target tracks from bearing only data. But the analysts have had an ongoing chore – the need to identify the target straight legs.</p>
 <p>This article discusses a recent step forward.</p>
 <h2>Customer</h2>
@@ -33,23 +25,23 @@ author: ianmayo
 <p>Over the last couple of years there have been a number of attempts at producing a Target Zig detector. But whilst the curve-fitting methods used worked ok for perfect simulated data, they quickly fell over in the face of dirty, untidy, real-world data.</p>
 <p>But, in the Autumn 2014 we learned of the ArcTan formula. This formula defines the rate of change of bearing that is produced by two vessels in steady state. This implementation was first developed in a standalone GitHub repository: <a title="github rep" href="https://github.com/IanMayo/ZigDetector">https://github.com/IanMayo/ZigDetector</a> – to enable collaborative working with stakeholders and associated experts.</p>
 <h2>Solution</h2>
-<p><a href="/wp-content/uploads/2015/03/stateDiagram.png"><img class="thumbnail wow fadeIn aligncenter wp-image-2846 size-full" src="{{ site.baseurl }}/assets/stateDiagram.png" alt="state-Diagram" width="786" height="567" /></a></p>
+<p class="text-center"><img class="img-fluid" src="{{ site.baseurl }}/assets/images/stateDiagram.png" alt="state-Diagram"/></p>
 <p>The formula has a couple of unknowns – but we can use a linear optimisation algorithm to optimise these two vessels – to give us an bearing curve that fits the bearings on the assumption that they are on steady course and speed.</p>
 <p>&nbsp;</p>
-<p><a href="/wp-content/uploads/2015/03/arcTan2.png"><img class="thumbnail wow fadeIn aligncenter wp-image-2847 size-full" src="{{ site.baseurl }}/assets/arcTan2.png" alt="arcTan2" width="830" height="449" /></a></p>
+<p class="text-center"><img class="img-fluid" src="{{ site.baseurl }}/assets/images/arcTan2.png" alt="arcTan2"/></p>
 <p>If the two vessels are actually on steady course and speed, the bearings will closely match this curve. But, if the target alters the bearings will be more significant. If we then experiment with slicing the target leg in difference places and fitting the ArcTan curve to the two legs, then one time will produce much, much lower sum of errors. This is the time at which the target zigged – since either side of it are two straight legs that can be closely matched by the optimised ArcTan curve.</p>
 <p>Once the algorithm was producing sensible calculations we tried it with some simulated data:</p>
 <p>&nbsp;</p>
-<p><a href="/wp-content/uploads/2015/03/Scen4.png"><img class="thumbnail wow fadeIn aligncenter wp-image-2848 size-large" src="{{ site.baseurl }}/assets/Scen4-1024x389.png" alt="Scen4" width="669" height="254" /></a></p>
+<p class="text-center"><img class="img-fluid" src="{{ site.baseurl }}/assets/images/Scen4.png" alt="Scen4"/></p>
 <p>The first plot in the attached diagram shows how we start by determining ownship straight legs. Then we move on to identify the minima in the calculated sums of squares -and from these we determine the target zigs. The opposite of the target zigs are the target legs – which are highlighted in red shading in the bottom plot. The bottom plot also shows the target truth data – as verification of the accuracy of the target zig detector.</p>
 <p>Next came dirty real world data. We sanitised some real data by removing all attributes except for course and speed for ownship, and bearing for the target. The times are also mangled.</p>
 <p>This data produced the following plot:</p>
 <p>&nbsp;</p>
-<p><a href="/wp-content/uploads/2015/03/dirtyPlots.png"><img class="thumbnail wow fadeIn aligncenter wp-image-2849 size-full" src="{{ site.baseurl }}/assets/dirtyPlots.png" alt="dirtyPlots" width="780" height="667" /></a></p>
+<p class="text-center"><img class="img-fluid" src="{{ site.baseurl }}/assets/images/dirtyPlots.png" alt="dirtyPlots"/></p>
 <p>As you can see, the ownship state and bearing data are very poor – with lots of noise. But, by tuning the optimisation thresholds we were able to determine 5 target legs. Note: we have no way of knowing what happens to the target whilst ownship is turning, so legs always get broken across an ownship zig.</p>
 <p>What’s the impact on Debrief for all of this maths and exploratory data science?</p>
 <p>&nbsp;</p>
-<p><a href="/wp-content/uploads/2015/03/MDA_Button.png"><img class="thumbnail wow fadeIn aligncenter wp-image-2730 size-full" src="{{ site.baseurl }}/assets/MDA_Button.png" alt="MDA_Button" width="702" height="224" /></a></p>
+<p class="text-center"><img class="img-fluid" src="{{ site.baseurl }}/assets/images/MDA_Button.png" alt="MDA_Button"/></p>
 <p>Yes, one measly <strong>Run</strong> button.</p>
 <h2>Looking Forward</h2>
 <p>It’s only now that the Zig Detector is embedded into Debrief that we can continue to move forward with real data – there’s a strong chance that there are more lessons to learn.  These next steps will be performed alongside the analysts, with algorithmic processes and tuning characteristics fed into the master Debrief branch.</p>

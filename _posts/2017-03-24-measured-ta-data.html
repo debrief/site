@@ -1,56 +1,49 @@
 ---
 layout: post
-title: Measured TA Data
+title: 'Measured TA Data'
 date: 2017-03-24 13:24:06.000000000 +00:00
-type: post
-parent_id: '0'
-published: true
-password: ''
-status: publish
 categories: [customisation-example, use-case-study]
-tags: [debrief, debrief-update, new-feature]
 meta:
-  _edit_last: '1'
   post_views_count: '772'
 author: ianmayo
 ---
 <p>Last year's addition of Stacked Charts in Debrief started the movement towards more free-flowing analysis using Debrief.  Stacked Charts allowed the analyst to consider the relationships between any kind of data in Debrief.</p>
 <p>Traditionally Debrief had a tightly focused data model: platform tracks plus some sensor data.  While new graphical annotations and cosmetic styling of tracks changed over the years, the underlying data (location, course, speed, time,etc) remained fixed.</p>
 <p><a href="http://limpet.info">Limpet</a> is the Debrief sister application that allows the completely free-form analysis of measured data, and this new requirement has allowed the team to consider the role of the Limpet data structures, and to start to pull some Limpet features into Debrief.</p>
-<p>To support a new block of analysis, a set of users needed more diverse data to be analysed.  It was still possible to represent this data in text format (via new REP file data types, see them <a href="http://www.debrief.info/tutorial/#reference.html#towed_array_annotations">here</a>), but the data moved away from the traditional fixed set.  Here is a sample (fictional) dataset. After the data type marker, date-time group, platform name, and sensor name, you can see pairs of depth and heading values.  These represent the fore and aft sensors on a towed array.</p>
-<p><a href="http://debrief.info/wp-content/uploads/2017/03/ta_rep_data.png"><img class="alignnone size-full wp-image-3337" src="{{ site.baseurl }}/assets/ta_rep_data.png" alt="ta_rep_data" width="618" height="284" /></a></p>
+<p>To support a new block of analysis, a set of users needed more diverse data to be analysed.  It was still possible to represent this data in text format (via new REP file data types, see them <a href="{{ site.url }}/tutorial/#reference.html#towed_array_annotations">here</a>), but the data moved away from the traditional fixed set.  Here is a sample (fictional) dataset. After the data type marker, date-time group, platform name, and sensor name, you can see pairs of depth and heading values.  These represent the fore and aft sensors on a towed array.</p>
+<p><img class="img-fluid" src="{{ site.baseurl }}/assets/images/ta_rep_data.png" alt="ta_rep_data" /></p>
 <p>To allow these diverse sets of data to be stored in Debrief, some elements (such as Sensor) are able to store additional data:</p>
-<p><a href="http://debrief.info/wp-content/uploads/2017/03/add_data.png"><img class="alignnone size-full wp-image-3338" src="{{ site.baseurl }}/assets/add_data.png" alt="add_data" width="532" height="268" /></a></p>
+<p><img class="img-fluid" src="{{ site.baseurl }}/assets/images/add_data.png" alt="add_data" /></p>
 <p>Once the above dataset is loaded, this data is present beneath the Additional Data:</p>
-<p><a href="http://debrief.info/wp-content/uploads/2017/03/fore_aft_data.png"><img class="alignnone size-full wp-image-3339" src="{{ site.baseurl }}/assets/fore_aft_data.png" alt="fore_aft_data" width="318" height="338" /></a></p>
+<p><img class="img-fluid" src="{{ site.baseurl }}/assets/images/fore_aft_data.png" alt="fore_aft_data" /></p>
 <p>An elementary understanding of towed array performance indicates that the measurements from the array are most accurate when it's in a straight line. We can effectively judge this as the time when the fore and aft heading sensors are equal.  The user can select the two headings, then right-click and select "View datasets in stacked Charts":</p>
-<p><a href="http://debrief.info/wp-content/uploads/2017/03/view_in_stacked.png"><img class="alignnone size-full wp-image-3341" src="{{ site.baseurl }}/assets/view_in_stacked.png" alt="view_in_stacked" width="503" height="254" /></a></p>
+<p><img class="img-fluid" src="{{ site.baseurl }}/assets/images/view_in_stacked.png" alt="view_in_stacked" /></p>
 <p>And here is the stacked chart:</p>
-<p><a href="http://debrief.info/wp-content/uploads/2017/03/stacked_chart.png"><img class="alignnone size-full wp-image-3342" src="{{ site.baseurl }}/assets/stacked_chart.png" alt="stacked_chart" width="831" height="348" /></a></p>
+<p><img class="img-fluid" src="{{ site.baseurl }}/assets/images/stacked_chart.png" alt="stacked_chart" /></p>
 <p>The curve of the array will lag behind ownship turns.  To change the formatting, or add more data the user can switch the Stacked Chart to edit mode (see the <strong>Edit</strong> button in the above screenshot). Here's edit mode:</p>
-<p><a href="http://debrief.info/wp-content/uploads/2017/03/edit_mode.png"><img class="alignnone size-full wp-image-3343" src="{{ site.baseurl }}/assets/edit_mode.png" alt="edit_mode" width="828" height="349" /></a></p>
+<p><img class="img-fluid" src="{{ site.baseurl }}/assets/images/edit_mode.png" alt="edit_mode" /></p>
 <p>Once in edit mode, it's possible to add ownship course by dragging the relevant track from the Outline View and dropping it either on the existing left-hand axis, or adding it to right hand axis (note: since a track actually represents several datasets, a dialog invites the user to select one or more of <em>Course, Speed </em>and <em>Depth)</em>.  Once the course data is added, click on <strong>View</strong> to switch back to View mode:</p>
-<p><a href="http://debrief.info/wp-content/uploads/2017/03/with_course.png"><img class="alignnone size-full wp-image-3344" src="{{ site.baseurl }}/assets/with_course.png" alt="with_course" width="832" height="350" /></a></p>
+<p><img class="img-fluid" src="{{ site.baseurl }}/assets/images/with_course.png" alt="with_course" /></p>
 <p>Let's talk through that plot.  The blue line is the course.  After each course change the <strong>fore</strong> module sensor changes heading, then the <strong>aft</strong> module sensor.  The array is straight when fore and aft sensor values are equal.  Thus, we can calculate these times by subtracting the value of one heading sensor from the other - when the difference is zero, they're on the same heading - and the array is straight.  The new Limpet-style capabilities in Debrief allow this. Right-click on the two heading datasets, and the menu allows one to be subtracted from the other:</p>
-<p><a href="http://debrief.info/wp-content/uploads/2017/03/subtract.png"><img class="alignnone size-full wp-image-3345" src="{{ site.baseurl }}/assets/subtract.png" alt="subtract" width="523" height="390" /></a></p>
+<p><img class="img-fluid" src="{{ site.baseurl }}/assets/images/subtract.png" alt="subtract" /></p>
 <p>Once <strong>Subtract datasets </strong>is clicked, a new dataset appears in the outline view:</p>
-<p><a href="http://debrief.info/wp-content/uploads/2017/03/new_dataset.png"><img class="alignnone size-full wp-image-3346" src="{{ site.baseurl }}/assets/new_dataset.png" alt="new_dataset" width="520" height="191" /></a></p>
+<p><img class="img-fluid" src="{{ site.baseurl }}/assets/images/new_dataset.png" alt="new_dataset" /></p>
 <p>The automatically generated name (from the full name of each operand) is quite cumbersome, so it can be changed in the Properties Window to something more manageable:</p>
-<p><a href="http://debrief.info/wp-content/uploads/2017/03/renamed.png"><img class="alignnone size-full wp-image-3347" src="{{ site.baseurl }}/assets/renamed.png" alt="renamed" width="352" height="99" /></a></p>
+<p><img class="img-fluid" src="{{ site.baseurl }}/assets/images/renamed.png" alt="renamed"/></p>
 <p>Let's right-click on the calculated dataset and select <strong>View in stacked charts</strong>:</p>
-<p><a href="http://debrief.info/wp-content/uploads/2017/03/heading_delta.png"><img class="alignnone size-full wp-image-3348" src="{{ site.baseurl }}/assets/heading_delta.png" alt="heading_delta" width="832" height="346" /></a></p>
+<p><img class="img-fluid" src="{{ site.baseurl }}/assets/images/heading_delta.png" alt="heading_delta" /></p>
 <p>We can use the values in a dataset to shade a track. So, we could use a range of shades from blue to red to show the size of a value, with larger values being more red.  We could apply such a shader to the above dataset, but it wouldn't highlight the periods when the value is zero.  But, if we take the mathematical absolute value of each delta, zero will be the minimum. So, we right-click on the heading deltas, and select <strong>Calculate Absolute</strong>:</p>
-<p><a href="http://debrief.info/wp-content/uploads/2017/03/calc_absolute.png"><img class="alignnone size-full wp-image-3349" src="{{ site.baseurl }}/assets/calc_absolute.png" alt="calc_absolute" width="507" height="224" /></a></p>
+<p><img class="img-fluid" src="{{ site.baseurl }}/assets/images/calc_absolute.png" alt="calc_absolute" /></p>
 <p>Here's the generated dataset:</p>
-<p><a href="http://debrief.info/wp-content/uploads/2017/03/abs_dataset.png"><img class="alignnone size-full wp-image-3350" src="{{ site.baseurl }}/assets/abs_dataset.png" alt="abs_dataset" width="418" height="85" /></a></p>
+<p><img class="img-fluid" src="{{ site.baseurl }}/assets/images/abs_dataset.png" alt="abs_dataset"/></p>
 <p>We can also take the cube root of the data values, which will give a greater range of colours.  Let's see the stacked chart with the absolute value and cube root:</p>
-<p><a href="http://debrief.info/wp-content/uploads/2017/03/cube_chart.png"><img class="alignnone size-full wp-image-3351" src="{{ site.baseurl }}/assets/cube_chart.png" alt="cube_chart" width="830" height="349" /></a></p>
+<p><img class="img-fluid" src="{{ site.baseurl }}/assets/images/cube_chart.png" alt="cube_chart" /></p>
 <p>The actual values in use aren't relevant. But, the significant benefit of taking the cube root is that the "high" values are almost equally high.  The purple <em>absolute</em> values cover a wider range, meaning the lower values will be closer to the shade used for zero.</p>
 <p>Anyway, how do we get this data onto the chart?</p>
 <p>A new Track property titled <strong>Track Coloring Mode</strong><em> </em>lets us specify how the track should be colored. The current coloring mode is for track fixes to be shaded in their own color.  This is called <em>Per-fix shades. </em>A new option allows for individual fix colors to be ignored, and just blindly use the track color: <em>Track Color Override</em>.  More exciting than that, however, is the fact that Debrief can also show any suitable measured datasets within that track:</p>
-<p><a href="http://debrief.info/wp-content/uploads/2017/03/dropdown_datasets.png"><img class="alignnone size-full wp-image-3352" src="{{ site.baseurl }}/assets/dropdown_datasets.png" alt="dropdown_datasets" width="756" height="495" /></a>As you can see, our cube root of heading delta is included in the list.</p>
+<p><img class="img-fluid" src="{{ site.baseurl }}/assets/images/dropdown_datasets.png" alt="dropdown_datasets" />As you can see, our cube root of heading delta is included in the list.</p>
 <p style="padding-left: 30px;">Note:in the traditional way of supporting users in Debrief, the application would have a good look at those datasets, and only offer the one(s) most likely to be used. But, in the spirit of improving support for ad-hoc analysis, all datasets are displays.</p>
 <p>Selecting to use the Cube Root of heading delta as the <em>Track Coloring Mode</em> renders the ownship track according to this value:</p>
-<p><a href="http://debrief.info/wp-content/uploads/2017/03/shaded_track.png"><img class="alignnone size-full wp-image-3353" src="{{ site.baseurl }}/assets/shaded_track.png" alt="shaded_track" width="829" height="645" /></a></p>
+<p><img class="img-fluid" src="{{ site.baseurl }}/assets/images/shaded_track.png" alt="shaded_track" /></p>
 <p>Here we can see that the heading unsteady periods are after the turns, and that the array effectively remains steady whilst ownship is conducting the turn.</p>
 <p>Stay tuned as we add more ad-hoc data analysis capabilities to Debrief.</p>

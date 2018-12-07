@@ -1,20 +1,11 @@
 ---
-layout: default
+layout: post
 title: 'New Release: Sprint 4: Export to PPT'
 date: 2018-08-03 13:08:13.000000000 +01:00
 image: '/assets/images/Export-to-PPT.jpg'
-type: post
-parent_id: '0'
-published: true
-password: ''
-status: publish
 categories: [releases, technical-demonstration]
-tags: []
 meta:
-  _edit_last: '3'
-  _thumbnail_id: '3478'
   post_views_count: '32'
-  _wp_old_date: '2018-10-02'
 author: ianmayo
 ---
 <p>With the conclusion of Sprint 4, the first major work package ("Epic" in Scrum language) is coming to completion, Export to PPT. In a multi-threaded package of work different members of the team have:</p>

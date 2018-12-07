@@ -2,107 +2,102 @@
 layout: post
 title: Two dimensional datasets
 date: 2017-07-11 11:11:59.000000000 +01:00
-type: post
-parent_id: '0'
-published: true
-password: ''
-status: publish
+image: '/assets/images/TwoAngles.png'
 categories: [releases, use-case-study]
-tags: []
 meta:
-  _edit_last: '1'
   post_views_count: '542'
-  _oembed_ec60518be1a153be59b5d8d5e127348f: "{{unknown}}"
-  _thumbnail_id: '3417'
-  author: ianmayo
+author: ianmayo
 ---
-<p><img class="alignright" src="{{ site.baseurl }}/assets/BistaticAngle.png" alt="" width="269" height="304" /></p>
-<p>Continuing from the previous article regarding <a href="http://debrief.info/datasets-indexed-by-non-time-data/">support for non-time datasets</a>, we're now going to consider how to collate two non-time indexed dataset to produce a 2D dataset that can be displayed as a heat map.</p>
-<h3>Background</h3>
-<p>The big picture objective is to view a two-dimensional plot containing the signal strength from a transmitter (tx) mapped against the a pair of bistatic angles that represent the angle at which an acoustic signal arrived at and departed from a moving target (ssn) then arrived at the receiver (rx).</p>
-<p>Learn more about bistatic angles at this Wikipedia page: <a href="https://en.wikipedia.org/wiki/Bistatic_angle">https://en.wikipedia.org/wiki/Bistatic_angle</a></p>
-<p>&nbsp;</p>
-<p>As a reminder, here's the distribution of the entities:</p>
-<p><a href="http://debrief.info/wp-content/uploads/2017/04/PlotInDebrief.png"><img class="size-large wp-image-3361" src="{{ site.baseurl }}/assets/PlotInDebrief.png" alt="PlotInDebrief" width="1125" height="691" /></a><br />
+<div class="row">
+  <div class="col-md-7 col-lg-9">
+    <p>Continuing from the previous article regarding <a href="{{ site.url }}/releases/use-case-study/datasets-indexed-by-non-time-data">support for non-time datasets</a>, we're now going to consider how to collate two non-time indexed dataset to produce a 2D dataset that can be displayed as a heat map.</p>
+    <h3>Background</h3>
+    <p>The big picture objective is to view a two-dimensional plot containing the signal strength from a transmitter (tx) mapped against the a pair of bistatic angles that represent the angle at which an acoustic signal arrived at and departed from a moving target (ssn) then arrived at the receiver (rx).</p>
+    <p>Learn more about bistatic angles at this Wikipedia page: <a href="https://en.wikipedia.org/wiki/Bistatic_angle">https://en.wikipedia.org/wiki/Bistatic_angle</a></p>
+    <p>&nbsp;</p>
+    <p>As a reminder, here's the distribution of the entities:</p>
+  </div>
+  <div class="col-md-5 col-lg-3"><img class="img-fluid" src="{{ site.baseurl }}/assets/images/BistaticAngle.png" alt="" width="269" height="304" /></div>
+</div>
+
+
+<p><img class="img-fluid" src="{{ site.baseurl }}/assets/images/PlotInDebrief.png" alt="PlotInDebrief"/><br />
 The SSN travels North, loops around, then travels West between the transmitter and receiver.</p>
 <h3>Loading data</h3>
 <p>So, start by opening Limpet:</p>
-<p><a href="http://debrief.info/wp-content/uploads/2017/07/WholeApp.png"><img class="size-large wp-image-3402" src="{{ site.baseurl }}/assets/WholeApp-1024x725.png" alt="WholeApp" width="669" height="474" /></a></p>
+<p><img class="img-fluid" src="{{ site.baseurl }}/assets/images/WholeApp.png" alt="WholeApp"/></p>
 <p>Before data can be analysed, you need to create a container to store the files. We could create a blank, empty container using <strong>File / New Project</strong>. But, to enable us to use the sample data, we will import an exiting project.</p>
 <p>So, right-click in the Navigator pane, and select <strong>Import....</strong> Next, select <strong>Existing Projects into Workspace</strong>.<br />
 Next, browse to the folder where you installed Limpet, and select Plugins/info.limpet.sample_data.xxxxxx Finally, select <strong>Finish</strong><br />
-<a href="http://debrief.info/wp-content/uploads/2017/07/ImportProjects.png"><img class=" size-full wp-image-3403" src="{{ site.baseurl }}/assets/ImportProjects.png" alt="ImportProjects" width="512" height="615" /></a></p>
+<img class="img-fluid" src="{{ site.baseurl }}/assets/images/ImportProjects.png" alt="ImportProjects" /></p>
 <p>You will now see the sample data:</p>
-<p><a href="http://debrief.info/wp-content/uploads/2017/07/dataImported.png"><img class="alignnone size-full wp-image-3404" src="{{ site.baseurl }}/assets/dataImported.png" alt="dataImported" width="1016" height="727" /></a></p>
+<p><img class="img-fluid" src="{{ site.baseurl }}/assets/images/dataImported.png" alt="dataImported"/></p>
 <p>Our sample data is in the <strong>multistatics</strong> folder.</p>
-<p><a href="http://debrief.info/wp-content/uploads/2017/07/Statics_Files.png"><img class="alignnone size-full wp-image-3395" src="{{ site.baseurl }}/assets/Statics_Files.png" alt="Statics_Files" width="464" height="373" /></a></p>
+<p><img class="img-fluid" src="{{ site.baseurl }}/assets/images/Statics_Files.png" alt="Statics_Files"/></p>
 <p>The sample data is a collection of comma-separated variable (CSV) files. The files contain either status (<strong>_stat</strong>) or detection (<strong>_det</strong>) measurements. Let's have a quick look at one of the files. Right-click on <strong>ssn_stat.csv</strong> and select <strong>Open With</strong> &gt; <strong>Text Editor.</strong></p>
-<p><a href="http://debrief.info/wp-content/uploads/2017/07/csv_contents.png"><img class="alignnone size-full wp-image-3405" src="{{ site.baseurl }}/assets/csv_contents.png" alt="csv_contents" width="1013" height="380" /></a></p>
+<p><img class="img-fluid" src="{{ site.baseurl }}/assets/images/csv_contents.png" alt="csv_contents"/></p>
 <p>As you'll see, the first three columns are named <strong>Time</strong>, <strong>Lat</strong> and <strong>Long</strong>.  Limpet recognises these column names as special names, and parses the date-time in the <strong>Time </strong> column, then combines the <strong>Lat</strong> and <strong>Long</strong> into a special Location data-type. For the remaining columns, Limpet reads the column title (such as <strong>Course</strong> and <b>Speed</b>) then also reads the data-type (in brackets) and assigns that data-type to the data.</p>
 <p>The data-type is important to the processing we're covering in this tutorial, since we have Limpet operations that rely on the presence of a particular data-type - such as requiring a dataset in Degrees to be present in order to calculate the bistatic angles.</p>
 <p>Ok.  Now close this text editor view.  Let's create a <strong>Limpet Analysis Project (.lap)</strong> to store our analysis. We're going to put the file into the <strong>multistatics</strong> folder. So, right-click on the <strong>multistatics</strong> folder, and select <strong>New / Limpet Analysis Project (.lap). </strong>A wizard will open.  Give the file a name (such as <strong>analysis.lap</strong>) then click on Finish.</p>
-<p><a href="http://debrief.info/wp-content/uploads/2017/07/NewProject.png"><img class="alignnone size-full wp-image-3407" src="{{ site.baseurl }}/assets/NewProject.png" alt="NewProject" width="579" height="347" /></a></p>
+<p><img class="img-fluid" src="{{ site.baseurl }}/assets/images/NewProject.png" alt="NewProject"/></p>
 <p>You will see an empty project shown.</p>
-<p><a href="http://debrief.info/wp-content/uploads/2017/07/EmptyProject.png"><img class="alignnone size-full wp-image-3408" src="{{ site.baseurl }}/assets/EmptyProject.png" alt="EmptyProject" width="1015" height="728" /></a></p>
+<p><img class="img-fluid" src="{{ site.baseurl }}/assets/images/EmptyProject.png" alt="EmptyProject"/></p>
 <p>Now drag in the RX, TX and SSN status files.</p>
-<p><a href="http://debrief.info/wp-content/uploads/2017/07/tracks_loaded.png"><img class="alignnone size-full wp-image-3409" src="{{ site.baseurl }}/assets/tracks_loaded.png" alt="tracks_loaded" width="938" height="627" /></a></p>
+<p><img class="img-fluid" src="{{ site.baseurl }}/assets/images/tracks_loaded.png" alt="tracks_loaded"/></p>
 <p>The rx3 and ssn data-files result in a folder of data being created.  The tx1 data-file, however has just given us a single location.  The txt and rx are actually stationary in this scenario - so it has been possible to represent the transmitter as a single line of CSV (go on, have a look).</p>
 <p>Let's also load the set of measurements at receiver 3, <strong>rx3_det.csv.</strong></p>
-<p><a href="http://debrief.info/wp-content/uploads/2017/07/with_receiver.png"><img class="alignnone size-full wp-image-3410" src="{{ site.baseurl }}/assets/with_receiver.png" alt="with_receiver" width="941" height="315" /></a></p>
+<p><img class="img-fluid" src="{{ site.baseurl }}/assets/images/with_receiver.png" alt="with_receiver"/></p>
 <h3>Viewing data</h3>
 <p>If we expand the folders, we can see the data that is loaded.</p>
-<p><a href="http://debrief.info/wp-content/uploads/2017/07/expanded_folders.png"><img class="alignright size-full wp-image-3411" src="{{ site.baseurl }}/assets/expanded_folders.png" alt="expanded_folders" width="242" height="308" /></a></p>
+<p><img class="img-fluid" src="{{ site.baseurl }}/assets/images/expanded_folders.png" alt="expanded_folders"/></p>
 <p>Each dataset is shown as an icon, the dataset name, and the number of items in the dataset.</p>
 <p>The icons are constructed from a series of components.  The yellow shape indicates the type of data in the dataset.  So, we work down the loaded data, we have a location marker for location data, an angle marker, and a speed marker.</p>
 <p>For the receiver detections we have a frequency marker and a signal strength markers.  Other than the location dataset these markers are derived from the units provided in the csv file.</p>
 <p>Over the yellow marker are some blue markers.  All of the datasets in this example have a clock-face at the bottom-right, which indicates the dataset is indexed (ie time vs the measured commodity).  The single tx1 location also has a <strong>1</strong> at the bottom-left, which indicates that this isn't a series of data, it's a single value.</p>
 <p>For many operations we require the indices to overlap. So, if we're adding two speed time series, we need the time periods to overlap.  But, where we have an operation comprising single value and an indexed dataset - we use the single value for all the values in the indexed dataset.</p>
 <p>Let's learn more about the datasets.  Note: if your windows aren't arranged like those below, you can click on <strong>Reset Perspective</strong> from the <strong>Window </strong>menu.</p>
-<p><a href="http://debrief.info/wp-content/uploads/2017/07/ResetPerspective.png"><img class="alignnone size-full wp-image-3413" src="{{ site.baseurl }}/assets/ResetPerspective.png" alt="ResetPerspective" width="1033" height="669" /></a></p>
+<p><img class="img-fluid" src="{{ site.baseurl }}/assets/images/ResetPerspective.png" alt="ResetPerspective" /></p>
 <p>If you select a dataset (such as the Course dataset in the ssn folder), the assorted Limpet views will show more detail on that dataset:</p>
-<p><a href="http://debrief.info/wp-content/uploads/2017/07/FirstAnalysis.png"><img class="alignnone size-full wp-image-3414" src="{{ site.baseurl }}/assets/FirstAnalysis.png" alt="FirstAnalysis" width="1039" height="789" /></a></p>
+<p><img class="img-fluid" src="{{ site.baseurl }}/assets/images/FirstAnalysis.png" alt="FirstAnalysis"/></p>
 <p>Here we can see some descriptive statistics in the <strong>Analysis View </strong>pane, we can see that the platform was travelling North then East in the <strong>XY Plot</strong>, and finally we see the frequency of measurements where the platform was travelling North or East in the <strong>Data Frequency</strong>.</p>
 <h3>Generate Aspect Angles</h3>
 <p>Ok, let's get to work.  To start off with, we'll get Limpet to generate the two dataset of bistatic and bistatic aspect angles.  Collapse the folders and select <strong>rx3_stat</strong>, <strong>ssn_stat</strong> and <strong>tx1_stat</strong>. Now right-click and look in the <strong>Spatial</strong> drop-down menu.</p>
-<p><a href="http://debrief.info/wp-content/uploads/2017/07/BistaticCalc.png"><img class="alignnone size-full wp-image-3415" src="{{ site.baseurl }}/assets/BistaticCalc.png" alt="BistaticCalc" width="500" height="263" /></a></p>
+<p><img class="img-fluid" src="{{ site.baseurl }}/assets/images/BistaticCalc.png" alt="BistaticCalc"/></p>
 <p>As you can see, Limpet has offered to generate bistatic angles against either <strong>rx3_stat</strong> or <strong>ssn_stat</strong>. Limpet is unclear which of the datasets represents the subject - since two datasets have course.  Since <strong>rx3</strong> is stationary, it doesn't have course data.  But, it's the <strong>ssn</strong> we're interested in, after all.  So, select <b>Bistatic angle at: ssn_stat</b>. You will see two new datafiles generated:</p>
-<p><a href="http://debrief.info/wp-content/uploads/2017/07/NewAngles.png"><img class="alignnone size-full wp-image-3416" src="{{ site.baseurl }}/assets/NewAngles.png" alt="NewAngles" width="348" height="169" /></a></p>
+<p><img class="img-fluid" src="{{ site.baseurl }}/assets/images/NewAngles.png" alt="NewAngles"/></p>
 <p>Note: there has been a subtle change to what you see in the analysis project. The <b>tx1_stat_location</b> element has turned into a expandable entity. If you click on the arrow next to it, you can expand the item to see a calculator icon. This represents an operation.  As the name indicates, the operation is <strong>Bistatic angle at:ssn_stat.</strong> You can further expand this icon to view the inputs and outputs - as below.</p>
-<p><a href="http://debrief.info/wp-content/uploads/2017/07/dependents.png"><img class="alignnone size-full wp-image-3419" src="{{ site.baseurl }}/assets/dependents.png" alt="dependents" width="466" height="292" /></a></p>
+<p><img class="img-fluid" src="{{ site.baseurl }}/assets/images/dependents.png" alt="dependents"/></p>
 <p>Now collapse the tx1 location, and let's look at the data we've generated. Click on the two new items to view the data in the <strong>XY Plot</strong> view.  You can ctrl-click to view them both at once:</p>
-<p><a href="http://debrief.info/wp-content/uploads/2017/07/TwoAngles.png"><img class="alignnone size-full wp-image-3417" src="{{ site.baseurl }}/assets/TwoAngles.png" alt="TwoAngles" width="462" height="288" /></a></p>
+<p><img class="img-fluid" src="{{ site.baseurl }}/assets/images/TwoAngles.png" alt="TwoAngles"/></p>
 <p>Ok, these two datasets are going to form the x &amp; y axes of our 2D dataset.  Now for the calculated values.</p>
 <h3>Generate Target Echo Strength</h3>
 <p>We wish to calculate the acoustic energy that is lost as the signal bounces off the submarine. This is called the Target Echo Strength (TES). We know the signal strength that arrives at <strong>rx3_det</strong>.   If we know the transmitted strength, and the propagation loss between the entities we can generate the TES.</p>
 <p>As with the previous tutorial, we know the transmitted signal strength was 180db.  We must enter this into Limpet.  So, first collapse the folders in the analysis project (to give us more space).  Next, ensure no items are selected in the analysis view (ctrl-clicking) on items if necessary.</p>
 <p>Next, right-click in empty space and select <strong>Add single decibels</strong></p>
-<p><a href="http://debrief.info/wp-content/uploads/2017/07/AddStrength.png"><img class="alignnone size-full wp-image-3418" src="{{ site.baseurl }}/assets/AddStrength.png" alt="AddStrength" width="473" height="313" /></a></p>
+<p><img class="img-fluid" src="{{ site.baseurl }}/assets/images/AddStrength.png" alt="AddStrength"/></p>
 <p>When the wizard opens, give the new dataset a name <strong>TX_Level</strong> and a value <strong>180</strong></p>
-<p><a href="http://debrief.info/wp-content/uploads/2017/07/tx_level.png"><img class="alignnone size-full wp-image-3420" src="{{ site.baseurl }}/assets/tx_level.png" alt="tx_level" width="357" height="191" /></a></p>
+<p><img class="img-fluid" src="{{ site.baseurl }}/assets/images/tx_level.png" alt="tx_level"/></p>
 <p>Next we need the propagation loss values been the transmitter and ssn, then the ssn and the receiver. Let's first work out the energy lost between the transmitter and the submarine. So, expand the submarine (ssn) folder in order to get at the location dataset, then select the location dataset and the transmitter location dataset.  Next, right-click and select <strong>Spatial .. Propagation Loss between Tracks</strong>.</p>
 <p>Note: the menu currently offers an interpolated or indexed operation.  These will shortly be reduced to one, Limpet is actually able to determine which operation to perform.</p>
 <p>When the wizard opens, give it a shorter name, something like <strong>PL TX to SSN</strong>. Now do the same between the SSN dataset and the RX. Here are the losses:</p>
-<p><a href="http://debrief.info/wp-content/uploads/2017/07/losses.png"><img class="alignnone size-full wp-image-3421" src="{{ site.baseurl }}/assets/losses.png" alt="losses" width="463" height="516" /></a></p>
+<p><img class="img-fluid" src="{{ site.baseurl }}/assets/images/losses.png" alt="losses"/></p>
 <p>Next we'll generate the total propagation loss. While we have the two PL datasets selected, right-click and select <strong>Arithmetic /</strong> <strong>Add logarithmic values in provided series</strong>.  Name the result set <strong>Total Loss.</strong></p>
 <p>Once complete view the two single-way propagation losses, together with the sum:</p>
-<p><a href="http://debrief.info/wp-content/uploads/2017/07/TotalLoss.png"><img class="alignnone size-full wp-image-3422" src="{{ site.baseurl }}/assets/TotalLoss.png" alt="TotalLoss" width="464" height="516" /></a></p>
+<p><img class="img-fluid" src="{{ site.baseurl }}/assets/images/TotalLoss.png" alt="TotalLoss"/></p>
 <p>As you can see from the XY Plot - Limpet has performed a logarithmic addition.</p>
 <p>Let's now add this to the received signal strength - select <strong>Total Loss </strong>and <strong>rx3_Det / rx3_det-Strength</strong>, then right-click and perform a logarithmic addition (call the result <strong>Total Energy</strong>).</p>
 <p>Finally, subtract the resulting dataset from the transmitted level (<strong>TX_Level</strong>), naming the result <strong>TES</strong>.</p>
-<p><a href="http://debrief.info/wp-content/uploads/2017/07/TES.png"><img class="alignnone size-full wp-image-3423" src="{{ site.baseurl }}/assets/TES.png" alt="TES" width="468" height="520" /></a></p>
+<p><img class="img-fluid" src="{{ site.baseurl }}/assets/images/TES.png" alt="TES"/></p>
 <p>Ok, we're nearly there.</p>
 <h3>Two dimensional dataset</h3>
 <p>Right, we've not got our two angular time-series datasets, and the a time-series of TES at the same timestamps.  We can now grid this data, to give us a 2D dataset.  So, select the two bistatic angle datasets, the TES dataset, then right-click and select <strong>Create / Collate 360 deg grid of calculated means of TES</strong>.  Viewing this dataset in the <strong>XY Plot</strong> will just show us the points at which we have data present:</p>
-<p><a href="http://debrief.info/wp-content/uploads/2017/07/Distribution.png"><img class="alignnone size-full wp-image-3424" src="{{ site.baseurl }}/assets/Distribution.png" alt="Distribution" width="468" height="518" /></a></p>
+<p><img class="img-fluid" src="{{ site.baseurl }}/assets/images/Distribution.png" alt="Distribution"/></p>
 <p>But, to view the calculated means, we need to use specialist views. From the <b>Window / Show View</b> menu, select <strong>Tabular View</strong>.  It will be empty when it opens, but click on the <strong>Calculated mean of TES</strong> dataset again, and you will see the set of gridded values.</p>
-<p><a href="http://debrief.info/wp-content/uploads/2017/07/TabularView.png"><img class="alignnone size-full wp-image-3430" src="{{ site.baseurl }}/assets/TabularView.png" alt="TabularView" width="429" height="593" /></a></p>
+<p><img class="img-fluid" src="{{ site.baseurl }}/assets/images/TabularView.png" alt="TabularView"/></p>
 <p>Next, from the <strong>Window / Show View</strong> menu, select <strong>Heatmap Plot</strong> - and select the calculated mean TES again:</p>
-<p><a href="http://debrief.info/wp-content/uploads/2017/07/heatmap.png"><img class="alignnone size-full wp-image-3425" src="{{ site.baseurl }}/assets/heatmap.png" alt="heatmap" width="432" height="593" /></a></p>
+<p><img class="img-fluid" src="{{ site.baseurl }}/assets/images/heatmap.png" alt="heatmap"/></p>
 <p>As you can see, the algorithm has used 20 degree bins.  We can modify this.  To do so, we need to access the gridding operation. So, expand the <strong>Calculated mean of TES</strong> dataset, view the precedents, and select <strong>Collate 360 deg grid of calculated means of TES</strong>.  You will see the editable properties in the <strong>Properties View</strong>:</p>
-<p><a href="http://debrief.info/wp-content/uploads/2017/07/BinSize.png"><img class="alignnone size-full wp-image-3426" src="{{ site.baseurl }}/assets/BinSize.png" alt="BinSize" width="741" height="589" /></a></p>
+<p><img class="img-fluid" src="{{ site.baseurl }}/assets/images/BinSize.png" alt="BinSize"/></p>
 <p>The first property is <strong>BinSize</strong>. Select this, and change it to 5 to see what the heatmap would be like if it was gridded with 5 degree bins.</p>
-<p><a href="http://debrief.info/wp-content/uploads/2017/07/5deg_bins.png"><img class="alignnone size-full wp-image-3427" src="{{ site.baseurl }}/assets/5deg_bins.png" alt="5deg_bins" width="741" height="591" /></a></p>
+<p><img class="img-fluid" src="{{ site.baseurl }}/assets/images/5deg_bins.png" alt="5deg_bins"/></p>
 <p>And there we are. Stay tuned to hear more - including how we handle multiple sets of TES calculations.</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>

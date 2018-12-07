@@ -45,7 +45,7 @@ collections:
     output: true
     permalink: /:collection/:name
 
-permalink: /:categories/:year/:month/:day/:title
+permalink: /:categories/:title
 
 defaults:
   - scope:

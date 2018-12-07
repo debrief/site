@@ -1,12 +1,4 @@
 blog:
-  - title: Recent Comments
-    list: 
-      - item: 'New Comment 1'
-      - item: 'New FComment 2'
-  - title: Archives
-    list: 
-      - item: 'New Comment 1'
-      - item: 'New FComment 2'
   - title: Categories
     list: 
       - item: 'Customisation example'

@@ -23,9 +23,7 @@ title: Get Debrief – Debrief Maritime Analysis Tool
 
         <div class="post-block">
             <div class="post-block__header">
-                <a href="{{ page.url }}">
-                  <img src="{{ absolute_url }} {{ page.image }}" class="img-fluid post-block__img">
-                </a>
+                <img src="{{ absolute_url }} {{ page.image }}" class="img-fluid post-block__img w-100">
                 <h1>
                   <a class="post-block__title" href="{{ page.url }}">
                     {{ page.title }}
@@ -96,16 +94,6 @@ title: Get Debrief – Debrief Maritime Analysis Tool
                   {% unless forloop.last %}&nbsp;{% endunless %}
                   {% endfor %}
                 </div>
-                {% if page.tags %}
-                  <div class="post-block__tags mr-2">
-                    <i class="fas fa-tags"></i>
-                    <span>tagged in</span>
-                    {% for tag in page.tags %}
-                      <a href="#">{{ tag }}</a>
-                    {% endfor %}
-                  </div>
-                {% endif %}
-
                 <div class="post-block__views-count">
                   <i class="far fa-eye"></i>
                   <span>{{ page.meta.post_views_count }}</span>
@@ -114,17 +102,6 @@ title: Get Debrief – Debrief Maritime Analysis Tool
               </div>
         </div>
 
-        <div class="article-vote">
-          <span class="article-vote__question">Was this helpful? Your opinion is very important to us</span>
-          <div class="article-vote__controls">
-            <a href="#" role="button" class="tip article-vote__control-link positive" data-id="3483" data-type="positive" title="" data-original-title="No votes yet">
-              <i class="fa fa-thumbs-up"></i> 0
-            </a>
-            <a href="#" role="button" class="tip article-vote__control-link negative" data-id="3483" data-type="negative" title="" data-original-title="No votes yet">
-              <i class="fa fa-thumbs-down"></i> 0
-            </a>
-          </div>
-        </div>
 
         <div class="post-page-nav d-flex flex-column flex-sm-row justify-content-between align-items-center">
             {% if page.previous.url %}
@@ -161,7 +138,7 @@ title: Get Debrief – Debrief Maritime Analysis Tool
 
         <div class="other-posts">
           <div class="row">
-            <div class="col-sm-6">
+            <div class="col-sm-12">
               <h3 class="blog-widget__title">Recent Posts</h3>
               <div class="other-posts-list">
                 {% assign recentCount = 0 %}
@@ -183,46 +160,6 @@ title: Get Debrief – Debrief Maritime Analysis Tool
                       {% break %}
                   {% endif %}
                 {% endfor %}
-              </div>
-            </div>
-
-            <div class="col-sm-6">
-              <h3 class="blog-widget__title">Popular Posts</h3>
-              <div class="other-posts-list">
-                <div class="other-posts-item media">
-                  <a href="#">
-                      <img class="mr-3 other-posts-item__img" src="{{ absolute_url }}  {{ page.image }}">
-                  </a>
-                  <div class="media-body">
-                    <a href="#">
-                      <h6 class="mt-0 other-posts-item__title">New Feature Release: Paste Rep from Clipboard</h6>
-                    </a> 
-                    <div class="other-posts-item__date">September 21, 2018</div>
-                  </div>
-                </div>
-                <div class="other-posts-item media">
-                  <a href="#">
-                      <img class="mr-3 other-posts-item__img" src="{{ absolute_url }}  {{ page.image }}">
-                  </a>
-                  <div class="media-body">
-                    <a href="#">
-                      <h6 class="mt-0 other-posts-item__title">New Feature Release: Paste Rep from Clipboard</h6>
-                    </a> 
-                    <div class="other-posts-item__date">September 21, 2018</div>
-                  </div>
-                </div>
-                <div class="other-posts-item media">
-                  <a href="#">
-                      <img class="mr-3 other-posts-item__img" src="{{ absolute_url }}  {{ page.image }}">
-                  </a>
-                  <div class="media-body">
-                    <a href="#">
-                      <h6 class="mt-0 other-posts-item__title">New Feature Release: Paste Rep from Clipboard</h6>
-                    </a> 
-                    <div class="other-posts-item__date">September 21, 2018</div>
-                  </div>
-                </div>
-                
               </div>
             </div>
           </div>

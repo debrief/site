@@ -48,27 +48,6 @@ title: About Us – Debrief Maritime Analysis Tool
             </div>
         </div>
     </section>
-    <section>
-           {% for post in site.posts %}
-                <div class="">
-                        <div class="">
-                                {{ post.date | date: "%B %e, %Y" }}
-                        </div>
-                </div>
-            {% endfor %}
-
-
-            <h2>Archive</h2>
-                {% assign postsByYearMonth = site.posts | group_by_exp:"post", "post.date | date: '%Y %b'"  %}
-                {% for yearMonth in postsByYearMonth %}
-                
-                <a href="{{ year }}">
-                        <h3>{{ yearMonth.name }}</h3>
-                </a>
-                {% endfor %}
-
-
-    </section>
 
     <section class="section-default">
         <div class="container-fluid">

@@ -2,6 +2,9 @@
 html {
   font-size: 15px;
   height: 100vh;
+  @include media-breakpoint-down (xs) {
+    font-size: 13px;
+  } 
 }
 body {
   font-weight: 300;
@@ -57,6 +60,13 @@ main {
 
 }
 
+//Typography
+.fs-19 {
+  font-size: 1.2rem;
+}
+.fs-21 {
+  font-size: 1.4rem;
+}
 
 // Items
 .error-page {
@@ -154,6 +164,7 @@ main {
   padding: 0;
   width: 100%;
   text-align: left;
+  white-space: normal;
   @include hover-focus-active {
     color: $body-color;
   }

@@ -26,29 +26,33 @@ For example, when analysing interactions, the point at which sensor contact is 
 <p>A lot of this information is known to <strong>Debrief</strong>, but is present in different locations.</p>
 <h2>Solution</h2>
 <p>The <strong>Tactical Overview</strong> display in<strong> Debrief</strong> has been developed as a way of collating as much of this information as possible into a single, time-synced display.  The <strong>Tactical Overview</strong> is a custom instance of the more generic<strong> Stacked Charts</strong> capability.</p>
-<img class="image-fluid" src="{{ absolute_url }}/assets/images/Intro.png" alt="First overview" />
+<img class="img-fluid" src="{{ absolute_url }}/assets/images/Intro.png" alt="First overview" />
 <p>Shown on the right of the above screenshot, the <strong>Tactical Overview</strong> provides at-a-glance comparisons of vessel statuses and their relative relationship.   The Orange marker line is shown at the current plot time, allowing the analyst to view all statuses/relationships at the current time.</p>
 <p>The view is opened in a single-click from the new <strong>Show Tactical Overview</strong> button in the Track Tote:</p>
-<img class="image-fluid" src="{{ absolute_url }}/assets/images/new-button.png" alt="Track Tote button"/>
+<img class="img-fluid" src="{{ absolute_url }}/assets/images/new-button.png" alt="Track Tote button"/>
 <p>This then uses the current <strong>Primary</strong> and <strong>Secondary</strong> tracks to produce the plot shown below.  As you can see, the top graph shows the vessel courses, the next one speed, then bearing/relative bearing/ ATB, and lastly the range between the vessels.</p>
-<img class="image-fluid" src="{{ absolute_url }}/assets/images/InitialView.png" alt="Tactical Overview as shown"/>
+<img class="img-fluid" src="{{ absolute_url }}/assets/images/InitialView.png" alt="Tactical Overview as shown"/>
 <p>As the time slider is adjusted, an orange <strong>time now</strong> marker moves along the plot (much like the existing <strong>XY Plot views</strong> in<strong> Debrief</strong>).</p>
 <p>As you can see, in this case there Speed chart doesn't reveal very much - since the Speed data for this dataset is artificial.   Let's remove it.</p>
 <p>In addition to informing your analysis, these charts are a way of you presenting information/data/analysis.  To allow analysts to focus on the data that is relevant, both for analysis &amp; presentation, lots of effort has been invested in being able to easily edit these charts.</p>
 <p>So, if we click on the <strong>Edit</strong> button, the chart will switch to edit mode:</p>
-<img class="image-fluid" src="{{ absolute_url }}/assets/images/EditMode.png" alt="EditMode"/>
+<img class="img-fluid" src="{{ absolute_url }}/assets/images/EditMode.png" alt="EditMode"/>
 <p>Here you can see the a breakdown of how the graphs are constructed.  We're going to remove the second graph.  To do this, just click on the orange "<strong>X</strong>" delete button next to <strong>Speed &amp; Depth</strong>. The graph will disappear. Now click on <strong>View</strong> button to return to the view mode.  This will give the first screenshot shown above.</p>
 <p>Hold on, let's not skim over the glamorous rotation transition between the two modes.  Here's another look:</p>
-<iframe width="669" height="502" src="https://www.youtube.com/embed/n4ZO4DAJsaI?feature=oembed" frameborder="0" gesture="media" allowfullscreen></iframe>
+
+<div class="embed-responsive embed-responsive-16by9">
+  <iframe class="embed-responsive-item" width="560" height="502" src="https://www.youtube.com/embed/n4ZO4DAJsaI?feature=oembed" frameborder="0" gesture="media" allowfullscreen></iframe>
+</div>
+
 <h2>Advanced usage</h2>
 <p>Let's make another change.  Let's imagine that we wish to highlight some significant produce of the relationship between the ATB of the secondary track and the Range. Switch to <strong>Edit</strong> mode, and drag the <strong>Bearing </strong>axis on the middle graph to the bottom-right of the bottom graph - the <em>landing pad</em> titled <strong>Max Axis</strong>.</p>
 <p>Ok, now switch back to the <strong>View</strong> mode:</p>
 <p>
-<img class="image-fluid" src="{{ site.baseurl }}/assets/images/AtbMoved.png" alt="AtbMoved"/>
+<img class="img-fluid" src="{{ site.baseurl }}/assets/images/AtbMoved.png" alt="AtbMoved"/>
 </p>
 <p>We've now plotted <strong>ATB</strong> against <strong>Range</strong> in the bottom graph.</p>
 <p>It's worth exploring the <strong>Edit</strong> view a little more.  Here are some highlights:</p>
-<p><img class="image-fluid" src="{{ site.baseurl }}/assets/images/EditView.png" alt="EditView" /></p>
+<p><img class="img-fluid" src="{{ site.baseurl }}/assets/images/EditView.png" alt="EditView" /></p>
 <ol>
 <li>click here and you can make high level edits to the set of charts. Currently this is covers the horizontal/vertical arrangement of the graphs</li>
 <li>click on <strong>Course</strong> to select the top chart, or on the <strong>X</strong> to delete the chart (as you did earlier)</li>
@@ -56,9 +60,9 @@ For example, when analysing interactions, the point at which sensor contact is 
 <li>lastly, click on the <strong>paintbrush</strong> icon to make formatting changes</li>
 </ol>
 <p>Note in the following screenshot how the graphs are stacked horizontally and the direction of the time axis has been reversed, to give a traditional waterfall display.</p>
-<p><img class="image-fluid" src="{{ site.baseurl }}/assets/images/Waterfall.png" alt="Waterfall" /></p>
+<p><img class="img-fluid" src="{{ site.baseurl }}/assets/images/Waterfall.png" alt="Waterfall" /></p>
 <p>Another feature of the edit mode is how it is used to add more data.  When in edit mode, if you drag a Debrief track from the Outline view onto either an existing Axis, or the Min Axis / Max Axis placeholder, a dialog will popup asking you which measurement to plot (course, speed, depth):</p>
-<p><img class="image-fluid" src="{{ site.baseurl }}/assets/images/NewMeasurement.png" alt="NewMeasurement" /></p>
+<p><img class="img-fluid" src="{{ site.baseurl }}/assets/images/NewMeasurement.png" alt="NewMeasurement" /></p>
 <p>Tick the box(es) for the data you want, and it will be added to that axis.</p>
 <h2>What's next?</h2>
 <p>This is an early release, aimed at getting early analyst feedback.</p>

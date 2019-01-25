@@ -10,4 +10,7 @@ author: ianmayo
 ---
 <p>To support the development of multi-static analysis capabilities, we've added the ability to introduce 3 actors in the frequency optimisation process: transmitter, subject, and receiver.</p>
 <p>See more in the video below:</p>
-<p><iframe width="560" height="315" src="https://www.youtube.com/embed/yt5CZmiUOqM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></p>
+
+<div class="embed-responsive embed-responsive-16by9">
+  <iframe class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/yt5CZmiUOqM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>

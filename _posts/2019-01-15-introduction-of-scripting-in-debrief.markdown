@@ -16,5 +16,6 @@ including:
   <li>Conduct ad-hoc calculations on Debrief data</li>
 </ul>
 
-<p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/vJ1dbZbbI5k" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></p>
+<div class="embed-responsive embed-responsive-16by9">
+  <iframe class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/vJ1dbZbbI5k" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>

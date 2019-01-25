@@ -12,6 +12,7 @@ author: ianmayo
 <p>We're coming to the end of another new feature.</p>
 <p>Most of the time Debrief data comes in digital form, captured on another system. But, occasionally it arrives in text form and has to be transcribed. Some users do this within Debrief, others perform the task in a text editor such as Notepad, then save the content and open in Debrief.</p>
 <p>This process has been made quicker by allowing analysts to write content in Notepad, then copy/paste it into Debrief's outline view.</p>
-<p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/tDvfxrHpXYg" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></p>
 
+<div class="embed-responsive embed-responsive-16by9">
+  <iframe class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/tDvfxrHpXYg" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>

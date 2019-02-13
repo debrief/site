@@ -47,23 +47,7 @@
       <div class="row">
         {% for item in site.data.features.all %}
           {% if item.reconstruction == true %}
-            <div class="col-sm-4">
-              <figure class="figure features-item">
-                  <div class="features-item__img-wrapper">
-                    <img src="{{ item.image }}" class="figure-img img-fluid features-item__img" alt="A generic square placeholder image with rounded corners in a figure.">
-                    <div class="features-item__overlay">
-                        <a class="features-item__overlay-link" href="#" data-gal="prettyPhoto">
-                          <i class="far fa-eye"></i>
-                        </a>
-                    </div>
-                  </div>
-                  <figcaption class="figure-caption features-item__caption">
-                    <a href="{{ item.link }}" class="features-item__title btn btn-primary">{{ item.title }}</a>
-                    <p class="features-item__text">{{ item.text }}</p>
-                    <a href="{{ item.link }}" class="features-item__link">Learn more</a>
-                  </figcaption>
-                </figure>
-            </div>
+            {% include feature-block.html %}
           {% endif %}
         {% endfor %}
       </div>      

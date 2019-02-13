@@ -2,6 +2,7 @@
 short_name: ianmayo
 name: Ian Mayo
 position: Director & Head of Engineering
+social: true
 linkedin: 'https://www.linkedin.com/in/ianmayo'
 googleplus: 'https://plus.google.com/u/0/+IanMayo'
 email: 'ian@planetmayo.com'

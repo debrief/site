@@ -122,15 +122,14 @@ title: Get Debrief – Debrief Maritime Analysis Tool
                 <a href="{{ author.url }}" title="Posts by {{ author.name }}" rel="author">{{ author.name }}</a>
               </h3>              
               <p class="author-block__description">{{ author.content | markdownify }}</p>
-              <div class="author-block__socials d-flex align-items-baseline">
-                <span class="text-uppercase mr-2">Follow me</span>
-                <a class="social-link author-block__social-link gplus" target="_blank" title="google+" href="{{ author.googleplus }}">
-                  <i class="fab fa-google-plus-g"></i>
-                </a>
-                <a class="social-link author-block__social-link linkedin" target="_blank" title="linkedin" href="{{ author.linkedin }}">
-                  <i class="fab fa-linkedin-in"></i>
-                </a>
-              </div>
+              {% if author.social == true %}
+                <div class="author-block__socials d-flex align-items-baseline">
+                  <span class="text-uppercase mr-2">Follow me</span>
+                  <a class="social-link author-block__social-link linkedin" target="_blank" title="linkedin" href="{{ author.linkedin }}">
+                    <i class="fab fa-linkedin-in"></i>
+                  </a>
+                </div>
+              {% endif %}
               
             </div>
           </div>

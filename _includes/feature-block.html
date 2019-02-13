@@ -1,0 +1,17 @@
+<div class="col-sm-6 col-md-4">
+    <figure class="figure features-item mx-auto">
+        <div class="features-item__img-wrapper">
+          <img src="{{ item.image }}" class="figure-img img-fluid features-item__img" alt="{{ item.title }}">
+          <div class="features-item__overlay">
+              <a class="features-item__overlay-link" href="#" data-gal="prettyPhoto">
+                <i class="far fa-eye"></i>
+              </a>
+          </div>
+        </div>
+        <figcaption class="figure-caption features-item__caption">
+          <a href="{{ item.link }}" class="features-item__title btn btn-primary">{{ item.title }}</a>
+          <p class="features-item__text">{{ item.text }}</p>
+          <a href="{{ item.link }}" class="features-item__link">Learn more</a>
+        </figcaption>
+      </figure>
+  </div>

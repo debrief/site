@@ -38,6 +38,10 @@
 .thumbnail-user-logo {
   margin-bottom: 2rem;
   margin-top: 1rem;
+  transition: transform .5s;
+  @include hover-focus-active {
+    transform: scale(1.2);
+  }
 }
 
 .block-try {

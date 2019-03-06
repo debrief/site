@@ -22,7 +22,7 @@ group :jekyll_plugins do
   gem "jekyll-feed", "~> 0.6"
 end
 
-gem 'bootstrap', '~> 4.1.3'
+gem 'bootstrap', '~> 4.3.1'
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]

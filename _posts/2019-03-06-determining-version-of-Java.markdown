@@ -17,11 +17,5 @@ author: ianmayo
   <li>Open the `Configuration` tab</li>
   <li>Scroll down to the `-arch` entry.  If this ends in `_64` then it's a 64-bit java installation, otherwise it's 32-bit.</li>
 </ol>
+<img class="img-fluid" src="{{ site.baseurl }}/assets/images/JVM_Version_Screenshot.png" alt="Viewing JVM Version" />
 </p>
-<p>This new capability is intended to enable Debrief Power Users to take on more advanced data manipulation tasks,
-including:
-<ul>
-  <li>Apply bulk changes to Debrief objects</li>
-  <li>Import unexpected data-types from file</li>
-  <li>Conduct ad-hoc calculations on Debrief data</li>
-</ul>

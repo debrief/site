@@ -1,0 +1,581 @@
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <title>Chapter&nbsp;17.&nbsp;Scripting Cookbook</title><link rel="stylesheet" type="text/css" href="header.css"><meta name="generator" content="DocBook XSL Stylesheets V1.78.1"><meta name="keywords" content="Maritime Analysis, Open Source Tool"><link rel="home" href="index.html" title="Debrief NG User Documentation"><link rel="up" href="reference_guide.html" title="Part&nbsp;IV.&nbsp;Reference Guide"><link rel="prev" href="BRT_format.html" title="16.8.&nbsp;Third Party BRT Format"><link rel="next" href="GeoToolsRef.html" title="Chapter&nbsp;18.&nbsp;GeoTools in Debrief"><link rel="preface" href="PrefaceIntro.html" title="Introduction"><link rel="part" href="tutorial.html" title="Part&nbsp;I.&nbsp;Getting started"><link rel="chapter" href="get_start.html" title="Chapter&nbsp;1.&nbsp;First steps"><link rel="part" href="UsingDebrief.html" title="Part&nbsp;II.&nbsp;Using Debrief"><link rel="chapter" href="moving_around.html" title="Chapter&nbsp;2.&nbsp;Moving around the view"><link rel="chapter" href="formatting_data.html" title="Chapter&nbsp;3.&nbsp;Manipulating track data"><link rel="chapter" href="analysing_data.html" title="Chapter&nbsp;4.&nbsp;Analysing Data"><link rel="chapter" href="exporting_data.html" title="Chapter&nbsp;5.&nbsp;Exporting Data"><link rel="chapter" href="symbol_sets.html" title="Chapter&nbsp;6.&nbsp;Symbol sets"><link rel="chapter" href="external_datasets.html" title="Chapter&nbsp;7.&nbsp;External datasets"><link rel="chapter" href="ExercisePlanning.html" title="Chapter&nbsp;8.&nbsp;Exercise planning"><link rel="chapter" href="viewing_narratives.html" title="Chapter&nbsp;9.&nbsp;Viewing narratives"><link rel="chapter" href="ChartBackdrops.html" title="Chapter&nbsp;10.&nbsp;Using chart backdrops"><link rel="chapter" href="sensor_data.html" title="Chapter&nbsp;11.&nbsp;Analysing sensor data"><link rel="chapter" href="tma_data.html" title="Chapter&nbsp;12.&nbsp;Management of TMA and TUA solutions"><link rel="chapter" href="dis_support.html" title="Chapter&nbsp;13.&nbsp;Support for DIS Protocol"><link rel="part" href="maintainers_guide.html" title="Part&nbsp;III.&nbsp;Maintainer's Guide"><link rel="chapter" href="participating.html" title="Chapter&nbsp;14.&nbsp;Participating in Debrief development"><link rel="chapter" href="maintainers.html" title="Chapter&nbsp;15.&nbsp;Debrief maintainer's guide"><link rel="part" href="reference_guide.html" title="Part&nbsp;IV.&nbsp;Reference Guide"><link rel="chapter" href="reference.html" title="Chapter&nbsp;16.&nbsp;Debrief file formats"><link rel="chapter" href="ScriptCookbook.html" title="Chapter&nbsp;17.&nbsp;Scripting Cookbook"><link rel="chapter" href="GeoToolsRef.html" title="Chapter&nbsp;18.&nbsp;GeoTools in Debrief"><link rel="chapter" href="chap_debrief_algorithms.html" title="Chapter&nbsp;19.&nbsp;Debrief algorithms"><link rel="chapter" href="chap_genetic_algorithms.html" title="Chapter&nbsp;20.&nbsp;Semi Automated Track Construction (SATC)"><link rel="chapter" href="dis_ref.html" title="Chapter&nbsp;21.&nbsp;System Documentation for DIS integration"><link rel="appendix" href="app_glossary.html" title="Appendix&nbsp;A.&nbsp;Debrief Glossary"><link rel="glossary" href="app_glossary.html#glossary" title="Glossary"><link rel="index" href="the_index.html" title="Index"><link rel="section" href="ScriptCookbook.html#ScriptIntro" title="17.1.&nbsp;Introduction"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">Chapter&nbsp;17.&nbsp;Scripting Cookbook</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="BRT_format.html"><img src="images/prev.gif" alt="Prev"></a>&nbsp;</td><th width="60%" align="center">Part&nbsp;IV.&nbsp;Reference Guide</th><td width="20%" align="right">&nbsp;<a accesskey="n" href="GeoToolsRef.html"><img src="images/next.gif" alt="Next"></a></td></tr></table><hr></div><div class="chapter" id="ScriptCookbook"><div class="titlepage"><div><div><h2 class="title">Chapter&nbsp;17.&nbsp;Scripting Cookbook</h2></div></div></div><div class="toc"><p><b>Table of Contents</b></p><dl class="toc"><dt><span class="sect1"><a href="ScriptCookbook.html#ScriptIntro">17.1. Introduction</a></span></dt><dd><dl><dt><span class="sect2"><a href="ScriptCookbook.html#d5e5627">17.1.1. Looping through Tracks</a></span></dt><dt><span class="sect2"><a href="ScriptCookbook.html#d5e5640">17.1.2. Getting Selected Item</a></span></dt><dt><span class="sect2"><a href="ScriptCookbook.html#d5e5653">17.1.3. Getting Current Time of a Scenario</a></span></dt><dt><span class="sect2"><a href="ScriptCookbook.html#d5e5664">17.1.4. Getting Start and End Time Bounds of a Scenario</a></span></dt><dt><span class="sect2"><a href="ScriptCookbook.html#d5e5675">17.1.5. Adding Shape to a Plot</a></span></dt><dt><span class="sect2"><a href="ScriptCookbook.html#d5e5694">17.1.6. Loading a Track from an Unusual Track Format</a></span></dt><dt><span class="sect2"><a href="ScriptCookbook.html#d5e5714">17.1.7. Writing Calculated Values to Text File</a></span></dt><dt><span class="sect2"><a href="ScriptCookbook.html#d5e5727">17.1.8. Revealing All Tracks in a Particular Color</a></span></dt><dt><span class="sect2"><a href="ScriptCookbook.html#d5e5739">17.1.9. Grouping Related into a New Layer</a></span></dt><dt><span class="sect2"><a href="ScriptCookbook.html#d5e5753">17.1.10. Making All Annotations Live for a Duration</a></span></dt><dt><span class="sect2"><a href="ScriptCookbook.html#d5e5800">17.1.11. Reusing Code from Another File</a></span></dt></dl></dd></dl></div>
+      
+      <div class="sect1" id="ScriptIntro"><div class="titlepage"><div><div><h2 class="title" style="clear: both">17.1.&nbsp;Introduction</h2></div></div></div><div class="toc"><dl class="toc"><dt><span class="sect2"><a href="ScriptCookbook.html#d5e5627">17.1.1. Looping through Tracks</a></span></dt><dt><span class="sect2"><a href="ScriptCookbook.html#d5e5640">17.1.2. Getting Selected Item</a></span></dt><dt><span class="sect2"><a href="ScriptCookbook.html#d5e5653">17.1.3. Getting Current Time of a Scenario</a></span></dt><dt><span class="sect2"><a href="ScriptCookbook.html#d5e5664">17.1.4. Getting Start and End Time Bounds of a Scenario</a></span></dt><dt><span class="sect2"><a href="ScriptCookbook.html#d5e5675">17.1.5. Adding Shape to a Plot</a></span></dt><dt><span class="sect2"><a href="ScriptCookbook.html#d5e5694">17.1.6. Loading a Track from an Unusual Track Format</a></span></dt><dt><span class="sect2"><a href="ScriptCookbook.html#d5e5714">17.1.7. Writing Calculated Values to Text File</a></span></dt><dt><span class="sect2"><a href="ScriptCookbook.html#d5e5727">17.1.8. Revealing All Tracks in a Particular Color</a></span></dt><dt><span class="sect2"><a href="ScriptCookbook.html#d5e5739">17.1.9. Grouping Related into a New Layer</a></span></dt><dt><span class="sect2"><a href="ScriptCookbook.html#d5e5753">17.1.10. Making All Annotations Live for a Duration</a></span></dt><dt><span class="sect2"><a href="ScriptCookbook.html#d5e5800">17.1.11. Reusing Code from Another File</a></span></dt></dl></div>
+        
+        <p>A cookbook helps users  learn a programming api/language by building up a
+          repository of snippets that implement a specific task. The <span class="bold"><strong>Debrief
+            Scripting Cookbook</strong></span> contains code snippets for some of the sample tasks that
+          can be performed using the Scripting Perspective feature of Debrief. You can use these
+          code snippets as building blocks to solve more complex issues.</p>
+        <p>Refer to the Debrief Scripting Tutorial to gain a higher level understanding of
+          developing scripts in Debrief.</p>
+        <div class="sect2" id="d5e5627"><div class="titlepage"><div><div><h3 class="title">17.1.1.&nbsp;Looping through Tracks</h3></div></div></div>
+          
+          <p>A lot of <span class="bold"><strong>Debrief</strong></span> operations will need to loop
+            through all loaded tracks, in a particular plot. The script below will facilitate
+            that:</p>
+          <pre class="programlisting">loadModule('/Debrief/Core');
+loadModule('/Debrief/Annotations');
+// @type org.mwc.debrief.scripting.wrappers.Plot
+let plot = getActivePlot();
+// @type org.mwc.debrief.scripting.wrappers.DLayers
+let layers = plot.getLayers();
+let tracks = layers.getTracks();
+for (let count =0 ; count &lt; tracks.length; count++)
+{
+  //@type Debrief.Wrappers.TrackWrapper
+  let track = tracks[count];
+  print(track.getName())
+}</pre>
+          <p>The result of the above code snippet on the file <span class="bold"><strong>lightweight_test_tracks.rep</strong></span> is shown in the below screenshot. The result
+            is the list of names of the tracks in the plot <span class="bold"><strong>lightweight_test_tracks.rep</strong></span> will display in the <span class="bold"><strong>Console</strong></span>.</p>
+          <div class="mediaobject"><img src="figures/1LoopThruTracks.png"></div>
+        </div>
+        <div class="sect2" id="d5e5640"><div class="titlepage"><div><div><h3 class="title">17.1.2.&nbsp;Getting Selected Item</h3></div></div></div>
+          
+          <p>Sometimes you may want to select the subject of a script by selecting an item in the
+            Outline View, rather than hard-coding it. This script does that.</p>
+          <pre class="programlisting">loadModule('/Debrief/Core');
+// @type org.mwc.debrief.scripting.wrappers.Plot
+let plot = getActivePlot();
+//@type org.mwc.debrief.scripting.wrappers.Outline
+let outline = plot.getOutline();
+let selectedObjects = outline.getSelection();
+print(selectedObjects);
+let count;
+for (count =0 ; count &lt; selectedObjects.length; count++ )
+{
+  print(selectedObjects[count].getName());
+}
+if(selectedObjects.length == 0)
+{
+ print("Please select one or more items in the Outline View");
+ exit(0);
+}</pre>
+          <p>The result of this script when it is run on the file <span class="bold"><strong>boat1.rep</strong></span>is shown in the below screenshot. The selected items, in the
+            outline view, in this example are positions <span class="bold"><strong>0501</strong></span>,<span class="bold"><strong> 0502</strong></span>, and <span class="bold"><strong>0503</strong></span>.</p>
+          <div class="mediaobject"><img src="figures/2GetSelectItem.png"></div>
+        </div>        
+        <div class="sect2" id="d5e5653"><div class="titlepage"><div><div><h3 class="title">17.1.3.&nbsp;Getting Current Time of a Scenario</h3></div></div></div>
+          
+          <p>When you are analysing a track and moving forward through the scenario, you may want to retrieve the current time of the scenario to perform some calculation. The below script addresses this need:</p>
+          <pre class="programlisting">loadModule('/Debrief/Core');
+loadModule('/Debrief/Annotations');
+// @type org.mwc.debrief.scripting.wrappers.Plot
+let plot = getActivePlot();
+// @type MWC.GenericData.HiResDate
+let currentTime = plot.getTime();
+print(currentTime.getDate());</pre>
+          <p>The result, the current time of the scenario, of the above code snippet on the file
+              <span class="bold"><strong>boat1.rep </strong></span>is shown in the below screenshot. The
+            current time of the scenario will display in the <span class="bold"><strong>Console</strong></span>:</p>
+          <div class="mediaobject"><img src="figures/3GetCurrentTime.png"></div>
+        </div>
+        <div class="sect2" id="d5e5664"><div class="titlepage"><div><div><h3 class="title">17.1.4.&nbsp;Getting Start and End Time Bounds of a Scenario</h3></div></div></div>
+          
+          <p>You may, at times, want to retrieve the start and end time bounds of a plot, possibly to set the axes on a graph. The below script gets the start and end time bounds of a scenario:</p>
+          <pre class="programlisting">loadModule('/Debrief/Core');
+// @type org.mwc.debrief.scripting.wrappers.Plot
+let plot = getActivePlot();
+//@type MWC.GenericData.TimePeriod
+let period = plot.getTimePeriod();
+print(period.getStartDTG().getDate());
+print(period.getEndDTG().getDate());</pre>
+          <p>The result of this script, i.e, the start and end time bounds of the scenario, on
+            the file <span class="bold"><strong>boat1.rep</strong></span> is shown in the below screenshot.
+            The result will display in the<span class="bold"><strong>Console</strong></span>:</p>
+          <div class="mediaobject"><img src="figures/4GetStartEndTimeBounds.png"></div>
+        </div>
+        <div class="sect2" id="d5e5675"><div class="titlepage"><div><div><h3 class="title">17.1.5.&nbsp;Adding Shape to a Plot</h3></div></div></div>
+          
+          <p>You can add value to a plot by adding shapes to it. You can use shapes, in a plot,
+            to represent a wide range of real world entities. Also shapes can be organised in
+            layers. The below script demonstrates creating a layer named <span class="bold"><strong>Shapes</strong></span>, creating the shape ellipse named <span class="bold"><strong>EllipseDemo</strong></span>, defining the position of the shape EllipseDemo, adding the
+            newly created shape (<span class="bold"><strong>EllipseDemo</strong></span>) to the newly created
+            layer (<span class="bold"><strong>Shapes</strong></span>), setting the color of the shape, and
+            displaying the output message &#8220;<span class="bold"><strong>EllipseDemo is created
+              successfully</strong></span>&#8221; in the <span class="bold"><strong>Console</strong></span>.</p>
+          <pre class="programlisting">loadModule('/Debrief/Core');
+loadModule('/Debrief/Shapes');
+loadModule('/Debrief/Spatial');
+// get active plot
+// @type org.mwc.debrief.scripting.wrappers.Plot
+let plot = getActivePlot();
+//@type org.mwc.debrief.scripting.wrappers.DLayers
+let layers = plot.getLayers();
+//create color
+let purple =  createColorRGB(100, 10, 215) ;
+// @type MWC.GUI.Layer
+let shapeLayer = layers.createLayer("Shapes");
+layers.add(shapeLayer );
+// prepare data necessary to create ellipse
+// @type MWC.GenericData.WorldLocation
+let ellipseLoc = createLocation(21,-10, 0);
+// @type MWC.GenericData.WorldDistance
+let wdDistance1 = createDistance(200.5, KM) ;
+// @type MWC.GenericData.WorldDistance
+let wdDistance2 = createDistance(100.5, KM) ;
+// @type Debrief.Wrappers.ShapeWrapper
+let myecllipse = createEllipse(ellipseLoc, 15.3, wdDistance1, 
+    wdDistance2, "EllipseDemo", purple);
+myecllipse.getShape().setFilled(true);
+shapeLayer.add(myecllipse)
+print(myecllipse.getName() + " is created successfully")</pre>
+          <p>The result of the script on the file <span class="bold"><strong>boat1.rep</strong></span> is
+            shown in the screenshot below. The <span class="bold"><strong>Outline</strong></span> view will
+            display the newly added layer <span class="bold"><strong>Shapes</strong></span> and the shape
+              <span class="bold"><strong>EllipseDemo</strong></span>.</p>
+          <div class="mediaobject"><img src="figures/5AddShapePlot.png"></div>
+        </div>
+        <div class="sect2" id="d5e5694"><div class="titlepage"><div><div><h3 class="title">17.1.6.&nbsp;Loading a Track from an Unusual Track Format</h3></div></div></div>
+          
+          <p><span class="bold"><strong>Debrief</strong></span> supports a variety of file types. With the
+            added advantage of scripting in <span class="bold"><strong>Debrief</strong></span>, you will be
+            able to handle new or rare file types also.</p>
+          <pre class="programlisting">loadModule('/System/Resources', false);
+loadModule('/Debrief/Core'); // date
+loadModule('/Debrief/Spatial'); // location
+loadModule('/Debrief/Tactical'); // for plot, duration, date
+// get project instance, in order to refer to a file
+// @type org.eclipse.core.resources.IProject
+var project = getProject("sample_data");
+if (!project.exists())
+{
+  print("Can't find project");
+  exit(0);
+}
+// to get this script work , please choose CSV_EXCHANGE_SAMPLE.csv file 
+// from other_formats folder
+// @type org.eclipse.ease.modules.platform.IFileHandle
+let pathToSelectedFile = showFileSelectionDialog("workspace://",1,
+    "Select File", "Select your File that has track information") ;
+// create a file within the project
+var file = openFile(pathToSelectedFile);
+if (!file.exists())
+{
+  print("Can't find file");
+  exit(0);
+}
+var track = null;
+// ok, now loop through the file contents
+var nextLine;
+var ctr = 0;
+while ((nextLine = readLine(file)) != null)
+{
+  ctr++;
+  if (ctr &gt; 2)
+  {
+    /**
+     * Note: format looks like this: Two header lines, 
+     * then rows of CSV entries.
+     * # UK TRACK EXCHANGE FORMAT, V1.0 #
+     * Lat,Long,DTG,UnitName,CaseNumber,Type,Flag,Sensor, 
+       MajorAxis,SemiMajorAxis,SemiMinorAxis,Course,Speed,Depth,
+       Likelihood,Confidence,SuppliedBy,Provenance,InfoCutoffDate,
+       Purpose,Classification,DistributionStatement
+     * 22.1862861,-21.6978806,19951212T050000Z,NELSON,D-112/12,
+       OILER,UK,S2002,1.0,0.5,0.5,269.7000,2.0000,0.0,Remote,Low,
+       UNIT_ALPHA,NELSON,19951212,For
+     * planning,PUBLIC,"Quite a content."
+    */
+   var partsOfStr = nextLine.split(',');
+     if (track == null)
+     {
+        // track not created yet. Go for it.
+        track = createTrack(partsOfStr[3])
+     }
+     // location
+     let dLat = parseFloat(partsOfStr[0]);
+     let dLong = parseFloat(partsOfStr[1]);
+     let location = createLocation(dLat, dLong, 0);
+     // dtg components
+     let dtgStr = partsOfStr[2];
+     let yrs = dtgStr.substring(0, 4);
+     let mons = dtgStr.substring(4, 6) - 1;
+     let days = dtgStr.substring(6, 8);
+     let hrs = dtgStr.substring(9, 11);
+     let mins = dtgStr.substring(11, 13);
+     let secs = dtgStr.substring(13, 15);
+     // date object
+     let dtg = createDateCalendarFormat(yrs, mons, days, hrs, mins, secs);
+     // course and speed
+     let course = partsOfStr[11];
+     let speed = partsOfStr[12];
+     // create the fix
+     // @type Debrief.Wrappers.FixWrapper
+     let fix = createFix(dtg, location, course, speed);
+     // store the fix
+     track.addFix(fix);
+  }
+}  
+if (track == null)
+{
+  exit(0)
+}
+// ok, now add the new track to the plot
+let plot = getActivePlot();
+//@type org.mwc.debrief.scripting.wrappers.DLayers
+let layers = plot.getLayers();
+layers.add(track);
+layers.fireModified();</pre>
+          <p>We will run this script on the file <span class="bold"><strong>boat2.rep</strong></span> which
+            has one track <span class="bold"><strong>COLLINGWOOD</strong></span>. When prompted select the
+            file <span class="bold"><strong>CSV_EXCHANGE_SAMPLE.csv</strong></span> file, from other_formats
+            folder, which has one track <span class="bold"><strong>NELSON</strong></span>. After running the
+            script, the file <span class="bold"><strong>boat2.rep</strong></span> will have two tracks
+              <span class="bold"><strong>NELSON</strong></span> and <span class="bold"><strong>COLLINGWOOD</strong></span>, which will update in the <span class="bold"><strong>Outline</strong></span> view and the <span class="bold"><strong>Plot Editor</strong></span>. The
+            result is shown in the below screenshot:</p>
+          <div class="mediaobject"><img src="figures/6LoadfromUnusualFormat.png"></div>
+        </div>
+        <div class="sect2" id="d5e5714"><div class="titlepage"><div><div><h3 class="title">17.1.7.&nbsp;Writing Calculated Values to Text File</h3></div></div></div>
+          
+          <p>Scripting, in <span class="bold"><strong>Debrief, </strong></span>is not only useful for
+            reading in data, but it is also useful in producing outputs of new derived datasets.
+            This script will help you do that:</p>
+          <pre class="programlisting">loadModule('/System/Resources', false);
+loadModule('/Debrief/Core'); // date
+loadModule("/System/UI", false); // for the input dialogs
+// get project instance
+var project = getProject("sample_data");
+if (!project.exists())
+{
+ print("Can't find project");
+ exit(0);
+}
+// @type org.mwc.debrief.scripting.wrappers.Plot
+let plot = getActivePlot(); // get the current plot
+if (plot == null) // did we find a Debrief plot?
+{
+ print("There is no active plot");
+ exit(0);
+}
+//@type org.mwc.debrief.scripting.wrappers.DLayers
+let layers = plot.getLayers(); // get the layers for the plot
+let lNames = layers.getTrackNames(); // get a list of layer names
+let choice = showSelectionDialog(lNames, 
+  "Which track?","Choose track to export"); // let the user select a name
+if (choice == null) // did user select something?
+{
+ print("You must choose an option");
+ exit(0);
+}
+// create a file within the project
+var file = openFile("workspace://sample_data/other_formats/tutorial_"
++ choice + "_export.csv", WRITE, true);
+if (!file.exists())
+{
+ print("Can't create file");
+ exit(0);
+}
+writeLine(file, ";; elapsed (secs), course rate (degs/sec)");
+let track = layers.findTrack(choice); // try to get the selected layer
+if (track == null) // did we find it the annotations layer?
+{
+ print("Layer was not found");
+ exit(0);
+}
+var ctr = 0;
+let fixes = track.getPositionIterator(); // to loop through positions
+var lastCourse = null;
+var lastTime = null;
+var firstTime = null;
+while (fixes.hasMoreElements()) // while there are more elements
+{
+ // @type Debrief.Wrappers.FixWrapper
+ let fix = fixes.nextElement(); // get the next element
+ let thisCourse = fix.getCourseDegs();
+ let thisTime = fix.getDTG().getDate().getTime();
+ if (firstTime == null)
+ {
+ firstTime = thisTime; // remember the start time
+ }
+ if (lastCourse != null)
+ {
+ let courseDelta = thisCourse - lastCourse;
+ let timeDelta = (thisTime - lastTime) / 1000.0;
+ let courseRate = courseDelta / timeDelta;
+ let elapsed = (thisTime - firstTime) / 1000.0;
+ let str = elapsed + ", " + courseRate;
+ writeLine(file, str);
+ }
+ lastCourse = thisCourse;
+ lastTime = thisTime;
+ ctr++;
+}
+showInfoDialog(ctr + " lines exported", "Export to CSV");
+closeFile(file);</pre>
+          <p>When you run the script, in this case on <span class="bold"><strong>boat1.rep</strong></span>,
+            the dialog showing the number of lines exported will display. </p>
+          <div class="mediaobject"><img src="figures/7WriteCalcValues.png"></div>
+          <p>The output file, in CSV format, will be saved in the sample_data folder of your
+              <span class="bold"><strong>Debrief</strong></span> installation.</p>
+        </div>
+        <div class="sect2" id="d5e5727"><div class="titlepage"><div><div><h3 class="title">17.1.8.&nbsp;Revealing All Tracks in a Particular Color</h3></div></div></div>
+          
+          <p>At times you would want to modify all the elements in the plot that match 
+            certain criteria; instead of individually selecting elements to modify. 
+            The script below reveals all the tracks that are of a selected color, from the plot.</p>
+          <pre class="programlisting">
+/**
+* name: filter to only show tracks with matching color
+**/
+loadModule("/System/UI", false); // for the input dialogs
+loadModule('/Debrief/Core'); // for plot, duration, date
+/**
+* function to return the unique entries in the provided list
+from here
+* https://coderwall.com/p/nilaba/
+         simple-pure-javascript-array-unique-method-with-5-lines-of-code
+**/
+Array.prototype.unique = function() 
+{
+  return this.filter(function(value, index, self) 
+  {
+    return self.indexOf(value) === index;
+  });
+}
+let plot = getActivePlot(); // get the current plot
+if (plot == null) // did we find a Debrief plot?
+{
+  print("There were no active plot");
+  exit(0);
+}
+// get the layers for the plot
+//@type org.mwc.debrief.scripting.wrappers.DLayers
+let layers = plot.getLayers();
+let tracks = layers.getTracks();
+// collate a list of symbols
+var colors = [];
+let len = tracks.length; // find number of tracks
+if(len== 0)
+{
+   showInfoDialog("No tracks found", "Filter colors");
+   exit(0);
+}
+for (var i = 0; i &lt; len; i++) // loop through tracks
+{
+    let track = tracks[i]; // get this track
+    let color = track.getColor(); // get the track color
+    colors[i] = color; // add this color to the list
+}
+// find the unique list of colors
+colors = colors.unique();
+// ask the user which one to filter
+let chosenColor = showSelectionDialog(colors, 
+  "Choose symbol to match","Filter to matching color");
+if (chosenColor == null) // did one get chosen?
+{
+  exit(0); // ok, drop out.
+}
+// now loop through, and hide any that don't match
+for (var i = 0; i &lt; len; i++) 
+{
+  //@type Debrief.Wrappers.TrackWrapper
+  let track = tracks[i]; // get the next track
+  // @type java.awt.Color
+  let color = track.getColor(); // get its color
+  let isVis = color == chosenColor; // does this match the chosen one?
+  track.setVisible(isVis); // set visibility accordingly
+}
+layers.fireModified();</pre>
+          <p>The result of the above script on the file <span class="bold"><strong>lightweight_test_tracks.rep</strong></span>, showing the tracks of the color with
+              <span class="bold"><strong>RGB</strong></span> code <span class="bold"><strong>153,102,0,</strong></span>
+            is shown in the below screenshot:</p>
+          <div class="mediaobject"><img src="figures/8RevealTracks.png"></div>
+        </div>
+        <div class="sect2" id="d5e5739"><div class="titlepage"><div><div><h3 class="title">17.1.9.&nbsp;Grouping Related into a New Layer</h3></div></div></div>
+          
+          <p>A common operation which is applied to similar tracks is converting them into lightweight tracks. On the next level would be controlling the lightweight tracks together which can be achieved by organizing them into a layer. Sometimes the presence of a characteristic, such as the use of a platform-type symbol on a track, can be used to control how to operate on tracks for other platforms of that type.
+            This script will group all the tracks, in a plot, with matching symbol into a new layer.
+          </p>
+          <pre class="programlisting">
+/**
+* name: Group all the tracks with matching symbol
+ *
+*/
+loadModule("/System/UI", false); // for the input dialogs
+loadModule('/Debrief/Core'); // for plot, duration, date
+/**
+* function to return the unique entries in the provided list from here:
+* https://coderwall.com/p/nilaba/
+       simple-pure-javascript-array-unique-method-with-5-lines-of-code
+*/
+Array.prototype.unique = function() {
+  return this.filter(function(value, index, self) {
+    return self.indexOf(value) === index;
+  });
+}
+let plot = getActivePlot(); //get active opened plot
+if (plot == null) // did we find a Debrief plot?
+{
+  print("No track found");
+  exit(0);
+}
+//@type org.mwc.debrief.scripting.wrappers.DLayers
+let layers = plot.getLayers(); // get the layers for the plot
+let tracks = layers.getTracks();
+// collate a list of symbols
+var symbols = [];
+let len = tracks.length; // find number of tracks
+// do we have?
+if(len== 0)
+{
+  showInfoDialog("No tracks found", "Filter symbols");
+  exit(0);
+}
+for (var i = 0; i &lt; len; i++) // loop through tracks
+{
+  let track = tracks[i]; // get this track
+  let symbol = track.getSymbolType(); // get the symbol type
+  symbols[i] = symbol; // add this symbol to the list
+}
+// find the unique list of symbols
+symbols = symbols.unique();
+// ask the user which one to filter
+let chosenSym = showSelectionDialog(symbols, 
+    "Choose symbol to match","Filter to matching symbol");
+if (chosenSym == null) // did one get chosen?
+{
+  exit(0); // ok, drop out.
+}
+// Then we create the new layer with the symbol name.
+let newLayer = layers.createLayer(chosenSym);
+/**
+* now loop through, and move the track to the new layer if it matches
+* with the symbol name
+* */
+for (var i = 0; i &lt; len; i++) 
+{
+  let track = tracks[i]; // get the next track
+  let symbol = track.getSymbolType(); // get its symbol
+  if ( symbol == chosenSym )
+  {
+   newLayer.add(track);
+   layers.remove(track);
+  }
+}
+layers.fireModified();</pre>
+          <p>Run this script on the file <span class="bold"><strong>sample.dpf</strong></span>, the tracks
+            in the plot, <span class="bold"><strong>NELSON</strong></span> and <span class="bold"><strong>COLLINGWOOD</strong></span>, will be grouped under the selected symbol <span class="bold"><strong>ScaledSubmarine</strong></span> and the result can be seen in the <span class="bold"><strong>Outline</strong></span> View. </p>
+          <div class="mediaobject"><img src="figures/9GroupTracks.png"></div>
+        </div>
+        
+        <div class="sect2" id="d5e5753"><div class="titlepage"><div><div><h3 class="title">17.1.10.&nbsp;Making All Annotations Live for a Duration</h3></div></div></div>
+          
+          <p>Scripts can be used to perform bulk tasks which would otherwise take hours of effort. This script will make all the annotations in the selected layer, in the plot, live for a particular duration of time. And this is achieved by changing the finishing time of the scenario.</p>
+          <pre class="programlisting">
+loadModule("/System/UI", false); // for the input dialogs
+loadModule('/Debrief/Core'); // for plot, duration, date
+let plot = getActivePlot(); // get the current plot
+if (plot == null) // did we find a Debrief plot?
+{
+  print("There is no active plot");
+  exit(0);
+}
+let layers = plot.getLayers(); // get the layers for the plot
+let lNames = layers.getLayerNames(); // get a list of layer names
+let choice = showSelectionDialog(lNames, "Which layer", 
+      "Choose ellipse layer"); // let the user select a name
+if (choice == null) // did user select something?
+{
+  print("You must select an option");
+  exit(0);
+}
+let anns = layers.findLayer(choice); // try to get the selected layer
+if (anns == null) // did we find it the annotations layer?
+{
+  print("Layer selected was not found");
+  exit(0);
+}
+// ok, sort out the duration
+let mins = showInputDialog("How many minutes?", "10", 
+                     "Set ellipse duration");
+let duration = createDuration(mins, DUR_MINUTES);
+// now loop through the layer
+let numer = anns.elements(); // retrieve the elements in this layer
+while (numer.hasMoreElements()) // loop through the items in this layer
+{
+  let item = numer.nextElement(); // get the next element
+  // @type java.lang.String
+  let name = item.toString(); // get the string label for the element
+  if (name.startsWith("Ellipse")) // see if it starts with "Ellipse"
+  {
+      let start = item.getStartDTG(); // retrieve the start date
+      let newTime = (start.getDate().getTime() + duration
+        .getValueIn(DUR_MILLISECONDS)); // calculate the new end time
+      item.setEndDTG(createDate(newTime)); // set the new end time
+  }
+}
+layers.fireModified();</pre>
+          <p>Follow the below steps to execute the script:</p>
+            <div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem">
+                <p>Drag and drop the file <span class="bold"><strong>shapes.rep</strong></span> into the
+                  <span class="bold"><strong>Plot Editor</strong></span>.</p>
+              </li><li class="listitem">
+                <p>In the <span class="bold"><strong>Outline</strong></span> view, hide all the layers
+                except the <span class="bold"><strong>TUAs (7 items)</strong></span> layer and the 7 child
+                items (Ellipses) under it.</p>
+              </li><li class="listitem">
+                <p>In the <span class="bold"><strong>Properties</strong></span> view, under the section
+                  <span class="bold"><strong>Time-Related</strong></span>, note the <span class="bold"><strong>Time
+                  end</strong></span> of each ellipse under the TUAs will display as <span class="bold"><strong>Unset</strong></span>.</p>
+              </li><li class="listitem">
+                <p>Now run the script on the file <span class="bold"><strong>shapes.rep</strong></span>.</p>
+              </li><li class="listitem">
+                <p>When prompted, select the ellipse layer <span class="bold"><strong>TUAs</strong></span>
+                and set the duration to <span class="bold"><strong>30</strong></span> minutes.</p>
+              </li><li class="listitem">
+                <p>In the <span class="bold"><strong>Properties</strong></span> view, under the section
+                  <span class="bold"><strong>Time-Related</strong></span>, note the change in the <span class="bold"><strong>Time end</strong></span> of each ellipse. It will display <span class="bold"><strong>Time start</strong></span> plus 30 minutes (the duration set in the
+                previous step).</p>
+              </li><li class="listitem">
+                <p>In the <span class="bold"><strong>Time Controller</strong></span>, switch to <span class="bold"><strong>Snail</strong></span> mode and drag the slider to <span class="bold"><strong>120552</strong></span>. You will notice that first test ellipse will display in the
+                  <span class="bold"><strong>Plot Editor</strong></span>.</p>
+              </li><li class="listitem">
+                <p>Continue to drag the slider. For every two seconds you move the slider, the
+                consecutive test ellipse will display in the <span class="bold"><strong>Plot
+                  Editor</strong></span>.</p>
+              </li></ol></div> 
+              <p>The result of the script is shown in the below screenshot:</p>
+          <div class="mediaobject"><img src="figures/10MakeAnnotationsLive.png"></div>
+        </div>
+        <div class="sect2" id="d5e5800"><div class="titlepage"><div><div><h3 class="title">17.1.11.&nbsp;Reusing Code from Another File</h3></div></div></div>
+          
+          <p>As your scripting skills increase, you may want to group commonly used code snippets
+            into utility files. This script will demonstrate how to refer to such commonly grouped
+            script files. </p>
+          <p>Create a script file <span class="bold"><strong>hello.js</strong></span> with the following
+            code:</p>
+          <pre class="programlisting">loadModule('/System/UI');
+showInfoDialog("Hello World", "Title")</pre>
+          <p>Create another script file <span class="bold"><strong>testCall.js</strong></span> with the
+            following code:</p>
+          <pre class="programlisting">// Include must contain the project name, followed by the 
+// complete path. You could include the &#8220;workspace:/&#8221; tag:
+include("workspace:/project/scripting/hello.js")</pre>
+          <p><span class="bold"><strong>Note</strong></span>: You can copy the complete path of the
+            workspace by navigating to <span class="bold"><strong>Window &gt; Preferences &gt; Scripting &gt;
+              Script Locations</strong></span>. </p>
+          <p>As an extension, you can include functions/methods created in different files. Now
+            create the script file <span class="bold"><strong>sum.js</strong></span>.</p>
+          <pre class="programlisting">function sum(a, b)
+{
+  return a+b;
+}</pre>
+          <p>Now let us call the scripts <span class="bold"><strong>sum </strong></span>and<span class="bold"><strong> hello</strong></span> in the script <span class="bold"><strong>testCall.js</strong></span>.</p>
+          <pre class="programlisting">// Include must contain the project name, followed by the complete path. 
+// You could include the &#8220;workspace:/&#8221; tag
+include("workspace://DebriefNG/sample_data/other_formats/Scripts/hello.js")
+include("workspace:/project/scripting/sum.js")
+print(sum(2,3));</pre>
+          <p>The script <span class="bold"><strong>hello.js</strong></span> will execute first and the
+            dialog with the message <span class="bold"><strong>Hello World</strong></span> will display. </p>
+          <div class="mediaobject"><img src="figures/11HelloWorld.png"></div>
+          <p>Click <span class="bold"><strong>OK</strong></span>. Then the next script <span class="bold"><strong>sum.js</strong></span> will execute and the sum of the two integers will be
+            displayed in the <span class="bold"><strong>Console</strong></span>.</p>
+          <div class="mediaobject"><img src="figures/11Sum.png"></div>
+        </div>
+      </div>
+    </div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="BRT_format.html"><img src="images/prev.gif" alt="Prev"></a>&nbsp;</td><td width="20%" align="center"><a accesskey="u" href="reference_guide.html"><img src="images/up.gif" alt="Up"></a></td><td width="40%" align="right">&nbsp;<a accesskey="n" href="GeoToolsRef.html"><img src="images/next.gif" alt="Next"></a></td></tr><tr><td width="40%" align="left" valign="top">16.8.&nbsp;Third Party BRT Format&nbsp;</td><td width="20%" align="center"><a accesskey="h" href="index.html"><img src="images/home.gif" alt="Home"></a></td><td width="40%" align="right" valign="top">&nbsp;Chapter&nbsp;18.&nbsp;GeoTools in Debrief</td></tr></table></div></body></html>

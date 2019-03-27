@@ -39,11 +39,12 @@ nav:
         link: /support
       - name: User Guide
         link: /tutorial/index.html
-      - name: Self-teach tutorial (PDF)
-        link: /library/DebriefNG_Tutorial.pdf
+      - name: Self-teach introductory tutorial (PDF)
+        link: /library/IntroductionToDebrief_1-3.pdf
+      - name: Self-teach Advanced Analysis tutorial (PDF)
+        link: /library/AdvancedAnalysisWithDebrief_4-5.pdf
       - name: Replay File Format
         link: /tutorial/reference.html
   - name: Blog
     link: /blog/
     id: NavlinkBlog
-

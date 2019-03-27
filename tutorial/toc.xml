@@ -338,6 +338,7 @@
             <topic label="Symbology attributes" href="html/legacy/reference.html#replay_symbology"/>
             <topic label="Annotation Data Intro" href="html/legacy/reference.html#replay_annotation_format"/>
             <topic label="Core Elements" href="html/legacy/reference.html#replay_core_annotations"/>
+            <topic label="Planning Legs" href="html/legacy/reference.html#planning_legs"/>
             <topic label="Entry comments" href="html/legacy/reference.html#entry_comments"/>
             <topic label="Towed Array Extensions" href="html/legacy/reference.html#towed_array_annotations"/>
             <topic label="Dynamic Elements" href="html/legacy/reference.html#replay_dynamic_annotations"/>
@@ -367,13 +368,28 @@
             <topic label="File format" href="html/legacy/format_2087_files.html#Fileformat2087"/>
          </topic>
          <topic label="SVG Symbol Format" href="html/legacy/SVG_symbol_format.html">
-            <topic label="Introduction" href="html/legacy/SVG_symbol_format.html#d5e5571"/>
-            <topic label="Implementation" href="html/legacy/SVG_symbol_format.html#d5e5575"/>
-            <topic label="Here are some examples:" href="html/legacy/SVG_symbol_format.html#d5e5593"/>
+            <topic label="Introduction" href="html/legacy/SVG_symbol_format.html#d5e5580"/>
+            <topic label="Implementation" href="html/legacy/SVG_symbol_format.html#d5e5584"/>
+            <topic label="Here are some examples:" href="html/legacy/SVG_symbol_format.html#d5e5602"/>
          </topic>
          <topic label="Third Party BRT Format" href="html/legacy/BRT_format.html">
-            <topic label="Introduction" href="html/legacy/BRT_format.html#d5e5603"/>
-            <topic label="Format" href="html/legacy/BRT_format.html#d5e5607"/>
+            <topic label="Introduction" href="html/legacy/BRT_format.html#d5e5612"/>
+            <topic label="Format" href="html/legacy/BRT_format.html#d5e5616"/>
+         </topic>
+      </topic>
+      <topic label="Scripting Cookbook" href="html/legacy/ScriptCookbook.html">
+         <topic label="Introduction" href="html/legacy/ScriptCookbook.html#ScriptIntro">
+            <topic label="Looping through Tracks" href="html/legacy/ScriptCookbook.html#d5e5627"/>
+            <topic label="Getting Selected Item" href="html/legacy/ScriptCookbook.html#d5e5640"/>
+            <topic label="Getting Current Time of a Scenario" href="html/legacy/ScriptCookbook.html#d5e5653"/>
+            <topic label="Getting Start and End Time Bounds of a Scenario" href="html/legacy/ScriptCookbook.html#d5e5664"/>
+            <topic label="Adding Shape to a Plot" href="html/legacy/ScriptCookbook.html#d5e5675"/>
+            <topic label="Loading a Track from an Unusual Track Format" href="html/legacy/ScriptCookbook.html#d5e5694"/>
+            <topic label="Writing Calculated Values to Text File" href="html/legacy/ScriptCookbook.html#d5e5714"/>
+            <topic label="Revealing All Tracks in a Particular Color" href="html/legacy/ScriptCookbook.html#d5e5727"/>
+            <topic label="Grouping Related into a New Layer" href="html/legacy/ScriptCookbook.html#d5e5739"/>
+            <topic label="Making All Annotations Live for a Duration" href="html/legacy/ScriptCookbook.html#d5e5753"/>
+            <topic label="Reusing Code from Another File" href="html/legacy/ScriptCookbook.html#d5e5800"/>
          </topic>
       </topic>
       <topic label="GeoTools in Debrief" href="html/legacy/GeoToolsRef.html">
@@ -407,90 +423,90 @@
          </topic>
       </topic>
       <topic label="Semi Automated Track Construction (SATC)" href="html/legacy/chap_genetic_algorithms.html">
-         <topic label="High-Level SATC Concepts" href="html/legacy/chap_genetic_algorithms.html#d5e5865">
-            <topic label="Strategy" href="html/legacy/chap_genetic_algorithms.html#d5e5870"/>
-            <topic label="Process" href="html/legacy/chap_genetic_algorithms.html#d5e5875"/>
-            <topic label="Data Concepts" href="html/legacy/chap_genetic_algorithms.html#d5e5878">
-               <topic label="Scenario" href="html/legacy/chap_genetic_algorithms.html#d5e5880"/>
-               <topic label="Problem space" href="html/legacy/chap_genetic_algorithms.html#d5e5883"/>
-               <topic label="Vehicle Track" href="html/legacy/chap_genetic_algorithms.html#d5e5886"/>
-               <topic label="Leg" href="html/legacy/chap_genetic_algorithms.html#d5e5889"/>
-               <topic label="Vehicle State" href="html/legacy/chap_genetic_algorithms.html#d5e5892"/>
-               <topic label="Bounded Vehicle State" href="html/legacy/chap_genetic_algorithms.html#d5e5895"/>
-               <topic label="Straight Leg" href="html/legacy/chap_genetic_algorithms.html#d5e5902"/>
-               <topic label="Alteration Leg" href="html/legacy/chap_genetic_algorithms.html#d5e5905"/>
-               <topic label="Contribution" href="html/legacy/chap_genetic_algorithms.html#d5e5908">
-                  <topic label="Contribution attributes" href="html/legacy/chap_genetic_algorithms.html#d5e5911"/>
-                  <topic label="Contribution abilities" href="html/legacy/chap_genetic_algorithms.html#d5e5929"/>
+         <topic label="High-Level SATC Concepts" href="html/legacy/chap_genetic_algorithms.html#d5e6091">
+            <topic label="Strategy" href="html/legacy/chap_genetic_algorithms.html#d5e6096"/>
+            <topic label="Process" href="html/legacy/chap_genetic_algorithms.html#d5e6101"/>
+            <topic label="Data Concepts" href="html/legacy/chap_genetic_algorithms.html#d5e6104">
+               <topic label="Scenario" href="html/legacy/chap_genetic_algorithms.html#d5e6106"/>
+               <topic label="Problem space" href="html/legacy/chap_genetic_algorithms.html#d5e6109"/>
+               <topic label="Vehicle Track" href="html/legacy/chap_genetic_algorithms.html#d5e6112"/>
+               <topic label="Leg" href="html/legacy/chap_genetic_algorithms.html#d5e6115"/>
+               <topic label="Vehicle State" href="html/legacy/chap_genetic_algorithms.html#d5e6118"/>
+               <topic label="Bounded Vehicle State" href="html/legacy/chap_genetic_algorithms.html#d5e6121"/>
+               <topic label="Straight Leg" href="html/legacy/chap_genetic_algorithms.html#d5e6128"/>
+               <topic label="Alteration Leg" href="html/legacy/chap_genetic_algorithms.html#d5e6131"/>
+               <topic label="Contribution" href="html/legacy/chap_genetic_algorithms.html#d5e6134">
+                  <topic label="Contribution attributes" href="html/legacy/chap_genetic_algorithms.html#d5e6137"/>
+                  <topic label="Contribution abilities" href="html/legacy/chap_genetic_algorithms.html#d5e6155"/>
                </topic>
-               <topic label="Reference contribution" href="html/legacy/chap_genetic_algorithms.html#d5e5939"/>
-               <topic label="Forecast Contribution" href="html/legacy/chap_genetic_algorithms.html#d5e5943"/>
-               <topic label="Measurement contribution" href="html/legacy/chap_genetic_algorithms.html#d5e5946"/>
-               <topic label="Analysis contribution" href="html/legacy/chap_genetic_algorithms.html#d5e5950"/>
+               <topic label="Reference contribution" href="html/legacy/chap_genetic_algorithms.html#d5e6165"/>
+               <topic label="Forecast Contribution" href="html/legacy/chap_genetic_algorithms.html#d5e6169"/>
+               <topic label="Measurement contribution" href="html/legacy/chap_genetic_algorithms.html#d5e6172"/>
+               <topic label="Analysis contribution" href="html/legacy/chap_genetic_algorithms.html#d5e6176"/>
             </topic>
-            <topic label="Algorithms" href="html/legacy/chap_genetic_algorithms.html#d5e5953">
-               <topic label="Constrain the global problem space" href="html/legacy/chap_genetic_algorithms.html#d5e5955"/>
-               <topic label="Generate and assess candidate solutions" href="html/legacy/chap_genetic_algorithms.html#d5e6004"/>
-               <topic label="Solution generator" href="html/legacy/chap_genetic_algorithms.html#d5e6020"/>
-               <topic label="Genetic algorithm" href="html/legacy/chap_genetic_algorithms.html#d5e6049"/>
-               <topic label="Collate optimal solutions" href="html/legacy/chap_genetic_algorithms.html#d5e6062"/>
-               <topic label="Manoeuvre Detection Algorithm" href="html/legacy/chap_genetic_algorithms.html#d5e6074">
-                  <topic label="Bearing-based MDA" href="html/legacy/chap_genetic_algorithms.html#d5e6077"/>
-                  <topic label="State-analysis MDA" href="html/legacy/chap_genetic_algorithms.html#d5e6085"/>
+            <topic label="Algorithms" href="html/legacy/chap_genetic_algorithms.html#d5e6179">
+               <topic label="Constrain the global problem space" href="html/legacy/chap_genetic_algorithms.html#d5e6181"/>
+               <topic label="Generate and assess candidate solutions" href="html/legacy/chap_genetic_algorithms.html#d5e6230"/>
+               <topic label="Solution generator" href="html/legacy/chap_genetic_algorithms.html#d5e6246"/>
+               <topic label="Genetic algorithm" href="html/legacy/chap_genetic_algorithms.html#d5e6275"/>
+               <topic label="Collate optimal solutions" href="html/legacy/chap_genetic_algorithms.html#d5e6288"/>
+               <topic label="Manoeuvre Detection Algorithm" href="html/legacy/chap_genetic_algorithms.html#d5e6300">
+                  <topic label="Bearing-based MDA" href="html/legacy/chap_genetic_algorithms.html#d5e6303"/>
+                  <topic label="State-analysis MDA" href="html/legacy/chap_genetic_algorithms.html#d5e6311"/>
                </topic>
             </topic>
-            <topic label="Examples of contributions" href="html/legacy/chap_genetic_algorithms.html#d5e6088">
-               <topic label="Vehicle performance reference contribution" href="html/legacy/chap_genetic_algorithms.html#d5e6090">
-                  <topic label="Attributes" href="html/legacy/chap_genetic_algorithms.html#d5e6092"/>
-                  <topic label="Abilities" href="html/legacy/chap_genetic_algorithms.html#d5e6096"/>
+            <topic label="Examples of contributions" href="html/legacy/chap_genetic_algorithms.html#d5e6314">
+               <topic label="Vehicle performance reference contribution" href="html/legacy/chap_genetic_algorithms.html#d5e6316">
+                  <topic label="Attributes" href="html/legacy/chap_genetic_algorithms.html#d5e6318"/>
+                  <topic label="Abilities" href="html/legacy/chap_genetic_algorithms.html#d5e6322"/>
                </topic>
-               <topic label="Bearing measurement contribution" href="html/legacy/chap_genetic_algorithms.html#d5e6109">
-                  <topic label="Attributes" href="html/legacy/chap_genetic_algorithms.html#d5e6111"/>
-                  <topic label="Abilities" href="html/legacy/chap_genetic_algorithms.html#d5e6114"/>
+               <topic label="Bearing measurement contribution" href="html/legacy/chap_genetic_algorithms.html#d5e6335">
+                  <topic label="Attributes" href="html/legacy/chap_genetic_algorithms.html#d5e6337"/>
+                  <topic label="Abilities" href="html/legacy/chap_genetic_algorithms.html#d5e6340"/>
                </topic>
-               <topic label="Speed analysis contribution" href="html/legacy/chap_genetic_algorithms.html#d5e6127">
-                  <topic label="Attributes" href="html/legacy/chap_genetic_algorithms.html#d5e6129"/>
-                  <topic label="Abilities" href="html/legacy/chap_genetic_algorithms.html#d5e6132"/>
+               <topic label="Speed analysis contribution" href="html/legacy/chap_genetic_algorithms.html#d5e6353">
+                  <topic label="Attributes" href="html/legacy/chap_genetic_algorithms.html#d5e6355"/>
+                  <topic label="Abilities" href="html/legacy/chap_genetic_algorithms.html#d5e6358"/>
                </topic>
-               <topic label="Speed forecast contribution" href="html/legacy/chap_genetic_algorithms.html#d5e6138">
-                  <topic label="Attributes" href="html/legacy/chap_genetic_algorithms.html#d5e6140"/>
-                  <topic label="Abilities" href="html/legacy/chap_genetic_algorithms.html#d5e6143"/>
+               <topic label="Speed forecast contribution" href="html/legacy/chap_genetic_algorithms.html#d5e6364">
+                  <topic label="Attributes" href="html/legacy/chap_genetic_algorithms.html#d5e6366"/>
+                  <topic label="Abilities" href="html/legacy/chap_genetic_algorithms.html#d5e6369"/>
                </topic>
-               <topic label="Straight leg forecast contribution" href="html/legacy/chap_genetic_algorithms.html#d5e6154">
-                  <topic label="Attributes" href="html/legacy/chap_genetic_algorithms.html#d5e6156"/>
-                  <topic label="Abilities" href="html/legacy/chap_genetic_algorithms.html#d5e6159"/>
+               <topic label="Straight leg forecast contribution" href="html/legacy/chap_genetic_algorithms.html#d5e6380">
+                  <topic label="Attributes" href="html/legacy/chap_genetic_algorithms.html#d5e6382"/>
+                  <topic label="Abilities" href="html/legacy/chap_genetic_algorithms.html#d5e6385"/>
                </topic>
             </topic>
          </topic>
          <topic label="Optimisation Strategies" href="html/legacy/ga_optimisation.html">
-            <topic label="Brute Force" href="html/legacy/ga_optimisation.html#d5e6168"/>
-            <topic label="Simulated Annealing" href="html/legacy/ga_optimisation.html#d5e6171"/>
-            <topic label="Genetic Algortihm" href="html/legacy/ga_optimisation.html#d5e6178"/>
+            <topic label="Brute Force" href="html/legacy/ga_optimisation.html#d5e6394"/>
+            <topic label="Simulated Annealing" href="html/legacy/ga_optimisation.html#d5e6397"/>
+            <topic label="Genetic Algortihm" href="html/legacy/ga_optimisation.html#d5e6404"/>
          </topic>
          <topic label="Solution Generator based on Genetic Algorithm" href="html/legacy/satc_ga.html">
-            <topic label="Definitions" href="html/legacy/satc_ga.html#d5e6183"/>
-            <topic label="Structure" href="html/legacy/satc_ga.html#d5e6231">
-               <topic label="Islands" href="html/legacy/satc_ga.html#d5e6233"/>
-               <topic label="Genetic algorithm" href="html/legacy/satc_ga.html#d5e6245"/>
+            <topic label="Definitions" href="html/legacy/satc_ga.html#d5e6409"/>
+            <topic label="Structure" href="html/legacy/satc_ga.html#d5e6457">
+               <topic label="Islands" href="html/legacy/satc_ga.html#d5e6459"/>
+               <topic label="Genetic algorithm" href="html/legacy/satc_ga.html#d5e6471"/>
             </topic>
             <topic label="Candidate Factory" href="html/legacy/satc_ga.html#candidate_factory"/>
             <topic label="Chromosome selection strategy" href="html/legacy/satc_ga.html#chromosome_selection"/>
-            <topic label="Genetic operators" href="html/legacy/satc_ga.html#d5e6302">
+            <topic label="Genetic operators" href="html/legacy/satc_ga.html#d5e6528">
                <topic label="Crossover" href="html/legacy/satc_ga.html#crossover">
-                  <topic label="One-point list crossover" href="html/legacy/satc_ga.html#d5e6308"/>
-                  <topic label="Arithmetic crossover" href="html/legacy/satc_ga.html#d5e6346"/>
+                  <topic label="One-point list crossover" href="html/legacy/satc_ga.html#d5e6534"/>
+                  <topic label="Arithmetic crossover" href="html/legacy/satc_ga.html#d5e6572"/>
                </topic>
                <topic label="Mutation" href="html/legacy/satc_ga.html#mutation">
-                  <topic label="Random mutation" href="html/legacy/satc_ga.html#d5e6403"/>
-                  <topic label="Mutation to vertex" href="html/legacy/satc_ga.html#d5e6414"/>
+                  <topic label="Random mutation" href="html/legacy/satc_ga.html#d5e6629"/>
+                  <topic label="Mutation to vertex" href="html/legacy/satc_ga.html#d5e6640"/>
                </topic>
                <topic label="Standard VFA strategy" href="html/legacy/satc_ga.html#standard_VFA"/>
                <topic label="Optimised point generation" href="html/legacy/satc_ga.html#optimised_generation"/>
             </topic>
-            <topic label="Fitness function" href="html/legacy/satc_ga.html#d5e6525"/>
+            <topic label="Fitness function" href="html/legacy/satc_ga.html#d5e6751"/>
             <topic label="Island attributes" href="html/legacy/satc_ga.html#island_attributes">
-               <topic label="Elite island characteristics (beta)" href="html/legacy/satc_ga.html#d5e6580"/>
-               <topic label="Simple and complex island characteristics" href="html/legacy/satc_ga.html#d5e6605"/>
+               <topic label="Elite island characteristics (beta)" href="html/legacy/satc_ga.html#d5e6806"/>
+               <topic label="Simple and complex island characteristics" href="html/legacy/satc_ga.html#d5e6831"/>
             </topic>
          </topic>
       </topic>

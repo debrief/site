@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <index>
    <entry keyword="Algorithms">
-      <topic href="html/legacy/contouring_algorithm.html#d5e5774"/>
+      <topic href="html/legacy/contouring_algorithm.html#d5e6000"/>
       <entry keyword="Contouring">
-         <topic href="html/legacy/contouring_algorithm.html#d5e5775"/>
+         <topic href="html/legacy/contouring_algorithm.html#d5e6001"/>
       </entry>
    </entry>
    <entry keyword="Algorithms">
@@ -13,15 +13,15 @@
       </entry>
    </entry>
    <entry keyword="Algorithms">
-      <topic href="html/legacy/other_algs.html#d5e5723"/>
+      <topic href="html/legacy/other_algs.html#d5e5949"/>
       <entry keyword="Frequency">
-         <topic href="html/legacy/other_algs.html#d5e5724"/>
+         <topic href="html/legacy/other_algs.html#d5e5950"/>
       </entry>
    </entry>
    <entry keyword="Algorithms">
-      <topic href="html/legacy/WormInHole.html#d5e5668"/>
+      <topic href="html/legacy/WormInHole.html#d5e5894"/>
       <entry keyword="Worm in the hole">
-         <topic href="html/legacy/WormInHole.html#d5e5669"/>
+         <topic href="html/legacy/WormInHole.html#d5e5895"/>
       </entry>
    </entry>
    <entry keyword="Annotation Data">
@@ -31,21 +31,21 @@
       </entry>
    </entry>
    <entry keyword="Annotation Data">
-      <topic href="html/legacy/reference.html#d5e5330"/>
+      <topic href="html/legacy/reference.html#d5e5339"/>
       <entry keyword="Dynamic Elements">
-         <topic href="html/legacy/reference.html#d5e5331"/>
+         <topic href="html/legacy/reference.html#d5e5340"/>
       </entry>
    </entry>
    <entry keyword="Annotation Data">
-      <topic href="html/legacy/reference.html#d5e5356"/>
+      <topic href="html/legacy/reference.html#d5e5365"/>
       <entry keyword="Dynamic Track Annotations">
-         <topic href="html/legacy/reference.html#d5e5357"/>
+         <topic href="html/legacy/reference.html#d5e5366"/>
       </entry>
    </entry>
    <entry keyword="Annotation Data">
-      <topic href="html/legacy/reference.html#d5e5321"/>
+      <topic href="html/legacy/reference.html#d5e5330"/>
       <entry keyword="Towed Array Extensions">
-         <topic href="html/legacy/reference.html#d5e5322"/>
+         <topic href="html/legacy/reference.html#d5e5331"/>
       </entry>
    </entry>
    <entry keyword="Annotations">
@@ -106,9 +106,9 @@
       </entry>
    </entry>
    <entry keyword="Coastline">
-      <topic href="html/legacy/app_glossary.html#d5e6967"/>
+      <topic href="html/legacy/app_glossary.html#d5e7193"/>
       <entry keyword="File Format">
-         <topic href="html/legacy/app_glossary.html#d5e6968"/>
+         <topic href="html/legacy/app_glossary.html#d5e7194"/>
       </entry>
    </entry>
    <entry keyword="Coastline">
@@ -133,9 +133,9 @@
       <topic href="html/legacy/History.html#d5e219"/>
    </entry>
    <entry keyword="DIS">
-      <topic href="html/legacy/dis_command_line.html#d5e6683"/>
+      <topic href="html/legacy/dis_command_line.html#d5e6909"/>
       <entry keyword="Command line paremeters">
-         <topic href="html/legacy/dis_command_line.html#d5e6684"/>
+         <topic href="html/legacy/dis_command_line.html#d5e6910"/>
       </entry>
    </entry>
    <entry keyword="DIS">
@@ -151,27 +151,27 @@
       </entry>
    </entry>
    <entry keyword="DIS">
-      <topic href="html/legacy/dis_messages.html#d5e6691"/>
+      <topic href="html/legacy/dis_messages.html#d5e6917"/>
       <entry keyword="Messages supported">
-         <topic href="html/legacy/dis_messages.html#d5e6692"/>
+         <topic href="html/legacy/dis_messages.html#d5e6918"/>
       </entry>
    </entry>
    <entry keyword="DIS">
-      <topic href="html/legacy/dis_ref.html#d5e6642"/>
+      <topic href="html/legacy/dis_ref.html#d5e6868"/>
       <entry keyword="Protocol version">
-         <topic href="html/legacy/dis_ref.html#d5e6643"/>
+         <topic href="html/legacy/dis_ref.html#d5e6869"/>
       </entry>
    </entry>
    <entry keyword="DIS">
-      <topic href="html/legacy/dis_ref.html#d5e6651"/>
+      <topic href="html/legacy/dis_ref.html#d5e6877"/>
       <entry keyword="Supporting new message types">
-         <topic href="html/legacy/dis_ref.html#d5e6652"/>
+         <topic href="html/legacy/dis_ref.html#d5e6878"/>
       </entry>
    </entry>
    <entry keyword="DIS">
-      <topic href="html/legacy/dis_ref.html#d5e6632"/>
+      <topic href="html/legacy/dis_ref.html#d5e6858"/>
       <entry keyword="System documentation">
-         <topic href="html/legacy/dis_ref.html#d5e6633"/>
+         <topic href="html/legacy/dis_ref.html#d5e6859"/>
       </entry>
    </entry>
    <entry keyword="DIS">
@@ -187,9 +187,9 @@
       <topic href="html/legacy/toggle_buttons.html#d5e734"/>
    </entry>
    <entry keyword="DTD">
-      <topic href="html/legacy/debrief_file_format.html#d5e5422"/>
+      <topic href="html/legacy/debrief_file_format.html#d5e5431"/>
       <entry keyword="XML Structure">
-         <topic href="html/legacy/debrief_file_format.html#d5e5423"/>
+         <topic href="html/legacy/debrief_file_format.html#d5e5432"/>
       </entry>
    </entry>
    <entry keyword="Earth Model">
@@ -247,21 +247,21 @@
       </entry>
    </entry>
    <entry keyword="File Format">
-      <topic href="html/legacy/format_2087_files.html#d5e5545"/>
+      <topic href="html/legacy/format_2087_files.html#d5e5554"/>
       <entry keyword="S2087">
-         <topic href="html/legacy/format_2087_files.html#d5e5546"/>
+         <topic href="html/legacy/format_2087_files.html#d5e5555"/>
       </entry>
    </entry>
    <entry keyword="File Format">
-      <topic href="html/legacy/debrief_file_format.html#d5e5387"/>
+      <topic href="html/legacy/debrief_file_format.html#d5e5396"/>
       <entry keyword="XML">
-         <topic href="html/legacy/debrief_file_format.html#d5e5388"/>
+         <topic href="html/legacy/debrief_file_format.html#d5e5397"/>
       </entry>
    </entry>
    <entry keyword="Format Helpers">
-      <topic href="html/legacy/reference.html#d5e5374"/>
+      <topic href="html/legacy/reference.html#d5e5383"/>
       <entry keyword="REP Format Helpers">
-         <topic href="html/legacy/reference.html#d5e5375"/>
+         <topic href="html/legacy/reference.html#d5e5384"/>
       </entry>
    </entry>
    <entry keyword="Formatting">
@@ -295,7 +295,7 @@
       </entry>
    </entry>
    <entry keyword="KML/KMZ Files">
-      <topic href="html/legacy/Section_KML.html#d5e5449"/>
+      <topic href="html/legacy/Section_KML.html#d5e5458"/>
    </entry>
    <entry keyword="Lightweight Track">
       <topic href="html/legacy/reference.html#d5e5267"/>
@@ -307,9 +307,9 @@
       </entry>
    </entry>
    <entry keyword="Multipath">
-      <topic href="html/legacy/multi_data_files.html#d5e5504"/>
+      <topic href="html/legacy/multi_data_files.html#d5e5513"/>
       <entry keyword="data files">
-         <topic href="html/legacy/multi_data_files.html#d5e5505"/>
+         <topic href="html/legacy/multi_data_files.html#d5e5514"/>
       </entry>
    </entry>
    <entry keyword="Narrative Data">
@@ -388,7 +388,7 @@
       <topic href="html/legacy/controlling_time.html#d5e1960"/>
    </entry>
    <entry keyword="Range/bearing calculations">
-      <topic href="html/legacy/chap_debrief_algorithms.html#d5e5624"/>
+      <topic href="html/legacy/chap_debrief_algorithms.html#d5e5850"/>
    </entry>
    <entry keyword="Reconstruction">
       <topic href="html/legacy/formatting_data.html#d5e906"/>
@@ -415,8 +415,14 @@
       </entry>
    </entry>
    <entry keyword="Replay File Format">
-      <topic href="html/legacy/reference.html#d5e5310"/>
+      <topic href="html/legacy/reference.html#d5e5319"/>
       <entry keyword="Entry comment">
+         <topic href="html/legacy/reference.html#d5e5320"/>
+      </entry>
+   </entry>
+   <entry keyword="Replay File Format">
+      <topic href="html/legacy/reference.html#d5e5310"/>
+      <entry keyword="Planning legs">
          <topic href="html/legacy/reference.html#d5e5311"/>
       </entry>
    </entry>
@@ -430,7 +436,7 @@
       <topic href="html/legacy/maintainers.html#d5e4401"/>
    </entry>
    <entry keyword="S2087 Log-file format">
-      <topic href="html/legacy/format_2087_files.html#d5e5543"/>
+      <topic href="html/legacy/format_2087_files.html#d5e5552"/>
    </entry>
    <entry keyword="SAM export">
       <topic href="html/legacy/controlling_time.html#d5e2056"/>
@@ -571,9 +577,9 @@
       </entry>
    </entry>
    <entry keyword="Track sections">
-      <topic href="html/legacy/RemoveJumpsRef.html#d5e5734"/>
+      <topic href="html/legacy/RemoveJumpsRef.html#d5e5960"/>
       <entry keyword="Remove jumps (algorithm)">
-         <topic href="html/legacy/RemoveJumpsRef.html#d5e5735"/>
+         <topic href="html/legacy/RemoveJumpsRef.html#d5e5961"/>
       </entry>
    </entry>
    <entry keyword="Track sections">
@@ -673,9 +679,9 @@
       </entry>
    </entry>
    <entry keyword="XML">
-      <topic href="html/legacy/debrief_file_format.html#d5e5425"/>
+      <topic href="html/legacy/debrief_file_format.html#d5e5434"/>
       <entry keyword="DTD Structure">
-         <topic href="html/legacy/debrief_file_format.html#d5e5426"/>
+         <topic href="html/legacy/debrief_file_format.html#d5e5435"/>
       </entry>
    </entry>
 </index>

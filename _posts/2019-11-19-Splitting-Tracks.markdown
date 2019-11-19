@@ -21,20 +21,20 @@ A split in the track can be recognised by a period of missing data. Depending on
 
 Here is an example of a track with missing periods of data.
 
-<img class="img-fluid" src="{{ site.baseurl }}/assets/images/TracksWithJumps.png" alt="Tracks with jumps" />
+<img class="img-fluid" src="{{ site.baseurl }}/assets/images/TrackWithJumps.png" alt="Tracks with jumps" />
 
 By splitting the track into segments, we can convey the periods of missing data.
 
 # Right-click menu
 
 We've added a new right-click menu option for tracks.  On selecting `Split track into segments...` a drop-down menu of time interval sizes is offered:
-<img class="img-fluid" src="{{ site.baseurl }}/assets/images/splitTracksMenu.png" alt="split tracks menu" />
+<img class="img-fluid" src="{{ site.baseurl }}/assets/images/SplitTracksMenu.png" alt="split tracks menu" />
 
 Once clicked, any selected tracks are inspected, being split into segments whenever there is a period of missing data greater than the provided threshold.
 
 Here's a split track.
 
-<img class="img-fluid" src="{{ site.baseurl }}/assets/images/splitTracks.png" alt="split tracks" />
+<img class="img-fluid" src="{{ site.baseurl }}/assets/images/SplitTrack.png" alt="split tracks" />
 
 # Formatting helper
 

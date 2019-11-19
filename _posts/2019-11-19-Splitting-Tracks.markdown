@@ -2,7 +2,7 @@
 layout: post
 title: 'New Feature: Splitting Tracks'
 date: 2019-11-19 09:52:08.000000000 +00:00
-image: '/assets/images/SplitTracksMenu.jpg'
+image: '/assets/images/SplitTracksMenu_Clipped.jpg'
 categories: [debrief-help]
 meta:
   post_views_count: '02'
@@ -43,7 +43,7 @@ Here's a split track.
 
 Right-clicking on a track is fine for individual tracks, but if you're processing a high volume of tracks, you may wish to auto-split them on missing data.
 
-Learn more about them here: https://debrief.github.io/tutorial/reference.html#replay_format_annotations
+Learn more about them here: [ https://debrief.github.io/tutorial/reference.html#replay_format_annotations](https://debrief.github.io/tutorial/reference.html#replay_format_annotations)
 
 This can be supported by inserting `Formatting Helper` instructions into a `.rep` file.  These are commands that advice Debrief on how to process data loaded from that file.
 

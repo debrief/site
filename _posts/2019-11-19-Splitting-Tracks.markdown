@@ -1,12 +1,15 @@
 ---
 layout: post
-title: 'Splitting Tracks'
+title: 'New Feature: Splitting Tracks'
 date: 2019-11-19 09:52:08.000000000 +00:00
+image: '/assets/images/SplitTracksMenu.jpg'
 categories: [debrief-help]
 meta:
   post_views_count: '02'
 author: ianmayo
 ---
+
+Learn more about handling periods of missing data in Debrief
 
 # Missing data
 

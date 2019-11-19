@@ -2,7 +2,7 @@
 layout: post
 title: 'New Feature: Splitting Tracks'
 date: 2019-11-19 09:52:08.000000000 +00:00
-image: '/assets/images/SplitTracksMenu_Clipped.jpg'
+image: '/assets/images/SplitTracksMenu_Clipped.png'
 categories: [debrief-help]
 meta:
   post_views_count: '02'

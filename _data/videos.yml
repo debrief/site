@@ -157,7 +157,7 @@ part1:
     icon: 'fab fa-youtube'
     btn_name:  Watch in Youtube
     video: https://www.youtube.com/embed/y9plFf9-Sog
-    subtitle: 2.04 – Analsying Sensor Data
+    subtitle: 2.04 – Analysing Sensor Data
     text:
       - paragraph: 'The final video in our Working with Debrief series will show you how to add sensor data, and the various ways in which you can analyze them.'
       - paragraph: 'You’ll also learn how to do a plot lock, how to declutter your workspace when you’re doing realy complicated analysis.'

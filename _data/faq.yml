@@ -29,8 +29,8 @@ theme_list:
       - question: 'How has Debrief ended up on the Internet?'
         id: bg-3-header
         id_link: bg-3-link
-        answer: '<p>Debrief was never been produced with the intention of commercial exploitation; 
-            it was been created to meet the analysis requirements of the MWC. With the growth in popularity and size of the Open Source Movement, it has become apparent that Debrief was an ideal candidate for such status; 
+        answer: '<p>Debrief was never produced with the intention of commercial exploitation; 
+            it was created to meet the analysis requirements of the MWC. With the growth in popularity and size of the Open Source Movement, it has become apparent that Debrief was an ideal candidate for such status; 
             MWC did not seek to make financial gain from Debrief, but would clearly benefit from its wider exploitation; largely for the following reasons:</p>
             <ul>
             <li>Its open use allows a greater volume of usage, leading to more rapid discovery and correction of bugs, improving the application.</li>

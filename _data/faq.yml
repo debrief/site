@@ -42,9 +42,9 @@ theme_list:
         id: bg-4-header
         id_link: bg-4-link
         answer: '<p>Debrief is the major analysis and replay tool used for submarine analysis within the Royal Navy’s Maritime Warfare Centre. It is also used to varying degree by the Surface and Aviation divisions, as they experience the need for a cheap, accessible desktop analysis tool.</p>
-            <p>Elsewhere in the UK Debrief is in use, or has been used within DSTL, SSPAG and BAe.</p>
+            <p>Elsewhere in the UK Debrief is in use, or has been used within DSTL, SSPAG and BAE.</p>
             <p>Internationally, the Dutch NLANTAC, together with the American VX-1 and NUWC organisations hold and use Debrief. The major international user of Debrief, however, is COMSUBDEVRON 12 in Groton, CT. COMSUBDEVRON 12 have been a significant partner in the development of all of the versions of Debrief, providing a great wealth of information on bugs and usability improvements.</p>
-            <p>More recently Debrief has been adopted by Poseidon Simulation AS in Norway and within the Virtual Ship Project at Defence Science and Technology Organisation, Australia.</p>
+            <p>More recently Debrief has been adopted by Poseidon Simulation AS in Norway and the Virtual Ship Project at Defence Science and Technology Organisation, Australia.</p>
             <p>In 2002, the NUWC in the US adopted Debrief, modifying the source code to provide additional functionality required for submarine track reconstruction.</p>'
 
 

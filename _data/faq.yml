@@ -66,7 +66,7 @@ theme_list:
         id: license-2-header
         id_link: license-2-link
         answer: '<p>The Debrief 2000 application is free to use, although no support or warranty is provided by either the Maritime Warfare Centre or PlanetMayo Ltd. Additionally, the complete source code for Debrief is freely available through the <a title="GitHub" href="https://github.com/debrief/debrief" target="_blank">GitHub</a> site.</p>
-            <p>Until 2014 PlanetMayo Ltd was contracted to support the Maritime Warfare Centre, and to provide initial support to organisation wishing to adopt Debrief. Organisations which have adopted Debrief can gain further assistance from PlanetMayo Ltd through a Debrief Support Contract.</p>'
+            <p>Until 2014 PlanetMayo Ltd was contracted to support the Maritime Warfare Centre, and to provide initial support to organisations wishing to adopt Debrief. Organisations which have adopted Debrief can gain further assistance from PlanetMayo Ltd through a Debrief Support Contract.</p>'
       - question: 'Can we really get the source code?'
         id: license-3-header
         id_link: license-3-link
@@ -82,7 +82,7 @@ theme_list:
       - question: 'How do I find out more about Debrief?'
         id: support-1-header
         id_link: support-1-link
-        answer: '<p>For a start, you can explore this web site. The Features page provides a breakdown of what Debrief is able to do, whilst the Tutorial page will give you an simulated run-through of the application.</p>
+        answer: '<p>For a start, you can explore this web site. The Features page provides a breakdown of what Debrief is able to do, whilst the Tutorial page will give you a simulated run-through of the application.</p>
             <p>If you’re definitely interested, from the Debrief home page you can navigate to the download page on GitHub and download a Debrief installation (it’s around 160Mb, including the Help file and World coastline, and another 26Mb with the world-wide <a title="Natural Earth" href="http://www.naturalearthdata.com/" target="_blank">Natural Earth</a> dataset).</p>
             <p>If your questions remain unanswered, then try the following:</p>
             <ul><li>For a question relating to the development or use of Debrief, use the Feedback Form</li></ul>'

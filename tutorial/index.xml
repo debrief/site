@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <index>
    <entry keyword="Algorithms">
-      <topic href="html/legacy/contouring_algorithm.html#d5e6000"/>
+      <topic href="html/legacy/contouring_algorithm.html#d5e6007"/>
       <entry keyword="Contouring">
-         <topic href="html/legacy/contouring_algorithm.html#d5e6001"/>
+         <topic href="html/legacy/contouring_algorithm.html#d5e6008"/>
       </entry>
    </entry>
    <entry keyword="Algorithms">
@@ -13,39 +13,39 @@
       </entry>
    </entry>
    <entry keyword="Algorithms">
-      <topic href="html/legacy/other_algs.html#d5e5949"/>
+      <topic href="html/legacy/other_algs.html#d5e5956"/>
       <entry keyword="Frequency">
-         <topic href="html/legacy/other_algs.html#d5e5950"/>
+         <topic href="html/legacy/other_algs.html#d5e5957"/>
       </entry>
    </entry>
    <entry keyword="Algorithms">
-      <topic href="html/legacy/WormInHole.html#d5e5894"/>
+      <topic href="html/legacy/WormInHole.html#d5e5901"/>
       <entry keyword="Worm in the hole">
-         <topic href="html/legacy/WormInHole.html#d5e5895"/>
+         <topic href="html/legacy/WormInHole.html#d5e5902"/>
       </entry>
    </entry>
    <entry keyword="Annotation Data">
-      <topic href="html/legacy/reference.html#d5e5299"/>
+      <topic href="html/legacy/reference.html#d5e5306"/>
       <entry keyword="Core Elements">
-         <topic href="html/legacy/reference.html#d5e5300"/>
+         <topic href="html/legacy/reference.html#d5e5307"/>
       </entry>
    </entry>
    <entry keyword="Annotation Data">
-      <topic href="html/legacy/reference.html#d5e5339"/>
+      <topic href="html/legacy/reference.html#d5e5346"/>
       <entry keyword="Dynamic Elements">
-         <topic href="html/legacy/reference.html#d5e5340"/>
+         <topic href="html/legacy/reference.html#d5e5347"/>
       </entry>
    </entry>
    <entry keyword="Annotation Data">
-      <topic href="html/legacy/reference.html#d5e5365"/>
+      <topic href="html/legacy/reference.html#d5e5372"/>
       <entry keyword="Dynamic Track Annotations">
-         <topic href="html/legacy/reference.html#d5e5366"/>
+         <topic href="html/legacy/reference.html#d5e5373"/>
       </entry>
    </entry>
    <entry keyword="Annotation Data">
-      <topic href="html/legacy/reference.html#d5e5330"/>
+      <topic href="html/legacy/reference.html#d5e5337"/>
       <entry keyword="Towed Array Extensions">
-         <topic href="html/legacy/reference.html#d5e5331"/>
+         <topic href="html/legacy/reference.html#d5e5338"/>
       </entry>
    </entry>
    <entry keyword="Annotations">
@@ -76,39 +76,39 @@
       <topic href="html/legacy/History.html#d5e174"/>
    </entry>
    <entry keyword="Bugs">
-      <topic href="html/legacy/debrief_feedback.html#d5e4319"/>
+      <topic href="html/legacy/debrief_feedback.html#d5e4321"/>
       <entry keyword="Submitting">
-         <topic href="html/legacy/debrief_feedback.html#d5e4320"/>
+         <topic href="html/legacy/debrief_feedback.html#d5e4322"/>
       </entry>
    </entry>
    <entry keyword="Charts">
-      <topic href="html/legacy/ChartStorage.html#d5e4523"/>
+      <topic href="html/legacy/ChartStorage.html#d5e4525"/>
       <entry keyword="Configuring">
-         <topic href="html/legacy/ChartStorage.html#d5e4524"/>
+         <topic href="html/legacy/ChartStorage.html#d5e4526"/>
       </entry>
    </entry>
    <entry keyword="Charts">
-      <topic href="html/legacy/loadCharts.html#d5e3271"/>
+      <topic href="html/legacy/loadCharts.html#d5e3273"/>
       <entry keyword="Folios">
-         <topic href="html/legacy/loadCharts.html#d5e3272"/>
+         <topic href="html/legacy/loadCharts.html#d5e3274"/>
       </entry>
    </entry>
    <entry keyword="Charts">
-      <topic href="html/legacy/ChartBackdrops.html#d5e3241"/>
+      <topic href="html/legacy/ChartBackdrops.html#d5e3243"/>
       <entry keyword="Introduction">
-         <topic href="html/legacy/ChartBackdrops.html#d5e3242"/>
+         <topic href="html/legacy/ChartBackdrops.html#d5e3244"/>
       </entry>
    </entry>
    <entry keyword="Charts">
-      <topic href="html/legacy/loadCharts.html#d5e3286"/>
+      <topic href="html/legacy/loadCharts.html#d5e3288"/>
       <entry keyword="Transparency">
-         <topic href="html/legacy/loadCharts.html#d5e3287"/>
+         <topic href="html/legacy/loadCharts.html#d5e3289"/>
       </entry>
    </entry>
    <entry keyword="Coastline">
-      <topic href="html/legacy/app_glossary.html#d5e7193"/>
+      <topic href="html/legacy/app_glossary.html#d5e7200"/>
       <entry keyword="File Format">
-         <topic href="html/legacy/app_glossary.html#d5e7194"/>
+         <topic href="html/legacy/app_glossary.html#d5e7201"/>
       </entry>
    </entry>
    <entry keyword="Coastline">
@@ -133,51 +133,51 @@
       <topic href="html/legacy/History.html#d5e219"/>
    </entry>
    <entry keyword="DIS">
-      <topic href="html/legacy/dis_command_line.html#d5e6909"/>
+      <topic href="html/legacy/dis_command_line.html#d5e6916"/>
       <entry keyword="Command line paremeters">
-         <topic href="html/legacy/dis_command_line.html#d5e6910"/>
+         <topic href="html/legacy/dis_command_line.html#d5e6917"/>
       </entry>
    </entry>
    <entry keyword="DIS">
-      <topic href="html/legacy/dis_config.html#d5e4012"/>
+      <topic href="html/legacy/dis_config.html#d5e4014"/>
       <entry keyword="DIS Preferences">
-         <topic href="html/legacy/dis_config.html#d5e4013"/>
+         <topic href="html/legacy/dis_config.html#d5e4015"/>
       </entry>
    </entry>
    <entry keyword="DIS">
-      <topic href="html/legacy/dis_support.html#d5e3995"/>
+      <topic href="html/legacy/dis_support.html#d5e3997"/>
       <entry keyword="Distributed Interactive Simulation">
-         <topic href="html/legacy/dis_support.html#d5e3996"/>
+         <topic href="html/legacy/dis_support.html#d5e3998"/>
       </entry>
    </entry>
    <entry keyword="DIS">
-      <topic href="html/legacy/dis_messages.html#d5e6917"/>
+      <topic href="html/legacy/dis_messages.html#d5e6924"/>
       <entry keyword="Messages supported">
-         <topic href="html/legacy/dis_messages.html#d5e6918"/>
+         <topic href="html/legacy/dis_messages.html#d5e6925"/>
       </entry>
    </entry>
    <entry keyword="DIS">
-      <topic href="html/legacy/dis_ref.html#d5e6868"/>
+      <topic href="html/legacy/dis_ref.html#d5e6875"/>
       <entry keyword="Protocol version">
-         <topic href="html/legacy/dis_ref.html#d5e6869"/>
+         <topic href="html/legacy/dis_ref.html#d5e6876"/>
       </entry>
    </entry>
    <entry keyword="DIS">
-      <topic href="html/legacy/dis_ref.html#d5e6877"/>
+      <topic href="html/legacy/dis_ref.html#d5e6884"/>
       <entry keyword="Supporting new message types">
-         <topic href="html/legacy/dis_ref.html#d5e6878"/>
+         <topic href="html/legacy/dis_ref.html#d5e6885"/>
       </entry>
    </entry>
    <entry keyword="DIS">
-      <topic href="html/legacy/dis_ref.html#d5e6858"/>
+      <topic href="html/legacy/dis_ref.html#d5e6865"/>
       <entry keyword="System documentation">
-         <topic href="html/legacy/dis_ref.html#d5e6859"/>
+         <topic href="html/legacy/dis_ref.html#d5e6866"/>
       </entry>
    </entry>
    <entry keyword="DIS">
-      <topic href="html/legacy/dis_tips.html#d5e4129"/>
+      <topic href="html/legacy/dis_tips.html#d5e4131"/>
       <entry keyword="Tips &amp; Tricks">
-         <topic href="html/legacy/dis_tips.html#d5e4130"/>
+         <topic href="html/legacy/dis_tips.html#d5e4132"/>
       </entry>
    </entry>
    <entry keyword="DR import mode">
@@ -187,9 +187,9 @@
       <topic href="html/legacy/toggle_buttons.html#d5e734"/>
    </entry>
    <entry keyword="DTD">
-      <topic href="html/legacy/debrief_file_format.html#d5e5431"/>
+      <topic href="html/legacy/debrief_file_format.html#d5e5438"/>
       <entry keyword="XML Structure">
-         <topic href="html/legacy/debrief_file_format.html#d5e5432"/>
+         <topic href="html/legacy/debrief_file_format.html#d5e5439"/>
       </entry>
    </entry>
    <entry keyword="Earth Model">
@@ -208,12 +208,12 @@
       </entry>
    </entry>
    <entry keyword="Exercise Planning">
-      <topic href="html/legacy/ExercisePlanning.html#d5e3017"/>
+      <topic href="html/legacy/ExercisePlanning.html#d5e3019"/>
    </entry>
    <entry keyword="Export">
-      <topic href="html/legacy/analyse_sensor_data.html#d5e3557"/>
+      <topic href="html/legacy/analyse_sensor_data.html#d5e3559"/>
       <entry keyword="Calculated Doppler">
-         <topic href="html/legacy/analyse_sensor_data.html#d5e3558"/>
+         <topic href="html/legacy/analyse_sensor_data.html#d5e3560"/>
       </entry>
    </entry>
    <entry keyword="Export">
@@ -241,27 +241,27 @@
       </entry>
    </entry>
    <entry keyword="File Format">
-      <topic href="html/legacy/reference.html#d5e4684"/>
+      <topic href="html/legacy/reference.html#d5e4686"/>
       <entry keyword="Replay">
-         <topic href="html/legacy/reference.html#d5e4685"/>
+         <topic href="html/legacy/reference.html#d5e4687"/>
       </entry>
    </entry>
    <entry keyword="File Format">
-      <topic href="html/legacy/format_2087_files.html#d5e5554"/>
+      <topic href="html/legacy/format_2087_files.html#d5e5561"/>
       <entry keyword="S2087">
-         <topic href="html/legacy/format_2087_files.html#d5e5555"/>
+         <topic href="html/legacy/format_2087_files.html#d5e5562"/>
       </entry>
    </entry>
    <entry keyword="File Format">
-      <topic href="html/legacy/debrief_file_format.html#d5e5396"/>
+      <topic href="html/legacy/debrief_file_format.html#d5e5403"/>
       <entry keyword="XML">
-         <topic href="html/legacy/debrief_file_format.html#d5e5397"/>
+         <topic href="html/legacy/debrief_file_format.html#d5e5404"/>
       </entry>
    </entry>
    <entry keyword="Format Helpers">
-      <topic href="html/legacy/reference.html#d5e5383"/>
+      <topic href="html/legacy/reference.html#d5e5390"/>
       <entry keyword="REP Format Helpers">
-         <topic href="html/legacy/reference.html#d5e5384"/>
+         <topic href="html/legacy/reference.html#d5e5391"/>
       </entry>
    </entry>
    <entry keyword="Formatting">
@@ -295,33 +295,33 @@
       </entry>
    </entry>
    <entry keyword="KML/KMZ Files">
-      <topic href="html/legacy/Section_KML.html#d5e5458"/>
+      <topic href="html/legacy/Section_KML.html#d5e5465"/>
    </entry>
    <entry keyword="Lightweight Track">
-      <topic href="html/legacy/reference.html#d5e5267"/>
+      <topic href="html/legacy/reference.html#d5e5269"/>
    </entry>
    <entry keyword="Multipath">
-      <topic href="html/legacy/analyse_sensor_data.html#d5e3602"/>
+      <topic href="html/legacy/analyse_sensor_data.html#d5e3604"/>
       <entry keyword="analysis">
-         <topic href="html/legacy/analyse_sensor_data.html#d5e3603"/>
+         <topic href="html/legacy/analyse_sensor_data.html#d5e3605"/>
       </entry>
    </entry>
    <entry keyword="Multipath">
-      <topic href="html/legacy/multi_data_files.html#d5e5513"/>
+      <topic href="html/legacy/multi_data_files.html#d5e5520"/>
       <entry keyword="data files">
-         <topic href="html/legacy/multi_data_files.html#d5e5514"/>
+         <topic href="html/legacy/multi_data_files.html#d5e5521"/>
       </entry>
    </entry>
    <entry keyword="Narrative Data">
-      <topic href="html/legacy/viewing_narratives.html#d5e3162"/>
+      <topic href="html/legacy/viewing_narratives.html#d5e3164"/>
       <entry keyword="Preparing">
-         <topic href="html/legacy/viewing_narratives.html#d5e3163"/>
+         <topic href="html/legacy/viewing_narratives.html#d5e3165"/>
       </entry>
    </entry>
    <entry keyword="Narrative Data">
-      <topic href="html/legacy/viewing_narratives.html#d5e3183"/>
+      <topic href="html/legacy/viewing_narratives.html#d5e3185"/>
       <entry keyword="Viewing">
-         <topic href="html/legacy/viewing_narratives.html#d5e3184"/>
+         <topic href="html/legacy/viewing_narratives.html#d5e3186"/>
       </entry>
    </entry>
    <entry keyword="Natural Earth Data">
@@ -361,9 +361,9 @@
       <topic href="html/legacy/History.html#d5e217"/>
    </entry>
    <entry keyword="Planning">
-      <topic href="html/legacy/ExercisePlanning.html#d5e3019"/>
+      <topic href="html/legacy/ExercisePlanning.html#d5e3021"/>
       <entry keyword="Exercise planning">
-         <topic href="html/legacy/ExercisePlanning.html#d5e3020"/>
+         <topic href="html/legacy/ExercisePlanning.html#d5e3022"/>
       </entry>
    </entry>
    <entry keyword="PowerPoint">
@@ -373,9 +373,9 @@
       </entry>
    </entry>
    <entry keyword="PowerPoint">
-      <topic href="html/legacy/xml_ppt.html#d5e4551"/>
+      <topic href="html/legacy/xml_ppt.html#d5e4553"/>
       <entry keyword="Master template format">
-         <topic href="html/legacy/xml_ppt.html#d5e4552"/>
+         <topic href="html/legacy/xml_ppt.html#d5e4554"/>
       </entry>
    </entry>
    <entry keyword="Primary track">
@@ -388,7 +388,7 @@
       <topic href="html/legacy/controlling_time.html#d5e1960"/>
    </entry>
    <entry keyword="Range/bearing calculations">
-      <topic href="html/legacy/chap_debrief_algorithms.html#d5e5850"/>
+      <topic href="html/legacy/chap_debrief_algorithms.html#d5e5857"/>
    </entry>
    <entry keyword="Reconstruction">
       <topic href="html/legacy/formatting_data.html#d5e906"/>
@@ -415,28 +415,28 @@
       </entry>
    </entry>
    <entry keyword="Replay File Format">
-      <topic href="html/legacy/reference.html#d5e5319"/>
+      <topic href="html/legacy/reference.html#d5e5326"/>
       <entry keyword="Entry comment">
-         <topic href="html/legacy/reference.html#d5e5320"/>
+         <topic href="html/legacy/reference.html#d5e5327"/>
       </entry>
    </entry>
    <entry keyword="Replay File Format">
-      <topic href="html/legacy/reference.html#d5e5310"/>
+      <topic href="html/legacy/reference.html#d5e5317"/>
       <entry keyword="Planning legs">
-         <topic href="html/legacy/reference.html#d5e5311"/>
+         <topic href="html/legacy/reference.html#d5e5318"/>
       </entry>
    </entry>
    <entry keyword="Replay file format">
-      <topic href="html/legacy/reference.html#d5e4682"/>
+      <topic href="html/legacy/reference.html#d5e4684"/>
    </entry>
    <entry keyword="Resampling data">
       <topic href="html/legacy/GroomingTrackData.html#d5e1533"/>
    </entry>
    <entry keyword="Right-clicking">
-      <topic href="html/legacy/maintainers.html#d5e4401"/>
+      <topic href="html/legacy/maintainers.html#d5e4403"/>
    </entry>
    <entry keyword="S2087 Log-file format">
-      <topic href="html/legacy/format_2087_files.html#d5e5552"/>
+      <topic href="html/legacy/format_2087_files.html#d5e5559"/>
    </entry>
    <entry keyword="SAM export">
       <topic href="html/legacy/controlling_time.html#d5e2056"/>
@@ -454,61 +454,61 @@
       <topic href="html/legacy/analysing_data.html#d5e1734"/>
    </entry>
    <entry keyword="Sensor data">
-      <topic href="html/legacy/analyse_sensor_data.html#d5e3406"/>
+      <topic href="html/legacy/analyse_sensor_data.html#d5e3408"/>
       <entry keyword="Analysing">
-         <topic href="html/legacy/analyse_sensor_data.html#d5e3407"/>
+         <topic href="html/legacy/analyse_sensor_data.html#d5e3409"/>
       </entry>
    </entry>
    <entry keyword="Sensor data">
-      <topic href="html/legacy/analyse_sensor_data.html#d5e3441"/>
+      <topic href="html/legacy/analyse_sensor_data.html#d5e3443"/>
       <entry keyword="Bulk data management">
-         <topic href="html/legacy/analyse_sensor_data.html#d5e3442"/>
+         <topic href="html/legacy/analyse_sensor_data.html#d5e3444"/>
       </entry>
    </entry>
    <entry keyword="Sensor data">
-      <topic href="html/legacy/analyse_sensor_data.html#d5e3420"/>
+      <topic href="html/legacy/analyse_sensor_data.html#d5e3422"/>
       <entry keyword="Generate track from Active data">
-         <topic href="html/legacy/analyse_sensor_data.html#d5e3421"/>
+         <topic href="html/legacy/analyse_sensor_data.html#d5e3423"/>
       </entry>
    </entry>
    <entry keyword="Sensor data">
-      <topic href="html/legacy/sensor_data.html#d5e3353"/>
+      <topic href="html/legacy/sensor_data.html#d5e3355"/>
       <entry keyword="Sensor offsets editor">
-         <topic href="html/legacy/sensor_data.html#d5e3354"/>
+         <topic href="html/legacy/sensor_data.html#d5e3356"/>
       </entry>
    </entry>
    <entry keyword="Sensor data">
-      <topic href="html/legacy/analyse_sensor_data.html#d5e3494"/>
+      <topic href="html/legacy/analyse_sensor_data.html#d5e3496"/>
       <entry keyword="Shading sensor cuts">
-         <topic href="html/legacy/analyse_sensor_data.html#d5e3495"/>
+         <topic href="html/legacy/analyse_sensor_data.html#d5e3497"/>
       </entry>
    </entry>
    <entry keyword="Sensor data">
-      <topic href="html/legacy/sensor_data.html#d5e3383"/>
+      <topic href="html/legacy/sensor_data.html#d5e3385"/>
       <entry keyword="Track name missing in REP">
-         <topic href="html/legacy/sensor_data.html#d5e3384"/>
+         <topic href="html/legacy/sensor_data.html#d5e3386"/>
       </entry>
    </entry>
    <entry keyword="Show Auto Calc range">
       <topic href="html/legacy/drawing_features.html#d5e1369"/>
    </entry>
    <entry keyword="SourceForge">
-      <topic href="html/legacy/debrief_feedback.html#d5e4303"/>
+      <topic href="html/legacy/debrief_feedback.html#d5e4305"/>
       <entry keyword="Providing Feedback">
-         <topic href="html/legacy/debrief_feedback.html#d5e4304"/>
+         <topic href="html/legacy/debrief_feedback.html#d5e4306"/>
       </entry>
    </entry>
    <entry keyword="SourceForge">
-      <topic href="html/legacy/debrief_feedback.html#d5e4337"/>
+      <topic href="html/legacy/debrief_feedback.html#d5e4339"/>
       <entry keyword="Requesting new features">
-         <topic href="html/legacy/debrief_feedback.html#d5e4338"/>
+         <topic href="html/legacy/debrief_feedback.html#d5e4340"/>
       </entry>
    </entry>
    <entry keyword="Symbol Sets">
       <topic href="html/legacy/symbol_sets.html#d5e2438"/>
    </entry>
    <entry keyword="Symbology data">
-      <topic href="html/legacy/reference.html#d5e4798"/>
+      <topic href="html/legacy/reference.html#d5e4800"/>
    </entry>
    <entry keyword="Time Control">
       <topic href="html/legacy/controlling_time.html#d5e2013"/>
@@ -529,9 +529,9 @@
       </entry>
    </entry>
    <entry keyword="TMA Data">
-      <topic href="html/legacy/tma_data.html#d5e3764"/>
+      <topic href="html/legacy/tma_data.html#d5e3766"/>
       <entry keyword="Analysing">
-         <topic href="html/legacy/tma_data.html#d5e3765"/>
+         <topic href="html/legacy/tma_data.html#d5e3767"/>
       </entry>
    </entry>
    <entry keyword="Toolbox">
@@ -541,9 +541,9 @@
       </entry>
    </entry>
    <entry keyword="Track Data">
-      <topic href="html/legacy/reference.html#d5e5269"/>
+      <topic href="html/legacy/reference.html#d5e5271"/>
       <entry keyword="Lightweight tracks">
-         <topic href="html/legacy/reference.html#d5e5270"/>
+         <topic href="html/legacy/reference.html#d5e5272"/>
       </entry>
    </entry>
    <entry keyword="Track Data">
@@ -577,9 +577,9 @@
       </entry>
    </entry>
    <entry keyword="Track sections">
-      <topic href="html/legacy/RemoveJumpsRef.html#d5e5960"/>
+      <topic href="html/legacy/RemoveJumpsRef.html#d5e5967"/>
       <entry keyword="Remove jumps (algorithm)">
-         <topic href="html/legacy/RemoveJumpsRef.html#d5e5961"/>
+         <topic href="html/legacy/RemoveJumpsRef.html#d5e5968"/>
       </entry>
    </entry>
    <entry keyword="Track sections">
@@ -673,15 +673,15 @@
       </entry>
    </entry>
    <entry keyword="Worm in the hole">
-      <topic href="html/legacy/sensor_data.html#d5e3346"/>
+      <topic href="html/legacy/sensor_data.html#d5e3348"/>
       <entry keyword="Usage">
-         <topic href="html/legacy/sensor_data.html#d5e3347"/>
+         <topic href="html/legacy/sensor_data.html#d5e3349"/>
       </entry>
    </entry>
    <entry keyword="XML">
-      <topic href="html/legacy/debrief_file_format.html#d5e5434"/>
+      <topic href="html/legacy/debrief_file_format.html#d5e5441"/>
       <entry keyword="DTD Structure">
-         <topic href="html/legacy/debrief_file_format.html#d5e5435"/>
+         <topic href="html/legacy/debrief_file_format.html#d5e5442"/>
       </entry>
    </entry>
 </index>

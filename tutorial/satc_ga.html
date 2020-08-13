@@ -1,8 +1,8 @@
 <html><head>
       <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-   <title>20.3.&nbsp;Solution Generator based on Genetic Algorithm</title><link rel="stylesheet" type="text/css" href="header.css"><meta name="generator" content="DocBook XSL Stylesheets V1.78.1"><meta name="keywords" content="Maritime Analysis, Open Source Tool"><link rel="home" href="index.html" title="Debrief NG User Documentation"><link rel="up" href="chap_genetic_algorithms.html" title="Chapter&nbsp;20.&nbsp;Semi Automated Track Construction (SATC)"><link rel="prev" href="ga_optimisation.html" title="20.2.&nbsp;Optimisation Strategies"><link rel="next" href="dis_ref.html" title="Chapter&nbsp;21.&nbsp;System Documentation for DIS integration"><link rel="preface" href="PrefaceIntro.html" title="Introduction"><link rel="part" href="tutorial.html" title="Part&nbsp;I.&nbsp;Getting started"><link rel="chapter" href="get_start.html" title="Chapter&nbsp;1.&nbsp;First steps"><link rel="part" href="UsingDebrief.html" title="Part&nbsp;II.&nbsp;Using Debrief"><link rel="chapter" href="moving_around.html" title="Chapter&nbsp;2.&nbsp;Moving around the view"><link rel="chapter" href="formatting_data.html" title="Chapter&nbsp;3.&nbsp;Manipulating track data"><link rel="chapter" href="analysing_data.html" title="Chapter&nbsp;4.&nbsp;Analysing Data"><link rel="chapter" href="exporting_data.html" title="Chapter&nbsp;5.&nbsp;Exporting Data"><link rel="chapter" href="symbol_sets.html" title="Chapter&nbsp;6.&nbsp;Symbol sets"><link rel="chapter" href="external_datasets.html" title="Chapter&nbsp;7.&nbsp;External datasets"><link rel="chapter" href="ExercisePlanning.html" title="Chapter&nbsp;8.&nbsp;Exercise planning"><link rel="chapter" href="viewing_narratives.html" title="Chapter&nbsp;9.&nbsp;Viewing narratives"><link rel="chapter" href="ChartBackdrops.html" title="Chapter&nbsp;10.&nbsp;Using chart backdrops"><link rel="chapter" href="sensor_data.html" title="Chapter&nbsp;11.&nbsp;Analysing sensor data"><link rel="chapter" href="tma_data.html" title="Chapter&nbsp;12.&nbsp;Management of TMA and TUA solutions"><link rel="chapter" href="dis_support.html" title="Chapter&nbsp;13.&nbsp;Support for DIS Protocol"><link rel="part" href="maintainers_guide.html" title="Part&nbsp;III.&nbsp;Maintainer's Guide"><link rel="chapter" href="participating.html" title="Chapter&nbsp;14.&nbsp;Participating in Debrief development"><link rel="chapter" href="maintainers.html" title="Chapter&nbsp;15.&nbsp;Debrief maintainer's guide"><link rel="part" href="reference_guide.html" title="Part&nbsp;IV.&nbsp;Reference Guide"><link rel="chapter" href="reference.html" title="Chapter&nbsp;16.&nbsp;Debrief file formats"><link rel="chapter" href="ScriptCookbook.html" title="Chapter&nbsp;17.&nbsp;Scripting Cookbook"><link rel="chapter" href="GeoToolsRef.html" title="Chapter&nbsp;18.&nbsp;GeoTools in Debrief"><link rel="chapter" href="chap_debrief_algorithms.html" title="Chapter&nbsp;19.&nbsp;Debrief algorithms"><link rel="chapter" href="chap_genetic_algorithms.html" title="Chapter&nbsp;20.&nbsp;Semi Automated Track Construction (SATC)"><link rel="chapter" href="dis_ref.html" title="Chapter&nbsp;21.&nbsp;System Documentation for DIS integration"><link rel="appendix" href="app_glossary.html" title="Appendix&nbsp;A.&nbsp;Debrief Glossary"><link rel="glossary" href="app_glossary.html#glossary" title="Glossary"><link rel="index" href="the_index.html" title="Index"><link rel="subsection" href="satc_ga.html#d5e6409" title="20.3.1.&nbsp;Definitions"><link rel="subsection" href="satc_ga.html#d5e6457" title="20.3.2.&nbsp;Structure"><link rel="subsection" href="satc_ga.html#candidate_factory" title="20.3.3.&nbsp;Candidate Factory"><link rel="subsection" href="satc_ga.html#chromosome_selection" title="20.3.4.&nbsp;Chromosome selection strategy"><link rel="subsection" href="satc_ga.html#d5e6528" title="20.3.5.&nbsp;Genetic operators"><link rel="subsection" href="satc_ga.html#d5e6751" title="20.3.6.&nbsp;Fitness function"><link rel="subsection" href="satc_ga.html#island_attributes" title="20.3.7.&nbsp;Island attributes"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">20.3.&nbsp;Solution Generator based on Genetic Algorithm</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="ga_optimisation.html"><img src="images/prev.gif" alt="Prev"></a>&nbsp;</td><th width="60%" align="center">Chapter&nbsp;20.&nbsp;Semi Automated Track Construction (SATC)</th><td width="20%" align="right">&nbsp;<a accesskey="n" href="dis_ref.html"><img src="images/next.gif" alt="Next"></a></td></tr></table><hr></div><div class="section" id="satc_ga"><div class="titlepage"><div><div><h2 class="title" style="clear: both">20.3.&nbsp;Solution Generator based on Genetic Algorithm</h2></div></div></div><div class="toc"><dl class="toc"><dt><span class="section"><a href="satc_ga.html#d5e6409">20.3.1. Definitions</a></span></dt><dt><span class="section"><a href="satc_ga.html#d5e6457">20.3.2. Structure</a></span></dt><dt><span class="section"><a href="satc_ga.html#candidate_factory">20.3.3. Candidate Factory</a></span></dt><dt><span class="section"><a href="satc_ga.html#chromosome_selection">20.3.4. Chromosome selection strategy</a></span></dt><dt><span class="section"><a href="satc_ga.html#d5e6528">20.3.5. Genetic operators</a></span></dt><dt><span class="section"><a href="satc_ga.html#d5e6751">20.3.6. Fitness function</a></span></dt><dt><span class="section"><a href="satc_ga.html#island_attributes">20.3.7. Island attributes</a></span></dt></dl></div>
+   <title>20.3.&nbsp;Solution Generator based on Genetic Algorithm</title><link rel="stylesheet" type="text/css" href="header.css"><meta name="generator" content="DocBook XSL Stylesheets V1.78.1"><meta name="keywords" content="Maritime Analysis, Open Source Tool"><link rel="home" href="index.html" title="Debrief NG User Documentation"><link rel="up" href="chap_genetic_algorithms.html" title="Chapter&nbsp;20.&nbsp;Semi Automated Track Construction (SATC)"><link rel="prev" href="ga_optimisation.html" title="20.2.&nbsp;Optimisation Strategies"><link rel="next" href="dis_ref.html" title="Chapter&nbsp;21.&nbsp;System Documentation for DIS integration"><link rel="preface" href="PrefaceIntro.html" title="Introduction"><link rel="part" href="tutorial.html" title="Part&nbsp;I.&nbsp;Getting started"><link rel="chapter" href="get_start.html" title="Chapter&nbsp;1.&nbsp;First steps"><link rel="part" href="UsingDebrief.html" title="Part&nbsp;II.&nbsp;Using Debrief"><link rel="chapter" href="moving_around.html" title="Chapter&nbsp;2.&nbsp;Moving around the view"><link rel="chapter" href="formatting_data.html" title="Chapter&nbsp;3.&nbsp;Manipulating track data"><link rel="chapter" href="analysing_data.html" title="Chapter&nbsp;4.&nbsp;Analysing Data"><link rel="chapter" href="exporting_data.html" title="Chapter&nbsp;5.&nbsp;Exporting Data"><link rel="chapter" href="symbol_sets.html" title="Chapter&nbsp;6.&nbsp;Symbol sets"><link rel="chapter" href="external_datasets.html" title="Chapter&nbsp;7.&nbsp;External datasets"><link rel="chapter" href="ExercisePlanning.html" title="Chapter&nbsp;8.&nbsp;Exercise planning"><link rel="chapter" href="viewing_narratives.html" title="Chapter&nbsp;9.&nbsp;Viewing narratives"><link rel="chapter" href="ChartBackdrops.html" title="Chapter&nbsp;10.&nbsp;Using chart backdrops"><link rel="chapter" href="sensor_data.html" title="Chapter&nbsp;11.&nbsp;Analysing sensor data"><link rel="chapter" href="tma_data.html" title="Chapter&nbsp;12.&nbsp;Management of TMA and TUA solutions"><link rel="chapter" href="dis_support.html" title="Chapter&nbsp;13.&nbsp;Support for DIS Protocol"><link rel="part" href="maintainers_guide.html" title="Part&nbsp;III.&nbsp;Maintainer's Guide"><link rel="chapter" href="participating.html" title="Chapter&nbsp;14.&nbsp;Participating in Debrief development"><link rel="chapter" href="maintainers.html" title="Chapter&nbsp;15.&nbsp;Debrief maintainer's guide"><link rel="part" href="reference_guide.html" title="Part&nbsp;IV.&nbsp;Reference Guide"><link rel="chapter" href="reference.html" title="Chapter&nbsp;16.&nbsp;Debrief file formats"><link rel="chapter" href="ScriptCookbook.html" title="Chapter&nbsp;17.&nbsp;Scripting Cookbook"><link rel="chapter" href="GeoToolsRef.html" title="Chapter&nbsp;18.&nbsp;GeoTools in Debrief"><link rel="chapter" href="chap_debrief_algorithms.html" title="Chapter&nbsp;19.&nbsp;Debrief algorithms"><link rel="chapter" href="chap_genetic_algorithms.html" title="Chapter&nbsp;20.&nbsp;Semi Automated Track Construction (SATC)"><link rel="chapter" href="dis_ref.html" title="Chapter&nbsp;21.&nbsp;System Documentation for DIS integration"><link rel="appendix" href="app_glossary.html" title="Appendix&nbsp;A.&nbsp;Debrief Glossary"><link rel="glossary" href="app_glossary.html#glossary" title="Glossary"><link rel="index" href="the_index.html" title="Index"><link rel="subsection" href="satc_ga.html#d5e6416" title="20.3.1.&nbsp;Definitions"><link rel="subsection" href="satc_ga.html#d5e6464" title="20.3.2.&nbsp;Structure"><link rel="subsection" href="satc_ga.html#candidate_factory" title="20.3.3.&nbsp;Candidate Factory"><link rel="subsection" href="satc_ga.html#chromosome_selection" title="20.3.4.&nbsp;Chromosome selection strategy"><link rel="subsection" href="satc_ga.html#d5e6535" title="20.3.5.&nbsp;Genetic operators"><link rel="subsection" href="satc_ga.html#d5e6758" title="20.3.6.&nbsp;Fitness function"><link rel="subsection" href="satc_ga.html#island_attributes" title="20.3.7.&nbsp;Island attributes"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">20.3.&nbsp;Solution Generator based on Genetic Algorithm</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="ga_optimisation.html"><img src="images/prev.gif" alt="Prev"></a>&nbsp;</td><th width="60%" align="center">Chapter&nbsp;20.&nbsp;Semi Automated Track Construction (SATC)</th><td width="20%" align="right">&nbsp;<a accesskey="n" href="dis_ref.html"><img src="images/next.gif" alt="Next"></a></td></tr></table><hr></div><div class="section" id="satc_ga"><div class="titlepage"><div><div><h2 class="title" style="clear: both">20.3.&nbsp;Solution Generator based on Genetic Algorithm</h2></div></div></div><div class="toc"><dl class="toc"><dt><span class="section"><a href="satc_ga.html#d5e6416">20.3.1. Definitions</a></span></dt><dt><span class="section"><a href="satc_ga.html#d5e6464">20.3.2. Structure</a></span></dt><dt><span class="section"><a href="satc_ga.html#candidate_factory">20.3.3. Candidate Factory</a></span></dt><dt><span class="section"><a href="satc_ga.html#chromosome_selection">20.3.4. Chromosome selection strategy</a></span></dt><dt><span class="section"><a href="satc_ga.html#d5e6535">20.3.5. Genetic operators</a></span></dt><dt><span class="section"><a href="satc_ga.html#d5e6758">20.3.6. Fitness function</a></span></dt><dt><span class="section"><a href="satc_ga.html#island_attributes">20.3.7. Island attributes</a></span></dt></dl></div>
         
-        <div class="section" id="d5e6409"><div class="titlepage"><div><div><h3 class="title">20.3.1.&nbsp;Definitions</h3></div></div></div>
+        <div class="section" id="d5e6416"><div class="titlepage"><div><div><h3 class="title">20.3.1.&nbsp;Definitions</h3></div></div></div>
           
           <p>
             </p><div class="variablelist"><dl class="variablelist"><dt><span class="term">Gene</span></dt><dd>
@@ -21,7 +21,7 @@
                   <p>number of iterations conducted before a migrations is performed. (20 iterations by default in <span class="application">Debrief-SATC</span>).</p>
                 </dd></dl></div><p>
           </p>
-          <div class="example" id="d5e6442"><p class="title"><b>Example&nbsp;20.1.&nbsp;Example</b></p><div class="example-contents">
+          <div class="example" id="d5e6449"><p class="title"><b>Example&nbsp;20.1.&nbsp;Example</b></p><div class="example-contents">
             
             <p><span class="emphasis"><em>Gene of Chromosome 1</em></span> - any black straight line</p>
             <p><span class="emphasis"><em>Gene of Chromosome 2</em></span> - any blue straight line</p>
@@ -33,9 +33,9 @@
             <div class="mediaobject"><img src="figures/tma_fig1_definitions.png" alt="Example"></div>
           </div></div><br class="figure-break">
         </div>
-        <div class="section" id="d5e6457"><div class="titlepage"><div><div><h3 class="title">20.3.2.&nbsp;Structure</h3></div></div></div>
+        <div class="section" id="d5e6464"><div class="titlepage"><div><div><h3 class="title">20.3.2.&nbsp;Structure</h3></div></div></div>
           
-          <div class="section" id="d5e6459"><div class="titlepage"><div><div><h4 class="title">20.3.2.1.&nbsp;Islands</h4></div></div></div>
+          <div class="section" id="d5e6466"><div class="titlepage"><div><div><h4 class="title">20.3.2.1.&nbsp;Islands</h4></div></div></div>
             
             <p>To allow multiple parallel threads of solution derivation, an Islands Model (Multiple-population GA) is used, with synchronized migrations (<a class="ulink" href="http://tracer.uc3m.es/tws/cEA/documents/cant98.pdf" target="_top">http://tracer.uc3m.es/tws/cEA/documents/cant98.pdf</a>). This involves several separate populations which are optimized in parallel. After each epoch the islands exchange chromosomes between each other. Each island is separate GA with its own characteristics.</p>
             <p>Our islands structure is shown on <a class="xref" href="satc_ga.html#islands_structure" title="Figure&nbsp;20.4.&nbsp;Islands structure">Figure&nbsp;20.4, &#8220;Islands structure&#8221;</a>.</p>
@@ -45,7 +45,7 @@
             </div></div><br class="figure-break">
             <p>The figure shows two simple and two complex islands. These are designed to produce good candidates from random search area. After each epoch every of simple and complex islands sends 5 elite individuals to elite island, which chooses the best candidate from these islands and optimizes it. The presence of different types of island allows the algorithm to produce an optimal solution across a range of problem types.</p>
           </div>
-          <div class="section" id="d5e6471"><div class="titlepage"><div><div><h4 class="title">20.3.2.2.&nbsp;Genetic algorithm</h4></div></div></div>
+          <div class="section" id="d5e6478"><div class="titlepage"><div><div><h4 class="title">20.3.2.2.&nbsp;Genetic algorithm</h4></div></div></div>
             
             <p>Each island is one instance of GA with its own parameters. The different island types have different strategies for Selection, Crossover, and Mutation.</p><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem">
                   <p>Candidate Generation - generates random chromosomes (see <a class="xref" href="satc_ga.html#candidate_factory" title="20.3.3.&nbsp;Candidate Factory">Section&nbsp;20.3.3, &#8220;Candidate Factory&#8221;</a>)</p>
@@ -118,13 +118,13 @@ while (selected.size &lt; populationSize)
   end
 end</code></pre>
         </div>
-        <div class="section" id="d5e6528"><div class="titlepage"><div><div><h3 class="title">20.3.5.&nbsp;Genetic operators</h3></div></div></div>
+        <div class="section" id="d5e6535"><div class="titlepage"><div><div><h3 class="title">20.3.5.&nbsp;Genetic operators</h3></div></div></div>
           
           <p>Two types of genetic operator are used: crossover and mutation.</p>
           <div class="section" id="crossover"><div class="titlepage"><div><div><h4 class="title">20.3.5.1.&nbsp;Crossover</h4></div></div></div>
             
             <p>Crossover is genetic operator which is used to produce new chromosomes based on crossing two parent chromosomes. There are several techniques to implement crossover, we use two of them: one-point list crossover and arithmetic crossover.</p>
-            <div class="section" id="d5e6534"><div class="titlepage"><div><div><h5 class="title">20.3.5.1.1.&nbsp;One-point list crossover</h5></div></div></div>
+            <div class="section" id="d5e6541"><div class="titlepage"><div><div><h5 class="title">20.3.5.1.1.&nbsp;One-point list crossover</h5></div></div></div>
               
               <p>One-point list crossover is well known and widely used crossover operator <a class="ulink" href="http://en.wikipedia.org/wiki/Crossover_%28genetic_algorithm%29" target="_top">http://en.wikipedia.org/wiki/Crossover_(genetic_algorithm)</a>. It selects random split point in parent chromosomes and generates two child chromosome based on the following rule:</p>
               <p>
@@ -136,7 +136,7 @@ end</code></pre>
                 <p>X<sub>2</sub> = { a<sub>2</sub>, b<sub>2</sub>, c<sub>2</sub>} - blue straight lines</p>
               </blockquote></div>
               <p>let's take our split point = 1, in this case we will have two new chromosomes:</p>
-              <div class="figure" id="d5e6556"><p class="title"><b>Figure&nbsp;20.7.&nbsp;one point crossover example</b></p><div class="figure-contents">
+              <div class="figure" id="d5e6563"><p class="title"><b>Figure&nbsp;20.7.&nbsp;one point crossover example</b></p><div class="figure-contents">
                 
                 <div class="mediaobject"><img src="figures/tma_fig5_1ptcrossover.png" alt="one point crossover example"></div>
               </div></div><br class="figure-break">
@@ -145,7 +145,7 @@ end</code></pre>
                 <p>I<sub>2</sub> = { a<sub>1</sub>, b<sub>2</sub>, c<sub>2</sub>} - blue lines on the above figure</p>
               </blockquote></div>
             </div>
-            <div class="section" id="d5e6572"><div class="titlepage"><div><div><h5 class="title">20.3.5.1.2.&nbsp;Arithmetic crossover</h5></div></div></div>
+            <div class="section" id="d5e6579"><div class="titlepage"><div><div><h5 class="title">20.3.5.1.2.&nbsp;Arithmetic crossover</h5></div></div></div>
               
               <p>Arithmetic crossover is GA crossover operator designed for continuous search spaces, it has several modification and described in many papers (for instance: <a class="ulink" href="http://www.researchgate.net/publication/228618503_A_new_genetic_algorithm_with_arithmetic_crossover_to_economic_and_environmental_economic_dispatch/file/9fcfd50a6971a00cc5.pdf" target="_top">http://www.researchgate.net/publication/228618503_A_new_genetic_algorithm_with_arithmetic_crossover_to_economic_and_environmental_economic_dispatch/file/9fcfd50a6971a00cc5.pdf</a>)</p>
               <p>The general idea of arithmetic crossover is to take two corresponding genes from parent individuals and create new gene as linear combination of parent genes:</p>
@@ -161,7 +161,7 @@ end</code></pre>
                 </li></ul></div>
               <p>Because the above formula restricts a new gene to be between its parents, several authors propose extending the random number interval to [-d; 1 + d], where d is parameter which allows new gene to go outside. Usually d is less than 0.25.</p>
               <p>For 2D points arithmetic crossover looks like: a, b - (blue) parent genes, c - (green) possible new genes:</p>
-              <div class="figure" id="d5e6592"><p class="title"><b>Figure&nbsp;20.8.&nbsp;Illustration of arithmetic crossover for 2D points</b></p><div class="figure-contents">
+              <div class="figure" id="d5e6599"><p class="title"><b>Figure&nbsp;20.8.&nbsp;Illustration of arithmetic crossover for 2D points</b></p><div class="figure-contents">
                 
                 <div class="mediaobject"><img src="figures/tma_fig6_crossover2d.png" alt="Illustration of arithmetic crossover for 2D points"></div>
               </div></div><br class="figure-break">
@@ -187,7 +187,7 @@ for (a = every gene of X<sub>1</sub>) (b = every gene of X<sub>2</sub>)
   add new gene (c) to chromosome (I)
 end</code></pre>
               <p>For our example from <a class="xref" href="satc_ga.html#example1" title="Figure&nbsp;20.3.&nbsp;Example">Figure&nbsp;20.3, &#8220;Example&#8221;</a>, we generate new chromosome (green) with arithmetic crossover.</p>
-              <div class="figure" id="d5e6621"><p class="title"><b>Figure&nbsp;20.9.&nbsp;Arithmetic crossover example</b></p><div class="figure-contents">
+              <div class="figure" id="d5e6628"><p class="title"><b>Figure&nbsp;20.9.&nbsp;Arithmetic crossover example</b></p><div class="figure-contents">
                 
                 <div class="mediaobject"><img src="figures/tma_fig7_arithmeticcrossoverex.png" alt="Arithmetic crossover example"></div>
               </div></div><br class="figure-break">
@@ -196,7 +196,7 @@ end</code></pre>
           <div class="section" id="mutation"><div class="titlepage"><div><div><h4 class="title">20.3.5.2.&nbsp;Mutation</h4></div></div></div>
             
             <p>The goal of mutation is to produce individuals which aren't present in current population - thus individuals that aren't achievable by crossover. Mutation is a genetic operator which produces new chromosomes by substituting genes in parent chromosome for newly generated ones with some specified probabilit. The specific mutation used in a GA instance depends on an understanding of the problem domain and data patterns.In our implementation we will use two techniques.</p>
-            <div class="section" id="d5e6629"><div class="titlepage"><div><div><h5 class="title">20.3.5.2.1.&nbsp;Random mutation</h5></div></div></div>
+            <div class="section" id="d5e6636"><div class="titlepage"><div><div><h5 class="title">20.3.5.2.1.&nbsp;Random mutation</h5></div></div></div>
               
               <p>Random mutation substitutes some genes of a parent chromosome for corresponding genes randomly generated by candidates factory chromosome. Pseudocode of random mutation looks like:</p>
               <pre class="screen"><code class="code">X = parent chromosome
@@ -211,12 +211,12 @@ for (a every gene of X) (b every gene of R)
   end
 end</code></pre>
               <p>Example: Let's take parent chromosome X (black) and random chromosome R (red). Mutation is made only on second gene this will produce new chromosome I (green)</p>
-              <div class="figure" id="d5e6635"><p class="title"><b>Figure&nbsp;20.10.&nbsp;Random mutation</b></p><div class="figure-contents">
+              <div class="figure" id="d5e6642"><p class="title"><b>Figure&nbsp;20.10.&nbsp;Random mutation</b></p><div class="figure-contents">
                 
                 <div class="mediaobject"><img src="figures/tma_fig8a_randommutation.png" alt="Random mutation"></div>
               </div></div><br class="figure-break">
             </div>
-            <div class="section" id="d5e6640"><div class="titlepage"><div><div><h5 class="title">20.3.5.2.2.&nbsp;Mutation to vertex</h5></div></div></div>
+            <div class="section" id="d5e6647"><div class="titlepage"><div><div><h5 class="title">20.3.5.2.2.&nbsp;Mutation to vertex</h5></div></div></div>
               
               <p>Mutation to vertex comes to GA from <span class="application">Debrief</span>'s experimental Simulated Annealing (SA) optimized point generation implementation (see <a class="xref" href="satc_ga.html#optimised_generation" title="20.3.5.4.&nbsp;Optimised point generation">Section&nbsp;20.3.5.4, &#8220;Optimised point generation&#8221;</a>), this algorithm gives good results for SA optimization and there is value in also using it within GA with some specific modifications.</p>
               <p>Because in GA on each iteration there are multiple individuals there is no reason to use two vertices and take a new point between them. It's simpler to take only one vertex and create a new point as linear combination of current point and chosen vertex:</p>
@@ -255,7 +255,7 @@ for (a every gene of X)
   end
 end</code></pre>
               <p>Example: Parent chromosome X (black), new chromosome I (green). Mutation was made for first and third genes.</p>
-              <div class="figure" id="d5e6676"><p class="title"><b>Figure&nbsp;20.11.&nbsp;Mutation to vertex example</b></p><div class="figure-contents">
+              <div class="figure" id="d5e6683"><p class="title"><b>Figure&nbsp;20.11.&nbsp;Mutation to vertex example</b></p><div class="figure-contents">
                 
                 <div class="mediaobject"><img src="figures/tma_fig9_mutationtovertex.png" alt="Mutation to vertex example"></div>
               </div></div><br class="figure-break">
@@ -300,13 +300,13 @@ end</code></pre>
               </li><li class="listitem">
                 <p>find P<sub>new</sub> on road from X to Y with distance = rand(0, 1) * distance(X, Y)</p>
               </li></ol></div>
-            <div class="figure" id="d5e6746"><p class="title"><b>Figure&nbsp;20.12.&nbsp;Point generation</b></p><div class="figure-contents">
+            <div class="figure" id="d5e6753"><p class="title"><b>Figure&nbsp;20.12.&nbsp;Point generation</b></p><div class="figure-contents">
               
               <div class="mediaobject"><img src="figures/tma_fig10_pointgeneration.png" alt="Point generation"></div>
             </div></div><br class="figure-break">
           </div>
         </div>
-        <div class="section" id="d5e6751"><div class="titlepage"><div><div><h3 class="title">20.3.6.&nbsp;Fitness function</h3></div></div></div>
+        <div class="section" id="d5e6758"><div class="titlepage"><div><div><h3 class="title">20.3.6.&nbsp;Fitness function</h3></div></div></div>
           
           <p>As previously explained, each chromosome in GA is a set of straight routes. The fitness function starts by verifying that each of these straight routes are achievable. If everything is ok it then constructs altering routes (cubic bezier curves) between them. The GA fitness score is the sum of two scores:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
                 <p>a) contributions scores for straight and altering routes</p>
@@ -371,7 +371,7 @@ end</pre>
         </div>
         <div class="section" id="island_attributes"><div class="titlepage"><div><div><h3 class="title">20.3.7.&nbsp;Island attributes</h3></div></div></div>
           
-          <div class="section" id="d5e6806"><div class="titlepage"><div><div><h4 class="title">20.3.7.1.&nbsp;Elite island characteristics (beta)</h4></div></div></div>
+          <div class="section" id="d5e6813"><div class="titlepage"><div><div><h4 class="title">20.3.7.1.&nbsp;Elite island characteristics (beta)</h4></div></div></div>
             
             <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
                 <p>Fixed population size = 70 individuals by default</p>
@@ -395,7 +395,7 @@ end</pre>
                     </li></ul></div>
               </li></ul></div>
           </div>
-          <div class="section" id="d5e6831"><div class="titlepage"><div><div><h4 class="title">20.3.7.2.&nbsp;Simple and complex island characteristics</h4></div></div></div>
+          <div class="section" id="d5e6838"><div class="titlepage"><div><div><h4 class="title">20.3.7.2.&nbsp;Simple and complex island characteristics</h4></div></div></div>
             
             <p>The only difference between simple and complex island is simple islands use only straight legs and DON'T use altering ones, and complex islands use altering legs too.</p>
             <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">

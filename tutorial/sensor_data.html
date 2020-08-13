@@ -37,13 +37,13 @@
         <div class="sect2" id="SectWormInHole"><div class="titlepage"><div><div><h3 class="title">11.1.3.&nbsp;Worm in the hole</h3></div></div></div>
           
 
-          <p><a class="indexterm" name="d5e3345"></a>When examining a Sensor in the properties view, you will see that in addition to Sensor Offset, there is a 'Worm in the hole' (see <a class="xref" href="WormInHole.html" title="19.2.&nbsp;Worm in the hole algorithm">Section&nbsp;19.2, &#8220;Worm in the hole algorithm&#8221;</a>). This is typically used for towed arrays, whereby the start of the sensor bearing line is located at the Sensor Offset distance back along the host platform track, instead of in a straight line behind the host.</p>
+          <p><a class="indexterm" name="d5e3347"></a>When examining a Sensor in the properties view, you will see that in addition to Sensor Offset, there is a 'Worm in the hole' (see <a class="xref" href="WormInHole.html" title="19.2.&nbsp;Worm in the hole algorithm">Section&nbsp;19.2, &#8220;Worm in the hole algorithm&#8221;</a>). This is typically used for towed arrays, whereby the start of the sensor bearing line is located at the Sensor Offset distance back along the host platform track, instead of in a straight line behind the host.</p>
         </div>
 
         <div class="sect2" id="SensorOffsetsEditor"><div class="titlepage"><div><div><h3 class="title">11.1.4.&nbsp;Sensor offset lengths editor</h3></div></div></div>
           
 
-          <p><a class="indexterm" name="d5e3352"></a>Since Autumn 09 Debrief has supported a library of sensor offsets. These offsets are used to populate a drop-down list of lengths, used in support of specifying sensor offsets.</p>
+          <p><a class="indexterm" name="d5e3354"></a>Since Autumn 09 Debrief has supported a library of sensor offsets. These offsets are used to populate a drop-down list of lengths, used in support of specifying sensor offsets.</p>
 
           <p>Somewhere on your network create a csv-formatted text file that stores two columns of data (as shown below). The first column is the platform/sensor name, the second column is that combination's array offset in metres (with -ve figures at the stern of the host platform). The file should end in a csv suffix, and is formatted as follows:</p><pre class="screen">Sensor Name,Length (m)
 Platform A,-45
@@ -91,7 +91,7 @@ frequency accuracy (Hz) [or the single word NULL], range(yds)
 
           <p>As you can see, unlike most other Debrief line formats, this format allows for NULL fields. Where the sensor latitude and longitude values are replaced by the single word NULL, Debrief plots this sensor contact using a relative origin. NULL values may also be provided for the ambiguous sensor bearing and/or detection frequency.</p>
           <div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.gif"></td><th align="left">Note</th></tr><tr><td align="left" valign="top">
-            <p><a class="indexterm" name="d5e3382"></a>It's quite common to produce a DSF file where the track name doesn't exactly match the tracks already loaded. So, if, when importing a REP file the track name doesn't match any existing tracks, Debrief will invite you to choose the track to add the sensor to.</p><div class="screenshot">
+            <p><a class="indexterm" name="d5e3384"></a>It's quite common to produce a DSF file where the track name doesn't exactly match the tracks already loaded. So, if, when importing a REP file the track name doesn't match any existing tracks, Debrief will invite you to choose the track to add the sensor to.</p><div class="screenshot">
                 <div class="mediaobject"><img src="figures/SensorTrackNotFound.png"></div>
               </div>
           </td></tr></table></div>

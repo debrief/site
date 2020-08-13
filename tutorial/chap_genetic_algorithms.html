@@ -1,16 +1,16 @@
 <html><head>
       <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-   <title>Chapter&nbsp;20.&nbsp;Semi Automated Track Construction (SATC)</title><link rel="stylesheet" type="text/css" href="header.css"><meta name="generator" content="DocBook XSL Stylesheets V1.78.1"><meta name="keywords" content="Maritime Analysis, Open Source Tool"><link rel="home" href="index.html" title="Debrief NG User Documentation"><link rel="up" href="reference_guide.html" title="Part&nbsp;IV.&nbsp;Reference Guide"><link rel="prev" href="contouring_algorithm.html" title="19.5.&nbsp;Contouring algorithm"><link rel="next" href="ga_optimisation.html" title="20.2.&nbsp;Optimisation Strategies"><link rel="preface" href="PrefaceIntro.html" title="Introduction"><link rel="part" href="tutorial.html" title="Part&nbsp;I.&nbsp;Getting started"><link rel="chapter" href="get_start.html" title="Chapter&nbsp;1.&nbsp;First steps"><link rel="part" href="UsingDebrief.html" title="Part&nbsp;II.&nbsp;Using Debrief"><link rel="chapter" href="moving_around.html" title="Chapter&nbsp;2.&nbsp;Moving around the view"><link rel="chapter" href="formatting_data.html" title="Chapter&nbsp;3.&nbsp;Manipulating track data"><link rel="chapter" href="analysing_data.html" title="Chapter&nbsp;4.&nbsp;Analysing Data"><link rel="chapter" href="exporting_data.html" title="Chapter&nbsp;5.&nbsp;Exporting Data"><link rel="chapter" href="symbol_sets.html" title="Chapter&nbsp;6.&nbsp;Symbol sets"><link rel="chapter" href="external_datasets.html" title="Chapter&nbsp;7.&nbsp;External datasets"><link rel="chapter" href="ExercisePlanning.html" title="Chapter&nbsp;8.&nbsp;Exercise planning"><link rel="chapter" href="viewing_narratives.html" title="Chapter&nbsp;9.&nbsp;Viewing narratives"><link rel="chapter" href="ChartBackdrops.html" title="Chapter&nbsp;10.&nbsp;Using chart backdrops"><link rel="chapter" href="sensor_data.html" title="Chapter&nbsp;11.&nbsp;Analysing sensor data"><link rel="chapter" href="tma_data.html" title="Chapter&nbsp;12.&nbsp;Management of TMA and TUA solutions"><link rel="chapter" href="dis_support.html" title="Chapter&nbsp;13.&nbsp;Support for DIS Protocol"><link rel="part" href="maintainers_guide.html" title="Part&nbsp;III.&nbsp;Maintainer's Guide"><link rel="chapter" href="participating.html" title="Chapter&nbsp;14.&nbsp;Participating in Debrief development"><link rel="chapter" href="maintainers.html" title="Chapter&nbsp;15.&nbsp;Debrief maintainer's guide"><link rel="part" href="reference_guide.html" title="Part&nbsp;IV.&nbsp;Reference Guide"><link rel="chapter" href="reference.html" title="Chapter&nbsp;16.&nbsp;Debrief file formats"><link rel="chapter" href="ScriptCookbook.html" title="Chapter&nbsp;17.&nbsp;Scripting Cookbook"><link rel="chapter" href="GeoToolsRef.html" title="Chapter&nbsp;18.&nbsp;GeoTools in Debrief"><link rel="chapter" href="chap_debrief_algorithms.html" title="Chapter&nbsp;19.&nbsp;Debrief algorithms"><link rel="chapter" href="chap_genetic_algorithms.html" title="Chapter&nbsp;20.&nbsp;Semi Automated Track Construction (SATC)"><link rel="chapter" href="dis_ref.html" title="Chapter&nbsp;21.&nbsp;System Documentation for DIS integration"><link rel="appendix" href="app_glossary.html" title="Appendix&nbsp;A.&nbsp;Debrief Glossary"><link rel="glossary" href="app_glossary.html#glossary" title="Glossary"><link rel="index" href="the_index.html" title="Index"><link rel="section" href="chap_genetic_algorithms.html#d5e6091" title="20.1.&nbsp;High-Level SATC Concepts"><link rel="section" href="ga_optimisation.html" title="20.2.&nbsp;Optimisation Strategies"><link rel="section" href="satc_ga.html" title="20.3.&nbsp;Solution Generator based on Genetic Algorithm"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">Chapter&nbsp;20.&nbsp;Semi Automated Track Construction (SATC)</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="contouring_algorithm.html"><img src="images/prev.gif" alt="Prev"></a>&nbsp;</td><th width="60%" align="center">Part&nbsp;IV.&nbsp;Reference Guide</th><td width="20%" align="right">&nbsp;<a accesskey="n" href="ga_optimisation.html"><img src="images/next.gif" alt="Next"></a></td></tr></table><hr></div><div class="chapter" id="chap_genetic_algorithms"><div class="titlepage"><div><div><h2 class="title">Chapter&nbsp;20.&nbsp;Semi Automated Track Construction (SATC)</h2></div></div></div><div class="toc"><p><b>Table of Contents</b></p><dl class="toc"><dt><span class="section"><a href="chap_genetic_algorithms.html#d5e6091">20.1. High-Level SATC Concepts</a></span></dt><dd><dl><dt><span class="section"><a href="chap_genetic_algorithms.html#d5e6096">20.1.1. Strategy</a></span></dt><dt><span class="section"><a href="chap_genetic_algorithms.html#d5e6101">20.1.2. Process</a></span></dt><dt><span class="section"><a href="chap_genetic_algorithms.html#d5e6104">20.1.3. Data Concepts</a></span></dt><dt><span class="section"><a href="chap_genetic_algorithms.html#d5e6179">20.1.4. Algorithms</a></span></dt><dt><span class="section"><a href="chap_genetic_algorithms.html#d5e6314">20.1.5. Examples of contributions</a></span></dt></dl></dd><dt><span class="section"><a href="ga_optimisation.html">20.2. Optimisation Strategies</a></span></dt><dd><dl><dt><span class="section"><a href="ga_optimisation.html#d5e6394">20.2.1. Brute Force</a></span></dt><dt><span class="section"><a href="ga_optimisation.html#d5e6397">20.2.2. Simulated Annealing</a></span></dt><dt><span class="section"><a href="ga_optimisation.html#d5e6404">20.2.3. Genetic Algortihm</a></span></dt></dl></dd><dt><span class="section"><a href="satc_ga.html">20.3. Solution Generator based on Genetic Algorithm</a></span></dt><dd><dl><dt><span class="section"><a href="satc_ga.html#d5e6409">20.3.1. Definitions</a></span></dt><dt><span class="section"><a href="satc_ga.html#d5e6457">20.3.2. Structure</a></span></dt><dt><span class="section"><a href="satc_ga.html#candidate_factory">20.3.3. Candidate Factory</a></span></dt><dt><span class="section"><a href="satc_ga.html#chromosome_selection">20.3.4. Chromosome selection strategy</a></span></dt><dt><span class="section"><a href="satc_ga.html#d5e6528">20.3.5. Genetic operators</a></span></dt><dt><span class="section"><a href="satc_ga.html#d5e6751">20.3.6. Fitness function</a></span></dt><dt><span class="section"><a href="satc_ga.html#island_attributes">20.3.7. Island attributes</a></span></dt></dl></dd></dl></div>
+   <title>Chapter&nbsp;20.&nbsp;Semi Automated Track Construction (SATC)</title><link rel="stylesheet" type="text/css" href="header.css"><meta name="generator" content="DocBook XSL Stylesheets V1.78.1"><meta name="keywords" content="Maritime Analysis, Open Source Tool"><link rel="home" href="index.html" title="Debrief NG User Documentation"><link rel="up" href="reference_guide.html" title="Part&nbsp;IV.&nbsp;Reference Guide"><link rel="prev" href="contouring_algorithm.html" title="19.5.&nbsp;Contouring algorithm"><link rel="next" href="ga_optimisation.html" title="20.2.&nbsp;Optimisation Strategies"><link rel="preface" href="PrefaceIntro.html" title="Introduction"><link rel="part" href="tutorial.html" title="Part&nbsp;I.&nbsp;Getting started"><link rel="chapter" href="get_start.html" title="Chapter&nbsp;1.&nbsp;First steps"><link rel="part" href="UsingDebrief.html" title="Part&nbsp;II.&nbsp;Using Debrief"><link rel="chapter" href="moving_around.html" title="Chapter&nbsp;2.&nbsp;Moving around the view"><link rel="chapter" href="formatting_data.html" title="Chapter&nbsp;3.&nbsp;Manipulating track data"><link rel="chapter" href="analysing_data.html" title="Chapter&nbsp;4.&nbsp;Analysing Data"><link rel="chapter" href="exporting_data.html" title="Chapter&nbsp;5.&nbsp;Exporting Data"><link rel="chapter" href="symbol_sets.html" title="Chapter&nbsp;6.&nbsp;Symbol sets"><link rel="chapter" href="external_datasets.html" title="Chapter&nbsp;7.&nbsp;External datasets"><link rel="chapter" href="ExercisePlanning.html" title="Chapter&nbsp;8.&nbsp;Exercise planning"><link rel="chapter" href="viewing_narratives.html" title="Chapter&nbsp;9.&nbsp;Viewing narratives"><link rel="chapter" href="ChartBackdrops.html" title="Chapter&nbsp;10.&nbsp;Using chart backdrops"><link rel="chapter" href="sensor_data.html" title="Chapter&nbsp;11.&nbsp;Analysing sensor data"><link rel="chapter" href="tma_data.html" title="Chapter&nbsp;12.&nbsp;Management of TMA and TUA solutions"><link rel="chapter" href="dis_support.html" title="Chapter&nbsp;13.&nbsp;Support for DIS Protocol"><link rel="part" href="maintainers_guide.html" title="Part&nbsp;III.&nbsp;Maintainer's Guide"><link rel="chapter" href="participating.html" title="Chapter&nbsp;14.&nbsp;Participating in Debrief development"><link rel="chapter" href="maintainers.html" title="Chapter&nbsp;15.&nbsp;Debrief maintainer's guide"><link rel="part" href="reference_guide.html" title="Part&nbsp;IV.&nbsp;Reference Guide"><link rel="chapter" href="reference.html" title="Chapter&nbsp;16.&nbsp;Debrief file formats"><link rel="chapter" href="ScriptCookbook.html" title="Chapter&nbsp;17.&nbsp;Scripting Cookbook"><link rel="chapter" href="GeoToolsRef.html" title="Chapter&nbsp;18.&nbsp;GeoTools in Debrief"><link rel="chapter" href="chap_debrief_algorithms.html" title="Chapter&nbsp;19.&nbsp;Debrief algorithms"><link rel="chapter" href="chap_genetic_algorithms.html" title="Chapter&nbsp;20.&nbsp;Semi Automated Track Construction (SATC)"><link rel="chapter" href="dis_ref.html" title="Chapter&nbsp;21.&nbsp;System Documentation for DIS integration"><link rel="appendix" href="app_glossary.html" title="Appendix&nbsp;A.&nbsp;Debrief Glossary"><link rel="glossary" href="app_glossary.html#glossary" title="Glossary"><link rel="index" href="the_index.html" title="Index"><link rel="section" href="chap_genetic_algorithms.html#d5e6098" title="20.1.&nbsp;High-Level SATC Concepts"><link rel="section" href="ga_optimisation.html" title="20.2.&nbsp;Optimisation Strategies"><link rel="section" href="satc_ga.html" title="20.3.&nbsp;Solution Generator based on Genetic Algorithm"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">Chapter&nbsp;20.&nbsp;Semi Automated Track Construction (SATC)</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="contouring_algorithm.html"><img src="images/prev.gif" alt="Prev"></a>&nbsp;</td><th width="60%" align="center">Part&nbsp;IV.&nbsp;Reference Guide</th><td width="20%" align="right">&nbsp;<a accesskey="n" href="ga_optimisation.html"><img src="images/next.gif" alt="Next"></a></td></tr></table><hr></div><div class="chapter" id="chap_genetic_algorithms"><div class="titlepage"><div><div><h2 class="title">Chapter&nbsp;20.&nbsp;Semi Automated Track Construction (SATC)</h2></div></div></div><div class="toc"><p><b>Table of Contents</b></p><dl class="toc"><dt><span class="section"><a href="chap_genetic_algorithms.html#d5e6098">20.1. High-Level SATC Concepts</a></span></dt><dd><dl><dt><span class="section"><a href="chap_genetic_algorithms.html#d5e6103">20.1.1. Strategy</a></span></dt><dt><span class="section"><a href="chap_genetic_algorithms.html#d5e6108">20.1.2. Process</a></span></dt><dt><span class="section"><a href="chap_genetic_algorithms.html#d5e6111">20.1.3. Data Concepts</a></span></dt><dt><span class="section"><a href="chap_genetic_algorithms.html#d5e6186">20.1.4. Algorithms</a></span></dt><dt><span class="section"><a href="chap_genetic_algorithms.html#d5e6321">20.1.5. Examples of contributions</a></span></dt></dl></dd><dt><span class="section"><a href="ga_optimisation.html">20.2. Optimisation Strategies</a></span></dt><dd><dl><dt><span class="section"><a href="ga_optimisation.html#d5e6401">20.2.1. Brute Force</a></span></dt><dt><span class="section"><a href="ga_optimisation.html#d5e6404">20.2.2. Simulated Annealing</a></span></dt><dt><span class="section"><a href="ga_optimisation.html#d5e6411">20.2.3. Genetic Algortihm</a></span></dt></dl></dd><dt><span class="section"><a href="satc_ga.html">20.3. Solution Generator based on Genetic Algorithm</a></span></dt><dd><dl><dt><span class="section"><a href="satc_ga.html#d5e6416">20.3.1. Definitions</a></span></dt><dt><span class="section"><a href="satc_ga.html#d5e6464">20.3.2. Structure</a></span></dt><dt><span class="section"><a href="satc_ga.html#candidate_factory">20.3.3. Candidate Factory</a></span></dt><dt><span class="section"><a href="satc_ga.html#chromosome_selection">20.3.4. Chromosome selection strategy</a></span></dt><dt><span class="section"><a href="satc_ga.html#d5e6535">20.3.5. Genetic operators</a></span></dt><dt><span class="section"><a href="satc_ga.html#d5e6758">20.3.6. Fitness function</a></span></dt><dt><span class="section"><a href="satc_ga.html#island_attributes">20.3.7. Island attributes</a></span></dt></dl></dd></dl></div>
       
 
-      <div class="section" id="d5e6091"><div class="titlepage"><div><div><h2 class="title" style="clear: both">20.1.&nbsp;High-Level SATC Concepts</h2></div></div></div><div class="toc"><dl class="toc"><dt><span class="section"><a href="chap_genetic_algorithms.html#d5e6096">20.1.1. Strategy</a></span></dt><dt><span class="section"><a href="chap_genetic_algorithms.html#d5e6101">20.1.2. Process</a></span></dt><dt><span class="section"><a href="chap_genetic_algorithms.html#d5e6104">20.1.3. Data Concepts</a></span></dt><dt><span class="section"><a href="chap_genetic_algorithms.html#d5e6179">20.1.4. Algorithms</a></span></dt><dt><span class="section"><a href="chap_genetic_algorithms.html#d5e6314">20.1.5. Examples of contributions</a></span></dt></dl></div>
+      <div class="section" id="d5e6098"><div class="titlepage"><div><div><h2 class="title" style="clear: both">20.1.&nbsp;High-Level SATC Concepts</h2></div></div></div><div class="toc"><dl class="toc"><dt><span class="section"><a href="chap_genetic_algorithms.html#d5e6103">20.1.1. Strategy</a></span></dt><dt><span class="section"><a href="chap_genetic_algorithms.html#d5e6108">20.1.2. Process</a></span></dt><dt><span class="section"><a href="chap_genetic_algorithms.html#d5e6111">20.1.3. Data Concepts</a></span></dt><dt><span class="section"><a href="chap_genetic_algorithms.html#d5e6186">20.1.4. Algorithms</a></span></dt><dt><span class="section"><a href="chap_genetic_algorithms.html#d5e6321">20.1.5. Examples of contributions</a></span></dt></dl></div>
         
 
         <p>This section records the high-level concepts related to the Semi-Automatic Track Construction (SATC) implementation in <span class="application">Debrief</span>. The content presented here represents system documentation, not necessarily targeted at the routine SATC user, user guidance is contained in <a class="xref" href="satc.html" title="12.3.&nbsp;Semi-Automated TMA generation">Section&nbsp;12.3, &#8220;Semi-Automated TMA generation&#8221;</a>.</p>
 
 
 
-        <div class="section" id="d5e6096"><div class="titlepage"><div><div><h3 class="title">20.1.1.&nbsp;Strategy</h3></div></div></div>
+        <div class="section" id="d5e6103"><div class="titlepage"><div><div><h3 class="title">20.1.1.&nbsp;Strategy</h3></div></div></div>
           
 
           <p>Some BOT strategies focus very strongly on the bearing data, with other aspects (priors, constraints, etc) used to refine the end product.</p>
@@ -20,46 +20,46 @@
           <p>Each time the analyst/user submits some information to be used in the algorithm he's contributing to the answer - so the piece of information is termed a contribution. </p>
         </div>
 
-        <div class="section" id="d5e6101"><div class="titlepage"><div><div><h3 class="title">20.1.2.&nbsp;Process</h3></div></div></div>
+        <div class="section" id="d5e6108"><div class="titlepage"><div><div><h3 class="title">20.1.2.&nbsp;Process</h3></div></div></div>
           
 
           <p>In generating one or more vehicle solutions the system will first constrain the global problem space, then generate candidate solutions within that space, and lastly assess their performance. If none of the candidate solutions are acceptable the analyst may refine existing contributions, or supply more contributions to further inform the system. These phases are described in more detail later, once we've covered the necessary data concepts.</p>
         </div>
 
-        <div class="section" id="d5e6104"><div class="titlepage"><div><div><h3 class="title">20.1.3.&nbsp;Data Concepts</h3></div></div></div>
+        <div class="section" id="d5e6111"><div class="titlepage"><div><div><h3 class="title">20.1.3.&nbsp;Data Concepts</h3></div></div></div>
           
 
-          <div class="section" id="d5e6106"><div class="titlepage"><div><div><h4 class="title">20.1.3.1.&nbsp;Scenario</h4></div></div></div>
+          <div class="section" id="d5e6113"><div class="titlepage"><div><div><h4 class="title">20.1.3.1.&nbsp;Scenario</h4></div></div></div>
             
 
             <p>A single instance of performing SATC on a set of data, plus contributions is called a Scenario. This includes all contributions and their states. It also includes the measurements that inform a Measurement Contributions. A scenario may be saved to file, in order that its analysis may continue at another time.</p>
           </div>
 
-          <div class="section" id="d5e6109"><div class="titlepage"><div><div><h4 class="title">20.1.3.2.&nbsp;Problem space</h4></div></div></div>
+          <div class="section" id="d5e6116"><div class="titlepage"><div><div><h4 class="title">20.1.3.2.&nbsp;Problem space</h4></div></div></div>
             
 
             <p>The problem space is a series of bounded vehicle state objects with a Vehicle Performance instance.</p>
           </div>
 
-          <div class="section" id="d5e6112"><div class="titlepage"><div><div><h4 class="title">20.1.3.3.&nbsp;Vehicle Track</h4></div></div></div>
+          <div class="section" id="d5e6119"><div class="titlepage"><div><div><h4 class="title">20.1.3.3.&nbsp;Vehicle Track</h4></div></div></div>
             
 
             <p>A track is comprised of a series of Vehicle State objects. It represents an estimate of the path followed by a vehicle for a period of time. </p>
           </div>
 
-          <div class="section" id="d5e6115"><div class="titlepage"><div><div><h4 class="title">20.1.3.4.&nbsp;Leg</h4></div></div></div>
+          <div class="section" id="d5e6122"><div class="titlepage"><div><div><h4 class="title">20.1.3.4.&nbsp;Leg</h4></div></div></div>
             
 
             <p>A leg represents a period of vehicle track. The leg may be a straight leg (representing the way vehicles normally move) or an alteration leg (representing how a vehicle makes the transition from one straight leg to another). The fact that the a set of Vehicle States (or Bounded Vehicle States) objects are in a straight or altering leg means we can infer further constraints/relaxations on them. </p>
           </div>
 
-          <div class="section" id="d5e6118"><div class="titlepage"><div><div><h4 class="title">20.1.3.5.&nbsp;Vehicle State</h4></div></div></div>
+          <div class="section" id="d5e6125"><div class="titlepage"><div><div><h4 class="title">20.1.3.5.&nbsp;Vehicle State</h4></div></div></div>
             
 
             <p>A vehicle state is represented as a time, location, course and speed. </p>
           </div>
 
-          <div class="section" id="d5e6121"><div class="titlepage"><div><div><h4 class="title">20.1.3.6.&nbsp;Bounded Vehicle State</h4></div></div></div>
+          <div class="section" id="d5e6128"><div class="titlepage"><div><div><h4 class="title">20.1.3.6.&nbsp;Bounded Vehicle State</h4></div></div></div>
             
 
             <p>A bounded vehicle state describes a range of possible vehicle states. It includes a course range (min-max, always clockwise), a speed range (min-max), and a polygon representing spatial constraints. </p>
@@ -73,24 +73,24 @@
             </td></tr></table></div>
           </div>
 
-          <div class="section" id="d5e6128"><div class="titlepage"><div><div><h4 class="title">20.1.3.7.&nbsp;Straight Leg</h4></div></div></div>
+          <div class="section" id="d5e6135"><div class="titlepage"><div><div><h4 class="title">20.1.3.7.&nbsp;Straight Leg</h4></div></div></div>
             
 
             <p>A straight leg is uniform, with constant course and speed. When constraining the problem space the leg will be formed from multiple bounded vehicle states, but when candidate solutions are being generated they will always have constant course and speed. During the Constrain the problem space phase we allow the straight leg to be comprised of varying bounded vehicle states to allow a manoeuvre detection algorithm to detect that there must actually be a course or speed change within the leg (since there isn't a single course or speed that is achievable along the whole leg), leading to the introduction of an alteration leg.</p>
           </div>
 
-          <div class="section" id="d5e6131"><div class="titlepage"><div><div><h4 class="title">20.1.3.8.&nbsp;Alteration Leg</h4></div></div></div>
+          <div class="section" id="d5e6138"><div class="titlepage"><div><div><h4 class="title">20.1.3.8.&nbsp;Alteration Leg</h4></div></div></div>
             
 
             <p>An alteration leg allows for change in course and/or speed. The alteration leg may represent a speed change, a course change, or a period for which insufficient data is available to suggest straight-line travel (in which case there may be an unpredictable number of course/speed changes). Consequently an Alteration Leg doesn't just have values for vehicle state at either end, it is expressed as a series of vehicle states (or bounded vehicle states in the constrain the problem space phase).</p>
           </div>
 
-          <div class="section" id="d5e6134"><div class="titlepage"><div><div><h4 class="title">20.1.3.9.&nbsp;Contribution</h4></div></div></div>
+          <div class="section" id="d5e6141"><div class="titlepage"><div><div><h4 class="title">20.1.3.9.&nbsp;Contribution</h4></div></div></div>
             
 
             <p>A contribution is a piece of knowledge supplied by the analyst. Beyond the simple, abstract description provided below, specific contributions may contain great algorithmic complexity. </p>
 
-            <div class="section" id="d5e6137"><div class="titlepage"><div><div><h5 class="title">20.1.3.9.1.&nbsp;Contribution attributes</h5></div></div></div>
+            <div class="section" id="d5e6144"><div class="titlepage"><div><div><h5 class="title">20.1.3.9.1.&nbsp;Contribution attributes</h5></div></div></div>
               
 
               <p>The contribution will always have at least one of </p>
@@ -110,7 +110,7 @@
                 </li></ul></div>
             </div>
 
-            <div class="section" id="d5e6155"><div class="titlepage"><div><div><h5 class="title">20.1.3.9.2.&nbsp;Contribution abilities</h5></div></div></div>
+            <div class="section" id="d5e6162"><div class="titlepage"><div><div><h5 class="title">20.1.3.9.2.&nbsp;Contribution abilities</h5></div></div></div>
               
 
               <p>A contribution is able to:</p>
@@ -123,7 +123,7 @@
             </div>
           </div>
 
-          <div class="section" id="d5e6165"><div class="titlepage"><div><div><h4 class="title">20.1.3.10.&nbsp;Reference contribution</h4></div></div></div>
+          <div class="section" id="d5e6172"><div class="titlepage"><div><div><h4 class="title">20.1.3.10.&nbsp;Reference contribution</h4></div></div></div>
             
 
             <p>This type of contribution represents some known fact about the vehicle. It may include max/min attainable speed, max/min acceleration and deceleration rates, and max/min turning circles. These contributions are normally time independent, and typically only have hard constraints. Reference contributions are typically only effective in constraining the problem space, they do not assist in the assessment of candidate solutions. An example of a reference contribution is the Vehicle Performance Reference Contribution.</p>
@@ -131,29 +131,29 @@
             <p>In implementation, it is expected that a &#8216;library' of reference data be made available to the analyst. The analyst may load a contribution from the library, but changes made to that contribution would only be made locally - the library would remain unchanged.</p>
           </div>
 
-          <div class="section" id="d5e6169"><div class="titlepage"><div><div><h4 class="title">20.1.3.11.&nbsp;Forecast Contribution</h4></div></div></div>
+          <div class="section" id="d5e6176"><div class="titlepage"><div><div><h4 class="title">20.1.3.11.&nbsp;Forecast Contribution</h4></div></div></div>
             
 
             <p>This type of contribution represents an analyst's forecast of vehicle behaviour. The forecasts are typically time bounded. They normally have estimates, and may also have hard constraints: &#8220;the vehicle is probably travelling between 4 and 6 knots. It is certainly not travelling outside 2 and 10 knots&#8221;. These contributions are probably to be used in both constraining the problem space and assessing candidate solutions. Examples of a forecast contribution are the Speed Forecast Contribution and the Straight leg forecast contribution.</p>
           </div>
 
-          <div class="section" id="d5e6172"><div class="titlepage"><div><div><h4 class="title">20.1.3.12.&nbsp;Measurement contribution</h4></div></div></div>
+          <div class="section" id="d5e6179"><div class="titlepage"><div><div><h4 class="title">20.1.3.12.&nbsp;Measurement contribution</h4></div></div></div>
             
 
             <p>This type of contribution represents some measurement on the vehicle, such as that produced by a radar or sonar. The contribution is a time-stamped collection of measurements. Hard constraints may apply to error ranges on the sensor (bearing or range, for example). The measurement itself is interpreted as an estimate. An example of measurement contribution is the Bearing Measurement Contribution. The analyst should be provided with a means of suppressing some measurements. In the <span class="application">Debrief</span> implementation it is proposed that this is done by setting them to not visible in the Outline View.</p>
           </div>
 
-          <div class="section" id="d5e6176"><div class="titlepage"><div><div><h4 class="title">20.1.3.13.&nbsp;Analysis contribution</h4></div></div></div>
+          <div class="section" id="d5e6183"><div class="titlepage"><div><div><h4 class="title">20.1.3.13.&nbsp;Analysis contribution</h4></div></div></div>
             
 
             <p>This type of contribution uses algorithms to either constrain the problem space, or assess the performance of a candidate solution - they contain no attributes. These contributions may not have to be explicitly specified by an analyst - they may be permanently present. An example of an analysis contribution is the Speed Analysis Contribution.</p>
           </div>
         </div>
 
-        <div class="section" id="d5e6179"><div class="titlepage"><div><div><h3 class="title">20.1.4.&nbsp;Algorithms</h3></div></div></div>
+        <div class="section" id="d5e6186"><div class="titlepage"><div><div><h3 class="title">20.1.4.&nbsp;Algorithms</h3></div></div></div>
           
 
-          <div class="section" id="d5e6181"><div class="titlepage"><div><div><h4 class="title">20.1.4.1.&nbsp;Constrain the global problem space</h4></div></div></div>
+          <div class="section" id="d5e6188"><div class="titlepage"><div><div><h4 class="title">20.1.4.1.&nbsp;Constrain the global problem space</h4></div></div></div>
             
 
             <p>It is thought that the generation and assessment of candidate solutions is an expensive process, so the problem space will be constrained as far as possible prior to consideration of candidate solutions. </p>
@@ -199,7 +199,7 @@
             <p>On completion the algorithm moves on to generating and assessing candidate solutions.</p>
           </div>
 
-          <div class="section" id="d5e6230"><div class="titlepage"><div><div><h4 class="title">20.1.4.2.&nbsp;Generate and assess candidate solutions</h4></div></div></div>
+          <div class="section" id="d5e6237"><div class="titlepage"><div><div><h4 class="title">20.1.4.2.&nbsp;Generate and assess candidate solutions</h4></div></div></div>
             
 
             <p>The system will investigate candidate solutions offering the single or multiple best candidates to the user. </p>
@@ -221,7 +221,7 @@
             <p>Beyond the brute-force approach, a feedback loop may inform the generation of successive solutions, using their assessed effectiveness. Such a loop would support the evolutionary production of candidate solutions, such as those in a genetic algorithm.</p>
           </div>
 
-          <div class="section" id="d5e6246"><div class="titlepage"><div><div><h4 class="title">20.1.4.3.&nbsp;Solution generator</h4></div></div></div>
+          <div class="section" id="d5e6253"><div class="titlepage"><div><div><h4 class="title">20.1.4.3.&nbsp;Solution generator</h4></div></div></div>
             
 
             <p>The solution generator is an algorithm that is able to take a problem space definition, and use the contributions to define possible course and speed permutations for a series of start points. </p>
@@ -255,7 +255,7 @@
               </li></ul></div>
           </div>
 
-          <div class="section" id="d5e6275"><div class="titlepage"><div><div><h4 class="title">20.1.4.4.&nbsp;Genetic algorithm</h4></div></div></div>
+          <div class="section" id="d5e6282"><div class="titlepage"><div><div><h4 class="title">20.1.4.4.&nbsp;Genetic algorithm</h4></div></div></div>
             
 
             <p>One methodology for producing candidate solutions is the use of a genetic algorithm. We already refer to the potential matching tracks as candidate solutions. We can then consider the error-from-estimate value as the fitness function for that solution. We can then consider the legs that comprise that solution as the discrete genes within the genotype.</p>
@@ -274,7 +274,7 @@
             </td></tr></table></div>
           </div>
 
-          <div class="section" id="d5e6288"><div class="titlepage"><div><div><h4 class="title">20.1.4.5.&nbsp;Collate optimal solutions</h4></div></div></div>
+          <div class="section" id="d5e6295"><div class="titlepage"><div><div><h4 class="title">20.1.4.5.&nbsp;Collate optimal solutions</h4></div></div></div>
             
 
             <p>It is expected that the system will generate and investigate many, many solutions. For some scenarios there may be one (or few) solutions with very high performance. These can be presented directly to the analyst for consideration. For other scenarios there may be many solutions that offer a similar performance result. It is proposed that the system has a means by which it offers distinct solutions to the analyst, in order to further refine the contributions. Such processes could include:</p><div class="variablelist"><dl class="variablelist"><dt><span class="term">Extreme solutions</span></dt><dd>
@@ -284,12 +284,12 @@
                   </dd></dl></div>
           </div>
 
-          <div class="section" id="d5e6300"><div class="titlepage"><div><div><h4 class="title">20.1.4.6.&nbsp;Manoeuvre Detection Algorithm</h4></div></div></div>
+          <div class="section" id="d5e6307"><div class="titlepage"><div><div><h4 class="title">20.1.4.6.&nbsp;Manoeuvre Detection Algorithm</h4></div></div></div>
             
 
             <p>A measured contribution may be able to inspect its measurements in conjunction with the bounded vehicle states and determine that one of the legs is actually comprised of a combination of straight and alteration legs. For example, a measured frequency contribution may be able to recognise that a single leg is actually comprised of a straight leg, an alteration leg then another straight leg. Similarly, a contribution may be able to determine that an alteration leg actually contains a period of steady course and speed - and insert a straight leg covering that period. Note: if the leg has been created through an analyst's Straight leg forecast contribution specified as a hard-constraint then the leg will not be decomposed.</p>
 
-            <div class="section" id="d5e6303"><div class="titlepage"><div><div><h5 class="title">20.1.4.6.1.&nbsp;Bearing-based MDA</h5></div></div></div>
+            <div class="section" id="d5e6310"><div class="titlepage"><div><div><h5 class="title">20.1.4.6.1.&nbsp;Bearing-based MDA</h5></div></div></div>
               
 
               <p>As two vessels move past each other, the bearings typically follow a fairly smooth/regular curve. Below is a very poor representation, but it is possible to produce a mathematical smoothing of the bearing curve representing &#8220;sensor and subject in steady state&#8221;. When the bearings start to diverge from this curve then something has changed - either the sensor or subject have changed their course/speed vector. The only input necessary for this is the bearing data. But, it's of note that only the BearingMeasurementContribution knows the actual bearings, they're not visible outside. So, I believe the bearing-based MDA must sit &#8220;inside&#8221; the BearingMeasCont.</p>
@@ -300,7 +300,7 @@
               </td></tr></table></div>
             </div>
 
-            <div class="section" id="d5e6311"><div class="titlepage"><div><div><h5 class="title">20.1.4.6.2.&nbsp;State-analysis MDA</h5></div></div></div>
+            <div class="section" id="d5e6318"><div class="titlepage"><div><div><h5 class="title">20.1.4.6.2.&nbsp;State-analysis MDA</h5></div></div></div>
               
 
               <p>Another way of detecting manoeuvres is by analysis of a series of bounded states. Where consecutive/adjacent states have incompatible bounds, we may be able to deduce that a manoeuvre must have happened. We may have a series of states with course bounds 040-080, then a series of states with a bounds 110-150. Clearly there must be a subject vehicle manoeuvre in between these states.</p>
@@ -308,13 +308,13 @@
           </div>
         </div>
 
-        <div class="section" id="d5e6314"><div class="titlepage"><div><div><h3 class="title">20.1.5.&nbsp;Examples of contributions</h3></div></div></div>
+        <div class="section" id="d5e6321"><div class="titlepage"><div><div><h3 class="title">20.1.5.&nbsp;Examples of contributions</h3></div></div></div>
           
 
-          <div class="section" id="d5e6316"><div class="titlepage"><div><div><h4 class="title">20.1.5.1.&nbsp;Vehicle performance reference contribution</h4></div></div></div>
+          <div class="section" id="d5e6323"><div class="titlepage"><div><div><h4 class="title">20.1.5.1.&nbsp;Vehicle performance reference contribution</h4></div></div></div>
             
 
-            <div class="section" id="d5e6318"><div class="titlepage"><div><div><h5 class="title">20.1.5.1.1.&nbsp;Attributes</h5></div></div></div>
+            <div class="section" id="d5e6325"><div class="titlepage"><div><div><h5 class="title">20.1.5.1.1.&nbsp;Attributes</h5></div></div></div>
               
 
               <p>Hard constraints are available that specify that the vehicle has a minimum speed of 1 knot, and a maximum speed of 30 knots. The minimum turning circle is 1km radius. It is also known that the vehicle can decelerate at 1 knot per 5 seconds and accelerate at 1 knot per 10 seconds. </p>
@@ -322,7 +322,7 @@
               <p>Potentially, such a constraint could also include an estimate on vehicle state, such as the vehicle normally travels between 8 and 12 knots.</p>
             </div>
 
-            <div class="section" id="d5e6322"><div class="titlepage"><div><div><h5 class="title">20.1.5.1.2.&nbsp;Abilities</h5></div></div></div>
+            <div class="section" id="d5e6329"><div class="titlepage"><div><div><h5 class="title">20.1.5.1.2.&nbsp;Abilities</h5></div></div></div>
               
 
               <p>This contribution mostly affects the constrain the problem space phase. </p>
@@ -341,16 +341,16 @@
             </div>
           </div>
 
-          <div class="section" id="d5e6335"><div class="titlepage"><div><div><h4 class="title">20.1.5.2.&nbsp;Bearing measurement contribution</h4></div></div></div>
+          <div class="section" id="d5e6342"><div class="titlepage"><div><div><h4 class="title">20.1.5.2.&nbsp;Bearing measurement contribution</h4></div></div></div>
             
 
-            <div class="section" id="d5e6337"><div class="titlepage"><div><div><h5 class="title">20.1.5.2.1.&nbsp;Attributes</h5></div></div></div>
+            <div class="section" id="d5e6344"><div class="titlepage"><div><div><h5 class="title">20.1.5.2.1.&nbsp;Attributes</h5></div></div></div>
               
 
               <p>This is a series of measured bearings. The bearings have a value (the estimate) plus an origin (sensor location). The dataset will also have error range (hard constraints). The error range may be relative bearing dependent, or the same for the whole dataset. The dataset may also have a maximum range value, beyond which no detection could be possible (another hard constraint). </p>
             </div>
 
-            <div class="section" id="d5e6340"><div class="titlepage"><div><div><h5 class="title">20.1.5.2.2.&nbsp;Abilities</h5></div></div></div>
+            <div class="section" id="d5e6347"><div class="titlepage"><div><div><h5 class="title">20.1.5.2.2.&nbsp;Abilities</h5></div></div></div>
               
 
               <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
@@ -369,16 +369,16 @@
             </div>
           </div>
 
-          <div class="section" id="d5e6353"><div class="titlepage"><div><div><h4 class="title">20.1.5.3.&nbsp;Speed analysis contribution</h4></div></div></div>
+          <div class="section" id="d5e6360"><div class="titlepage"><div><div><h4 class="title">20.1.5.3.&nbsp;Speed analysis contribution</h4></div></div></div>
             
 
-            <div class="section" id="d5e6355"><div class="titlepage"><div><div><h5 class="title">20.1.5.3.1.&nbsp;Attributes</h5></div></div></div>
+            <div class="section" id="d5e6362"><div class="titlepage"><div><div><h5 class="title">20.1.5.3.1.&nbsp;Attributes</h5></div></div></div>
               
 
               <p>This contribution contains no data.</p>
             </div>
 
-            <div class="section" id="d5e6358"><div class="titlepage"><div><div><h5 class="title">20.1.5.3.2.&nbsp;Abilities</h5></div></div></div>
+            <div class="section" id="d5e6365"><div class="titlepage"><div><div><h5 class="title">20.1.5.3.2.&nbsp;Abilities</h5></div></div></div>
               
 
               <p><span class="emphasis"><em>Constrain the problem space. </em></span></p>
@@ -389,16 +389,16 @@
             </div>
           </div>
 
-          <div class="section" id="d5e6364"><div class="titlepage"><div><div><h4 class="title">20.1.5.4.&nbsp;Speed forecast contribution</h4></div></div></div>
+          <div class="section" id="d5e6371"><div class="titlepage"><div><div><h4 class="title">20.1.5.4.&nbsp;Speed forecast contribution</h4></div></div></div>
             
 
-            <div class="section" id="d5e6366"><div class="titlepage"><div><div><h5 class="title">20.1.5.4.1.&nbsp;Attributes</h5></div></div></div>
+            <div class="section" id="d5e6373"><div class="titlepage"><div><div><h5 class="title">20.1.5.4.1.&nbsp;Attributes</h5></div></div></div>
               
 
               <p>The analyst indicates that for a set period the vehicle must be travelling between 1 and 8 knots, and is probably travelling between 4 and 6 knots. He also gives a weighting to this forecast.</p>
             </div>
 
-            <div class="section" id="d5e6369"><div class="titlepage"><div><div><h5 class="title">20.1.5.4.2.&nbsp;Abilities</h5></div></div></div>
+            <div class="section" id="d5e6376"><div class="titlepage"><div><div><h5 class="title">20.1.5.4.2.&nbsp;Abilities</h5></div></div></div>
               
 
               <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
@@ -413,16 +413,16 @@
             </div>
           </div>
 
-          <div class="section" id="d5e6380"><div class="titlepage"><div><div><h4 class="title">20.1.5.5.&nbsp;Straight leg forecast contribution</h4></div></div></div>
+          <div class="section" id="d5e6387"><div class="titlepage"><div><div><h4 class="title">20.1.5.5.&nbsp;Straight leg forecast contribution</h4></div></div></div>
             
 
-            <div class="section" id="d5e6382"><div class="titlepage"><div><div><h5 class="title">20.1.5.5.1.&nbsp;Attributes</h5></div></div></div>
+            <div class="section" id="d5e6389"><div class="titlepage"><div><div><h5 class="title">20.1.5.5.1.&nbsp;Attributes</h5></div></div></div>
               
 
               <p>The analyst specifies a time period for which he believes the vehicle is travelling on a straight course at constant speed. </p>
             </div>
 
-            <div class="section" id="d5e6385"><div class="titlepage"><div><div><h5 class="title">20.1.5.5.2.&nbsp;Abilities</h5></div></div></div>
+            <div class="section" id="d5e6392"><div class="titlepage"><div><div><h5 class="title">20.1.5.5.2.&nbsp;Abilities</h5></div></div></div>
               
 
               <p><span class="emphasis"><em>Constrain the problem space. </em></span></p>

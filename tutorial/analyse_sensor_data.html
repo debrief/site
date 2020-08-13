@@ -6,7 +6,7 @@
         <div class="sect2" id="analyse_sensor_data_intro"><div class="titlepage"><div><div><h3 class="title">11.2.1.&nbsp;Introduction</h3></div></div></div>
           
 
-          <p>When first loaded, <a class="glossterm" href="app_glossary.html#g_sensor"><em class="glossterm">sensor</em></a> data is not <a class="indexterm" name="d5e3405"></a> made visible, since with any reasonable volume of sensor data the plot quickly becomes illegible. Sensor data is switched on and off individually by accessing the sensor, via its Track, from the Outline View.</p>
+          <p>When first loaded, <a class="glossterm" href="app_glossary.html#g_sensor"><em class="glossterm">sensor</em></a> data is not <a class="indexterm" name="d5e3407"></a> made visible, since with any reasonable volume of sensor data the plot quickly becomes illegible. Sensor data is switched on and off individually by accessing the sensor, via its Track, from the Outline View.</p>
 
           <p>It is once in <a class="glossterm" href="app_glossary.html#g_snail_trail"><em class="glossterm">snail trail</em></a> mode that sensor data is most easily analysed. When in snail mode the Snail display mode performs the following processing: </p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
                 <p>For each Track being plotted, the display mode looks to see if it contains any Sensor data.</p>
@@ -16,7 +16,7 @@
           <p id="TrackFromActive">
             <b>Generate track from Active Sensor Data.&nbsp;</b>
             
-              <a class="indexterm" name="d5e3419"></a> If your sensor data has both range and bearing, you have all the data you need to generate a target track. If you right-click on a Sensor, or on a block of sensor cuts in the Outline View then Debrief will inspect them to see if they are suitable for generating a target track. Specifically it will check that they all have a Range value, a Bearing value, and no ambiguous bearing. If the selected data matches these constraints you will be invited to <span class="guimenu">Generate Track from Active Sensor Data</span>, and Debrief will generate a new track, named according to the sensor that produced it.
+              <a class="indexterm" name="d5e3421"></a> If your sensor data has both range and bearing, you have all the data you need to generate a target track. If you right-click on a Sensor, or on a block of sensor cuts in the Outline View then Debrief will inspect them to see if they are suitable for generating a target track. Specifically it will check that they all have a Range value, a Bearing value, and no ambiguous bearing. If the selected data matches these constraints you will be invited to <span class="guimenu">Generate Track from Active Sensor Data</span>, and Debrief will generate a new track, named according to the sensor that produced it.
           </p>
         </div>
 
@@ -40,7 +40,7 @@
                 <div class="mediaobject"><img src="figures/LotsOfTracks.png"><div class="caption"><p>Cumbersome sensor data</p></div></div>
               </div>
 
-            <p><a class="indexterm" name="d5e3440"></a>The new <span class="guilabel">Bulk Sensor Manager</span> offers an opportunity to determine which sensor data has a direction near to one of the other tracks currently loaded in Debrief. Before opening the Bulk Sensor Manager it's worth telling Debrief which is your 'ownship' track, and which are the tracks of interest. Do this by marking tracks as primary and secondary in the Track Tote (see <a class="xref" href="analysing_data.html#assigning_tracks" title="4.1.&nbsp;Assigning tracks as primary and secondary">Section&nbsp;4.1, &#8220;Assigning tracks as primary and secondary&#8221;</a>). Once you have a primary track set, select <span class="guilabel">Bulk Sensor Manager</span> from the <span class="guilabel">Window/Show View</span> menu. You'll see a plot like the one below:</p><div class="screenshot">
+            <p><a class="indexterm" name="d5e3442"></a>The new <span class="guilabel">Bulk Sensor Manager</span> offers an opportunity to determine which sensor data has a direction near to one of the other tracks currently loaded in Debrief. Before opening the Bulk Sensor Manager it's worth telling Debrief which is your 'ownship' track, and which are the tracks of interest. Do this by marking tracks as primary and secondary in the Track Tote (see <a class="xref" href="analysing_data.html#assigning_tracks" title="4.1.&nbsp;Assigning tracks as primary and secondary">Section&nbsp;4.1, &#8220;Assigning tracks as primary and secondary&#8221;</a>). Once you have a primary track set, select <span class="guilabel">Bulk Sensor Manager</span> from the <span class="guilabel">Window/Show View</span> menu. You'll see a plot like the one below:</p><div class="screenshot">
                 <div class="mediaobject"><img src="figures/BulkSensorManager.png"></div>
               </div>
 
@@ -61,13 +61,13 @@
                 <div class="mediaobject"><img src="figures/BulkSensorManager_PostSplit.png"></div>
               </div>
           </div>
-          <div class="sect3" id="d5e3470"><div class="titlepage"><div><div><h4 class="title">11.2.2.4.&nbsp;Trim to track period</h4></div></div></div>
+          <div class="sect3" id="d5e3472"><div class="titlepage"><div><div><h4 class="title">11.2.2.4.&nbsp;Trim to track period</h4></div></div></div>
             
             <p>Sometimes the data extraction process results in sensor datasets being loaded/provided that cover time periods outside the range of the parent track. These unnecessarily slow down Debrief - so you may choose to delete them. The <span class="guibutton">Trim to track period</span>(<span class="guiicon">
                 <span class="inlinemediaobject"><img src="figures/bulk_sensor_hourglass.png" align="middle"></span>
               </span>) operation will delete any blocks of sensor data that completely fall outside the time period of the primary track.</p>
           </div>
-          <div class="sect3" id="d5e3478"><div class="titlepage"><div><div><h4 class="title">11.2.2.5.&nbsp;Remove sensor data unrelated to Secondary Tracks</h4></div></div></div>
+          <div class="sect3" id="d5e3480"><div class="titlepage"><div><div><h4 class="title">11.2.2.5.&nbsp;Remove sensor data unrelated to Secondary Tracks</h4></div></div></div>
             
             <p>Sensor data loaded from a command system may contain many, many tracks. Many of the tracks will be of contacts unrelated to the platforms in question. It's quite easy for Debrief to determine sensor data that isn't related to the loaded secondary tracks. By clicking on the <span class="guibutton">Remove sensor data unrelated to Secondary Tracks</span> (<span class="guiicon">
                 <span class="inlinemediaobject"><img src="figures/bulk_sensor_scissors.png" align="middle"></span>
@@ -75,9 +75,9 @@
                 <div class="mediaobject"><img src="figures/BulkSensorManager_trim_unrelated.png"></div>
               </div>
           </div>
-          <div class="sect3" id="d5e3490"><div class="titlepage"><div><div><h4 class="title">11.2.2.6.&nbsp;Automatically shading bulk sensor data</h4></div></div></div>
+          <div class="sect3" id="d5e3492"><div class="titlepage"><div><div><h4 class="title">11.2.2.6.&nbsp;Automatically shading bulk sensor data</h4></div></div></div>
             
-            <p><a class="indexterm" name="d5e3493"></a>When very long sets of sensor data are exported to a report, it can be difficult for a reader to distinguish newer from old cuts - particularly when they are overlapping. Debrief provides support for this via the two <span class="guimenuitem">Shade</span> operations:</p><div class="screenshot">
+            <p><a class="indexterm" name="d5e3495"></a>When very long sets of sensor data are exported to a report, it can be difficult for a reader to distinguish newer from old cuts - particularly when they are overlapping. Debrief provides support for this via the two <span class="guimenuitem">Shade</span> operations:</p><div class="screenshot">
                 <div class="mediaobject"><img src="figures/ShadeSensor.png"></div>
               </div>
             <p>These two operations shade the selected block of sensor data (or whole sensor) according to two operations - as shown below.</p><div class="screenshot">
@@ -87,7 +87,7 @@
               </div>
           </div>
 
-          <div class="sect3" id="d5e3510"><div class="titlepage"><div><div><h4 class="title">11.2.2.7.&nbsp;Trim length of sensor lines</h4></div></div></div>
+          <div class="sect3" id="d5e3512"><div class="titlepage"><div><div><h4 class="title">11.2.2.7.&nbsp;Trim length of sensor lines</h4></div></div></div>
             
 
             <p>As you'll see in the earlier <span class="emphasis"><em>Cumbersome sensor plot</em></span>, a lot of sensor data can make a plot difficult to interpret. If sensor data isn't provided with a range attribute, then sensor lines are drawn out to infinity (or the edge to the viewport - whichever is nearer...). On a large area plot this may given sensor lines of 10s of nautical miles long. If in truth the detections are only in the thousands of yards, you may wish to give the sensor data a range. To do this, start by multi-selecting a block of sensor data in the Outline View. Next, open the properties window - you'll see the elements have zero range. Just insert an 'indicative' value for range. The sensor lines on the plot will now be clipped to that range - greatly reducing plot clutter.</p><div class="screenshot">
@@ -133,7 +133,7 @@
         <div class="sect2" id="doppler_export"><div class="titlepage"><div><div><h3 class="title">11.2.5.&nbsp;Exploiting doppler calculations</h3></div></div></div>
           
 
-          <p><a class="indexterm" name="d5e3556"></a>To support the display frequency residuals (as used in <a class="xref" href="tma_support.html#DraggingTracks" title="12.2.3.&nbsp;Dragging tracks">Section&nbsp;12.2.3, &#8220;Dragging tracks&#8221;</a>), Debrief contains a set of doppler frequency calculations (see <a class="xref" href="other_algs.html#freq_alg" title="19.3.1.&nbsp;Frequency algorithms">Section&nbsp;19.3.1, &#8220;Frequency algorithms&#8221;</a>). Should you require this data in a third-party application it is possible to export this calculated data. Do this export as follows:</p><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem">
+          <p><a class="indexterm" name="d5e3558"></a>To support the display frequency residuals (as used in <a class="xref" href="tma_support.html#DraggingTracks" title="12.2.3.&nbsp;Dragging tracks">Section&nbsp;12.2.3, &#8220;Dragging tracks&#8221;</a>), Debrief contains a set of doppler frequency calculations (see <a class="xref" href="other_algs.html#freq_alg" title="19.3.1.&nbsp;Frequency algorithms">Section&nbsp;19.3.1, &#8220;Frequency algorithms&#8221;</a>). Should you require this data in a third-party application it is possible to export this calculated data. Do this export as follows:</p><div class="orderedlist"><ol class="orderedlist" type="1"><li class="listitem">
                 <p>You must have a Debrief plot open that contains ownship plus target tracks</p>
               </li><li class="listitem">
                 <p>Ownship must be marked (<a class="xref" href="analysing_data.html#assigning_tracks" title="4.1.&nbsp;Assigning tracks as primary and secondary">Section&nbsp;4.1, &#8220;Assigning tracks as primary and secondary&#8221;</a>) as primary track (see <a class="xref" href="analysing_data.html#the_tote_area" title="4.1.1.&nbsp;Tote area">Section&nbsp;4.1.1, &#8220;Tote area&#8221;</a>), and the target track must be the only secondary track</p>
@@ -175,7 +175,7 @@
         <div class="sect2" id="multipath_analysis"><div class="titlepage"><div><div><h3 class="title">11.2.7.&nbsp;Multipath analysis</h3></div></div></div>
           
 
-          <p><a class="indexterm" name="d5e3601"></a>Should you have access to multipath sensor data of a target vessel from a host platform, Debrief is able to assist in determining the target depth. In overview, Debrief allows you to compare the measured time interval with one calculated from the relevant dispositions of the two tracks (plus measured sound speeds for that location).</p>
+          <p><a class="indexterm" name="d5e3603"></a>Should you have access to multipath sensor data of a target vessel from a host platform, Debrief is able to assist in determining the target depth. In overview, Debrief allows you to compare the measured time interval with one calculated from the relevant dispositions of the two tracks (plus measured sound speeds for that location).</p>
 
           <div class="sect3" id="multipath_datasets"><div class="titlepage"><div><div><h4 class="title">11.2.7.1.&nbsp;Datasets</h4></div></div></div>
             
@@ -256,7 +256,7 @@
             <p>Average sound speed between 0 m and 30 m can be ignored as the sound never goes into that region. Average sound speed between 30 m and 40 m is 1507.5 m/s. The sound speed at 55 m is 1513.75 m/s (through linear interpolation). Average sound speed between 40 m and 55 m is 1511.875 m/s. Using the depth range in metres as its weighting value, the overall average sound speed is ((1511.875*15)+(1507.5*10))/25 = 1510.125 m/s</p>
           </div>
 
-          <div class="sect3" id="d5e3698"><div class="titlepage"><div><div><h4 class="title">11.2.7.4.&nbsp;Optimisation Algorithm</h4></div></div></div>
+          <div class="sect3" id="d5e3700"><div class="titlepage"><div><div><h4 class="title">11.2.7.4.&nbsp;Optimisation Algorithm</h4></div></div></div>
             
 
             <p>Debrief is able to use&nbsp;Dr Michael Thomas Flanagan's (at <a class="ulink" href="www.ee.ucl.ac.uk/~mflanaga" target="_top">www.ee.ucl.ac.uk/~mflanaga</a>, [note: external link]) Nelder Mead simplex optimisation algorithm to determine the optimum target depth to minimise the least-squares error between the calculated and measured curves.</p>
